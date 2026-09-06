@@ -63,6 +63,13 @@ PASS
 The tests bind the Loop Skill, both directly corresponding public descriptions,
 the RED example, and the unchanged root authority boundary.
 
+The first paired admission-block draft failed three of six historical 13-42 /
+13-43 regressions because it did not carry forward the full admitted frontier.
+The tests were not weakened. The block was replaced with a Forward-only block
+that preserves the prior reconstruction base, all required frontier fields, and
+the 13-43 restart route while adding only the Workspace Health repair fields;
+the final historical suite passed 6 / 6.
+
 ### Static case judgment
 
 | Case | Expected route | Static result |
@@ -85,10 +92,15 @@ and static judgment are not reported as runtime behavior evidence.
 
 ## Current-state and external boundary
 
-This is a local admission candidate only. It does not change the current Gate,
-create GO, or establish canonical capability from a branch commit. No push, PR,
-merge, or remote read-back is authorized in this task. The existing paired first
-blocks in `docs/current_signal.md` and `handoff/current_codex_handoff.md` remain
-unchanged. If this repair is later selected for canonical admission, the current
-AGENTS admission joint, paired first-block update when applicable, required
-regressions, merge, fetched remote read-back, and ancestry check remain open.
+Shin authorized formal admission after the bounded local commit. Matching new
+first blocks are therefore prepended to `docs/current_signal.md` and
+`handoff/current_codex_handoff.md`, with all older material preserved below.
+They remain an admission candidate on a branch or PR and become current only
+when the exact blocks are read from fetched `origin/main` and the repair commit
+is verified as its ancestor.
+
+This repair does not change the current Gate, create GO, or authorize runtime
+execution. Normal push, required review/checks, merge, fetched remote read-back,
+content identity, and ancestry are the remaining admission conditions. Force
+push, review bypass, unrelated work, and runtime behavior claims remain outside
+scope.
