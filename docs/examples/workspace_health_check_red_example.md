@@ -81,7 +81,8 @@ Without it, even good guardrails can turn into archaeology.
 Do not continue from the current state.
 
 Reconstruct the source of truth first.
-Return the decision to the human.
+Keep authorized read-only reconstruction with the AI. Return only an
+irreducible decision or a new approval to the human.
 ```
 
 ## Safest next action
@@ -101,6 +102,13 @@ Before any continuation, the human or AI should identify:
 - handoff freshness
 - what the next AI must not assume
 - one safe next action
+
+When the AI has authorized read-only access, it owns these checks. An exact,
+current repair approval may be named as a separate next phase without being
+requested again, but the diagnostic loop does not execute it. New authority or
+an uncovered irreversible decision returns to the Human Seat. Unknown identity,
+ownership, or approval remains HOLD while available authorized read-only
+recovery continues.
 
 ## V13 interpretation
 

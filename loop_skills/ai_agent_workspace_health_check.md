@@ -329,7 +329,12 @@ Examples:
 - continue only after source-of-truth alignment
 
 ## Human Seat Return
-What decision must be returned to the human?
+State the exact irreducible decision or new approval that must be returned to
+the human. If none remains, write:
+
+```text
+none — authorized read-only diagnosis or evidence recovery remains AI-owned
+```
 
 ## Public Takeaway
 One sentence.
@@ -431,10 +436,26 @@ Use RED when:
 RED means:
 
 ```text
-Do not continue.
-Reconstruct state first.
-Return seat to the human.
+Do not continue unsafe implementation from ambiguous state.
+Reconstruct state first within existing read authority.
+RED creates no write, repair, branch-change, deletion, or GO authority.
 ```
+
+Route the next step by current authority, not by RED alone:
+
+- An authorized read-only diagnosis or evidence-recovery action remains
+  AI-owned. Do not return it to the human merely because the signal is RED.
+- When an exact, current repair approval already covers the repository, target,
+  operation, scope, count or use, and validity conditions, do not ask for the
+  same approval again. Report the repair as a separate next phase; this
+  diagnostic loop still stops without executing it. An operation name such as
+  branch change or deletion does not by itself invalidate a matching approval.
+- A repair that requires new or expanded authority, or an uncovered
+  irreversible decision, returns the exact remaining decision to the Human
+  Seat. RED itself supplies none of that authority.
+- If identity, ownership, authority, approval coverage, or approval validity is
+  unknown, use `HOLD`. Continue any available authorized read-only recovery and
+  ask the human only for evidence or judgment the AI cannot establish.
 
 ## Hard boundaries
 
@@ -465,7 +486,7 @@ Use the most relevant high-signal trace available: a long session, failed handof
 
 If the input is short/simple/low-complexity, do not overstate the result. Mark it as low-complexity GREEN when appropriate and provide Growth-Path Notes instead of a repair plan.
 
-Return 🟢 / 🟡 / 🔴, evidence, likely failure modes, safest next action, and what decision must return to the human.
+Return 🟢 / 🟡 / 🔴, evidence, likely failure modes, safest next action, and the exact Human Seat decision or `none`.
 ```
 
 ## Why this exists

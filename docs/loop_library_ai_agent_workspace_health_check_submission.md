@@ -125,7 +125,9 @@ One action only.
 
 Do not repair before diagnosis.
 Do not continue if source of truth is unclear.
-Return the decision to the human when continuation is unsafe or ambiguous.
+Keep authorized read-only diagnosis and evidence recovery AI-owned. Return only
+an irreducible decision or new approval to the human; use HOLD when identity,
+ownership, authority, or approval validity is unknown.
 ```
 
 ## Output meaning
@@ -151,6 +153,12 @@ Source of truth, branch state, handoff, accepted state, or next safe action is b
 This loop stops before repair.
 
 It does not rewrite docs, delete files, change branches, or continue implementation.
+
+RED creates no repair authority. A separate exact, current repair approval may
+be reported as the next phase without being requested again, but this diagnostic
+loop does not execute it. New or expanded authority still returns to the Human
+Seat; unknown authority remains HOLD while authorized read-only recovery
+continues.
 
 The first goal is visibility.
 

@@ -97,6 +97,44 @@ Older Material Below:
 HISTORICAL ONLY — older Gate, Next Authorized Action, branch, capability, and Completion Line grant no current authority
 ```
 
+## Workspace Health RED authority-routing repair candidate — 2026-09-06
+
+```text
+State:
+LOCAL REPAIR + VALIDATION COMPLETE / CANONICAL ADMISSION NOT AUTHORIZED
+
+Repository / base:
+shin4141/decision-os-v13-loopkit / 94144c4a034267863963d5a81bd67bd203c8277e
+
+Repair branch:
+codex/workspace-health-red-routing-repair
+
+Repair:
+RED keeps authorized read-only diagnosis AI-owned; an exact current repair
+approval is not requested again and is presented only as a separate phase; new
+authority returns to the Human Seat; unknown identity, owner, or authority is
+HOLD with available authorized read-only recovery; RED creates no write,
+repair, branch-change, deletion, or GO authority
+
+Validation:
+5 / 5 mechanical contract tests, 8 / 8 admission tests, 6 / 6 historical
+current-state regressions, and 56 / 56 handoff acceptance tests PASS; four
+routing cases PASS by static judgment; runtime model behavior NOT RUN
+
+Record:
+validation/workspace_health_red_routing_repair_2026-09-06.md
+
+Missing Closure:
+local commit, then any separately authorized push / PR / merge / current-state
+admission / fetched remote read-back
+
+Next Authorized Action:
+commit only this bounded local repair and stop
+
+Not Authorized:
+push; PR; merge; current Gate change; repair execution from RED; unrelated work
+```
+
 ## 13-43 Responsibility Transfer
 
 ```text
