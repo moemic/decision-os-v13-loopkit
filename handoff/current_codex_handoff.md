@@ -1,5 +1,118 @@
 # Current Codex Handoff — V13 13-42 Closure and 13-43 Transfer
 
+## Canonical Current State — Workspace Health RED Routing Repair Admission Candidate
+
+```text
+Canonical Reconstruction Base:
+5be89c84d1816a2b185cc2f6e85869a9f1e73d11
+
+Current Canonical Main:
+94144c4a034267863963d5a81bd67bd203c8277e at formal-reflection authorization; the admitted canonical main is the fetched merge descendant containing this exact block
+
+Current Layer:
+V13
+
+V12 State:
+PASS — the admitted 13-42 closure remains intact and the bounded Workspace Health RED authority-routing repair and local validation are complete; runtime model behavior remains NOT MEASURED
+
+13-42 Closure:
+ADMITTED in prior fetched origin/main and preserved through this Forward-only repair; this new block is CANDIDATE on a branch or PR
+
+Completed Work:
+the repaired V13 lineage through 13-42 remains intact; Workspace Health RED now preserves AI-owned authorized read-only diagnosis, avoids repeated exact repair approval, returns new authority to the Human Seat, routes unknown authority to HOLD, and creates no write, repair, deletion, branch-change, or GO authority
+
+Canonical Current Capability:
+the repaired V13 lineage through Compact Test Output and 13-42 closure remains current; when this block is admitted from fetched origin/main, Workspace Health RED also separates diagnostic severity from authority and reports an already-authorized repair only as a separate non-executed phase
+
+Current Restart Point:
+validation/workspace_health_red_routing_repair_2026-09-06.md plus the preserved 13-43 responsibility transfer in handoff/current_codex_handoff.md, read from fetched origin/main
+
+Active Branch:
+codex/workspace-health-red-routing-repair before admission; none assigned by this repair after admission
+
+13-42 Historical Branch:
+codex/13-42-closure-13-43-handoff
+
+Current Gate:
+HOLD — no automatic next loop, no invented GO for 13-43, and no repair authority from RED
+
+V13 Self-Repair / Research:
+HOLD — requires a fresh bounded selection and authority
+
+Article / Publication:
+BLOCK — preserve the admitted Compact current-state boundary and do not restart article work
+
+Value Port:
+EXTERNAL OWNERSHIP — Value-Locked side owns any later port; V13 and 13-43 must not run a parallel port
+
+Known Baseline Boundary:
+44 pre-existing creator-live fixed-identity errors remain unchanged and are not repair authority
+
+What 13-43 Now Owns:
+the current V13 canonical state after admitted 13-42 closure and, after this block is admitted, the Workspace Health RED routing clarification; no repair or next loop starts without separate current authority
+
+What Remains Parked:
+V13 self-repair and research, article/publication, Compact expansion, the 44-error repair, unrelated security work, runtime Workspace Health claims, and all Value-port execution
+
+What Must Not Be Inferred:
+RED does not create GO or repair authority; handoff does not accept noncanonical branch state, authorize Value work, reopen article work, or start a new repair or research branch
+
+First One Action:
+fetch origin/main and verify this exact paired block, the bounded repair files, remote content identity, and repair-commit ancestry; if any check fails, HOLD
+
+Do Not Continue Boundary:
+do not execute a Workspace Health repair, start another V13 implementation or research loop, run Value work, restart article work, or publish without separate authority
+
+Operational Cleanup:
+the executing admission AI owns validation, Git delivery, and post-merge read-back; authorized read-only diagnosis and routine cleanup must not be returned to Shin or 13-43
+
+Handoff Responsibility Transfer:
+Handoff is not complete until the receiving AI knows what it now owns.
+
+Completion Line:
+PASS when this exact paired first block and the bounded repair files are remotely reconstructable from fetched origin/main, the repair commit is an ancestor of that ref, required checks pass, and remote content matches
+
+Missing Closure:
+none when this exact block is read from fetched origin/main with content identity and ancestry PASS; on the candidate branch or PR, normal push, required review/checks, merge, and remote read-back remain
+
+Next Authorized Action:
+candidate branch: complete normal PR delivery and fetched remote read-back; fetched origin/main: 13-43 retains the preserved HOLD restart point and no further repair or runtime action starts without fresh authority
+
+Next Actor:
+13-43 Receiving AI after canonical admission; the executing admission AI owns only bounded delivery and read-back
+
+Not Authorized:
+force push; review bypass; RED-derived execution; unrelated repair; runtime model claim; Value work; article restart; publication or external action
+
+Decision Owner:
+Shin
+
+Admission Joint:
+ADMITTED only when this exact matched first block is present in both current surfaces on fetched origin/main and the repair commit is its ancestor; otherwise CANDIDATE / NOT CURRENT
+
+Admission Evidence:
+the bounded repair record, 5 contract tests, 8 admission tests, 6 historical current-state regressions, 56 handoff acceptance tests, static four-case judgment, remote content comparison, and commit ancestry
+
+Remote Read-Back:
+after merge, fetch origin/main and verify the paired first blocks, every bounded repair path, and ancestry before operational COMPLETE
+
+Workspace Health RED Routing:
+authorized read-only diagnosis remains AI-owned; exact current repair approval is not repeated and is reported only as a separate phase; new authority returns to the Human Seat; unknown authority is HOLD; RED creates no execution authority
+
+Runtime Behavior:
+NOT MEASURED — contract and static validation only
+
+Older Material Below:
+HISTORICAL ONLY — older Gate, Next Authorized Action, branch, capability, and Completion Line grant no current authority
+```
+
+Everything below this boundary is preserved historical material. Its older
+`Current Gate`, `Next Authorized Action`, branch, capability, and `Completion
+Line` values cannot be inherited as current authority.
+
+<!-- current-state-history-boundary:workspace-health-red-routing-repair -->
+
+
 ## Canonical Current State — 13-42 Closure Admission Candidate
 
 ```text
@@ -95,6 +208,48 @@ after Human Seat merge, the executing closure AI fetches origin/main and verifie
 
 Older Material Below:
 HISTORICAL ONLY — older Gate, Next Authorized Action, branch, capability, and Completion Line grant no current authority
+```
+
+## Workspace Health RED authority-routing repair candidate — 2026-09-06
+
+```text
+State:
+ADMITTED only after merge and fetched origin/main read-back; otherwise
+FORMAL ADMISSION CANDIDATE
+
+Repository / base:
+shin4141/decision-os-v13-loopkit / 94144c4a034267863963d5a81bd67bd203c8277e
+
+Repair branch:
+codex/workspace-health-red-routing-repair
+
+Repair:
+RED keeps authorized read-only diagnosis AI-owned; an exact current repair
+approval is not requested again and is presented only as a separate phase; new
+authority returns to the Human Seat; unknown identity, owner, or authority is
+HOLD with available authorized read-only recovery; RED creates no write,
+repair, branch-change, deletion, or GO authority
+
+Validation:
+5 / 5 mechanical contract tests, 8 / 8 admission tests, 6 / 6 historical
+current-state regressions, and 56 / 56 handoff acceptance tests PASS; four
+routing cases PASS by static judgment; runtime model behavior NOT RUN
+
+Record:
+validation/workspace_health_red_routing_repair_2026-09-06.md
+
+Missing Closure:
+candidate branch or PR: normal push, required review/checks, merge, paired
+current-state admission, fetched remote read-back, content identity, and ancestry;
+admitted fetched origin/main: none for this bounded repair
+
+Next Authorized Action:
+candidate branch: complete normal PR delivery and admission read-back; admitted
+fetched origin/main: no further repair or runtime action is authorized
+
+Not Authorized:
+force push; review bypass; current Gate change; repair execution from RED;
+unrelated work; runtime model claim
 ```
 
 ## 13-43 Responsibility Transfer
