@@ -1,0 +1,293 @@
+{
+  "schema": "v209-bounded-verification-receipt-v1",
+  "repository": "shin4141/decision-os-v13-loopkit",
+  "canonical_base": "646012d470b53609951d48938fcc78f9c6e35686",
+  "implementation_commit": "2909180092fa4876edcc47752bb0276de3b7641f",
+  "python_version": "3.14.3",
+  "git_version": "git version 2.50.1 (Apple Git-155)",
+  "baseline": {
+    "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+    "command": "python3 -B -m unittest discover -s tests",
+    "runner_summary": [
+      "Ran 1552 tests in 1014.468s",
+      "FAILED (failures=1, errors=44, skipped=15)"
+    ],
+    "exit_code": 1,
+    "log_bytes": 97417,
+    "log_sha256": "9cd840cb827448ee2cef1fafd86eb1265f5e2676b15b8651c87ad1f7a2a8b58c",
+    "failure_identities": [
+      "ERROR: test_44_exact_a3_witness_pass (test_field_notes_creator_live_candidate.A3WitnessTests.test_44_exact_a3_witness_pass)",
+      "ERROR: test_45_a3_wrong_source_offsets_fail (test_field_notes_creator_live_candidate.A3WitnessTests.test_45_a3_wrong_source_offsets_fail)",
+      "ERROR: test_46_a3_wrong_output_bytes_fail (test_field_notes_creator_live_candidate.A3WitnessTests.test_46_a3_wrong_output_bytes_fail)",
+      "ERROR: test_46a_a3_eligible_count_must_equal_one (test_field_notes_creator_live_candidate.A3WitnessTests.test_46a_a3_eligible_count_must_equal_one)",
+      "ERROR: test_46b_coordinator_orders_durable_a2_and_candidate_a3 (test_field_notes_creator_live_candidate.A3WitnessTests.test_46b_coordinator_orders_durable_a2_and_candidate_a3)",
+      "ERROR: test_46c_coordinator_blocks_a3_reentry_during_a2 (test_field_notes_creator_live_candidate.A3WitnessTests.test_46c_coordinator_blocks_a3_reentry_during_a2)",
+      "ERROR: test_46d_failed_a2_transport_never_admits_a3 (test_field_notes_creator_live_candidate.A3WitnessTests.test_46d_failed_a2_transport_never_admits_a3)",
+      "ERROR: test_52_bundle_exact_paths (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_52_bundle_exact_paths)",
+      "ERROR: test_53_bundle_requires_manifest_allowlist (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_53_bundle_requires_manifest_allowlist)",
+      "ERROR: test_54_bundle_rejects_private_identity (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_54_bundle_rejects_private_identity)",
+      "ERROR: test_55_bundle_rejects_unapproved_witness (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_55_bundle_rejects_unapproved_witness)",
+      "ERROR: test_56_bundle_claim_boundary_present (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56_bundle_claim_boundary_present)",
+      "ERROR: test_56a_bundle_rejects_mixed_boundary_receipt (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56a_bundle_rejects_mixed_boundary_receipt)",
+      "ERROR: test_56b_fake_harness_pass_cannot_be_artifact_pass (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56b_fake_harness_pass_cannot_be_artifact_pass)",
+      "ERROR: test_56c_proof_summary_contains_allowlisted_identities (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56c_proof_summary_contains_allowlisted_identities)",
+      "ERROR: test_56d_bundle_rejects_self_consistent_oversized_projection (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56d_bundle_rejects_self_consistent_oversized_projection)",
+      "ERROR: test_57_bundle_is_deterministic (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_57_bundle_is_deterministic)",
+      "ERROR: test_13_compression_passes (test_field_notes_creator_live_candidate.CompressionTests.test_13_compression_passes)",
+      "ERROR: test_14_compression_schema (test_field_notes_creator_live_candidate.CompressionTests.test_14_compression_schema)",
+      "ERROR: test_15_compression_six_decimal_fraction (test_field_notes_creator_live_candidate.CompressionTests.test_15_compression_six_decimal_fraction)",
+      "ERROR: test_16_diff_labels_are_fixed (test_field_notes_creator_live_candidate.CompressionTests.test_16_diff_labels_are_fixed)",
+      "ERROR: test_17_changed_count_is_sum (test_field_notes_creator_live_candidate.CompressionTests.test_17_changed_count_is_sum)",
+      "ERROR: test_19_equal_size_fails_threshold (test_field_notes_creator_live_candidate.CompressionTests.test_19_equal_size_fails_threshold)",
+      "ERROR: test_01_before_exact_identity (test_field_notes_creator_live_candidate.FixedIdentityTests.test_01_before_exact_identity)",
+      "ERROR: test_02_before_line_count (test_field_notes_creator_live_candidate.FixedIdentityTests.test_02_before_line_count)",
+      "ERROR: test_32_witness_binding_pass (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_32_witness_binding_pass)",
+      "ERROR: test_33_witness_binding_has_no_raw_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_33_witness_binding_has_no_raw_identity)",
+      "ERROR: test_34_witness_binding_has_no_text (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_34_witness_binding_has_no_text)",
+      "ERROR: test_35_witness_identity_digest_changes_with_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_35_witness_identity_digest_changes_with_identity)",
+      "ERROR: test_36_witness_rejects_task_prepopulation (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_36_witness_rejects_task_prepopulation)",
+      "ERROR: test_37b_witness_occurrence_counts_are_exact (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_37b_witness_occurrence_counts_are_exact)",
+      "ERROR: test_38_post_a1_gate_pass (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_38_post_a1_gate_pass)",
+      "ERROR: test_39_post_a1_gate_rejects_boundary_reorder (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39_post_a1_gate_rejects_boundary_reorder)",
+      "ERROR: test_39a_post_a1_rejects_mixed_projection_receipts (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39a_post_a1_rejects_mixed_projection_receipts)",
+      "ERROR: test_39b_post_a1_rejects_forged_projection_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39b_post_a1_rejects_forged_projection_identity)",
+      "ERROR: test_39c_post_a1_rejects_source_path_drift (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39c_post_a1_rejects_source_path_drift)",
+      "ERROR: test_39d_post_a1_rejects_forged_witness_source_receipt (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39d_post_a1_rejects_forged_witness_source_receipt)",
+      "ERROR: test_40_a2_requires_pass (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_40_a2_requires_pass)",
+      "ERROR: test_41_a2_rejects_fail (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_41_a2_rejects_fail)",
+      "ERROR: test_41a_a2_requires_exact_note_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_41a_a2_requires_exact_note_identity)",
+      "ERROR: test_41b_a2_rejects_content_identical_different_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_41b_a2_rejects_content_identical_different_identity)",
+      "ERROR: test_42_readback_write_once_and_exact (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_42_readback_write_once_and_exact)",
+      "ERROR: test_43_readback_tamper_fails (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_43_readback_tamper_fails)",
+      "ERROR: test_38_candidate_v01_fixed_identities_unchanged (test_field_notes_creator_live_candidate_v0_2.CompatibilitySchemaAndProtectedStateTests.test_38_candidate_v01_fixed_identities_unchanged)",
+      "FAIL: test_current_canonical_and_handoff_surfaces_are_consistent (test_compound_evidence_meter.CompoundEvidenceMeterCanonicalSurfaceTests.test_current_canonical_and_handoff_surfaces_are_consistent)"
+    ],
+    "exception_counts": [
+      {
+        "exception": "decision_os.companion.field_notes_creator_live_candidate.CandidateFixationError",
+        "code": "COMPRESSION_BEFORE_IDENTITY_INVALID",
+        "count": 41
+      },
+      {
+        "exception": "decision_os.companion.field_notes_creator_live_candidate.CandidateFixationError",
+        "code": "FIXED_ARTIFACT_IDENTITY_DRIFT",
+        "count": 3
+      }
+    ],
+    "local_log": ".test-logs/v209-baseline-full.log",
+    "worktree_role": "fixed-main-baseline"
+  },
+  "focused_logs": [
+    {
+      "local_log": ".test-logs/v209-output-safety-before.log",
+      "bytes": 7373,
+      "sha256": "ee2f8b393c560350f1ad954425aeb89f0b91062375afa4792c4cab85f6fd6f6c",
+      "summary": [
+        "Ran 4 tests in 0.516s",
+        "FAILED (failures=7)"
+      ],
+      "worktree_role": "candidate"
+    },
+    {
+      "local_log": ".test-logs/v209-output-safety-after.log",
+      "bytes": 121,
+      "sha256": "a2d72b148bcd968cf2d77c923b22506cac27d4389722a2c870e78106e380c543",
+      "summary": [
+        "Ran 21 tests in 29.267s",
+        "OK"
+      ],
+      "worktree_role": "candidate"
+    },
+    {
+      "local_log": ".test-logs/v209-admission.log",
+      "bytes": 186,
+      "sha256": "b9b71fb6e4d8633bed8a1f4cc6f321c723e86ded41f25ff04fd3e96024013f06",
+      "summary": [
+        "Ran 85 tests in 140.686s",
+        "OK"
+      ],
+      "worktree_role": "candidate"
+    },
+    {
+      "local_log": ".test-logs/v209-restart-source.log",
+      "bytes": 101,
+      "sha256": "cf56656828b91c19b1bbc73a2dd4bd7c7f7f6054255e2adf058caa1286643984",
+      "summary": [
+        "Ran 3 tests in 2.376s",
+        "OK"
+      ],
+      "worktree_role": "candidate"
+    }
+  ],
+  "implementation_remote_readback": {
+    "implementation_commit": "2909180092fa4876edcc47752bb0276de3b7641f",
+    "remote_ref": "refs/remotes/origin/codex/v209-restart-security-bounded",
+    "remote_tip": "2909180092fa4876edcc47752bb0276de3b7641f",
+    "readback_utc": "2026-09-08T01:03:04.836026+00:00",
+    "paths": [
+      {
+        "path": "AGENTS.md",
+        "git_blob": "a1a37220cf9cad1f764c57e8ce718df228b711b8",
+        "sha256": "40277d8d3ec376b58acef7175787d218e2c23397215511c60cef2ae84bcd4cc5"
+      },
+      {
+        "path": "decision_os/cli.py",
+        "git_blob": "9c3a9527bcd0d550e39c60f2c92fcd0063d1a2bb",
+        "sha256": "65d86a3c0c3a5d90fddac978a0b08b7211e4951be04a49943e73bdf07c01706f"
+      },
+      {
+        "path": "docs/current_signal.md",
+        "git_blob": "c2e365b5e0bf040d6479e61c3ac232921979ec85",
+        "sha256": "e75c2a5a6bef6d0f0557f27d9a5766baade839c4cb46f0acab928c53c1b9facd"
+      },
+      {
+        "path": "handoff/current_codex_handoff.md",
+        "git_blob": "c898870c40e0857994f427d73e517dc39d75da02",
+        "sha256": "e5432d31368eede3e439def52ae85181d98bd95486df43dd4a572703d1e9f8e9"
+      },
+      {
+        "path": "tests/test_decision_os_check_output_safety.py",
+        "git_blob": "3a1f87ecd7d213446d97f4726deb438bd05509ed",
+        "sha256": "a43acc719d7b3ebe6033ed08ad6f154f92b980a9a5f8c8dde55ee79dd6fc3839"
+      },
+      {
+        "path": "tests/test_v209_restart_surface.py",
+        "git_blob": "5741b4d06c9f005cd65cd7157f198d7ec693d93e",
+        "sha256": "640a7fc0a95d35cb686c423f73490c10df2c65fcf7293b35c41cef1ab040ebc7"
+      },
+      {
+        "path": "validation/v13_13_42_closure_trajectory.md",
+        "git_blob": "a62583e1b8a73e06cff9b7b3649e5dc92dc6649c",
+        "sha256": "daac9360f3b19be2fbbe18aee76478aa9052d1e7e0f020cfa86dbc6c4ec10965"
+      },
+      {
+        "path": "validation/v209_restart_security_bounded.md",
+        "git_blob": "76732e4303f7a452ffb3e05099c14fd7dcaff331",
+        "sha256": "2e173e7cecb1bf7425cb4d85b3bfa9ddd5cccc421c947e4403583a403ce29bc8"
+      },
+      {
+        "path": "validation/v209_source_manifest.json",
+        "git_blob": "482f5503d8e00c5ee23fce1c62dd998cf2f27c36",
+        "sha256": "29d7ca864eb3d9358ae6b2a286205b8fc724a02be768502d836204f0a31f7848"
+      }
+    ],
+    "status": "PASS",
+    "scope": "branch content delivery only; canonical admission pending"
+  },
+  "candidate_secret_scan_metadata": {
+    "tracked_paths": 589,
+    "matches_metadata_only": [
+      {
+        "kind": "credential_url",
+        "path": "tests/test_acceleration_store.py",
+        "matches": 1
+      },
+      {
+        "kind": "credential_url",
+        "path": "tests/test_decision_os_check_output_safety.py",
+        "matches": 3
+      },
+      {
+        "kind": "credential_url",
+        "path": "tests/test_decision_os_scan.py",
+        "matches": 1
+      }
+    ]
+  },
+  "candidate_full_suite": {
+    "source_commit": "2909180092fa4876edcc47752bb0276de3b7641f",
+    "command": "python3 -B -m unittest discover -s tests",
+    "runner_summary": [
+      "Ran 1559 tests in 1027.037s",
+      "FAILED (failures=1, errors=44, skipped=15)"
+    ],
+    "exit_code": 1,
+    "log_bytes": 100389,
+    "log_sha256": "4f36dc21ae8a51a8b68cd2c5e758ee4f55d34eda589752b0fd6a5b59fb32daa7",
+    "local_log": ".test-logs/v209-candidate-full.log",
+    "worktree_role": "candidate",
+    "failure_identities": [
+      "ERROR: test_44_exact_a3_witness_pass (test_field_notes_creator_live_candidate.A3WitnessTests.test_44_exact_a3_witness_pass)",
+      "ERROR: test_45_a3_wrong_source_offsets_fail (test_field_notes_creator_live_candidate.A3WitnessTests.test_45_a3_wrong_source_offsets_fail)",
+      "ERROR: test_46_a3_wrong_output_bytes_fail (test_field_notes_creator_live_candidate.A3WitnessTests.test_46_a3_wrong_output_bytes_fail)",
+      "ERROR: test_46a_a3_eligible_count_must_equal_one (test_field_notes_creator_live_candidate.A3WitnessTests.test_46a_a3_eligible_count_must_equal_one)",
+      "ERROR: test_46b_coordinator_orders_durable_a2_and_candidate_a3 (test_field_notes_creator_live_candidate.A3WitnessTests.test_46b_coordinator_orders_durable_a2_and_candidate_a3)",
+      "ERROR: test_46c_coordinator_blocks_a3_reentry_during_a2 (test_field_notes_creator_live_candidate.A3WitnessTests.test_46c_coordinator_blocks_a3_reentry_during_a2)",
+      "ERROR: test_46d_failed_a2_transport_never_admits_a3 (test_field_notes_creator_live_candidate.A3WitnessTests.test_46d_failed_a2_transport_never_admits_a3)",
+      "ERROR: test_52_bundle_exact_paths (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_52_bundle_exact_paths)",
+      "ERROR: test_53_bundle_requires_manifest_allowlist (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_53_bundle_requires_manifest_allowlist)",
+      "ERROR: test_54_bundle_rejects_private_identity (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_54_bundle_rejects_private_identity)",
+      "ERROR: test_55_bundle_rejects_unapproved_witness (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_55_bundle_rejects_unapproved_witness)",
+      "ERROR: test_56_bundle_claim_boundary_present (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56_bundle_claim_boundary_present)",
+      "ERROR: test_56a_bundle_rejects_mixed_boundary_receipt (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56a_bundle_rejects_mixed_boundary_receipt)",
+      "ERROR: test_56b_fake_harness_pass_cannot_be_artifact_pass (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56b_fake_harness_pass_cannot_be_artifact_pass)",
+      "ERROR: test_56c_proof_summary_contains_allowlisted_identities (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56c_proof_summary_contains_allowlisted_identities)",
+      "ERROR: test_56d_bundle_rejects_self_consistent_oversized_projection (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_56d_bundle_rejects_self_consistent_oversized_projection)",
+      "ERROR: test_57_bundle_is_deterministic (test_field_notes_creator_live_candidate.BehaviorAndBundleTests.test_57_bundle_is_deterministic)",
+      "ERROR: test_13_compression_passes (test_field_notes_creator_live_candidate.CompressionTests.test_13_compression_passes)",
+      "ERROR: test_14_compression_schema (test_field_notes_creator_live_candidate.CompressionTests.test_14_compression_schema)",
+      "ERROR: test_15_compression_six_decimal_fraction (test_field_notes_creator_live_candidate.CompressionTests.test_15_compression_six_decimal_fraction)",
+      "ERROR: test_16_diff_labels_are_fixed (test_field_notes_creator_live_candidate.CompressionTests.test_16_diff_labels_are_fixed)",
+      "ERROR: test_17_changed_count_is_sum (test_field_notes_creator_live_candidate.CompressionTests.test_17_changed_count_is_sum)",
+      "ERROR: test_19_equal_size_fails_threshold (test_field_notes_creator_live_candidate.CompressionTests.test_19_equal_size_fails_threshold)",
+      "ERROR: test_01_before_exact_identity (test_field_notes_creator_live_candidate.FixedIdentityTests.test_01_before_exact_identity)",
+      "ERROR: test_02_before_line_count (test_field_notes_creator_live_candidate.FixedIdentityTests.test_02_before_line_count)",
+      "ERROR: test_32_witness_binding_pass (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_32_witness_binding_pass)",
+      "ERROR: test_33_witness_binding_has_no_raw_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_33_witness_binding_has_no_raw_identity)",
+      "ERROR: test_34_witness_binding_has_no_text (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_34_witness_binding_has_no_text)",
+      "ERROR: test_35_witness_identity_digest_changes_with_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_35_witness_identity_digest_changes_with_identity)",
+      "ERROR: test_36_witness_rejects_task_prepopulation (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_36_witness_rejects_task_prepopulation)",
+      "ERROR: test_37b_witness_occurrence_counts_are_exact (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_37b_witness_occurrence_counts_are_exact)",
+      "ERROR: test_38_post_a1_gate_pass (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_38_post_a1_gate_pass)",
+      "ERROR: test_39_post_a1_gate_rejects_boundary_reorder (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39_post_a1_gate_rejects_boundary_reorder)",
+      "ERROR: test_39a_post_a1_rejects_mixed_projection_receipts (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39a_post_a1_rejects_mixed_projection_receipts)",
+      "ERROR: test_39b_post_a1_rejects_forged_projection_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39b_post_a1_rejects_forged_projection_identity)",
+      "ERROR: test_39c_post_a1_rejects_source_path_drift (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39c_post_a1_rejects_source_path_drift)",
+      "ERROR: test_39d_post_a1_rejects_forged_witness_source_receipt (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_39d_post_a1_rejects_forged_witness_source_receipt)",
+      "ERROR: test_40_a2_requires_pass (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_40_a2_requires_pass)",
+      "ERROR: test_41_a2_rejects_fail (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_41_a2_rejects_fail)",
+      "ERROR: test_41a_a2_requires_exact_note_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_41a_a2_requires_exact_note_identity)",
+      "ERROR: test_41b_a2_rejects_content_identical_different_identity (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_41b_a2_rejects_content_identical_different_identity)",
+      "ERROR: test_42_readback_write_once_and_exact (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_42_readback_write_once_and_exact)",
+      "ERROR: test_43_readback_tamper_fails (test_field_notes_creator_live_candidate.WitnessAndGateTests.test_43_readback_tamper_fails)",
+      "ERROR: test_38_candidate_v01_fixed_identities_unchanged (test_field_notes_creator_live_candidate_v0_2.CompatibilitySchemaAndProtectedStateTests.test_38_candidate_v01_fixed_identities_unchanged)",
+      "FAIL: test_current_canonical_and_handoff_surfaces_are_consistent (test_compound_evidence_meter.CompoundEvidenceMeterCanonicalSurfaceTests.test_current_canonical_and_handoff_surfaces_are_consistent)"
+    ],
+    "exception_counts": [
+      {
+        "exception": "decision_os.companion.field_notes_creator_live_candidate.CandidateFixationError",
+        "code": "COMPRESSION_BEFORE_IDENTITY_INVALID",
+        "count": 41
+      },
+      {
+        "exception": "decision_os.companion.field_notes_creator_live_candidate.CandidateFixationError",
+        "code": "FIXED_ARTIFACT_IDENTITY_DRIFT",
+        "count": 3
+      }
+    ]
+  },
+  "claim_boundary": "branch delivery is not canonical admission; no runtime security certification",
+  "local_worktree_names": {
+    "candidate": "v209-restart-security-bounded",
+    "fixed-main-baseline": "v209-baseline-verification"
+  },
+  "comparison": {
+    "failure_identity_set_equal": true,
+    "failure_identity_count": 45,
+    "new_failure_identities": [],
+    "removed_failure_identities": [],
+    "error_codes_and_counts_equal": true,
+    "baseline_tests": 1552,
+    "candidate_tests": 1559,
+    "new_tests": 7,
+    "new_tests_passed": 7,
+    "baseline_failures": 1,
+    "candidate_failures": 1,
+    "baseline_errors": 44,
+    "candidate_errors": 44,
+    "baseline_skips": 15,
+    "candidate_skips": 15,
+    "original_tests_and_hashes_changed": false
+  },
+  "recorded_at_utc": "2026-09-08T01:20:10.323643+00:00"
+}
