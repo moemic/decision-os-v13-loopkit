@@ -124,15 +124,37 @@ admission. The reviewer performed no edits, tests or fetch in either re-read.
   to preserve the fixture's actual Gate; no original test was modified.
 - Repair B focused verification: 21 tests PASS, 29.267s, exit 0 (4 new safety
   tests plus existing check CLI and scan CLI suites).
-- Full fixed-main baseline: RUNNING; final counts and failure identities must
-  replace this line before branch delivery.
+- Full fixed main at `646012d470b53609951d48938fcc78f9c6e35686`: 1,552 tests,
+  1 failure, 44 errors, 15 skips; 1014.468s, exit 1.
+- Full candidate at `2909180092fa4876edcc47752bb0276de3b7641f`: 1,559 tests,
+  1 failure, 44 errors, 15 skips; 1027.037s, exit 1.
+- Failure identity sets: exactly equal, 45/45, with no added or removed failure.
+  Error causes match: 41 `COMPRESSION_BEFORE_IDENTITY_INVALID` and 3
+  `FIXED_ARTIFACT_IDENTITY_DRIFT`. All seven new tests pass. The one
+  `test_compound_evidence_meter.CompoundEvidenceMeterCanonicalSurfaceTests.test_current_canonical_and_handoff_surfaces_are_consistent`
+  failure retains the historical `None. Stop.` expectation. The bounded
+  candidate action text differs as declared; that stale expectation is not repaired.
+- Exact results, all failure identities and full-log SHA-256/byte counts:
+  [verification receipt](v209_verification_receipt.json). Full logs remain in
+  ignored `.test-logs/` in the named baseline/candidate worktrees.
+- Candidate secret scan: 589 tracked paths; all five credential-URL matches
+  are synthetic fixtures in three test files. No live-secret candidate or
+  tracked symlink was detected.
 - Admission, historical, RED and handoff regressions: 85 tests PASS,
   140.686s, exit 0. This includes generic admission 8, preserved historical 6,
   RED wording 5, handoff acceptance 56 and handoff CLI 10.
 - Source manifest / link / history retention checks: 3 tests PASS, 2.376s.
   All 23 source identities and all 8 RED paths resolve; full old state and
   trajectory bytes remain unchanged. All 14 protected v0.1 blobs are unchanged.
-- Branch commit / push / remote read-back: PENDING.
+- Implementation `2909180092fa4876edcc47752bb0276de3b7641f` was pushed to
+  `origin/codex/v209-restart-security-bounded`. Exact remote-tip and all nine
+  changed-file byte comparisons passed. The receipt binds that fixed witness.
+- No tracked file changed during the candidate full suite. Subsequent changes
+  are this validation record and its receipt only; the final metadata commit
+  is resolved from the same work-branch ref and read back before task closure.
+- Generated `.pyc` files from these two task-owned test worktrees were removed;
+  source/history and full logs remain. Other worktrees were not cleaned.
+- `git diff --check`: PASS. No PR, merge, main write or external send occurred.
 
 The known baseline is 44 fixed creator-live identity errors and one current-state
 consistency failure. Its previous observation is not repair authority. The
@@ -173,6 +195,41 @@ trajectory index, before its historical delimiter.
   runtime equivalence measurement.
 - Full old bytes remain preserved below the new boundaries. The normal AGENTS
   operating contract is common context and excluded from both counts.
+
+## Preserved non-route discrepancy
+
+`docs/ai_reading_order.md` names `docs/trajectory/V13_TRAJECTORY.md` in a
+third-party-fork exclusion list, but that path is absent at the inspected
+baseline. It is outside the active restart route. V209 binds the actual
+existing validation trajectory and records the discrepancy without another repair.
+
+## Canonical base report
+
+```text
+V12 State:
+PASS — two bounded repairs verified; implementation branch delivery read back; final verification metadata is delivered on the same branch
+
+V13 Next Loop Gate:
+HOLD
+
+Reason:
+No new test failure; original history and hashes preserved. V209 remains a branch admission candidate.
+
+Next Authorized Action:
+Shin decides the one PR/main admission question; a receiver verifies the recorded branch delivery before relying on it; no new execution loop.
+
+Not Authorized:
+main direct write or unapproved merge; external action or authority expansion; fixture/hash weakening or unselected repair
+
+Decision Packet Required:
+yes — only for PR/main admission, using the fixed branch and this verification evidence
+
+Decision Owner:
+Shin
+
+Completion Line:
+Both implementation and validation metadata are committed, pushed and read back; canonical admission remains separately gated.
+```
 
 ## Completion and re-entry
 
