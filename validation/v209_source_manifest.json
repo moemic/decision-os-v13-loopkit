@@ -1,0 +1,205 @@
+{
+  "schema": "v209-bounded-source-manifest-v1",
+  "repository": "shin4141/decision-os-v13-loopkit",
+  "as_of_utc": "2026-09-08",
+  "canonical_base": "646012d470b53609951d48938fcc78f9c6e35686",
+  "scope": "Exact baseline sources for V209 restart and bounded security inspection; not execution authority. Candidate artifact identity is the containing Git commit, not this baseline manifest.",
+  "red_implementation_commit": "96eaba7838b991d83346a321138db28b30d82931",
+  "red_admission_commit": "f9e663669d2d356d1581aa268101d072fc9713de",
+  "red_repair_paths": [
+    "docs/current_signal.md",
+    "docs/examples/workspace_health_check_red_example.md",
+    "docs/loop_library_ai_agent_workspace_health_check.md",
+    "docs/loop_library_ai_agent_workspace_health_check_submission.md",
+    "handoff/current_codex_handoff.md",
+    "loop_skills/ai_agent_workspace_health_check.md",
+    "tests/test_workspace_health_red_routing.py",
+    "validation/workspace_health_red_routing_repair_2026-09-06.md"
+  ],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "3d142ee52306b397303e6ab938a95fc71d9e59ee",
+      "sha256": "a133af6c3096dc3f00830df94a29244aa76718e960b344d98f830e9748651908",
+      "bytes": 15504,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "MISTAKEN.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "8470e800f00693f144eb9a6b33d9af9dcd5742be",
+      "sha256": "70d0fbf4c8c73afaa6e7cc4d694ecd2204188e0c86497dc5673b11bd3e948251",
+      "bytes": 5949,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "decision_os/checks.py",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "fa304eb1361e09c0ee7213aa3a6899ec867507a6",
+      "sha256": "0c7174c5d270bbaf5df00d1e1d089dfb884c5dce4e9206c09d394170fa1c516c",
+      "bytes": 24763,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "decision_os/cli.py",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "148542f5c8d9663dd2195e2c1f148954d7d4d241",
+      "sha256": "33786f40c620c1836cfaf88367c438ef7e8588fab163bc8fe699799ce0be2667",
+      "bytes": 23066,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "decision_os/scan.py",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "01b3f697ad0cfe862937cbcc9ae4f1b29ad11720",
+      "sha256": "51462e8e31dc46b74596cf2f90ae2cfb76356374d97f3c1c69a06dea9c773570",
+      "bytes": 33335,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "docs/context_compression.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "5e1ca2d91c1dff0666fdaa7c6b07f6579cc09207",
+      "sha256": "5c7e5fa68a7e5a7b8837d98b8dc159c3ca759e2c267c6102058e92ec4c06b516",
+      "bytes": 9738,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "docs/current_signal.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "7c3e579afa9e408e8131c950191708f974cbe5d9",
+      "sha256": "4e2a8b07b9e2e306cdf8c4bb9f57a5b547bafdce50d2d5d534c2b0d19f1ef6f9",
+      "bytes": 128097,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "docs/examples/workspace_health_check_red_example.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "f54193b852eed227edfc9a0ae77914feebb25598",
+      "sha256": "4636d22f5ccc286dba78423bc35e8740bbcd3ec53ee658f380edec5a2099f32b",
+      "bytes": 3456,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "docs/field_note_lifecycle.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "3cbca04dc9cc70a4137a5a629f61f6b1f5484f07",
+      "sha256": "046a42b50d3999989cfa31864ba3fb31c8b8d39051a54044bb474e64342383d2",
+      "bytes": 1607,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "docs/handoff_command.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "7ce12bf250cd486844c568777312064491340112",
+      "sha256": "89dedff27ecb46ff2579eb769145f1123c97b57768544400d299adb7cb77b58b",
+      "bytes": 1902,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "docs/loop_library_ai_agent_workspace_health_check.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "a05aad10d32b6b2227911ca577a3b0dbd9158afb",
+      "sha256": "38665286c76c24946326102a8a102a40bf241f4df7abe786e0ec4ff177419e0e",
+      "bytes": 5527,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "docs/loop_library_ai_agent_workspace_health_check_submission.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "53426fe9e096455f84a90d168eaac91f4be43d68",
+      "sha256": "4e5bce9370a6a686ef89283744d69d94e85be7a1dc6873eb39f4a4b7c9e17646",
+      "bytes": 5764,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "handoff/current_codex_handoff.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "e405b1294800836cbad4446bc280fcd76aa81718",
+      "sha256": "7b644ece8695cc3c62bfd76a3358e963175909571a628e05991087783d5341b7",
+      "bytes": 257219,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "loop_skills/ai_agent_workspace_health_check.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "2a9256200cad8789d87efb80c0ea3d4631d50ff5",
+      "sha256": "961627b2a975d39d67bd4b3999b3c6d9c1537fdf999ede134a404057379a2499",
+      "bytes": 13129,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "tests/test_13_42_13_43_historical_regression.py",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "0475325c64c771537ddc697662dc2257b39c8441",
+      "sha256": "7b61fc429ea83d61e00b58cda896f56cce4368776fda34ed7804c4cf331dab14",
+      "bytes": 9670,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "tests/test_compound_evidence_meter.py",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "7482d232441b1f87a47fc4545175ed57f5f3825e",
+      "sha256": "06c2a9519af33b4112900c449fe2ad8f95bdd371983ca73d10dd3d4fbb61d32f",
+      "bytes": 13830,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "tests/test_current_state_admission.py",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "ace16124a7d110b17bf50d8dc609d14ccb560f89",
+      "sha256": "ddeae6cabcdcd4df07d7f7012f94618a8d059f370caa75b7c2b3eb5af821975f",
+      "bytes": 12729,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "tests/test_workspace_health_red_routing.py",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "daf40389da46fd1704e217c1e98be0649a85e0dd",
+      "sha256": "ad9e8cbd7119eb4a8bd0bbe706db9e8d700859e3f71fb296b15d13365deb16fc",
+      "bytes": 2790,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "validation/v13_13_204_field_note_canon_authority_inventory.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "55d035f10cb8425a4b694d1a4edc4db458e4a378",
+      "sha256": "37fc309f974293578d3f20826829934645bdfbedf9738985ee56cc5ec3f54baa",
+      "bytes": 109792,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "validation/v13_13_206_bounded_contract_repair.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "bf81e015b921fc5f7605a2c4dfa57cfa8e5534eb",
+      "sha256": "d197c758b4eaa12b644707fc1515a2eaaafc0f3c9d9966a96138ebba13ae2dc9",
+      "bytes": 5805,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "validation/v13_13_207_fable_public_evaluation_contract.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "1a8748a5f718c9b5c681b63fb0a05605446298ae",
+      "sha256": "884fc6c4fa605bcbfef1bf79ab25cad87d081d4b5be4cb067c570cd317565714",
+      "bytes": 8301,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "validation/v13_13_42_closure_trajectory.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "535a999b730158873d3be72f7c2f868329dbab2a",
+      "sha256": "ee8da275e735a9f7f5ae1f59accfc902c355968ea0c530a42e34340dfd7f1ffc",
+      "bytes": 7699,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    },
+    {
+      "path": "validation/workspace_health_red_routing_repair_2026-09-06.md",
+      "source_commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "git_blob": "3a8baa22c1343bcbf022d3197fec30d1b7abe94d",
+      "sha256": "c25560ff6555f1d78d31689b8d4bf12c21efa6501c21f6cf644b8af7520967b6",
+      "bytes": 4626,
+      "role": "baseline evidence; current status must be read from admitted first block"
+    }
+  ]
+}

@@ -4,6 +4,27 @@ Before generating or changing files, preserve the purpose of this repository:
 
 > This repository exists to convert completed work into governed next-loop decisions.
 
+## Resuming this canonical repository
+
+When resuming this repository's own work, use this bounded reading order:
+
+1. Establish repository/remote identity, fetched `origin/main`, local branch,
+   dirty state, other worktrees, and current task authority before any write.
+2. Read only the first fenced blocks in `docs/current_signal.md` and
+   `handoff/current_codex_handoff.md`; compare them and apply the admission
+   joint below. A candidate on a work branch is not the canonical current state.
+3. Follow the first block's Current Restart Point. The compact causal index in
+   `validation/v13_13_42_closure_trajectory.md` connects fixed source identities,
+   changed judgments, unresolved differences, and recheck conditions. It is
+   evidence subordinate to the admitted pair, not another authority surface.
+4. Stop there unless an unresolved question requires a named deeper source.
+   Use `docs/context_compression.md` and `docs/handoff_command.md` for the
+   transfer; old blocks and Field Notes never create execution authority.
+
+This route is for upstream V13 continuation, not first-contact onboarding or a
+third-party fork's current state. Respect any current Main-Write Pause: perform
+only separately authorized work in an isolated worktree and work branch.
+
 ## External Intelligence onboarding router
 
 If the user asks about External Intelligence, this repository's tutorial,

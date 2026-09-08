@@ -1,3 +1,116 @@
+# Current Codex Handoff — V209 Bounded Restart / Security Admission Candidate
+
+This is a branch candidate until the exact admission joint below is satisfied.
+The current canonical baseline inspected for this task is `646012d470b53609951d48938fcc78f9c6e35686`.
+
+```text
+Canonical Reconstruction Base:
+5be89c84d1816a2b185cc2f6e85869a9f1e73d11
+
+Current Canonical Main:
+646012d470b53609951d48938fcc78f9c6e35686 at V209 inspection; after separately approved admission, the fetched merge descendant containing this exact block is current
+
+Current Layer:
+V13
+
+V12 State:
+PASS — admitted 13-42 and Workspace Health RED closure remain intact; V209 candidate verification and delivery are recorded separately, not inferred from this historical PASS
+
+13-42 Closure:
+ADMITTED at 4931f23d51b598cc4c3c9d0d184d7bc68091d801 and preserved through 646012d470b53609951d48938fcc78f9c6e35686
+
+Completed Work:
+13-42 security/authority repair lineage, Git isolation, admission joint, Compact Test Output and RED routing are on the inspected main; V209 adds a bounded restart index and check CLI diagnostic minimization as an unadmitted candidate
+
+Canonical Current Capability:
+the repaired V13 lineage through RED routing remains current at the inspection base; V209 changes become canonical only after separate admission and exact remote read-back
+
+Current Restart Point:
+this admitted paired first block, then validation/v13_13_42_closure_trajectory.md#v209-compact-restart; candidate delivery evidence is validation/v209_restart_security_bounded.md
+
+Active Branch:
+codex/v209-restart-security-bounded for authorized candidate delivery only; none assigned after admission
+
+13-42 Historical Branch:
+codex/13-42-closure-13-43-handoff
+
+Current Gate:
+HOLD — no automatic next loop, no RED-derived execution, no authority from this compression
+
+V13 Self-Repair / Research:
+HOLD — a fresh bounded selection and authority are required
+
+Article / Publication:
+BLOCK — no article restart or publication
+
+Value Port:
+EXTERNAL OWNERSHIP — the Value-Locked side owns any later port; V13 and 13-43 do not run a parallel port
+
+Known Baseline Boundary:
+44 fixed-identity errors and one current-state consistency failure were previously reported; latest fixed-main reproduction and exact outcomes are in the V209 validation record; no fixture/hash rebaseline authority
+
+What 13-43 Now Owns:
+the admitted HOLD restart point, its causal evidence and unresolved boundaries; an unmerged V209 branch supplies review evidence only
+
+What Remains Parked:
+new V13 features/research, article/publication, Compact expansion, fixture repair, unselected security repairs, runtime claims, and all Value-port execution
+
+What Must Not Be Inferred:
+branch push is not canonical admission; historical PASS, advisory memory, RED, compression and successful tests do not grant execution authority
+
+First One Action:
+verify repository identity and the exact fetched main pair, then follow its Current Restart Point; if main differs from the inspection base, inspect that bounded delta before inheriting any claim
+
+Do Not Continue Boundary:
+no main write, merge, release, external posting or sending, permission change, secret movement, or additional repair without current authority
+
+Operational Cleanup:
+the V209 closing AI owns its tests, source checks, commit, work-branch push and read-back; 13-43 owns later authorized read-only reconstruction, not an inferred new loop
+
+Handoff Responsibility Transfer:
+Handoff is not complete until the receiving AI knows what it now owns.
+
+Completion Line:
+PASS when the candidate's evidence and exact branch commit are reconstructable and, for canonical completion only, Shin's separate admission is followed by paired origin/main read-back and ancestry verification
+
+Missing Closure:
+none for the recorded prior 13-42/RED admission at the inspection base; V209 remains CANDIDATE / NOT CURRENT until separate PR/main approval, required review/checks and canonical read-back
+
+Next Authorized Action:
+candidate branch: finish authorized validation and delivery, then request the single Shin PR/main decision; fetched origin/main: 13-43 verifies the admitted restart point and retains HOLD without a new execution loop
+
+Next Actor:
+V209 closing AI for branch delivery; Shin for the final PR/main decision; 13-43 receiving AI for separately authorized canonical reconstruction
+
+Not Authorized:
+main direct write or merge; PR creation before Shin approval; release, external action, permission change or secret movement; fixture/hash weakening; authority expansion
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only when this exact matched first block is read from fetched origin/main and the admitted change and reconstruction base are ancestors
+
+Admission Evidence:
+validation/v209_restart_security_bounded.md and validation/v209_source_manifest.json; tests and hashes retain their original meaning and do not prove runtime safety
+
+Remote Read-Back:
+work-branch read-back proves delivery only; after separately approved merge, fetch origin/main and verify the exact pair, change ancestry and content identity before canonical COMPLETE
+
+Workspace Health RED Routing:
+authorized read-only recovery remains AI-owned; an exact current repair approval is not repeated; new authority returns to Shin; unknown authority stays HOLD
+
+Runtime Behavior:
+NOT MEASURED — no live model, external attack, external send or runtime-safety certification in V209
+
+Older Material Below:
+HISTORICAL ONLY — preserved bytes explain causality; older Gate, Next Authorized Action, branch and Completion Line grant no current authority
+```
+
+Everything below is preserved historical material and cannot be inherited as current authority.
+
+<!-- current-state-history-boundary:v209-restart-security -->
+
 # Current Codex Handoff — V13 13-42 Closure and 13-43 Transfer
 
 ## Canonical Current State — Workspace Health RED Routing Repair Admission Candidate

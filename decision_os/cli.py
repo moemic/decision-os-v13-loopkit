@@ -36,7 +36,7 @@ from .intake import invalid_payload as intake_invalid_payload
 from .intake import validate_intake_file
 from .intake_text import render_text as render_intake_text
 from .scan import failure_payload as scan_failure_payload
-from .scan import scan_repository
+from .scan import _sanitize_origin, scan_repository
 from .scan_text import render_text
 from .public_claim_guard import (
     BLOCK as PUBLIC_CLAIM_BLOCK,
@@ -705,6 +705,35 @@ def _run_public_claim(
     return exit_code
 
 
+def _check_output_payload(payload: dict[str, Any]) -> dict[str, Any]:
+    """Keep legacy check evidence intact while bounding its public diagnostics."""
+
+    items = []
+    for item in payload["evidence"]:
+        rendered = dict(item)
+        detail = item.get("detail")
+        if item.get("check") == "git.repository" and isinstance(detail, dict):
+            detail = dict(detail)
+            origin = detail.get("origin")
+            detail["origin"] = (
+                _sanitize_origin(origin)["identity"] or "UNKNOWN"
+                if isinstance(origin, str) and origin != "UNKNOWN"
+                else "UNKNOWN"
+            )
+            rendered["detail"] = detail
+        elif (
+            item.get("check") == "git.worktree"
+            and isinstance(detail, dict)
+            and "stderr" in detail
+        ):
+            rendered["detail"] = {
+                **detail,
+                "stderr": "Git worktree inspection failed; raw diagnostic withheld.",
+            }
+        items.append(rendered)
+    return {**payload, "evidence": items}
+
+
 def main(
     argv: Sequence[str] | None = None,
     *,
@@ -761,11 +790,11 @@ def main(
         payload = _failure_payload(
             "runner.internal",
             {
-                "message": str(exc),
+                "message": "Repository inspection failed; raw diagnostic withheld.",
                 "type": type(exc).__name__,
             },
         )
         exit_code = EXIT_INTERNAL
 
-    _write(payload, output)
+    _write(_check_output_payload(payload), output)
     return exit_code
