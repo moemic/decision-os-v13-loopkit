@@ -1015,6 +1015,7 @@ Field notes are not the first reading path. They are evidence of what the repo r
 
 Examples:
 
+- [Field Note 145 — Result difference and AI operations value](field_notes/145_result_difference_to_ai_operations_value.md) — operational value, value recognition, and behavior; Field Note candidate / Verification pending.
 - `field_notes/099_handoff_responsibility_transfer.md` — broken handoff responsibility transfer.
 - `field_notes/100_session_size_context_risk.md` — session size becoming Context Risk.
 - `field_notes/062_public_entry_friction_review.md` — public entry friction.
