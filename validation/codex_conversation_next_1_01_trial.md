@@ -16,7 +16,7 @@ Automatic Batch Execution:
 NONE
 
 Current Recorded Runs:
-0
+1
 
 Compounding Evidence:
 NOT YET ESTABLISHED
@@ -113,4 +113,68 @@ YES / NO / NOT YET ESTABLISHED
 
 ## Recorded Runs
 
-None yet. The first entry is created by the first user-triggered `♻️` Run.
+### Run 1
+
+```text
+Run:
+1
+
+Triggered At:
+2026-09-17T03:46:21Z
+
+Pre-Run State:
+branch codex/13-conversation-recycle-trigger;
+HEAD 249d85143321112744736ce552008b1c5880d65f;
+clean worktree; one commit ahead and zero behind local origin/main
+
+Evidence Read:
+AGENTS.md conditional route;
+docs/current_signal.md and handoff/current_codex_handoff.md first blocks;
+docs/codex_conversation_next_1_01.md;
+docs/roadmap_anchors.md;
+docs/self_repair_diagnostic.md;
+Field Notes 021, 022, 023, and 024;
+this trial record
+
+Compared Candidates:
+1. complete and record the first ordinary-conversation trigger;
+2. add more tests or documentation before use;
+3. push, open a PR, or reflect the connection to main;
+4. do nothing / wait
+
+Selected 1.01:
+Complete and record the first ordinary-conversation trigger without another
+product change.
+
+Selection Reason:
+Within the inspected candidates and evidence, the earliest missing required
+node was real use: the connection was implemented and statically checked but
+had zero user-triggered Runs. More test or documentation work would optimize
+an easier local task; external delivery is outside current authority; waiting
+has no unmet prerequisite.
+
+Execution:
+EXECUTED
+
+Verification / Observed Result:
+PASS — the same Codex conversation routed the standalone trigger, selected one
+bounded action, executed it without another model or server, and stopped after
+recording. `python3 -B -m decision_os check .` returned V12 PASS / V13 HOLD
+with both current-state surfaces parsed and no contradiction; `git diff
+--check` passed.
+
+Human Questions / Confirmations During Run:
+0 — no routine decision was returned to Shin
+
+Known User Correction Since Prior Run:
+Initial pre-trial correction: the entry is the ordinary Codex conversation,
+not Companion, a separate server, or a dedicated button.
+
+Resulting State Delta:
+The exact standalone symbol reached the routed procedure in the same Codex
+conversation; Run 1 evidence was added without product/runtime changes.
+
+Counts As Compounding Evidence:
+NOT YET ESTABLISHED — this is first-use route evidence, not evidence of an
+accumulating downstream improvement.
+```
