@@ -33,7 +33,11 @@ PRE_13_42_CLOSURE_SHA256 = {
         "d3dfe6700bdf7d6cf9c083f674626ebe73b2ccb345f8504425e1cd5a5561e511"
     ),
 }
-RECONSTRUCTED_MAIN = "5be89c84d1816a2b185cc2f6e85869a9f1e73d11"
+V209_RECONSTRUCTION_BASE = "5be89c84d1816a2b185cc2f6e85869a9f1e73d11"
+CURRENT_RECONSTRUCTION_BASE = "42e406e858b05b6b8aff5cc6669cf10ad506b424"
+READER_ENTRY_BOUNDARY = (
+    "<!-- current-state-history-boundary:conversation-recycle-reader-entry -->"
+)
 
 
 def current_block(relative_path: str) -> str:
@@ -64,69 +68,59 @@ class Historical13_42And13_43RegressionTests(unittest.TestCase):
             "current_canonical_main",
             "current_layer",
             "v12_state",
-            "13_42_closure",
             "completed_work",
             "canonical_current_capability",
             "current_restart_point",
             "active_branch",
             "current_gate",
-            "v13_self_repair_research",
-            "article_publication",
-            "value_port",
-            "known_baseline_boundary",
-            "what_13_43_now_owns",
-            "what_remains_parked",
-            "what_must_not_be_inferred",
-            "first_one_action",
-            "do_not_continue_boundary",
-            "operational_cleanup",
-            "handoff_responsibility_transfer",
             "completion_line",
             "missing_closure",
             "next_authorized_action",
-            "next_actor",
             "not_authorized",
             "decision_owner",
             "admission_joint",
             "admission_evidence",
             "remote_read_back",
+            "reader_ownership_boundary",
+            "reader_workspace_decision_owner",
+            "companion_status",
+            "runtime_evidence_boundary",
             "older_material_below",
         }
         self.assertEqual(set(), required_fields.difference(fields))
         self.assertEqual(
-            RECONSTRUCTED_MAIN,
+            CURRENT_RECONSTRUCTION_BASE,
             fields["canonical_reconstruction_base"][0],
         )
         self.assertTrue(fields["current_gate"][0].startswith("HOLD"))
-        self.assertIn("13-43", fields["next_authorized_action"][0])
-        self.assertTrue(fields["value_port"][0].startswith("EXTERNAL OWNERSHIP"))
+        self.assertIn("readers may follow the README path", fields["next_authorized_action"][0])
         self.assertEqual("Shin", fields["decision_owner"][0])
-        self.assertIn("Handoff is not complete until the receiving AI knows what it now owns.", signal_block)
-        self.assertIn("codex/13-42-closure-13-43-handoff", signal_block)
-        self.assertIn("Value-Locked side", signal_block)
+        self.assertIn("not automatically Shin", fields["reader_workspace_decision_owner"][0])
+        self.assertTrue(fields["companion_status"][0].startswith("UNDER DEVELOPMENT"))
+        self.assertIn("one fresh isolated Codex task", fields["runtime_evidence_boundary"][0])
 
     def test_repository_check_reads_only_the_new_current_authority(self) -> None:
         payload, exit_code = inspect_repository(REPO_ROOT)
         self.assertEqual(EXIT_OK, exit_code)
         self.assertEqual("PASS", payload["v12_state"])
         self.assertEqual("HOLD", payload["v13_gate"])
-        self.assertIn("13-43", payload["next_authorized_action"])
+        self.assertIn("readers may follow the README path", payload["next_authorized_action"])
 
     def test_reconstruction_base_is_real_and_ancestral(self) -> None:
         completed = subprocess.run(
-            ("git", "-C", str(REPO_ROOT), "merge-base", "--is-ancestor", RECONSTRUCTED_MAIN, "HEAD"),
+            ("git", "-C", str(REPO_ROOT), "merge-base", "--is-ancestor", CURRENT_RECONSTRUCTION_BASE, "HEAD"),
             capture_output=True,
             check=False,
             text=True,
         )
         self.assertEqual(0, completed.returncode, completed.stderr)
         title = subprocess.run(
-            ("git", "-C", str(REPO_ROOT), "show", "-s", "--format=%s", RECONSTRUCTED_MAIN),
+            ("git", "-C", str(REPO_ROOT), "show", "-s", "--format=%s", CURRENT_RECONSTRUCTION_BASE),
             capture_output=True,
             check=True,
             text=True,
         ).stdout.strip()
-        self.assertIn("Merge pull request #150", title)
+        self.assertIn("Merge pull request #160", title)
 
     def test_post_merge_reader_on_origin_main_recovers_steady_state(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -165,23 +159,57 @@ class Historical13_42And13_43RegressionTests(unittest.TestCase):
                 observed_blocks.append(block)
 
         self.assertEqual(observed_blocks[0], observed_blocks[1])
-        self.assertNotEqual(RECONSTRUCTED_MAIN, observed_head)
+        self.assertNotEqual(CURRENT_RECONSTRUCTION_BASE, observed_head)
         fields = parse_fields(observed_blocks[0] or "")
         self.assertIn("current_canonical_main", fields)
         self.assertEqual(
-            RECONSTRUCTED_MAIN,
+            CURRENT_RECONSTRUCTION_BASE,
             fields["canonical_reconstruction_base"][0],
         )
         self.assertTrue(fields["current_gate"][0].startswith("HOLD"))
         self.assertTrue(
             fields["canonical_current_capability"][0].startswith(
-                "the repaired V13 lineage"
+                "after admission"
             )
         )
         self.assertIn("fetched merge descendant", fields["current_canonical_main"][0])
-        self.assertTrue(fields["missing_closure"][0].startswith("none"))
-        self.assertIn("fetched origin/main: 13-43", fields["next_authorized_action"][0])
+        self.assertIn("after the exact admission joint passes, none", fields["missing_closure"][0])
+        self.assertIn("readers may follow the README path", fields["next_authorized_action"][0])
         self.assertTrue(fields["completion_line"][0].startswith("PASS when"))
+
+    def test_v209_frontier_remains_exact_history_below_reader_entry(self) -> None:
+        historical_blocks = []
+        for relative_path in SURFACES:
+            with self.subTest(relative_path=relative_path):
+                text = (REPO_ROOT / relative_path).read_text(encoding="utf-8")
+                self.assertEqual(1, text.count(READER_ENTRY_BOUNDARY))
+                history = text.split(READER_ENTRY_BOUNDARY, 1)[1]
+                block = first_fenced_block(history)
+                self.assertIsNotNone(block)
+
+                fixed_text = run_git(
+                    REPO_ROOT,
+                    "show",
+                    f"{CURRENT_RECONSTRUCTION_BASE}:{relative_path}",
+                ).stdout
+                fixed_block = first_fenced_block(fixed_text)
+                self.assertEqual(fixed_block, block)
+                historical_blocks.append(block or "")
+
+        self.assertEqual(historical_blocks[0], historical_blocks[1])
+        fields = parse_fields(historical_blocks[0])
+        self.assertEqual(
+            V209_RECONSTRUCTION_BASE,
+            fields["canonical_reconstruction_base"][0],
+        )
+        self.assertIn("13-43", fields["next_authorized_action"][0])
+        self.assertTrue(fields["value_port"][0].startswith("EXTERNAL OWNERSHIP"))
+        self.assertIn(
+            "Handoff is not complete until the receiving AI knows what it now owns.",
+            historical_blocks[0],
+        )
+        self.assertIn("codex/13-42-closure-13-43-handoff", historical_blocks[0])
+        self.assertIn("Value-Locked side", historical_blocks[0])
 
     def test_pre_13_42_closure_surfaces_remain_byte_preserved_history(self) -> None:
         for relative_path in SURFACES:
