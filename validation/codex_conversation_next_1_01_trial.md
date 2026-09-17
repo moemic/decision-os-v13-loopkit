@@ -9,8 +9,9 @@ Shin
 Entry:
 Send exactly ♻️ in the ordinary Codex conversation for this repository.
 
-Initial Trial Target:
-3 separately user-triggered Runs
+Initial Observation Window:
+up to 3 separately user-triggered Runs; this is not a completion target and
+must not select or generate work
 
 Automatic Batch Execution:
 NONE
@@ -28,7 +29,9 @@ not count as a trial Run.
 
 The record distinguishes selection from execution. A selected action is not
 recorded as executed without execution evidence. Three selections from the
-same material state do not establish accumulating improvement.
+same material state do not establish accumulating improvement. This file is an
+output sink for work selected from the current Aspire and state; its run count
+is not an objective, required node, candidate, or reason to act.
 
 ## Setup Verification — Not a Trial Run
 
@@ -245,4 +248,49 @@ corrections and zero re-explanations before Run 2; no product behavior changed.
 Counts As Compounding Evidence:
 NO — this is a new burden observation from materially the same product state,
 not a second accumulated improvement.
+```
+
+## Connection Audit Correction — Not Run 3
+
+The Run 1 and Run 2 blocks above are retained as the contemporaneous history.
+This correction changes their current interpretation without deleting or
+rewriting what was recorded.
+
+```text
+Audit Trigger:
+Shin's correction after Run 2 that ♻️ is shorthand for the broad existing
+Aspire-grounded Next-1.01 request, not a request to advance the trial procedure
+
+Run 1 Candidate-Scope Finding:
+The record proves comparison only among first-trigger completion, more
+tests/docs, external delivery, and waiting. It does not prove comparison of the
+broader operational candidate range.
+
+Run 2 Selection-Reason Finding:
+The recorded reason explicitly made “the trial's next missing fact” the target.
+It deprioritized more tests/docs, treated main reflection as later Human Seat,
+and rejected waiting because a new observation existed. The record does not
+show that maintenance, cost, repair, investigation, feature, model, or
+environment candidates were examined or blocked by authority or dependencies.
+
+Objective-Substitution Finding:
+YES — in Run 1 and especially Run 2, completing or enriching the trial record
+replaced the broader Aspire-grounded selection objective. Those Runs remain
+valid entrance and record-path observations, but not evidence that ♻️ selected
+the currently most effective repository-wide 1.01.
+
+Burden Observation Preserved:
+0 Human-Seat questions or confirmations were issued during each recorded Run;
+no correction, clarification, or task-restatement message appeared between
+Run 1's result and the Run 2 trigger.
+
+Burden Claim Withdrawn:
+The sentence that Run 1's post-result burden became “measured as zero” is not
+admitted. Absence of an intervening correction message does not establish zero
+cognitive, review, or deferred-correction burden. Shin's current correction is
+the first explicit evidence that route interpretation imposed material
+follow-up burden after Run 2.
+
+Run Count:
+Remains 2. This audit and repair are not Run 3.
 ```
