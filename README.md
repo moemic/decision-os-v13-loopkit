@@ -6,6 +6,86 @@
 ![Local read-only scan](https://img.shields.io/badge/scan-local%20read--only-blue)
 ![Human approval for changes](https://img.shields.io/badge/changes-human%20approval%20required-orange)
 
+## Start one governed next action in Codex / Codexで最初の一回
+
+`♻️` is a short form of this ordinary-language request:
+
+> From my current Aspire, current state, and existing judgment rules, choose
+> the most effective next 1.01; execute, verify, and record it once within my
+> permission; then stop.
+
+It can choose among evidence-backed maintenance, cost reduction, repair,
+investigation, feature work, recording, and waiting. It is not a dedicated
+button or an automatic loop. One standalone `♻️` in the normal Codex input
+runs at most one selection and one already-authorized action, verifies and
+records the result, and stops.
+
+### Required environment
+
+- a personal fork or another writable copy of public `main`;
+- the repository root opened as a Codex project on a writable branch or
+  isolated worktree; and
+- the tools required by the action Codex eventually selects.
+
+No Companion process, server, second model, or special button is required.
+Python and repository checks may be needed for selected code changes, but no
+extra runtime is required merely to send the command.
+
+### Prepare once in the normal conversation
+
+Send this first, replacing the four short values. Codex should confirm the
+setup without starting work:
+
+```text
+このworkspaceのDecision Ownerは私です。
+Aspire: <このworkspaceを何へ近づけたいか>
+現在地: <いま完了していること／詰まっていること>
+守る条件: <変更禁止、予算、期限、外部送信禁止など>
+一回の♻️で許可する範囲: <例: このbranch内のlocalな文書・test変更、検証、commitまで>
+
+この4点をこの会話の初回前提として確認してください。
+Shinやupstreamの目的・現在地・Gate・権限を私のものとして継承せず、
+まだ実行しないでください。結果を変える不足があれば質問は一つだけにしてください。
+```
+
+This setup belongs to the current user and workspace. In a fork or personal
+copy, `Shin` and the upstream current-state files remain upstream history; they
+do not authorize or describe the new owner's work, and their task-specific
+boundaries are not silently imported. The generally applicable safety rules in
+`AGENTS.md` still control repository work. For a durable direction, reuse
+[`templates/user_roadmap_anchors.md`](templates/user_roadmap_anchors.md). For a
+durable restart point, reuse
+[`handoff/current_codex_handoff.md`](handoff/current_codex_handoff.md) only when
+file changes are inside the declared permission. No new settings layer is
+required for the first Run.
+
+### Run the first one
+
+After Codex confirms the setup, send exactly this as a new message:
+
+```text
+♻️
+```
+
+The route is defined in
+[`docs/codex_conversation_next_1_01.md`](docs/codex_conversation_next_1_01.md).
+Codex should briefly show the compared candidates, why one won, and the exact
+permission boundary before acting. It then performs one bounded action,
+checks the result, leaves a conversation result or an authorized existing
+record, and stops.
+
+Read the outcome this way:
+
+- **Done:** the selected local action ran and its verification is shown.
+- **Human judgment needed:** Codex returns one concrete decision and stops
+  before the unapproved boundary.
+- **Waiting:** no useful authorized action is currently supported; the missing
+  condition or re-entry trigger is shown.
+
+Zero questions is an interaction count, not proof of zero human burden. Send
+another `♻️` only when you deliberately want another separately initiated
+Run; Codex must not emit or chain the next command itself.
+
 ## External intelligence for decisions that survive the chat
 
 ### The problem
@@ -217,26 +297,6 @@ That trial also requires no install, fork, or repository change. If it helps,
 use the full [Next-Action Confidence
 Check](copy-paste/next-action-confidence-check.md), then consider the
 [Fork + Codex Quickstart](docs/fork_codex_quickstart.md).
-
-## Optional Companion: your coding agent asks once. The next Run remembers.
-
-1. The agent asks whether it may modify a file.
-2. You choose **Use for this repository**. This saves permission for this
-   repository, action, and exact path for future Runs.
-3. A fresh later Run may reuse that permission without showing the same diff
-   again. Future proposed content may differ; the saved Default does not bind
-   future reuse to the current diff or content.
-4. After the later Run passes its checkpoint, it records a Verified Save and
-   emits a local Acceleration Receipt.
-
-In the creator-owned human live proof for the first Claude Agent SDK adapter,
-the human explicitly selected option 2 in Run 1. A separate, fresh Run 2 showed
-no second option prompt and ended with `VERIFIED_SAVE`. Its Receipt recorded
-1 Save and 1 Verified Reuse; 7.5 minutes, ¥625, and 9,467 tokens are estimates.
-
-This is creator-owned human live proof, not external-user adoption or
-third-party certification. [See the Verified Save Claude MVP
-guide.](docs/verified_save_claude_mvp_v0_1.md)
 
 ## Turn one AI incident into a paste-ready rule
 
@@ -1093,6 +1153,34 @@ bounded; `PASS` does not automatically mean `GO`.
 
 - Start with [`USE_CASES.md`](USE_CASES.md) for common loop-governance scenarios.
 - Copy and paste [`prompts/v13_loop_review.md`](prompts/v13_loop_review.md) after a completed work report to produce a V13 Loop Record.
+
+## Optional Companion: your coding agent asks once. The next Run remembers.
+
+The Companion is **under development** and optional. It is not used by the
+normal Codex conversation `♻️` route above; that route needs no Companion
+process, server, UI, or dedicated button. Do not delay the first conversation
+Run to install or start it.
+
+The currently confirmed scope is narrower:
+
+1. The agent asks whether it may modify a file.
+2. You choose **Use for this repository**. This saves permission for this
+   repository, action, and exact path for future Runs.
+3. A fresh later Run may reuse that permission without showing the same diff
+   again. Future proposed content may differ; the saved Default does not bind
+   future reuse to the current diff or content.
+4. After the later Run passes its checkpoint, it records a Verified Save and
+   emits a local Acceleration Receipt.
+
+In the creator-owned human live proof for the first Claude Agent SDK adapter,
+the human explicitly selected option 2 in Run 1. A separate, fresh Run 2 showed
+no second option prompt and ended with `VERIFIED_SAVE`. Its Receipt recorded
+1 Save and 1 Verified Reuse; 7.5 minutes, ¥625, and 9,467 tokens are estimates.
+
+That is creator-owned evidence for this bounded adapter path, not confirmation
+that the whole Companion is complete, required by Codex, externally adopted,
+or third-party certified. [See the Verified Save Claude MVP
+guide.](docs/verified_save_claude_mvp_v0_1.md)
 
 ## Current Status
 

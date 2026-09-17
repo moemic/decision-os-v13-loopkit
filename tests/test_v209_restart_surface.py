@@ -56,6 +56,16 @@ class V209RestartSurfaceTests(unittest.TestCase):
                 self.assertEqual(1, data.count(boundary.encode()))
                 self.assertTrue(data.endswith(original), "historical source bytes changed")
 
+    def test_later_o69_record_stays_forward_of_the_history_boundary(self) -> None:
+        path = ROOT / "validation/v13_13_42_closure_trajectory.md"
+        data = path.read_text()
+        boundary = "<!-- trajectory-history-boundary:v209-restart-security -->"
+        o69 = "## O-8 / O-69 テスト境界レビュー比較の保存 — 2026-09-10"
+
+        self.assertEqual(1, data.count(boundary))
+        self.assertEqual(1, data.count(o69))
+        self.assertLess(data.index(o69), data.index(boundary))
+
     def test_compact_restart_links_and_exact_commits_resolve(self) -> None:
         path = ROOT / "validation/v13_13_42_closure_trajectory.md"
         text = path.read_text().split("<!-- trajectory-history-boundary:v209-restart-security -->")[0]

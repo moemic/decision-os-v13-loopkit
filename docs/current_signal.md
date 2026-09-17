@@ -1,3 +1,82 @@
+# Current Signal — Conversation Recycle Reader Entry Admission Candidate
+
+This is a branch candidate until the exact admission joint below is satisfied.
+The canonical reconstruction base inspected for this task is
+`42e406e858b05b6b8aff5cc6669cf10ad506b424`.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+42e406e858b05b6b8aff5cc6669cf10ad506b424 at reader-entry authorization; after separately approved admission, the fetched merge descendant containing this exact block is current
+
+Current Layer:
+V13 — public conversation recycle reader entry
+
+V12 State:
+PASS — the existing conversation route, reader-owned entry, O-69 history-boundary repair, focused regression and one fresh isolated reader Run are complete on the candidate; canonical admission remains pending
+
+Completed Work:
+the prior route and Run 1–3 evidence are retained; README now leads from reader-owned setup to one normal conversation trigger; fork ownership and result boundaries are explicit; Companion is optional and marked under development; O-69 evidence is preserved forward of the V209 history boundary; one fresh task completed the setup and exact-trigger path
+
+Canonical Current Capability:
+after admission, a public-main reader can define their own Aspire, current state, protected conditions and one-Run authority, send standalone ♻️ in normal Codex input, receive one bounded selection and authorized execution with verification/recording, and stop without Companion
+
+Current Restart Point:
+this paired first block, then README.md#start-one-governed-next-action-in-codex--codexで最初の一回, docs/codex_conversation_next_1_01.md and validation/codex_conversation_recycle_reader_entry_publication_readiness.md
+
+Active Branch:
+codex/13-conversation-recycle-trigger until canonical admission; none assigned by this work after admission
+
+Current Gate:
+HOLD — one trigger permits at most one already-authorized Run; no automatic next loop, paper publication, release, tag, SNS action or Companion expansion follows
+
+Completion Line:
+PASS when the exact paired block and bounded reader-entry files are read back from fetched origin/main, the reconstruction base and admitted change are ancestors, required checks pass, and remote content matches
+
+Missing Closure:
+on the candidate branch, final commit/push, PR review and checks, merge, and fetched origin/main read-back; after the exact admission joint passes, none for this reader-entry task
+
+Next Authorized Action:
+candidate branch: finish bounded validation and approved PR/main delivery; fetched origin/main after admission: readers may follow the README path under their own declared authority, while each later Run requires a separate trigger
+
+Not Authorized:
+paper publication, release, tag or SNS posting; automatic or batch ♻️ execution; importing Shin's Aspire, Gate or authority into a reader workspace; Companion development or completion claims; unrelated repair or feature growth
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only when this exact matched first block and the bounded change are read from fetched origin/main and the reconstruction base is its ancestor
+
+Admission Evidence:
+validation/codex_conversation_recycle_reader_entry_publication_readiness.md, validation/codex_conversation_reader_owned_live_trial_001.md, the focused regression set, exact history-suffix/content checks, PR review/checks and remote read-back
+
+Remote Read-Back:
+after merge, fetch origin/main and verify the exact paired first blocks, every bounded changed path, admitted-change and reconstruction-base ancestry, and remote content identity before canonical COMPLETE
+
+Reader Ownership Boundary:
+repository identity does not transfer decision ownership; upstream state remains evidence only in a fork or personal copy unless its actual owner explicitly adopts a boundary; generally applicable AGENTS.md safety rules continue to control
+
+Reader Workspace Decision Owner:
+the actual user or maintainer of that workspace, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — not required or used by the normal Codex conversation ♻️ route; existing creator-owned adapter evidence retains its narrow meaning
+
+Runtime Evidence Boundary:
+one fresh isolated Codex task observed setup, exact trigger, comparison, one capped local action, verification, recording and stop; general reliability, zero human burden, repeated compounding, external adoption and multi-model equivalence are NOT ESTABLISHED
+
+Older Material Below:
+HISTORICAL ONLY — preserved bytes explain prior V209 and earlier authority; older Gate, Next Authorized Action, branch, capability and Completion Line grant no current authority
+```
+
+Everything below is preserved historical material and cannot be inherited as
+current authority.
+
+<!-- current-state-history-boundary:conversation-recycle-reader-entry -->
+
 # Current Signal — V209 Bounded Restart / Security Admission Candidate
 
 This is a branch candidate until the exact admission joint below is satisfied.
