@@ -6,6 +6,27 @@
 ![Local read-only scan](https://img.shields.io/badge/scan-local%20read--only-blue)
 ![Human approval for changes](https://img.shields.io/badge/changes-human%20approval%20required-orange)
 
+## Update: conversation ♻️ / 更新案内
+
+[PR #161](https://github.com/shin4141/decision-os-v13-loopkit/pull/161) added
+one normal-Codex-conversation `♻️` Run: compare next actions, execute within
+your permission, verify, record, and stop. It may also choose to wait.
+Companion is optional, under development, and not needed for this route.
+
+**既存利用者へ：** 自分の変更を残したままforkをupstreamの最新mainと同期し、
+下の手順で「Aspire・現在地・守る条件・一回の許可範囲」を設定してください。
+確認後、別メッセージで単独の `♻️` を送ります。選択・許可範囲内の実行・
+検証・記録を一回行って停止し、必要な改善がなければ待機します。
+Companionの導入は不要です。
+
+**Existing users:** sync your fork with upstream main while preserving your
+own changes, then follow the four-field setup below before sending a standalone
+`♻️`. Syncing does not grant new permissions.
+
+**確認範囲 / Evidence:** one fresh isolated Codex trial completed this path.
+General reliability, repeated compounding, and cost savings are not established.
+See the [recorded trial](validation/codex_conversation_reader_owned_live_trial_001.md).
+
 ## Start one governed next action in Codex / Codexで最初の一回
 
 `♻️` is a short form of this ordinary-language request:
