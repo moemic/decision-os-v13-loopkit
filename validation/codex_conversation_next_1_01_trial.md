@@ -16,7 +16,7 @@ Automatic Batch Execution:
 NONE
 
 Current Recorded Runs:
-1
+2
 
 Compounding Evidence:
 NOT YET ESTABLISHED
@@ -170,6 +170,10 @@ Known User Correction Since Prior Run:
 Initial pre-trial correction: the entry is the ordinary Codex conversation,
 not Companion, a separate server, or a dedicated button.
 
+Post-Run Correction / Re-explanation Before Run 2:
+0 — Shin's next message was only the standalone `♻️`; no correction,
+clarification, or task restatement was supplied.
+
 Resulting State Delta:
 The exact standalone symbol reached the routed procedure in the same Codex
 conversation; Run 1 evidence was added without product/runtime changes.
@@ -177,4 +181,68 @@ conversation; Run 1 evidence was added without product/runtime changes.
 Counts As Compounding Evidence:
 NOT YET ESTABLISHED — this is first-use route evidence, not evidence of an
 accumulating downstream improvement.
+```
+
+### Run 2
+
+```text
+Run:
+2
+
+Triggered At:
+2026-09-17T04:10:27Z
+
+Pre-Run State:
+branch codex/13-conversation-recycle-trigger;
+HEAD ebe59190d17feb77d3bd676be38f303e0cc4e42c;
+clean worktree; two commits ahead and zero behind local origin/main
+
+Evidence Read:
+AGENTS.md conditional route;
+matching first blocks in docs/current_signal.md and
+handoff/current_codex_handoff.md;
+docs/codex_conversation_next_1_01.md;
+Run 1 in this trial record;
+unchanged roadmap, self-repair, required-node, Gate, CAP, Carrier, and re-entry
+criteria retained from the same conversation
+
+Compared Candidates:
+1. reconcile Run 1's post-result correction and re-explanation burden;
+2. add more tests or documentation;
+3. ask for main reflection now;
+4. do nothing / wait
+
+Selected 1.01:
+Reconcile the newly observed zero-correction, zero-re-explanation interval for
+Run 1 and preserve it with the Run 2 record.
+
+Selection Reason:
+Within the inspected candidates and evidence, the trial's next missing fact
+was post-result human burden. The standalone Run 2 trigger directly supplied
+that evidence. More tests or documentation would optimize an easier local
+task; main reflection remains a later Human-Seat decision; waiting would leave
+the new observation unrecorded.
+
+Execution:
+EXECUTED
+
+Verification / Observed Result:
+PASS — Run 1's post-result observation and Run 2 were recorded without product
+or runtime changes. `python3 -B -m decision_os check .` returned V12 PASS /
+V13 HOLD with both current-state surfaces parsed and no contradiction; `git
+diff --check` passed.
+
+Human Questions / Confirmations During Run:
+0 — no routine decision was returned to Shin
+
+Known User Correction Since Prior Run:
+none — the only intervening user input was the standalone `♻️`
+
+Resulting State Delta:
+Run 1's post-result burden changed from not yet observed to measured as zero
+corrections and zero re-explanations before Run 2; no product behavior changed.
+
+Counts As Compounding Evidence:
+NO — this is a new burden observation from materially the same product state,
+not a second accumulated improvement.
 ```
