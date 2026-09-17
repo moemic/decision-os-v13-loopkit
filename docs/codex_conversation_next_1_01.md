@@ -19,6 +19,40 @@ Field Note UI.
 There is no dedicated button, server, Companion process, or second model in
 this route. The user sends `♻️` through the ordinary Codex input field.
 
+## First-use setup and ownership boundary
+
+Before a new owner sends the first trigger, the current conversation or a
+user-owned workspace record must establish four things:
+
+1. the user's Aspire;
+2. the user's current state;
+3. the conditions that must be protected; and
+4. the operations one `♻️` Run is allowed to perform.
+
+The compact setup message in `README.md` is sufficient. A user who wants a
+durable direction can reuse `templates/user_roadmap_anchors.md`; a user who
+authorizes a durable restart record can reuse
+`handoff/current_codex_handoff.md`. Neither file is required merely to confirm
+the first conversation setup, and no new settings layer is required.
+
+Repository identity does not transfer decision ownership. `Shin` is the
+Decision Owner for the upstream canonical repository's own state. In a fork,
+personal copy, or reader trial, the actual owner or maintainer is the Decision
+Owner. Do not inherit Shin's Aspire, current state, Gate, approval, branch
+authority, or publication boundary as the new user's state.
+
+This ownership separation does not disable generally applicable repository
+safety rules. `AGENTS.md` continues to control work in the repository unless a
+fork owner explicitly and safely changes their own copy.
+
+Likewise, the upstream `docs/current_signal.md`,
+`handoff/current_codex_handoff.md`, trajectory, and validation records are
+upstream evidence in a reader-owned workspace. They are not that reader's
+current state unless the reader explicitly asks to resume or evaluate upstream
+work. If reader-owned setup is missing, ask at most one question whose answer
+would change the first action; do not execute from the upstream state by
+default.
+
 ## Input Equivalence and Selection Objective
 
 These two inputs use the same selection path:
@@ -35,15 +69,19 @@ authority, or stop condition.
 
 Resolve the selection objective from the current Decision-Owner-defined
 Aspire, the active operational goal if one exists, the admitted current state,
-and `docs/roadmap_anchors.md`. The mechanics of this command, the trial-log
-length, and a target number of trials are not the objective and do not become
-candidates merely because `♻️` was used.
+and the applicable roadmap anchors. For upstream canonical work, the admitted
+pair and `docs/roadmap_anchors.md` apply. For a reader-owned workspace, use the
+reader's setup and any fork-owned anchors instead; the upstream roadmap is
+historical context, not the reader's direction. The mechanics of this command,
+the trial-log length, and a target number of trials are not the objective and
+do not become candidates merely because `♻️` was used.
 
 ## Authority Boundary
 
 The current invocation, whether standalone `♻️` or its ordinary-language
-equivalent, authorizes one bounded local loop under this command. It does not
-grant authority for:
+equivalent, requests one bounded local loop and authorizes only the operations
+already declared for that conversation and workspace. It does not grant
+authority for:
 
 - merge or direct write to `main`;
 - push, PR creation, release, deployment, publication, or external sending;
@@ -66,14 +104,17 @@ Read only the minimum evidence needed to decide the next action:
    `origin/main` identity, and worktree status. State when remote freshness was
    not checked; do not fetch merely by habit.
 2. Resolve the selection objective using **Input Equivalence and Selection
-   Objective** above. Preserve any current explicit owner objective and
+   Objective** above. Preserve the actual current owner's objective and
    authorization, but do not substitute command setup or trial completion for
    the Aspire-serving objective.
-3. Read the first current-state block in `docs/current_signal.md` and
-   `handoff/current_codex_handoff.md`. Confirm whether the pair matches. Do not
-   inherit an older block below its historical boundary.
-4. Read `docs/roadmap_anchors.md` and `docs/self_repair_diagnostic.md` only as
-   needed for the judgment.
+3. For upstream canonical work, read the first current-state block in
+   `docs/current_signal.md` and `handoff/current_codex_handoff.md`, confirm that
+   the pair matches, and do not inherit an older historical block. For a
+   reader-owned workspace, use the reader's confirmed setup and fork-owned
+   state instead; do not import the upstream pair as current authority.
+4. Read the applicable roadmap anchors and `docs/self_repair_diagnostic.md`
+   only as needed for the judgment. Do not use Shin's upstream roadmap as the
+   direction of a new owner.
 5. Read prior outcome records only when they can change the current judgment.
    During the initial observation window, use at most the latest three entries
    in `validation/codex_conversation_next_1_01_trial.md`. Treat their results,
@@ -158,7 +199,7 @@ Never interpret successful execution as permission to start another loop.
 
 ### 4. Record and close
 
-During the declared initial observation window, append one compact run entry to
+During the upstream route's declared initial observation window, append one compact run entry to
 `validation/codex_conversation_next_1_01_trial.md` **after** the selected work
 has completed or stopped. Outside that window, use the existing task-appropriate
 validation, handoff, or result record. The record is an output sink, not a
@@ -178,6 +219,12 @@ source of work. It contains:
 Reconcile that field at the next `♻️` if the intervening conversation supplies
 evidence. Three selections from materially the same state do not count as
 three compounding improvements.
+
+A reader-owned Run is not part of the upstream observation window and must not
+append to the upstream trial file. Its minimum record is the returned
+conversation result. When the setup authorizes a durable file record, reuse the
+task-appropriate existing handoff, validation, example, or documentation
+surface; do not create a configuration layer merely to store the command.
 
 Distinguish directly observed interaction counts from inferred human burden.
 For example, “no correction message was received before the next trigger” is

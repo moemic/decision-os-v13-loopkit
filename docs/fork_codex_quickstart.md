@@ -60,6 +60,27 @@ surfaces automatically. `MANUAL` and `REMOVE` require an explicit file-change
 approval and must preserve memory, notes, handoff, reusable intelligence,
 rules, and V12/V13 operation.
 
+## Run your first conversation `♻️`
+
+If the user came here to run one governed next action rather than continue the
+Quest tutorial, use the four-field setup at the top of `README.md`: the user's
+Aspire, current state, protected conditions, and the operations permitted for
+one Run. Confirm the setup without acting, then wait for the user to send a
+standalone `♻️` in the normal Codex input.
+
+The fork owner is the Decision Owner for that workspace. Do not inherit Shin's
+Aspire, upstream Gate, current-state pair, branch authority, or publication
+boundary as the fork owner's state. Upstream current-state and validation files
+remain evidence about upstream unless the owner explicitly asks to resume or
+evaluate that work.
+
+One trigger compares bounded candidates including waiting, executes at most one
+already-authorized action, verifies and records its result, and stops. It is not
+an automatic loop and does not use the optional Companion. The conversation
+result is the minimum record. If file recording is authorized, reuse an
+existing task-appropriate surface such as the fork-owned handoff; do not append
+a reader Run to the upstream trial log.
+
 ## What V13 can help with
 
 V13 helps after an AI-assisted task or loop, when the question is not only "is it done?" but:

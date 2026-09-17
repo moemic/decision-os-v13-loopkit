@@ -10,6 +10,62 @@ def read(path: str) -> str:
 
 
 class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
+    def test_00a_readme_exposes_reader_owned_conversation_recycle_entry(self) -> None:
+        readme = read("README.md")
+        route = read("docs/codex_conversation_next_1_01.md")
+        quickstart = read("docs/fork_codex_quickstart.md")
+
+        entry = readme.split(
+            "## Start one governed next action in Codex / Codexで最初の一回",
+            1,
+        )[1].split("## External intelligence for decisions that survive the chat", 1)[0]
+
+        self.assertLess(
+            readme.index("## Start one governed next action in Codex"),
+            readme.index("## External intelligence for decisions that survive the chat"),
+        )
+        for field in ("Aspire:", "現在地:", "守る条件:", "一回の♻️で許可する範囲:"):
+            self.assertIn(field, entry)
+        for category in (
+            "maintenance",
+            "cost reduction",
+            "repair",
+            "investigation",
+            "feature work",
+            "recording",
+            "waiting",
+        ):
+            self.assertIn(category, entry)
+        for outcome in ("**Done:**", "**Human judgment needed:**", "**Waiting:**"):
+            self.assertIn(outcome, entry)
+
+        self.assertIn("a personal fork or another writable copy", entry)
+        self.assertIn("normal Codex input", entry)
+        self.assertIn("No Companion process, server, second model", entry)
+        self.assertIn("Shinやupstreamの目的・現在地・Gate・権限", entry)
+        self.assertIn("まだ実行しないでください", entry)
+        self.assertIn("docs/codex_conversation_next_1_01.md", entry)
+        self.assertEqual(entry.count("```text\n♻️\n```"), 1)
+        self.assertIn("Zero questions is an interaction count", entry)
+
+        for text in (route, quickstart):
+            self.assertIn("fork", text.lower())
+            self.assertIn("Decision Owner", text)
+            self.assertIn("Do not inherit Shin", text)
+            self.assertIn("upstream", text)
+        self.assertIn("must not\nappend to the upstream trial file", route)
+        self.assertIn("does not use the optional Companion", quickstart)
+
+        companion = readme.index(
+            "## Optional Companion: your coding agent asks once. "
+            "The next Run remembers."
+        )
+        self.assertGreater(companion, readme.index("## Practical Use"))
+        self.assertLess(companion, readme.index("## Current Status"))
+        companion_section = readme[companion : readme.index("## Current Status")]
+        self.assertIn("under development", companion_section)
+        self.assertIn("not used by the\nnormal Codex conversation `♻️` route", companion_section)
+
     def test_00_readme_first_contact_order_centers_external_intelligence(self) -> None:
         readme = read("README.md")
         markers = (
