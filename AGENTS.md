@@ -308,6 +308,7 @@ document.
 
 | Judgment or operation | Required reference |
 |---|---|
+| Latest user message is exactly `♻️` in a Codex conversation | `docs/codex_conversation_next_1_01.md` |
 | Select the next required 0.01 | `field_notes/021_required_intermediate_node.md` |
 | Convert V12 state into V13 Gate | `field_notes/022_v12_to_v13_mapping.md` |
 | Select a CAP axis and limit | `field_notes/023_cap_axis_limit_selection.md` |
