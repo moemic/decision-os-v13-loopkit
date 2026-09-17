@@ -17,7 +17,7 @@ Automatic Batch Execution:
 NONE
 
 Current Recorded Runs:
-2
+3
 
 Compounding Evidence:
 NOT YET ESTABLISHED
@@ -293,4 +293,81 @@ follow-up burden after Run 2.
 
 Run Count:
 Remains 2. This audit and repair are not Run 3.
+```
+
+### Run 3
+
+```text
+Run:
+3
+
+Triggered At:
+2026-09-17T04:42:09Z
+
+Pre-Run State:
+branch codex/13-conversation-recycle-trigger;
+HEAD 99cda88c8b156a0fb65adf3f88b62d7b559c61d6;
+clean worktree; four commits ahead and zero behind freshly fetched origin/main
+
+Evidence Read:
+matching first fenced blocks in docs/current_signal.md and
+handoff/current_codex_handoff.md from fetched origin/main;
+the first-parent and path delta from 646012d to 42e406e;
+V209 trajectory, validation, implementation ancestry, and admission joint;
+the O-8 / O-69 review record;
+Field Note 145;
+the repaired command scope and prior trial correction in this record
+
+Compared Candidates:
+1. reconstruct and classify the bounded post-inspection-base main delta;
+2. rewrite the canonical current-state pair immediately;
+3. advance the O-69 review or Field Note 145 hypothesis;
+4. do nothing / wait
+
+Selected 1.01:
+Reconstruct the bounded fetched-main delta and record its authority and
+lifecycle classification for future Aspire-grounded selections.
+
+Selection Reason:
+The admitted pair itself requires delta inspection before inheriting claims
+when main differs from the named inspection base. The delta contained admitted
+V209 work plus two newer candidate records with explicit non-authority
+boundaries. Classifying those differences closes the current-state evidence
+blocker without prematurely rewriting the canonical pair or starting work that
+remains HOLD, externally owned, or verification pending. Waiting would leave
+the named blocker unresolved.
+
+Execution:
+EXECUTED
+
+Verification / Observed Result:
+The reconstruction record fixes the fetched-main identity, matching first-block
+hash, required ancestry, three-commit delta, lifecycle classifications, Gate,
+and non-promotions. `git diff --check` passed and the repository check returned
+V12 PASS / V13 HOLD with both surfaces parsed and no contradiction. The focused
+set ran 53 tests: 52 passed and one current-main regression failed because the
+O-69 append no longer leaves the preserved trajectory bytes as the file suffix.
+The trajectory blob exactly matches fetched origin/main and was not edited in
+this Run. No fixture, protected hash, canonical pair, product code, or external
+state was changed.
+
+Human Questions / Confirmations During Run:
+0 — the bounded local reconstruction required no routine Decision-Owner input
+
+Known User Correction Since Prior Run:
+Shin corrected the selector scope after Run 2: standalone ♻️ means the broad
+Aspire-grounded Next-1.01 request, not advancement of the trial procedure.
+The correction is preserved in the preceding audit and governed this Run.
+
+Resulting State Delta:
+The post-646012d main delta is now classified: V209 is admitted by exact pair
+and ancestry; the O-69 comparison and Field Note 145 remain non-authorizing
+candidate evidence; one post-V209 trajectory suffix-invariant regression is
+diagnosed and left unrepaired; the current Gate remains HOLD. No canonical
+claim or candidate was promoted.
+
+Counts As Compounding Evidence:
+NOT YET ESTABLISHED — this Run clears a current-state selection blocker and
+improves re-entry evidence, but no downstream decision or operational result
+using that improvement has yet been observed.
 ```
