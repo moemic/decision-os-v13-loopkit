@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "rule_id": "FN125",
+  "current_version": "fn125-v1",
+  "versions": [
+    {
+      "id": "fn125-v1",
+      "source": {
+        "commit": "d0182a1e917e800aefe50f95cd4d400b1fa272fd",
+        "path": "field_notes/125_execution_context_proof_selection.md",
+        "sha256": "32132630bb9eaf2fe7d75cb8fe17dd9803bd1dc8504057268658ad3d9813cd53"
+      },
+      "rule": "Use the minimum sufficient continuation proof: persisted artifact provenance by default; add destination identity only for genuinely unpersisted context-specific judgment.",
+      "applies_when": "Resuming authorized work whose repository, current state, artifact identity or prior judgment must be established.",
+      "exceptions": "Missing or mismatched required proof blocks the affected modification. Mutable paths, file existence and hashes alone prove neither semantic completeness nor authority; broad path guessing and cross-repository/version substitution are forbidden.",
+      "recheck_when": "Identity, freshness, uniqueness, ownership or authorization is ambiguous; a context-specific judgment is missing; or the proof route adds burden without changing the decision.",
+      "authority": "Existing FN125 Canon adoption via AGENTS.md sections 2 and 6; this version binding records the existing rule and grants no authority.",
+      "change_reason": "Initial practice-memory binding of the already adopted Canon; the source rule is unchanged.",
+      "evidence": [
+        "field_notes/125_execution_context_proof_selection.md",
+        "validation/field_note_125_operational_validation.md"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "v214-fn125-reentry-01",
+      "execution_id": "shin4141/decision-os-v13-loopkit:v214-rule-practice-memory:continuation",
+      "version": "fn125-v1",
+      "kind": "applied",
+      "conditions": "V214's authorized implementation had to resume upstream V13 in a parent workspace with many historical worktrees. The original repository checkout was at b73c90a, while fetched main was d0182a1e917e800aefe50f95cd4d400b1fa272fd. Current authorization was supplied in the user's V214 request; no unpersisted prior-context judgment was required.",
+      "influence": "Used artifact provenance: established the exact remote, fetched main, compared and admitted the first current-state pair and reconstruction ancestry, then created a clean isolated worktree at that base. Did not inherit the historical checkout's current-state claims or ask Shin to reconstruct an old chat.",
+      "result": "observed",
+      "observation": "The existing admission helper accepted the exact main pair and ancestor; the dedicated worktree was clean before implementation. Authorized implementation could proceed from persisted evidence. This is an observed continuation result, not proof of general rule effectiveness or a hypothetical prevented failure.",
+      "burden": "Initial broad file discovery and an old handoff read produced excessive output. The working route then narrowed to the first paired blocks and named references. Routine network access recovery and worktree setup stayed AI-owned; elapsed-time savings and human burden were not measured.",
+      "unknowns": "One artifact-sufficient task only; destination-identity cases, general reliability, causal time/cost savings and independent runtime compliance were not measured.",
+      "evidence": [
+        "validation/v214_rule_practice_memory.md#real-use",
+        "validation/v214_rule_practice_reentry.json"
+      ],
+      "decision": "maintain",
+      "issue": "none",
+      "reason": "Maintain fn125-v1 for this artifact-sufficient continuation: fixed provenance resolved the actual stale-checkout ambiguity and allowed bounded work. The observed excessive reading supports following the existing minimum-proof rule more closely; it does not justify broadening or rewriting it.",
+      "change_scope": "none",
+      "recheck_when": "A later real continuation admits the wrong source, needs unpersisted judgment, hides ambiguity, or shows repeated unnecessary proof/reading burden under the same conditions.",
+      "supersedes": null,
+      "resolves": [],
+      "resolution_reason": null
+    }
+  ]
+}

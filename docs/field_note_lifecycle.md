@@ -40,3 +40,15 @@ They preserve discovery history, but their operational status may change when hi
 ## Completion Rule
 
 A Field Note lifecycle action is complete when the note has a visible status and, when applicable, a parent/replacement/canon location.
+
+## Practice feedback for an already adopted rule
+
+For the bounded FN125 pilot, use the [current rule card](rule_practice/fn125.md)
+and [practice procedure](rule_practice_memory.md). This connects an observed
+application to a version, evidence, burden, uncertainty, and a maintain / revise /
+split / pause assessment. It adds no lifecycle state or automatic promotion.
+Maintenance in a stated condition is a useful recorded result; reference-only,
+unknown outcomes, duplicate executions and synthetic tests do not establish
+successful practice. Important unresolved counterexamples return to the card.
+Existing promotion requirements still apply, and old versions and judgments
+remain evidence after a forward-only change. No other Field Note is migrated.

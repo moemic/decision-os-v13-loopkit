@@ -107,6 +107,20 @@ Zero questions is an interaction count, not proof of zero human burden. Send
 another `♻️` only when you deliberately want another separately initiated
 Run; Codex must not emit or chain the next command itself.
 
+## Rule practice memory / ルールを使った経験を次へ戻す
+
+FN125（継続時の証拠選択）では、普段は[短い現行カード](docs/rule_practice/fn125.md)を
+読み、必要な時だけ実践条件・結果・負担・判断根拠へ降りられます。
+改訂しない判断も保存し、未解決の反例は次の利用者の入口へ戻します。
+使い方と今回の変更範囲は[実践記憶の手順](docs/rule_practice_memory.md)、
+実使用・検証は[V214 記録](validation/v214_rule_practice_memory.md)、変更は
+[PR #163](https://github.com/shin4141/decision-os-v13-loopkit/pull/163)にあります。
+一つのルールの限定導入であり、使用回数による自動昇格や ♻️ の探索拡張はありません。
+
+For FN125, read the small current card first and follow its evidence only when
+needed. Real use can support keeping the rule as well as revising it; unresolved
+counterexamples stay visible. This pilot does not establish general effectiveness.
+
 ## External intelligence for decisions that survive the chat
 
 ### The problem
