@@ -1,0 +1,124 @@
+{
+  "format_version": 1,
+  "case_id": "delayed-outcome-003",
+  "historical_execution_id": "shin4141/decision-os-v13-loopkit:compact-test-output:4944a4be6aed1f018b18d5b065fc26150ea57216",
+  "inspection_base": "5c506ccd2a7b7cd264124959d93a62ea2aba8b12",
+  "rule_attribution": {
+    "rule_id": null,
+    "status": "UNESTABLISHED",
+    "reason": "The implementation selected evidence-preserving output compression, but no versioned Field Note activation or isolated rule effect is identified. This is a historical engineering observation, not an FN125 application."
+  },
+  "sources": {
+    "selection_and_comparison": {
+      "commit": "4944a4be6aed1f018b18d5b065fc26150ea57216",
+      "path": "validation/v13_compact_test_output_reference_implementation.md",
+      "role": "Original discovery, bounded wrapper choice, actual same-state full-suite comparison and separately marked controlled proofs",
+      "sha256": "5711d7cd1d86b380f1b9db0aa75120f1e97ebe66c667366dbc62129be8748d24",
+      "git_committed_at": "2026-08-30T12:56:46+09:00"
+    },
+    "implementation": {
+      "commit": "4944a4be6aed1f018b18d5b065fc26150ea57216",
+      "path": "scripts/compact_test_output.py",
+      "role": "Fixed implementation; unchanged at the current inspection base",
+      "sha256": "5a45efa9dc1e2d81040371c449450fc77ebbf151bf5c0e127067a0e721b15909",
+      "git_committed_at": "2026-08-30T12:56:46+09:00"
+    },
+    "completion_handoff": {
+      "commit": "5be89c84d1816a2b185cc2f6e85869a9f1e73d11",
+      "path": "handoff/current_codex_handoff.md",
+      "role": "First block records admission, known 44-error boundary and stop; older blocks are historical",
+      "sha256": "d3dfe6700bdf7d6cf9c083f674626ebe73b2ccb345f8504425e1cd5a5561e511",
+      "git_committed_at": "2026-08-30T13:20:50+09:00"
+    },
+    "later_report": {
+      "commit": "4931f23d51b598cc4c3c9d0d184d7bc68091d801",
+      "path": "validation/v13_13_42_closure_trajectory.md",
+      "role": "13-42 later closure retains the evidence-preserving compression result and unresolved errors",
+      "sha256": "ee8da275e735a9f7f5ae1f59accfc902c355968ea0c530a42e34340dfd7f1ffc",
+      "git_committed_at": "2026-08-30T14:54:42+09:00"
+    },
+    "later_verification": {
+      "commit": "4f38d5d0a712144bbd3a02a1843b65dc712a7ac0",
+      "path": "validation/v209_restart_security_bounded.md",
+      "role": "Later baseline/candidate comparison still reports unresolved failure identities; it does not bind an additional wrapper invocation",
+      "sha256": "897d2d82206ee874d4e8ccdc7468f3df0f88385dde3c86205eeacd65edb2d980",
+      "git_committed_at": "2026-09-08T10:20:59+09:00"
+    },
+    "later_receipt": {
+      "commit": "4f38d5d0a712144bbd3a02a1843b65dc712a7ac0",
+      "path": "validation/v209_verification_receipt.json",
+      "role": "Exact later suite summaries, exit codes and 45 matching failure/error identities",
+      "sha256": "014eb1d33df16215905b1ff3ef4b85fbd8535681cd3f24e09130868fd569bfa4",
+      "git_committed_at": "2026-09-08T10:20:59+09:00"
+    }
+  },
+  "observations": [
+    {
+      "id": "delayed-outcome-003-observation-001",
+      "supersedes": null,
+      "confirmed_at": "2026-09-19T08:03:11Z",
+      "confirmation_scope": "Read fixed implementation, comparison, handoff and later public verification records plus PR metadata; check source equality and recorded metrics. No historical full-log remeasurement, new suite comparison or AI trial.",
+      "event_times": {
+        "implementation_record_committed_at": "2026-08-30T12:56:46+09:00",
+        "later_closure_committed_at": "2026-08-30T14:54:42+09:00",
+        "later_verification_record_committed_at": "2026-09-08T10:20:59+09:00",
+        "comparison_finished_at": null,
+        "comparison_finished_at_unknown_reason": "The comparison supplies durations and a commit time, not a separately measured absolute finish timestamp."
+      },
+      "external_receipt": {
+        "url": "https://github.com/shin4141/decision-os-v13-loopkit/pull/150",
+        "state": "MERGED",
+        "head": "4944a4be6aed1f018b18d5b065fc26150ea57216",
+        "merge_commit": "5be89c84d1816a2b185cc2f6e85869a9f1e73d11",
+        "merged_at": "2026-08-30T04:20:51Z",
+        "checked_at": "2026-09-19T08:03:11Z"
+      },
+      "related_receipts": [
+        {
+          "url": "https://github.com/shin4141/decision-os-v13-loopkit/pull/151",
+          "state": "MERGED",
+          "head": "8c4765d273982bf5fd6ee5cd0213cb8cdf86f9a4",
+          "merge_commit": "4931f23d51b598cc4c3c9d0d184d7bc68091d801",
+          "merged_at": "2026-08-30T05:54:42Z",
+          "checked_at": "2026-09-19T08:03:11Z"
+        },
+        {
+          "url": "https://github.com/shin4141/decision-os-v13-loopkit/pull/159",
+          "state": "MERGED",
+          "head": "4f38d5d0a712144bbd3a02a1843b65dc712a7ac0",
+          "merge_commit": "f4b93992c08a40d8fa1b2b61a9479eb4ff533346",
+          "merged_at": "2026-09-08T01:46:35Z",
+          "checked_at": "2026-09-19T08:03:11Z"
+        }
+      ],
+      "result": "OBSERVED",
+      "observed_outcome": "The selected wrapper reduced reported AI-visible output from 707 lines/95513 bytes to 85 lines/9976 bytes with 1539 tests, 44 errors, 15 skips and exit 1 retained. The later closure kept the error boundary and stopped. V209 later still reported 1 failure and 44 errors on both its baseline and candidate; this is continued failure visibility, not another proven wrapper-use episode or resolution.",
+      "content_checks": {
+        "implementation_unchanged_at_inspection_base": true,
+        "historical_comparison_tests_each": 1539,
+        "historical_comparison_errors_each": 44,
+        "historical_comparison_skipped_each": 15,
+        "historical_comparison_exit_each": 1,
+        "later_failure_identity_sets_equal": true,
+        "later_failure_identity_count": 45
+      },
+      "assessment": {
+        "kind": "NEXT_SELECTION_IMPLICATION",
+        "implication": "When output is excessive, retain the same command/test set, counts, exit and full logs while considering the existing wrapper. Compare a new task with its own fixed baseline; do not equate compact output, a delivered repair or old known errors with present full-suite success.",
+        "rule_change": "NONE",
+        "effect_improvement": "SAME_STATE_VISIBLE_OUTPUT_REDUCTION_REPORTED; TOKEN_TIME_AND_GENERAL_EFFECT_UNCONFIRMED",
+        "causal_limit": "The actual development-suite comparison is separate from controlled synthetic PASS/FAIL proofs and from business use. Historical logs were not remeasured. V209 records no explicit wrapper command, so it is not counted as another wrapper success. Test counts are not independent real-use counts."
+      },
+      "unresolved_attention": [],
+      "revisit": {
+        "state": "UNCONFIRMED",
+        "question": "Does the existing wrapper still preserve the evidence needed for a currently authorized test command?",
+        "trigger": "A real task encounters lost full logs, missing summary/exit evidence, another runner format or changed failure identities.",
+        "references": [
+          "validation/delayed_outcome_case_003.md#revisit"
+        ],
+        "automatic_schedule": false
+      }
+    }
+  ]
+}

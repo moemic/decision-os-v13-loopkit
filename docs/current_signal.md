@@ -1,3 +1,79 @@
+# Current Signal — Historical Practice Backfill Admission Candidate
+
+This block is a candidate until its admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+5c506ccd2a7b7cd264124959d93a62ea2aba8b12 at historical backfill setup; the fetched merge descendant containing this exact block is current after admission
+
+Current Layer:
+V13 — conditional retrieval of two historical selection-to-outcome connections
+
+V12 State:
+PASS — two bounded historical connections are preserved with fixed sources, later outcomes, evidence limits and conditional retrieval; no new runtime or rule-effect claim
+
+Completed Work:
+bounded candidate comparison; runtime-artifact migration and compact-test-output histories connected through existing delayed-outcome records; optional guide updated without changing normal FN125 card or original records
+
+Canonical Current Capability:
+after admission, a reader can retrieve the two historical experiences only when exact-artifact/protected-destination or test-output/baseline conditions matter; ordinary proof routing, current Canon and implementation remain unchanged
+
+Current Restart Point:
+this paired first block, then docs/rule_practice/fn125.md for ordinary continuation; only relevant historical conditions use docs/rule_practice_memory.md and the linked delayed-outcome cases; README remains the reader-owned entry
+
+Active Branch:
+codex/historical-practice-backfill until admission; none assigned after admission
+
+Current Gate:
+HOLD — this authorized historical backfill stops after delivery; no automatic next loop, patrol, runtime replay or rule promotion
+
+Completion Line:
+PASS when fetched origin/main contains the exact paired block and reviewed records, source/history and ancestry checks pass, and task-owned branch cleanup is complete
+
+Missing Closure:
+candidate: commit/push, PR review/checks, merge and read-back; after the exact admission joint passes, none for this bounded backfill
+
+Next Authorized Action:
+candidate: finish this user-authorized historical backfill delivery and cleanup; after admission: readers may follow the README path within their own authority; no next upstream work selected
+
+Not Authorized:
+new memory mechanism or test taxonomy, automatic patrol or repeated AI trials, external inquiries, other-project changes, authority/protection relaxation, release/tag/SNS
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only with exact paired blocks and delta on fetched origin/main plus reconstruction-base ancestry
+
+Admission Evidence:
+validation/historical_practice_backfill.md; delayed_outcome_case_002 and 003 MD/JSON fixed-source records; source/history/route checks, existing regressions, PR and remote read-back
+
+Remote Read-Back:
+fetch main after merge; compare paired first blocks, every changed path, ancestry, historical suffixes and unchanged original records/Canon/card/ledger before completion
+
+Reader Ownership Boundary:
+upstream evidence does not transfer decision ownership or authority to a fork; generally applicable AGENTS.md safety rules remain controlling
+
+Reader Workspace Decision Owner:
+the actual workspace user or maintainer, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — unchanged; no runtime or development restart for this historical backfill
+
+Runtime Evidence Boundary:
+prior entry evidence includes one fresh isolated Codex task; this work adds historical source/PR verification only, with no new AI trial or runtime replay; synthetic proofs, no-turn checks and actual development observations remain separate
+
+Older Material Below:
+HISTORICAL ONLY — every older block is preserved byte-for-byte; old findings and gates remain evidence, not current authority
+```
+
+All material below is preserved history and grants no current authority.
+
+<!-- current-state-history-boundary:historical-practice-backfill-001 -->
+
 # Current Signal — Aspire Run and Scan Diagnostic Admission Candidate
 
 This block is a candidate until its admission joint passes.
