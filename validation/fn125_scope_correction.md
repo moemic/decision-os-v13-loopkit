@@ -145,7 +145,8 @@ reader clone was removed after its receipts were saved and integrity checked.
 The broad legacy suite, original external executions and real-work effect were
 not re-run or inferred.
 
-Canonical delivery remains pending the PR and exact fetched-main read-back.
-The delivery PR's final body receipt will record reviewed head, merge identity,
+Canonical delivery remains pending exact fetched-main read-back.
+[PR #167](https://github.com/shin4141/decision-os-v13-loopkit/pull/167) carries
+review and delivery. Its final body receipt records reviewed head, merge identity,
 changed paths, paired blocks and ancestry. No global display duty, new feature,
 monitor, release, tag or outreach is introduced.
