@@ -114,6 +114,8 @@ Run; Codex must not emit or chain the next command itself.
 必要な追記は各作業の書込権限内で行い、新規利用者にはその所有者の設定が適用されます。
 [選別・保存・失敗時の手順](docs/rule_practice_memory.md#closure-selection)はAI向けの指示です。
 コードによる台帳検査・カード生成とは区別し、保存価値や一般的な自動運用をコードだけで保証しません。
+[限定試用と残る限界](validation/practice_closure_selection_validation.md)には、実作業の保存、
+初回の接続漏れと修正、追加なし・再開の確認を区別して残しています。
 
 FN125（継続時の証拠選択）では、普段は[短い現行カード](docs/rule_practice/fn125.md)を
 読み、必要な時だけ実践条件・結果・負担・判断根拠へ降りられます。

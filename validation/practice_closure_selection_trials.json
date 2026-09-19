@@ -1,0 +1,152 @@
+{
+  "setup": {
+    "base": "0e90f81cb89cb5a7829f0961925b54316a59a78b",
+    "candidate": "2c43eecaf4c20b1e1e01929944e3ade70a8f08a1",
+    "history": "fork_turns:none; independent copied Git objects; no parent conversation/evaluator working files/sibling outputs; same host/tools, not OS security isolation",
+    "pre_trial_contract_sha256": "83e395005150dc702010f3d7e261f663ac48328a4ec291e5cf746c1a57a3846d",
+    "trials": [
+      {
+        "name": "wheel",
+        "workspace": "/Users/sn/Documents/v13/13-closure-trial-wheel",
+        "snapshot_commit": "cb6ea0f05e1bfcb29f52cb8cf2ad899ff006014d",
+        "tree": "1d06e80372807dc1bf3a24fb0e15b88dd392a58b"
+      },
+      {
+        "name": "no-delta",
+        "workspace": "/Users/sn/Documents/v13/13-closure-trial-no-delta",
+        "snapshot_commit": "2c43eecaf4c20b1e1e01929944e3ade70a8f08a1",
+        "tree": "c43e30c7e06d2609cfb227447b257e1947a8d7a1"
+      },
+      {
+        "name": "no-delta-entry",
+        "workspace": "/Users/sn/Documents/v13/13-closure-trial-no-delta-entry",
+        "snapshot_commit": "2c43eecaf4c20b1e1e01929944e3ade70a8f08a1",
+        "tree": "c43e30c7e06d2609cfb227447b257e1947a8d7a1",
+        "reason": "One setup recheck after the initial path-only read did not load repository instructions; no operating files or expected memory answer changed."
+      },
+      {
+        "name": "resume",
+        "workspace": "/Users/sn/Documents/v13/13-closure-trial-resume",
+        "candidate": "31d1db40cc3248782e30545f664f66a0314cb10b",
+        "snapshot_commit": "7880d0d5ad3ff50e283a588e35125b36014e5917",
+        "tree": "ea53e3043b22ef1d7cf365781d9c413b1c9047be",
+        "input_sha256": {
+          "validation/recycle_distribution_pin_scope_001.md": "09e0ca1e17d677ce9677b35abdf8a9a42cb922321d46b253b2de4662816501af",
+          "validation/recycle_distribution_pin_scope_001.json": "115f561b158a1d239c53d337e2c71e19d191e11d6b81e13380d765d7f62fd1e9",
+          "validation/recycle_distribution_wheel_001.md": "377c8577648644c71b47e5255edf86b92caa4e680f5565c9b3c99503796d14c3",
+          "validation/recycle_distribution_wheel_001.json": "c541400074706222633156036fdf8b68f881c3d3c700f3dc87f2fadc61b802bf"
+        },
+        "reason": "Ordinary continuation after the initial save lacked a forward link; existing actual artifact and result, no new experience or rebuild expected solely from a reread."
+      }
+    ]
+  },
+  "tool_dependency": {
+    "package": "flit_core",
+    "version": "3.12.0",
+    "wheel_sha256": "e7a0304069ea895172e3c7bb703292e992c5d1555dd1233ab7b5621b5b69e62c",
+    "scope": "Existing pinned build backend downloaded/extracted only to a task temporary tool directory; no global install or new runtime dependency"
+  },
+  "trials": [
+    {
+      "name": "wheel",
+      "prompt": "作業場所は /Users/sn/Documents/v13/13-closure-trial-wheel です。V13 upstreamのShinからのローカル作業として、既存の配布範囲調査 validation/recycle_distribution_pin_scope_001.md を一工程進めてください。記録が指す固定main sourceからwheelを一つ作り、含有ファイル・console entrypoint・依存を確認してください。既存の実装、READMEの配布pin、canonical current-state pairは変更しないでください。このcheckoutと /private/tmp/v13-closure-wheel-output の中で必要なローカル文書・成果物の作成は許可します。build backend flit_core 3.12.0 は /private/tmp/v13-closure-trial-tools/backend に取得済みで、PYTHONPATHに指定してPythonから利用できます。このツールディレクトリは読み取りだけにしてください。追加のネットワーク取得・runtime起動・commit・push・PR・main反映はしません。cold/warm配布起動の確認は別工程として残し、wheelの確認を終えたら、次の担当が完了済み範囲と未確認範囲を区別して引き継げる形で報告して停止してください。他のworktreeや親・兄弟の作業記録は読まないでください。",
+      "prompt_sha256": "1ba6a92c645a88299b8911c83f9f21cdf0d0d6283c10e1ced9f59dc3c408bb81",
+      "agent_context": "new agent / fork_turns:none",
+      "result": "partial",
+      "memory_line": "実践記憶：観測差分と検査手順の訂正を本記録へ保存。FN125台帳や効果確認数への加算なし。",
+      "observed_files": [
+        "validation/recycle_distribution_wheel_001.md",
+        "validation/recycle_distribution_wheel_001.json"
+      ],
+      "observed_file_sha256": {
+        "validation/recycle_distribution_wheel_001.md": "377c8577648644c71b47e5255edf86b92caa4e680f5565c9b3c99503796d14c3",
+        "validation/recycle_distribution_wheel_001.json": "c541400074706222633156036fdf8b68f881c3d3c700f3dc87f2fadc61b802bf"
+      },
+      "outcome": "Ordinary real local wheel task created an evidence-classified MD/JSON and a handoff with stable execution identity, observed artifact facts, a corrected metadata-inspection mistake and retained unknown runtime results. No save reminder was sent.",
+      "remaining_gap": "No forward link was added from the existing input task record or conditional index. Saving occurred, but the agreed retrieval connection was incomplete.",
+      "parent_intervention": "One progress/blocker-only message; no memory-specific hint or corrective retry was sent to this agent.",
+      "parent_progress_message": "進行状況と、現時点で未解決の実行上の障害があるかだけ短く知らせてください。作業範囲・判断基準の変更はありません。",
+      "independent_readback": {
+        "wheel_sha256": "57c32b1773628f4b500035e6e8a01f67f35d54af5ba74a07deb24ad6b3d4408e",
+        "members": 67,
+        "source_package_members": 62,
+        "record_checks": 66,
+        "raw_readme_match": true,
+        "trial_tracked_files_unchanged": true,
+        "runtime_execution": false,
+        "second_build": false
+      }
+    },
+    {
+      "name": "no-delta",
+      "prompt": "作業場所は /Users/sn/Documents/v13/13-closure-trial-no-delta です。現行pyproject.tomlを確認し、package名、必要なPythonの範囲、console script名を短く報告してください。編集、追加調査、ネットワークアクセスは不要です。このcheckoutの現在の状態を使い、他のworktreeや親・兄弟の作業記録は読まないでください。",
+      "prompt_sha256": "1b799544fa1dba2b06f8d379c64687957a977d7c67c2c8384dec51cfe85b80f8",
+      "agent_context": "new agent / fork_turns:none",
+      "result": "observed",
+      "saved_files": [],
+      "final_memory_line": null,
+      "outcome": "No addition, but the required brief memory-selection report was absent. Post-final receipt reports only pyproject.toml read through cat; AGENTS was not loaded.",
+      "post_final_receipt_request": "実施済みの作業の確認用に、実際に読んだファイル、実行したコマンド、変更したファイルの有無だけを短く列挙してください。追加の読み取り・変更・再判断は不要です。",
+      "limits": "No renewed reading or selection was requested after the initial answer; no storage failure is inferred."
+    },
+    {
+      "name": "no-delta-entry",
+      "prompt": "作業場所は /Users/sn/Documents/v13/13-closure-trial-no-delta-entry です。このrepositoryのAGENTS.mdを入口として通常の作業指示に従い、現行pyproject.tomlのpackage名、必要なPythonの範囲、console script名を短く報告してください。編集、追加調査、ネットワークアクセスは不要です。このcheckoutの現在の状態を使い、他のworktreeや親・兄弟の作業記録は読まないでください。",
+      "prompt_sha256": "6896178ddb62293af4c01e0ced43691847410e61cec0a6cb64716f58192d1fbf",
+      "agent_context": "new agent / fork_turns:none",
+      "result": "observed",
+      "saved_files": [],
+      "final_memory_line": "実践記憶：追加なし（既存設定の参照のみ）。",
+      "outcome": "Same candidate policy, one fresh recheck with ordinary AGENTS entry specified. Read AGENTS and pyproject only according to final receipt; worktree remained unchanged.",
+      "limits": "This verifies instruction-loaded behavior once, not automatic instruction discovery for every path-only inquiry."
+    },
+    {
+      "name": "resume",
+      "prompt": "作業場所は /Users/sn/Documents/v13/13-closure-trial-resume です。AGENTS.mdを入口としてこのrepositoryの通常手順に従い、前工程の配布調査を引き継いでください。validation/recycle_distribution_pin_scope_001.md から現在の成果物と確認状況を調べ、保存済みwheelと記録の同一性を確認し、完了済み範囲・残る未確認・次工程の境界を短く報告してください。保存wheelと関連outputは /private/tmp/v13-closure-wheel-output にあり、読み取りのみ許可します。このcheckoutでは必要なローカル文書整理は許可します。追加build・install・runtime起動・ネットワーク・commit・push・PR・main反映はしません。実装、READMEの配布pin、canonical pairは維持してください。他worktreeや親・兄弟の記録は読まず、この引き継ぎ一件で停止してください。",
+      "prompt_sha256": "c860056ff5f262c069dab98f77cc847d2b73356667dc1b0e8a3213d7a2e3c437",
+      "agent_context": "new agent / fork_turns:none",
+      "candidate_after_gap_fix": "31d1db40cc3248782e30545f664f66a0314cb10b",
+      "result": "observed",
+      "memory_line": "実践記憶：既存作業IDの未接続リンクを補完。新しい経験件数の追加なし。",
+      "changed_files": [
+        "validation/recycle_distribution_pin_scope_001.md"
+      ],
+      "forward_link_added": true,
+      "old_record_bytes_preserved_as_prefix": true,
+      "new_experience_entries": 0,
+      "rebuilds": 0,
+      "unknown_runtime_boundaries_preserved": true,
+      "outcome": "Fresh ordinary continuation found the existing record and actual artifact, verified identity, and appended only the missing forward link and handoff/readback context to the same task record. No memory-specific reminder or second rebuild."
+    }
+  ],
+  "retained_task_records": {
+    "validation/recycle_distribution_pin_scope_001.md": "c72ab73500a4708e1dd85de795716905ea3d0d94716a8ab69c355ba855691fd5",
+    "validation/recycle_distribution_pin_scope_001.json": "115f561b158a1d239c53d337e2c71e19d191e11d6b81e13380d765d7f62fd1e9",
+    "validation/recycle_distribution_wheel_001.md": "377c8577648644c71b47e5255edf86b92caa4e680f5565c9b3c99503796d14c3",
+    "validation/recycle_distribution_wheel_001.json": "c541400074706222633156036fdf8b68f881c3d3c700f3dc87f2fadc61b802bf"
+  },
+  "limits": [
+    "Initial path-only read did not load AGENTS and omitted the memory line; one general repository-entry recheck passed.",
+    "Initial real-work save lacked a forward link; the scoped instruction repair and fresh ordinary resume completed it without another experience.",
+    "Save failure handoff is instruction-based; mechanical card failure and CLI non-success are unit-tested, not a live full-disk trial.",
+    "No OS security isolation, new model, installed-package runtime qualification or general burden/effect measurement."
+  ],
+  "local_snapshot_preservation": [
+    {
+      "trial": "wheel",
+      "path": "/private/tmp/v13-closure-wheel-output/closure-trial-wheel-snapshot.bundle",
+      "sha256": "9edfc5b3fa4d69a57139e3939d85a7fc27520cefed25ed53f9d699d8a3b26cb5",
+      "bytes": 6106,
+      "prerequisite": "2c43eecaf4c20b1e1e01929944e3ade70a8f08a1",
+      "verified_in_parent": true
+    },
+    {
+      "trial": "resume",
+      "path": "/private/tmp/v13-closure-wheel-output/closure-trial-resume-snapshot.bundle",
+      "sha256": "1969539ee9122f98701858824c2cad2b45e2c4f4ed7477f2270594d977628a66",
+      "bytes": 17613,
+      "prerequisite": "31d1db40cc3248782e30545f664f66a0314cb10b",
+      "verified_in_parent": true
+    }
+  ]
+}

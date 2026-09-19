@@ -198,6 +198,7 @@ m03の合成データ限定の報告漏れには、[原回答を残した訂正�
 | --- | --- |
 | 同じpath・版を厳密な再実行の証拠に使いたい／知見の昇格先が保護対象 | [002：実体の未回収から別時点の確認へ](../validation/delayed_outcome_case_002.md)。古い実行証拠、新しい実体、互換性PASS、実runのA1停止、限定的なCanon昇格を区別する |
 | テスト出力が多い／短い成功報告から全suite成功を推定しそう | [003：出力圧縮と失敗の保持](../validation/delayed_outcome_case_003.md)。実suiteの観測、合成proof、後日にも残った失敗を区別する |
+| 同じpackage版で配布pinを更新したい／wheelのmetadataをsourceと照合したい | [配布範囲調査001と後続wheel確認](../validation/recycle_distribution_pin_scope_001.md)。source範囲、実wheelの静的観測、検査側のREADME解釈訂正、未確認の配布起動を区別する |
 
 [今回の候補比較と確認範囲](../validation/historical_practice_backfill.md)。原文と既存台帳は維持し、
 この参照追加をFN125の新しい適用回数、ルール改訂、実行許可として扱わない。

@@ -1,3 +1,79 @@
+# Current Signal — Ordinary Practice Selection Admission Candidate
+
+This block is a candidate until its admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+0e90f81cb89cb5a7829f0961925b54316a59a78b at closure-selection setup; the fetched merge descendant containing this exact block is current after admission
+
+Current Layer:
+V13 — selective practice capture at ordinary completion, planned pause and handoff
+
+V12 State:
+PASS — the bounded instruction connection, duplicate/write-failure guards and scoped trials are recorded with initial gaps and evidence limits preserved
+
+Completed Work:
+ordinary closure/pause selection and one-line report; no-addition and same-execution rules; discoverable forward links; atomic single-card replacement; limited fresh-agent work and continuation checks
+
+Canonical Current Capability:
+after admission, instruction-following agents select reusable task deltas and save within current owner scope through existing records/indexes; code validates ledger structure and exact duplicate amendments and safely replaces one card, but does not judge value or run a background hook
+
+Current Restart Point:
+this paired first block; ordinary task context and AGENTS control; docs/rule_practice_memory.md#closure-selection only for relevant selection/persistence detail; validation/practice_closure_selection_validation.md holds the observed scope and initial failures
+
+Active Branch:
+codex/practice-memory-closure-selection until admission; none assigned after admission
+
+Current Gate:
+HOLD — this closure-selection task stops after delivery; no automatic patrol, next Run, distribution update or rule promotion
+
+Completion Line:
+PASS when fetched origin/main contains this exact paired block and reviewed changes, ancestry/history/source checks pass, and task-owned trial cleanup and artifact preservation are complete
+
+Missing Closure:
+candidate: final review, commit/push, PR checks, merge and read-back; after the exact admission joint passes, none for this bounded implementation
+
+Next Authorized Action:
+candidate: finish this user-authorized implementation delivery and cleanup; after admission: readers may follow the README path within their own authority; routine practice cleanup remains inside each task scope, with no new upstream task selected
+
+Not Authorized:
+automatic patrol, full-history migration, new model/service, Companion expansion, other-project writes, inferred push/publication or upper-rule authority, release/tag/SNS
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only with exact paired blocks and delta on fetched origin/main plus reconstruction-base ancestry
+
+Admission Evidence:
+validation/practice_closure_selection_validation.md and trials JSON; actual fixed-source wheel record and source comparison; guard/regression tests; exact PR/main read-back
+
+Remote Read-Back:
+fetch main after merge; compare paired first blocks, all changed paths, ancestry, old state suffixes and unchanged original Canon/ledger/history; retain exact trial/artifact identities
+
+Reader Ownership Boundary:
+upstream evidence does not transfer decision ownership or authority to a fork; generally applicable AGENTS.md safety rules remain controlling
+
+Reader Workspace Decision Owner:
+the actual workspace user or maintainer, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — unchanged; package contents were inspected as data without starting Companion or a model runtime
+
+Runtime Evidence Boundary:
+prior entry evidence includes one fresh isolated Codex task; this adds a local wheel build and limited fresh-agent selection/continuation observations, with initial instruction-loading and link gaps retained; no universal host hook, live installed-package success or measured general burden effect
+
+Older Material Below:
+HISTORICAL ONLY — every older block is preserved byte-for-byte; old findings and gates remain evidence, not current authority
+```
+
+All material below is preserved history and grants no current authority.
+
+<!-- current-state-history-boundary:ordinary-practice-selection-001 -->
+
 # Current Signal — Historical Practice Backfill Admission Candidate
 
 This block is a candidate until its admission joint passes.
