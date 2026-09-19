@@ -1,4 +1,6 @@
 from copy import deepcopy
+from contextlib import redirect_stderr, redirect_stdout
+import io
 import json
 from pathlib import Path
 import shutil
@@ -6,8 +8,9 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
-from scripts.rule_practice import CARD, LEDGER, ROOT, preserve_history, render, validate
+from scripts.rule_practice import CARD, LEDGER, ROOT, main, preserve_history, render, validate, write_card
 
 
 BASE = "d0182a1e917e800aefe50f95cd4d400b1fa272fd"
@@ -70,11 +73,53 @@ class RulePracticeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "explicit amendment"):
             validate(self.data, ROOT)
         later["supersedes"] = "test-01"
+        with self.assertRaisesRegex(ValueError, "no new observation"):
+            validate(self.data, ROOT)
+        later["observation"] = "A later result changed what could be established for the same execution."
         validate(self.data, ROOT)
         self.assertIn("Distinct applied executions: 1", render(self.data))
         later["id"] = "test-01"
         with self.assertRaisesRegex(ValueError, "duplicate entry"):
             validate(self.data, ROOT)
+
+    def test_unknown_amendment_remains_unknown_until_a_result_is_observed(self):
+        self.entry.update(result="unknown", decision="unassessed",
+                          observation="Result is not yet available.")
+        later = deepcopy(self.entry)
+        later.update(id="test-02", supersedes="test-01",
+                     unknowns="Result still pending; receiver and retry condition established.")
+        self.data["entries"].append(later)
+        validate(self.data, ROOT)
+        self.assertIn("observed results: 0; unknown results: 1", render(self.data))
+        later.update(result="observed", decision="maintain",
+                     observation="The named later result is now observed.")
+        validate(self.data, ROOT)
+        self.assertIn("Distinct applied executions: 1; observed results: 1", render(self.data))
+
+    def test_card_replace_failure_preserves_existing_bytes_and_reports_failure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "card.md"
+            path.write_bytes(b"existing card\n")
+            path.chmod(0o640)
+            with patch("scripts.rule_practice.os.replace", side_effect=OSError("simulated replace failure")):
+                with self.assertRaisesRegex(OSError, "replace failure"):
+                    write_card(path, "new card\n")
+            self.assertEqual(b"existing card\n", path.read_bytes())
+            self.assertEqual([path], list(Path(directory).iterdir()))
+            write_card(path, "new card\n")
+            self.assertEqual("new card\n", path.read_text())
+            self.assertEqual(0o640, path.stat().st_mode & 0o777)
+
+    def test_cli_does_not_claim_a_save_when_card_write_fails(self):
+        stdout, stderr = io.StringIO(), io.StringIO()
+        before = (ROOT / CARD).read_bytes()
+        with patch("sys.argv", ["rule_practice.py", "--write"]), \
+                patch("scripts.rule_practice.write_card", side_effect=OSError("write unavailable")), \
+                redirect_stdout(stdout), redirect_stderr(stderr):
+            self.assertEqual(1, main())
+        self.assertNotIn("Updated", stdout.getvalue())
+        self.assertIn("UNVERIFIED practice surface", stderr.getvalue())
+        self.assertEqual(before, (ROOT / CARD).read_bytes())
 
     def test_old_versions_and_decisions_survive_forward_revision(self):
         old = deepcopy(self.data)

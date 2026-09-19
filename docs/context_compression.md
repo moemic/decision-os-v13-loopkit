@@ -281,6 +281,9 @@ Use when the context is still small, active, and not causing restart risk.
 ### COMPRESS
 
 Create or update a compressed handoff.
+Before transfer, apply AGENTS.md's lightweight practice selection to the work
+already performed. Carry any unsaved/partial memory and retry condition through
+the existing handoff fields; compression does not create another experience.
 
 Use when repeated context loading is wasteful but the work can still continue.
 

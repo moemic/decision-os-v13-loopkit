@@ -135,6 +135,28 @@ Before selecting the next-loop Gate, establish:
 A polished summary, local success, passing test, or statement of “done” is not
 completion evidence by itself.
 
+### Practice selection before closing or pausing
+
+Before the ordinary completion report or a planned interruption, compression,
+or handoff, briefly select reusable experience from the work just performed.
+This applies to ordinary development requests as well as `♻️`. Codex owns the
+selection; do not ask the owner to make routine in-scope append decisions.
+Start from the task's actual choices, results and evidence, not a history scan.
+Read-only references and unchanged conditions/results need no new entry.
+If a reusable delta may exist, follow only the relevant records and
+`docs/rule_practice_memory.md#closure-selection` for selection and persistence.
+Changed choices, procedure, intensity, timing or stopping decisions need an
+observable basis; reference presence alone does not establish influence.
+Keep synthetic, real and unconfirmed evidence distinct. Reuse the same task's
+identity on resume; saving memory is not another experience to save recursively.
+
+Shin authorizes necessary V13-local practice appends and existing-index links
+as task cleanup inside the current task's write scope. This adds no push,
+publication, other-project, or upper-rule revision authority. In a reader-owned
+workspace, its actual owner's setup controls; do not inherit Shin's approval.
+If saving fails, preserve pending facts, destination, identity and retry
+conditions through the existing handoff route; never claim a completed save.
+
 Use only these V12 states:
 
 ```text
@@ -383,6 +405,11 @@ At the end of each ordinary bounded task, the responsible closing agent emits
 one canonical base report.
 
 The human should not need to manually write it.
+
+Alongside the base report, add just one short line: `実践記憶：<追記・追加なし・
+保存未完了と理由>` (an equivalent language is fine). Preserve evidence class and
+unknown outcomes in that line when material; link the saved result only if
+useful. For no addition, create no dedicated file or recurring no-addition log.
 
 Use:
 

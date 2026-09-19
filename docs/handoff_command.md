@@ -30,6 +30,8 @@ This command only transfers the current operational state.
 - Include only current state, not speculative plans.
 - If a field is unknown, write `UNKNOWN` and explain why in one line.
 - Do not hide missing closure.
+- Before transfer, apply the lightweight practice selection in AGENTS.md and `docs/rule_practice_memory.md#closure-selection` to this task's evidence. This closes existing work; it does not start another loop or require all-history reading.
+- If experience remains unsaved or partly saved, include its existing execution ID, destination, evidence/result limits, failure and retry condition in Missing Closure and the receiving responsibility. Check already-written parts before retrying; do not claim saved memory or create a fresh execution for the same work.
 - `Current State` must distinguish completed work, unresolved work, and routine cleanup. `What the Receiving AI Now Owns` must assign the unresolved executable responsibility; `Next Owner` alone is not a substitute for that transfer.
 - If current-state ownership cannot be established, write `UNKNOWN`. Do not imply accepted transfer, PASS, or closure.
 - Do not return routine cleanup to the Decision Owner if an execution agent can close it.
