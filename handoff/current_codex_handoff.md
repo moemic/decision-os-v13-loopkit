@@ -1,3 +1,79 @@
+# Current Codex Handoff — One Delayed Outcome Admission Candidate
+
+The following block is a candidate until its admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+579f042e738ca117baa27cf7e95d7f0e76019a77 at delayed-outcome inspection; the fetched merge descendant containing this exact block is current after admission
+
+Current Layer:
+V13 — one historical selection connected to its later outcome
+
+V12 State:
+PASS — Run 3 selection/completion, later repair and admission, current read-only confirmation and bounded next-selection implication are connected; PR/main read-back remains required
+
+Completed Work:
+one delayed observation reuses V214 evidence and optional retrieval; the original Run and later report remain intact; occurrence/recording/confirmation times and unknown effect are separated
+
+Canonical Current Capability:
+after admission, readers can trace one historical 1.01 through its execution-time closure to a later observed result and next-selection implication; FN125 v1, its card and ledger, and the reader-owned one-Run route remain unchanged
+
+Current Restart Point:
+this paired first block, then docs/rule_practice/fn125.md as usual; only when a later result affects a decision follow docs/rule_practice_memory.md to delayed-outcome-001; ordinary reader setup remains README.md
+
+Active Branch:
+codex/post-v214-delayed-outcome until admission; none assigned after admission
+
+Current Gate:
+HOLD — no next upstream loop, automatic revisit or rule change; every reader Run still needs its own trigger and current authority
+
+Completion Line:
+PASS when fetched origin/main contains this exact paired block and bounded delta, base/head ancestry and changed-path identity pass, and the optional retrieval path is verified
+
+Missing Closure:
+candidate: commit/push, PR review/checks, merge and remote read-back; after the exact admission joint passes, none for this one-case connection
+
+Next Authorized Action:
+candidate: finish the explicitly authorized bounded PR/main delivery; after admission: readers may follow the README path within their own authority; no new upstream action is selected
+
+Not Authorized:
+automatic or scheduled revisit, bulk history reading/migration, forced rule attribution, authority/protection changes, Companion or selector expansion, release/tag/SNS
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only with the exact matched first blocks and delta on fetched origin/main and reconstruction-base ancestry
+
+Admission Evidence:
+validation/delayed_outcome_case_001.md and its fixed-source JSON; relevant regression, history-preservation checks, PR state and remote read-back
+
+Remote Read-Back:
+fetch origin/main after merge; verify paired blocks, bounded paths, base/head ancestry, preserved source history, unchanged FN125 surfaces and optional case retrieval
+
+Reader Ownership Boundary:
+upstream evidence does not transfer decision ownership or authority to a fork; generally applicable AGENTS.md safety rules remain controlling
+
+Reader Workspace Decision Owner:
+the actual workspace user or maintainer, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — unchanged; not needed or expanded by this connection
+
+Runtime Evidence Boundary:
+prior reader entry observed one fresh isolated Codex task; this task only reconnects existing outcome evidence and performs read-only confirmation. General efficacy, independent runtime obedience, burden savings and repeated compounding remain unconfirmed
+
+Older Material Below:
+HISTORICAL ONLY — every older block is preserved byte-for-byte; old findings and gates remain evidence, not current authority
+```
+
+Everything below is preserved historical material and grants no current authority.
+
+<!-- current-state-history-boundary:delayed-outcome-001 -->
+
 # Current Codex Handoff — V214 Rule Practice Memory Admission Candidate
 
 This block is a branch candidate until its admission joint passes.

@@ -1,0 +1,112 @@
+{
+  "format_version": 1,
+  "case_id": "delayed-outcome-001",
+  "historical_execution_id": "shin4141/decision-os-v13-loopkit:conversation-recycle:run-3:2026-09-17T04:42:09Z",
+  "inspection_base": "579f042e738ca117baa27cf7e95d7f0e76019a77",
+  "rule_attribution": {
+    "rule_id": null,
+    "status": "UNESTABLISHED",
+    "reason": "The original Run identifies a state-reconstruction selection and artifact checks, but does not bind a versioned rule activation or isolate its effect. This is a next-selection observation, not another FN125 practice entry."
+  },
+  "sources": {
+    "selection": {
+      "commit": "4bc279584d634e7a12947b35689efb70061a630d",
+      "path": "validation/codex_conversation_next_1_01_trial.md",
+      "role": "Run 3: purpose, candidates, selected 1.01, reason and completion",
+      "sha256": "b7a675fcee2c80610499afd11763acc86950d2b441b1c113762d9138b1b74ce0",
+      "git_committed_at": "2026-09-17T13:48:15+09:00"
+    },
+    "completion": {
+      "commit": "4bc279584d634e7a12947b35689efb70061a630d",
+      "path": "validation/codex_conversation_next_1_01_run_3_current_state_reconstruction.md",
+      "role": "Execution-time reconstruction and unresolved 52-pass / 1-fail result",
+      "sha256": "5d96d04f0a391b917c6e5a943ec1b6745d4004f6c40588e4b57354698fe33255",
+      "git_committed_at": "2026-09-17T13:48:15+09:00"
+    },
+    "later_report": {
+      "commit": "ff239dc0845364d7f52a6296d7ab2d4abba558b7",
+      "path": "validation/codex_conversation_recycle_reader_entry_publication_readiness.md",
+      "role": "Later authorized repair explicitly reuses the Run 3 finding",
+      "sha256": "a570e0c3cedfe2fb699a1121ffa90d4d92f08517cd6e7b55e0f350fb24bb3c0e",
+      "git_committed_at": "2026-09-18T06:19:17+09:00"
+    },
+    "before_repair": {
+      "commit": "42e406e858b05b6b8aff5cc6669cf10ad506b424",
+      "path": "validation/v13_13_42_closure_trajectory.md",
+      "role": "Fetched main inspected by Run 3; suffix invariant false",
+      "sha256": "3ea6243c2012a4ab5d3b4616344eca4a724c5c3ba2b203ccd32a0fedf23fa108",
+      "git_committed_at": "2026-09-10T18:21:33+09:00"
+    },
+    "after_repair": {
+      "commit": "c58f2d2e9af5baad9c9e542901f8f294997f81c7",
+      "path": "validation/v13_13_42_closure_trajectory.md",
+      "role": "Committed relocation preserving all O-69 bytes and restoring the suffix",
+      "sha256": "61c89fc622bba8abbf3939ee41da61c49ff18dd86d9856eca775bfbd121456d5",
+      "git_committed_at": "2026-09-18T06:01:33+09:00"
+    },
+    "protected_history": {
+      "commit": "646012d470b53609951d48938fcc78f9c6e35686",
+      "path": "validation/v13_13_42_closure_trajectory.md",
+      "role": "Exact historical suffix required by the original invariant",
+      "sha256": "ee8da275e735a9f7f5ae1f59accfc902c355968ea0c530a42e34340dfd7f1ffc",
+      "git_committed_at": "2026-09-06T11:01:41+09:00"
+    }
+  },
+  "observations": [
+    {
+      "id": "delayed-outcome-001-observation-001",
+      "supersedes": null,
+      "confirmed_at": "2026-09-19T05:20:28Z",
+      "confirmation_scope": "Read existing fixed records and GitHub PR metadata; compare immutable before/after/current blobs and run the two existing V209 history tests locally. No repair, external message, fresh runtime trial or network scan was performed to produce an outcome.",
+      "event_times": {
+        "selection_triggered_at": "2026-09-17T04:42:09Z",
+        "execution_finished_at": null,
+        "execution_finished_at_unknown_reason": "The original record supplies a trigger and a commit timestamp, not a separate measured finish timestamp.",
+        "completion_record_committed_at": "2026-09-17T04:48:15Z",
+        "repair_executed_at": null,
+        "repair_executed_at_unknown_reason": "Git establishes when the repaired artifact was committed, not the exact work execution time.",
+        "repair_committed_at": "2026-09-17T21:01:33Z",
+        "later_report_committed_at": "2026-09-17T21:19:17Z",
+        "repair_admitted_at": "2026-09-17T21:20:48Z"
+      },
+      "external_receipt": {
+        "url": "https://github.com/shin4141/decision-os-v13-loopkit/pull/161",
+        "state": "MERGED",
+        "head": "ff239dc0845364d7f52a6296d7ab2d4abba558b7",
+        "merge_commit": "3f6d1c019492f2f048ee624a886dd0338013caca",
+        "merged_at": "2026-09-17T21:20:48Z",
+        "checked_at": "2026-09-19T05:18:16Z"
+      },
+      "result": "OBSERVED",
+      "observed_outcome": "The later separately authorized reader-entry task repaired the identified O-69 placement problem, retained its exact evidence, and delivered the repair through PR 161; the repaired blob is still present at the inspection base.",
+      "content_checks": {
+        "before_suffix_preserved": false,
+        "after_suffix_preserved": true,
+        "current_matches_after_repair": true,
+        "o69_bytes": 4940,
+        "o69_sha256": "9377856aab31b9fcfa1487d93ba03030fea4da2750c1eda6091ed11fa3ea98d9",
+        "historical_suffix_bytes": 7699,
+        "historical_suffix_sha256": "ee8da275e735a9f7f5ae1f59accfc902c355968ea0c530a42e34340dfd7f1ffc",
+        "existing_v209_tests_passed": 2
+      },
+      "assessment": {
+        "kind": "NEXT_SELECTION_IMPLICATION",
+        "implication": "The recorded placement defect is resolved at this inspected main. Do not select the same repair again from the historical open finding alone; reassess only if fresh identity, content or regression evidence disagrees. Preserve the Run 3 reconstruction and its then-valid unresolved result.",
+        "rule_change": "NONE",
+        "effect_improvement": "UNCONFIRMED",
+        "causal_limit": "The later report explicitly reused the finding and the delivered artifact matches. This establishes a bounded downstream use and closure, not optimal original selection, isolated rule effectiveness, saved human effort or repeated compounding. The underlying external O-69 transport/runtime issue was not rechecked."
+      },
+      "unresolved_attention": [],
+      "revisit": {
+        "state": "UNCONFIRMED",
+        "question": "Does later authorized selection using this connection reduce duplicate repair or change a useful real outcome?",
+        "trigger": "A later task actually considers this same historical finding, reports a conflicting result, or supplies observed downstream selection/burden evidence.",
+        "references": [
+          "validation/delayed_outcome_case_001.md#revisit",
+          "validation/codex_conversation_next_1_01_run_3_current_state_reconstruction.md"
+        ],
+        "automatic_schedule": false
+      }
+    }
+  ]
+}
