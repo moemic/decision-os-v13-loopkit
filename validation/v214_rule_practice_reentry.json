@@ -1,0 +1,10 @@
+{
+  "repository": "shin4141/decision-os-v13-loopkit",
+  "base": "d0182a1e917e800aefe50f95cd4d400b1fa272fd",
+  "pair_equal": true,
+  "pair_sha256": "4ddf87a2807c5f294a34afd6ac196c35d937df76bef0a8f6ad3387038b6d2964",
+  "reconstruction_base": "42e406e858b05b6b8aff5cc6669cf10ad506b424",
+  "admission": "PASS",
+  "rule_sha256": "32132630bb9eaf2fe7d75cb8fe17dd9803bd1dc8504057268658ad3d9813cd53",
+  "worktree_clean_before_implementation": true
+}

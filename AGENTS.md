@@ -108,10 +108,13 @@ Transport failure is not evidence failure.
 When proof cannot be accessed, promote no claim, preserve the missing proof and
 re-entry condition, and resume only when identity becomes verifiable.
 
-For detailed continuation-proof selection, follow:
-
-- `field_notes/125_execution_context_proof_selection.md`
-- `validation/field_note_125_operational_validation.md`
+For ordinary continuation-proof selection, first read the compact current
+rule, applicability, exceptions, version and unresolved practice attention in
+`docs/rule_practice/fn125.md`. Read its named Canon source or evidence only when
+the current dependency, an exception or a warning needs that detail.
+The card is a projection of the existing FN125 Canon, not new authority.
+After a material real use, preserve its bounded observation and assessment
+through `docs/rule_practice_memory.md`; references and tests are not real use.
 
 ## 3. V12 Completion Before V13 Gate
 
@@ -314,7 +317,7 @@ document.
 | Select a CAP axis and limit | `field_notes/023_cap_axis_limit_selection.md` |
 | Judge Aspire, Carrier, or re-entry impact | `field_notes/024_aspire_carrier_reentry_operational_definitions.md` |
 | Select reporting extensions | `field_notes/025_footer_axis_consolidation.md` |
-| Select continuation proof | `field_notes/125_execution_context_proof_selection.md` |
+| Select continuation proof | `docs/rule_practice/fn125.md` (current FN125; follow named deeper sources only as needed) |
 | Create or accept a handoff | `docs/handoff_command.md` |
 | Compress or restart from long context | `docs/context_compression.md` |
 | Review or promote Field Notes | `docs/field_note_lifecycle.md` |

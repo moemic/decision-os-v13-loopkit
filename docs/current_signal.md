@@ -1,3 +1,82 @@
+# Current Signal — V214 Rule Practice Memory Admission Candidate
+
+This block is a branch candidate until its admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+d0182a1e917e800aefe50f95cd4d400b1fa272fd at V214 authorization; the fetched merge descendant containing this exact block is current after admission
+
+Current Layer:
+V13 — FN125 rule practice memory and revision path
+
+V12 State:
+PASS — one real artifact-sufficient continuation, a version-bound practice record, maintenance judgment and next-use card are connected on the candidate; canonical delivery remains pending until the admission joint passes
+
+Completed Work:
+existing FN125 Canon is unchanged; a compact current card links conditions, exceptions, version and unresolved attention to append-only practice evidence; synthetic checks remain separate; prior reader-entry and historical evidence are preserved
+
+Canonical Current Capability:
+after admission, FN125 users can retrieve a small current rule card, record observed use or uncertainty, retain reasons to maintain or propose revision/splitting/pause, and trace unresolved attention to evidence; the existing reader-owned one-Run conversation route remains available
+
+Current Restart Point:
+this paired first block, then docs/rule_practice/fn125.md; only for recording or judgment evidence follow docs/rule_practice_memory.md and validation/v214_rule_practice_memory.md; reader setup still starts at README.md
+
+Active Branch:
+codex/v214-rule-practice-memory until canonical admission; none assigned by this work after admission
+
+Current Gate:
+HOLD — no next upstream loop; one reader trigger permits at most one already-authorized Run; practice evidence does not authorize another action or automatic rule change
+
+Completion Line:
+PASS when the exact paired block and bounded practice-memory change are read back from fetched origin/main, reconstruction-base and admitted-change ancestry pass, relevant checks pass and remote content matches
+
+Missing Closure:
+on the candidate: final commit/push, PR checks and review response, merge and remote read-back; after the exact admission joint passes, none for this bounded V214 task
+
+Next Authorized Action:
+candidate branch: finish the V214-authorized validation and PR/main delivery; after admission: readers may follow the README path and the FN125 card within their own declared authority; no new upstream task is selected
+
+Not Authorized:
+release, tag, SNS or paper rewrite; Jev/new model/harness, Companion development, bulk Field Note migration, automatic loops or expansion of conversation recycle selection; purpose/authority/protection changes without current owner judgment
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only when this exact matched first block and bounded change are read from fetched origin/main and the reconstruction base is its ancestor
+
+Admission Evidence:
+validation/v214_rule_practice_memory.md, validation/v214_rule_practice_reentry.json, the focused regression set, exact historical suffix checks, PR checks/review response and remote read-back
+
+Remote Read-Back:
+after merge fetch origin/main, verify the exact paired first blocks, each bounded changed path, source/history identity, and admitted-change/reconstruction-base ancestry before canonical COMPLETE
+
+Reader Ownership Boundary:
+repository identity does not transfer decision ownership; upstream state remains evidence only in a fork or personal copy unless its actual owner explicitly adopts a boundary; generally applicable AGENTS.md safety rules continue to control
+
+Reader Workspace Decision Owner:
+the actual user or maintainer of that workspace, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — not required or used by the normal Codex conversation ♻️ route; existing creator-owned adapter evidence retains its narrow meaning
+
+Runtime Evidence Boundary:
+one fresh isolated Codex task observed setup, exact trigger, comparison, one capped local action, verification, recording and stop; general reliability, zero human burden, repeated compounding, external adoption and multi-model equivalence are NOT ESTABLISHED; V214 additionally observed one FN125 artifact-sufficient continuation; its generated-card and synthetic tests establish connection behavior, not general rule effectiveness
+
+Rule Practice Decision:
+maintain fn125-v1 in the observed artifact-sufficient condition; destination-identity cases, measured burden savings and general efficacy remain unconfirmed
+
+Older Material Below:
+HISTORICAL ONLY — all older blocks are preserved byte-for-byte; older Gates, authority, capability and completion claims are evidence, not current authority
+```
+
+Everything below is preserved historical material and cannot be inherited as current authority.
+
+<!-- current-state-history-boundary:v214-rule-practice-memory -->
+
 # Current Signal — Conversation Recycle Reader Entry Admission Candidate
 
 This is a branch candidate until the exact admission joint below is satisfied.
