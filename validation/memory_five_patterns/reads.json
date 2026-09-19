@@ -1,0 +1,722 @@
+{
+  "schema": 1,
+  "suite_id": "memory-five-patterns-001",
+  "baseline": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+  "measurement_boundary": "Reader-reported path/range and commands, not an OS-enforced access trace. chars are source-text len(str), unless explicitly marked stdout JS length; not tokens/physical I/O. Unknown measures remain null. Paths normalized relative to each independent clone.",
+  "receipt_columns": [
+    "stage",
+    "path",
+    "model_visible_range",
+    "source_chars_displayed",
+    "full_blob_chars_read_by_python"
+  ],
+  "cases": {
+    "m01": {
+      "agent": "reader_m01",
+      "round": "initial",
+      "decision": "Maintain FN125-v1 only where current permission and required judgments are recoverable from persisted evidence. V214 supports this bounded condition, not broad efficacy, revisions or retirement of Destination Identity.",
+      "evidence_used": "V214 provenance checks (remote/main pair/ancestry/clean worktree/current user authority), observed broad-search and old-handoff burden; prior path-relocation overblocking already repaired in Canon.",
+      "limits": "One real-use ledger execution. Original external workspace/PR/runtime not re-executed; costs/time/human burden not measured.",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-464",
+          17290,
+          17290
+        ],
+        [
+          2,
+          "docs/current_signal.md",
+          "5-71 first fence",
+          3450,
+          150181
+        ],
+        [
+          2,
+          "handoff/current_codex_handoff.md",
+          "5-71 first fence",
+          3450,
+          279047
+        ],
+        [
+          2,
+          "docs/rule_practice/fn125.md",
+          "1-26",
+          2379,
+          2379
+        ],
+        [
+          2,
+          "docs/rule_practice_memory.md",
+          "1-123",
+          4515,
+          4515
+        ],
+        [
+          3,
+          "evidence/rule_practice/fn125.json",
+          "1-51",
+          4194,
+          4194
+        ],
+        [
+          3,
+          "field_notes/125_execution_context_proof_selection.md",
+          "1-270",
+          12652,
+          12652
+        ],
+        [
+          3,
+          "validation/v214_rule_practice_memory.md",
+          "1-200",
+          12173,
+          12173
+        ],
+        [
+          4,
+          "validation/v214_rule_practice_reentry.json",
+          "1-10",
+          441,
+          441
+        ],
+        [
+          4,
+          "validation/field_note_125_operational_validation.md",
+          "1-192",
+          8149,
+          8149
+        ]
+      ],
+      "reasons": [
+        "Normal entrance routes card/procedure.",
+        "Actual maintenance basis and burden require named practice ledger, Canon and V214 evidence; pair full blobs were read mechanically but only first blocks displayed.",
+        "Named reentry JSON checks stored observation rather than citing PASS alone; historical validation explains conditions and already repaired path burden.",
+        "Stopped at repository record, did not follow separate external workspace."
+      ],
+      "commands": "PYTHONDONTWRITEBYTECODE=1 python3, Path.read_text, full/range print and len; current pair visually compared, automatic equality not done.",
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 1,
+        "description": "After initial final judgment was frozen, evaluator requested one consolidated repeat of already-reported receipts; reader reported no new reads/rejudgment."
+      },
+      "recorded_source_chars_displayed": 68693,
+      "receipt_basis": "Evaluator transcription of reader public step reports and final judgment; not a private reasoning transcript or independent OS access audit."
+    },
+    "m02": {
+      "agent": "reader_m02",
+      "round": "initial",
+      "decision": "Use current FN125-v1 with persisted artifact provenance; no destination identity, revision or extra historical check in the supplied ordinary condition.",
+      "evidence_used": "AGENTS and card applicability/exceptions/recheck boundary.",
+      "limits": "Hypothetical conditions accepted as input. Artifact identity/pair/Canon/history/runtime not independently checked; one prior maintain entry is not general efficacy.",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-464",
+          17290,
+          17290
+        ],
+        [
+          2,
+          "docs/rule_practice/fn125.md",
+          "1-26",
+          2379,
+          2379
+        ]
+      ],
+      "reasons": [
+        "Normal entrance routes card.",
+        "All supplied conditions match card; no exception or warning needs detail, so stop."
+      ],
+      "commands": "PYTHONDONTWRITEBYTECODE=1 python3 Path.read_text, full print and len.",
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 1,
+        "description": "Frozen judgment; repeat of existing receipts only, no new reads."
+      },
+      "recorded_source_chars_displayed": 19669,
+      "receipt_basis": "Evaluator transcription of reader public step reports and final judgment; not a private reasoning transcript or independent OS access audit."
+    },
+    "m03": {
+      "agent": "reader_m03",
+      "round": "initial",
+      "decision": "Case1 persisted Bundle permits provenance-only continuation with current authority; Case2 adds receiving-context proof for unpersisted judgments; Case3A holds affected mutation/acceptance until Bundle arrival and identity verification. Case3B bounded path resolution avoids unnecessary block.",
+      "evidence_used": "FN125 and operational validation Case1/2/3A/3B; scoped V214 corroboration of card's one-use limit.",
+      "limits": "External original Bundles/receiver history/hash replay/current remote not checked. No new execution. Final preserved source-access limits but did not explicitly repeat the validation's synthetic-only dataset limit.",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-464",
+          17290,
+          17290
+        ],
+        [
+          2,
+          "docs/rule_practice/fn125.md",
+          "1-26",
+          2379,
+          2379
+        ],
+        [
+          2,
+          "docs/current_signal.md",
+          "5-71 first fence",
+          3450,
+          150181
+        ],
+        [
+          2,
+          "handoff/current_codex_handoff.md",
+          "5-71 first fence",
+          3450,
+          279047
+        ],
+        [
+          3,
+          "field_notes/125_execution_context_proof_selection.md",
+          "1-270",
+          12652,
+          12652
+        ],
+        [
+          3,
+          "evidence/rule_practice/fn125.json",
+          "1-51",
+          4194,
+          4194
+        ],
+        [
+          4,
+          "validation/field_note_125_operational_validation.md",
+          "1-192",
+          8149,
+          8149
+        ],
+        [
+          5,
+          "validation/v214_rule_practice_memory.md",
+          "51-88 Real use",
+          2167,
+          12173
+        ],
+        [
+          5,
+          "validation/v214_rule_practice_reentry.json",
+          "1-10",
+          441,
+          441
+        ]
+      ],
+      "reasons": [
+        "AGENTS directly names card.",
+        "Card's one-use/Destination/transport limitations motivate Canon and practice JSON.",
+        "Canon names historical operational validation for requested situations.",
+        "Original external workspace not followed. V214 Real use section and JSON confirm current card limits, then stop."
+      ],
+      "commands": "pwd and rg --files -g AGENTS.md -g !**/.git/** for filenames; Python read_text + whole or section print and len. No git/fetch/tests/write/network.",
+      "discovery": {
+        "visible_paths": [
+          "AGENTS.md",
+          "decision_os/companion/candidate_inputs/creator_live_agents_before_after_v0_2/AGENTS.md",
+          "tests/fixtures/v13_runner_v0_2/multiple_instructions/AGENTS.md",
+          "tests/fixtures/v13_runner_v0_2/one_instruction/AGENTS.md"
+        ],
+        "other_bodies_read": false,
+        "chars": null
+      },
+      "stdout_js_length_by_stage": [
+        17372,
+        9631,
+        17075,
+        8272,
+        2867
+      ],
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 1,
+        "description": "Frozen judgment; repeat of existing receipts only, no new reads."
+      },
+      "recorded_source_chars_displayed": 54172,
+      "receipt_basis": "Evaluator transcription of reader public step reports and final judgment; not a private reasoning transcript or independent OS access audit."
+    },
+    "m04": {
+      "agent": "reader_m04",
+      "round": "initial",
+      "decision": "Artifact Provenance is default, but first establish whether prior decisions and receiving responsibility can be reconstructed from saved artifacts. Unknown is not artifact-sufficient. Add Destination Identity only for actual unpersisted contextual dependency; hold the affected mutation if sufficient proof unavailable.",
+      "evidence_used": "AGENTS/card/Canon conditions; no assertion of actual case artifact proof.",
+      "limits": "Exact artifact/version/binding/prior decision/owner/Gate/Completion Line/Missing Closure/current authority remain missing. No runtime proof.",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-464",
+          17290,
+          17290
+        ],
+        [
+          2,
+          "docs/rule_practice/fn125.md",
+          "1-26",
+          2379,
+          2379
+        ],
+        [
+          3,
+          "field_notes/125_execution_context_proof_selection.md",
+          "1-270",
+          12652,
+          12652
+        ]
+      ],
+      "reasons": [
+        "Normal entrance names card.",
+        "Unknown persistence and receiver ownership change proof selection; follow named Canon for that boundary.",
+        "Stop without practice history or prior PASS link following."
+      ],
+      "commands": "PYTHONDONTWRITEBYTECODE=1 python3 Path.read_text, full display and len.",
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 0
+      },
+      "recorded_source_chars_displayed": 32321,
+      "receipt_basis": "Evaluator transcription of reader public step reports and final judgment; not a private reasoning transcript or independent OS access audit."
+    },
+    "m06": {
+      "agent": "reader_m06",
+      "round": "initial",
+      "decision": "Complete authorized local metadata read: project.name decision-os-v13-loopkit; requires-python >=3.10. Do not stop unrelated read or initiate external workflow recovery because of historical failure.",
+      "evidence_used": "AGENTS authority, card applicability to affected changes, pyproject exact values L6/L10.",
+      "limits": "External failure details/resolution/runtime and prepared Git state not independently checked. Card None recorded does not erase unrelated failure.",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-200",
+          7362,
+          17290
+        ],
+        [
+          2,
+          "AGENTS.md",
+          "201-464",
+          9928,
+          17290
+        ],
+        [
+          3,
+          "docs/rule_practice/fn125.md",
+          "1-26",
+          2379,
+          2379
+        ],
+        [
+          3,
+          "pyproject.toml",
+          "1-27",
+          692,
+          692
+        ]
+      ],
+      "reasons": [
+        "Read normal entrance in two parts.",
+        "Check effect of past failure on authority/applicability with compact card, then requested task values.",
+        "No unresolved dependency on Canon or history, so stop."
+      ],
+      "commands": "PYTHONDONTWRITEBYTECODE=1 python3 Path.read_text with full/range display and len.",
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 0
+      },
+      "recorded_source_chars_displayed": 20361,
+      "receipt_basis": "Evaluator transcription of reader public step reports and final judgment; not a private reasoning transcript or independent OS access audit."
+    },
+    "m05": {
+      "agent": "reader_m05",
+      "round": "initial",
+      "status": "COMPLETE",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-464",
+          17290,
+          17290
+        ],
+        [
+          2,
+          "docs/current_signal.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          2,
+          "handoff/current_codex_handoff.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          2,
+          "docs/rule_practice/fn125.md",
+          "1-26",
+          2379,
+          2379
+        ],
+        [
+          3,
+          "docs/rule_practice_memory.md",
+          "1-123",
+          4515,
+          4515
+        ],
+        [
+          4,
+          "validation/delayed_outcome_case_001.md",
+          "1-148",
+          5921,
+          5921
+        ],
+        [
+          5,
+          "validation/codex_conversation_next_1_01_run_3_current_state_reconstruction.md",
+          "1-117",
+          5513,
+          5513
+        ],
+        [
+          7,
+          "validation/v13_13_42_closure_trajectory.md",
+          "1-134",
+          9898,
+          null
+        ],
+        [
+          9,
+          "validation/v13_13_42_closure_trajectory.md",
+          "137-339",
+          7693,
+          null
+        ],
+        [
+          10,
+          "evidence/rule_practice/fn125.json",
+          "1-51",
+          4194,
+          4194
+        ],
+        [
+          12,
+          "field_notes/125_execution_context_proof_selection.md",
+          "1-121 and 141-240",
+          10573,
+          null
+        ],
+        [
+          15,
+          "field_notes/141_retry_escalation_without_recompute.md",
+          "1-214",
+          7179,
+          7179
+        ]
+      ],
+      "searches": [
+        {
+          "stage": 1,
+          "command": "pwd / rg --files",
+          "body_read": false,
+          "chars": null
+        },
+        {
+          "stage": 6,
+          "command": "rg -n headings/O-69/O-8/transport/failure/retry/repeated validation/v13_13_42_closure_trajectory.md",
+          "stdout_chars": 1970,
+          "source_only_chars": null
+        },
+        {
+          "stage": 8,
+          "command": "rg MISTAKEN.md headings/failure/retry",
+          "stdout_chars": 1199,
+          "source_only_chars": null
+        },
+        {
+          "stage": 11,
+          "command": "rg FN125 headings/failure/transport",
+          "stdout_chars": 2290,
+          "source_only_chars": null
+        },
+        {
+          "stage": 13,
+          "command": "rg -n -C3 repeated failure/retry docs/current_signal.md handoff/current_codex_handoff.md",
+          "stdout_chars": 3346,
+          "source_only_chars": null
+        },
+        {
+          "stage": 14,
+          "command": "rg Markdown unexplained/same-mechanism/原因不明/同じ仕組み; tests and candidate_inputs excluded",
+          "stdout_chars": 778,
+          "source_only_chars": null,
+          "matches": 6
+        }
+      ],
+      "reasons": [
+        "AGENTS normal route interpreted as paired first fences plus compact card.",
+        "Later success / earlier failure interpreted as delayed-outcome route, following procedure then delayed-outcome-001.",
+        "Read Run3 to seek repeated transport failures, then causal index; reader noted a different lineage may exist.",
+        "O69 trajectory did not establish match. Searched MISTAKEN then remaining trajectory then practice JSON/Canon then current/handoff history; still no event identity.",
+        "Finally bounded repository term search identified FN141; reader explicitly did not substitute similar failure events or treat search as authority.",
+        "FN141 matched specific episode and causal sequence, so stopped. Eventual success did not erase failed-method evidence."
+      ],
+      "io_notes": "Current pair streamed to L71 without full blob extraction; non-displayed L1-4 and buffering not measured. Other described reads Python read_text.",
+      "stdout_js_length_by_stage": [
+        20124,
+        10543,
+        5353,
+        6919,
+        6364,
+        1970
+      ],
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 0
+      },
+      "decision": "Retain intermediate failures. HOLD proposal and stop reusing the same method without causal/method evidence delta. Bounded diagnosis and evidenced method/side-effect/rollback/Gate review can allow reconsideration, not a permanent ban.",
+      "evidence_used": "FN141 three failed Actions runs with zero jobs, semantically unchanged retrigger and identical workflow recreation, eventual success by abandoning Actions for direct write. Candidate/Canon HOLD and unknown private root cause preserved.",
+      "limits": "Private repository/run/original logs not re-audited. Current method delta, side effects/recovery and actual failure cause unknown; notification burden count unknown.",
+      "recorded_source_chars_displayed": 82055,
+      "receipt_basis": "Evaluator transcription of reader public step reports and final judgment; not a private reasoning transcript or independent OS access audit."
+    },
+    "m07": {
+      "agent": "reader_m07",
+      "round": "initial",
+      "decision": "Current project.name decision-os-v13-loopkit and requires-python >=3.10 are the requested environment-comparison declarations; stop after direct read.",
+      "evidence_used": "AGENTS applicability and pyproject L6/L10.",
+      "limits": "Actual Python/runtime compatibility/Git status not independently checked.",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-160",
+          5962,
+          null
+        ],
+        [
+          2,
+          "AGENTS.md",
+          "161-320",
+          6726,
+          null
+        ],
+        [
+          3,
+          "AGENTS.md",
+          "321-464",
+          4602,
+          null
+        ],
+        [
+          4,
+          "pyproject.toml",
+          "1-27",
+          692,
+          null
+        ]
+      ],
+      "reasons": [
+        "Normal entrance read in three sections.",
+        "Task is current config lookup, not continuation/Gate/change, so no current signal/FN125/history descent."
+      ],
+      "commands": "PYTHONDONTWRITEBYTECODE=1 python3, islice; source text len. Stage2 scans 1-320, stage3 1-464 but only selected sections displayed. pyproject streamed in full (791 source+line-number chars); OS buffering unmeasured.",
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 0
+      },
+      "recorded_source_chars_displayed": 17982,
+      "receipt_basis": "Evaluator transcription of reader public step reports and final judgment; not a private reasoning transcript or independent OS access audit."
+    },
+    "m08": {
+      "agent": "reader_m08",
+      "round": "initial",
+      "status": "COMPLETE",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-464",
+          17290,
+          17290
+        ],
+        [
+          2,
+          "docs/current_signal.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          2,
+          "handoff/current_codex_handoff.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          3,
+          "docs/rule_practice/fn125.md",
+          "1-26",
+          2379,
+          2379
+        ],
+        [
+          3,
+          "validation/v13_13_42_closure_trajectory.md",
+          "1-339",
+          17651,
+          17651
+        ],
+        [
+          5,
+          "README.md",
+          "825-888",
+          1415,
+          null
+        ],
+        [
+          5,
+          "README.md",
+          "1098-1125",
+          1360,
+          null
+        ],
+        [
+          5,
+          "field_notes/057_external_repo_transfer_packet_minimum_input_contract.md",
+          "1-406",
+          9490,
+          9490
+        ],
+        [
+          7,
+          "docs/field_note_lifecycle.md",
+          "1-54",
+          2363,
+          2363
+        ],
+        [
+          7,
+          "field_notes/059_external_repo_transfer_packet_readiness_review.md",
+          "1-244",
+          5889,
+          5889
+        ],
+        [
+          7,
+          "field_notes/060_v13_active_and_parked_lines_status_review.md",
+          "1-275",
+          7407,
+          7407
+        ]
+      ],
+      "searches": [
+        {
+          "stage": 4,
+          "command": "rg README External Repo Transfer Packet/external_repo_transfer/parked/active",
+          "stdout_chars": 802,
+          "matches": 9
+        },
+        {
+          "stage": 6,
+          "command": "rg exact External Repo Transfer Packet in docs/ field_notes/ validation/ README",
+          "stdout_chars": 6446
+        }
+      ],
+      "reasons": [
+        "AGENTS interpreted as upstream paired-first/current restart route.",
+        "Followed FN125 and entire causal index; reader acknowledged unrelated historical latter sections.",
+        "README topic matches provide FN057; input contract found, historical pause identity unresolved.",
+        "Exact topic search finds FN059/060/061 and current inventory advisory status.",
+        "FN059/060 and lifecycle establish original pause and present status; stop without templates/history."
+      ],
+      "io_notes": "Pair and README whole blobs mechanically read; only reported slices displayed; machine char totals not reported. Other Python read_text shown with len; rg internals unmeasured.",
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 0
+      },
+      "decision": "Bounded read-only reconsideration completed; actual packet creation remains HOLD and line parked. Partial new request permits input comparison, not authority inference; packet may be unnecessary for small one-off work.",
+      "evidence_used": "Current AGENTS and FN060 Folded precedence; FN059 original internal-only validation and absent real task contract/effect/overhead comparison; FN057 minimum inputs and packet GO distinct from repo GO.",
+      "limits": "External repo/current real permission/real effectiveness unverified. Old PASS supports internal organization only.",
+      "recorded_source_chars_displayed": 72144,
+      "receipt_basis": "Evaluator transcription of reader public step reports and final judgment; not a private reasoning transcript or independent OS access audit."
+    },
+    "m09": {
+      "agent": "reader_m09",
+      "round": "initial",
+      "decision": "Old FN060/100 CAP or elapsed time cannot restart parked work or restore an independent current rule. No new trigger/input/authority/counterevidence means stop after precedence check.",
+      "evidence_used": "AGENTS current authority/Folded status/parked trigger; lifecycle Folded rule and matching current first blocks HOLD.",
+      "limits": "FN060/100 bodies, individual parked-case triggers, latest remote and full admission not checked; existing PASS not efficacy or authority.",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-464",
+          17290,
+          17290
+        ],
+        [
+          2,
+          "docs/current_signal.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          2,
+          "handoff/current_codex_handoff.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          3,
+          "docs/rule_practice/fn125.md",
+          "1-26",
+          2379,
+          2379
+        ],
+        [
+          3,
+          "docs/field_note_lifecycle.md",
+          "1-54",
+          2363,
+          2363
+        ]
+      ],
+      "reasons": [
+        "AGENTS normal entrance interpreted as first-block pair; streamed to L71 and compared byte-equal.",
+        "Current Restart Point names card; lifecycle required by whether to restore a rule.",
+        "No uncertainty requiring Canon/practice/history."
+      ],
+      "commands": "Python stream pair through line71; other Path.read_text with full display and len.",
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 0
+      },
+      "recorded_source_chars_displayed": 28932,
+      "receipt_basis": "Evaluator transcription of reader public step reports and final judgment; not a private reasoning transcript or independent OS access audit."
+    }
+  },
+  "initial_group_complete": true,
+  "initial_group_completion": "All nine initial final judgments were received before any operating-route edit. m01-m03 had one post-completion transcription request each, not a new trial; others had none."
+}

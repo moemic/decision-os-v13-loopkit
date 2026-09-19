@@ -1,0 +1,243 @@
+{
+  "suite_id": "memory-five-patterns-001",
+  "round": "single-targeted-recheck",
+  "baseline": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+  "candidate_tree": "8ad1247263b23035d3f5a7d881545fdc7b7bc159",
+  "candidate_changed_paths": [
+    "AGENTS.md"
+  ],
+  "boundary": "One fresh no-history session per affected case. No answers, sibling records, evaluation report, or new current-state summary in snapshots. No further recheck.",
+  "receipt_columns": [
+    "stage",
+    "path",
+    "model_visible_range",
+    "source_chars_displayed",
+    "full_blob_chars_read_by_python"
+  ],
+  "cases": {
+    "m05": {
+      "agent": "reader_r05",
+      "head": "9773f992af1e9a661742f716a63daffdf5324bc7",
+      "decision": "Block the unchanged write-capable method in the current form; hold reconsideration pending evidence and permit bounded diagnosis, not permanent prohibition. Eventual different-method success does not erase failures.",
+      "evidence_used": "FN141 zero-job failures/retrigger/same blob/different final route; Candidate and private-source limits; FN022/023 Gate/CAP, FN029 failure learning, FN087 changed-condition re-entry.",
+      "limits": "Private original IDs/event identity, true Actions cause, notification counts and current side-effect/rollback details unknown. Local candidate not canonical main; past task completion not reverified.",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-474",
+          17958,
+          17958
+        ],
+        [
+          2,
+          "docs/current_signal.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          2,
+          "handoff/current_codex_handoff.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          4,
+          "field_notes/141_retry_escalation_without_recompute.md",
+          "1-214",
+          7179,
+          7179
+        ],
+        [
+          6,
+          "field_notes/022_v12_to_v13_mapping.md",
+          "1-145 and 187-201",
+          3619,
+          null
+        ],
+        [
+          6,
+          "field_notes/023_cap_axis_limit_selection.md",
+          "1-135 and 235-270",
+          3981,
+          null
+        ],
+        [
+          6,
+          "field_notes/029_fixpoint_learning_breakout.md",
+          "38-118 and 162-202",
+          3500,
+          null
+        ],
+        [
+          6,
+          "field_notes/087_rechallenge_gate.md",
+          "1-132",
+          3080,
+          3080
+        ]
+      ],
+      "searches": [
+        {
+          "stage": 3,
+          "command": "rg --files within field_notes and filename terms",
+          "stdout_chars": 1021
+        },
+        {
+          "stage": 3,
+          "command": "rg -n -i -m 2 unexplained/repeated failure/same mechanism/unknown cause within field_notes",
+          "stdout_chars": 1396
+        },
+        {
+          "stage": 5,
+          "command": "rg --files identify FN022/023/029/087",
+          "stdout_chars": 164
+        },
+        {
+          "stage": 5,
+          "command": "rg headings only in those four named files",
+          "stdout_chars": 3464
+        }
+      ],
+      "reasons": [
+        "Read current first blocks to determine event identity; they name a later placement-repair story, not this event.",
+        "Use bounded field_notes search and verify FN141 incident sequence; no delayed outcome/Run3/O69 detour.",
+        "Follow named related principles and AGENTS-required Gate references in relevant sections; stop with source limitations."
+      ],
+      "machine_io": "Current pair streams to L71; other partial reads stream to 201/270/202 respectively, without full-blob extraction. Buffering/rg scan bytes unmeasured.",
+      "git_metadata": {
+        "commands": "GIT_OPTIONAL_LOCKS=0 git rev-parse root HEAD origin/main; status; remote -v",
+        "stdout_chars": {
+          "root": 45,
+          "head_origin_main": 82,
+          "status": 32,
+          "remote": 141
+        },
+        "result": "clean, local main ahead 1, candidate HEAD distinct from origin/main"
+      },
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 0
+      },
+      "recorded_source_chars_displayed": 46217,
+      "receipt_basis": "Evaluator transcription of reader public reports and final judgment; no private reasoning or OS trace."
+    },
+    "m08": {
+      "agent": "reader_r08",
+      "head": "595c899d3927fcba499bae32319be92fdf7615f1",
+      "decision": "HOLD packet creation; partial URL/vague-purpose request does not unpark or permit editing. Bounded input comparison/reconsideration is possible; concrete authority/inputs and medium or transfer-worthy task allow a later packet-only decision; small one-off may need no packet.",
+      "evidence_used": "FN059 missing real input contract and unmeasured handoff benefit; FN060 Folded origin/current AGENTS authority; FN057 input/Gate boundary, FN056 different medium-work CAP assumptions and missing-input HOLD; FN047 packet purpose.",
+      "limits": "External repo/current real permission/latest remote/real effectiveness unknown. Candidate not main; packet authorization not external edit authority.",
+      "reads": [
+        [
+          1,
+          "AGENTS.md",
+          "1-474",
+          17958,
+          17958
+        ],
+        [
+          2,
+          "docs/current_signal.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          2,
+          "handoff/current_codex_handoff.md",
+          "5-71 first fence",
+          3450,
+          null
+        ],
+        [
+          4,
+          "field_notes/060_v13_active_and_parked_lines_status_review.md",
+          "1-230",
+          6278,
+          null
+        ],
+        [
+          4,
+          "field_notes/059_external_repo_transfer_packet_readiness_review.md",
+          "1-244",
+          5889,
+          5889
+        ],
+        [
+          5,
+          "field_notes/057_external_repo_transfer_packet_minimum_input_contract.md",
+          "1-260",
+          5210,
+          null
+        ],
+        [
+          5,
+          "field_notes/056_external_task_transfer_packet_decision_proof.md",
+          "1-210",
+          6435,
+          null
+        ],
+        [
+          5,
+          "field_notes/047_external_repo_transfer_packet.md",
+          "21-162",
+          3660,
+          null
+        ],
+        [
+          6,
+          "field_notes/057_external_repo_transfer_packet_minimum_input_contract.md",
+          "249-380",
+          3880,
+          null
+        ],
+        [
+          6,
+          "field_notes/056_external_task_transfer_packet_decision_proof.md",
+          "210-251",
+          844,
+          null
+        ]
+      ],
+      "searches": [
+        {
+          "stage": 3,
+          "command": "rg three Transfer Packet topic terms in README/docs/field_notes",
+          "stdout_chars": 5194
+        },
+        {
+          "stage": 4,
+          "command": "rg Note numbers/parked in docs/field_note_lifecycle.md",
+          "stdout_chars": 0
+        }
+      ],
+      "reasons": [
+        "First block route did not identify Transfer Packet, so bounded topic search.",
+        "FN060/059 identify historical pause and advisory status; missing inputs require FN057 and related concrete FN056 decision.",
+        "Read remaining Gate sections where a slice ended; do not transplant prior medium-work CAP. Stop without unrelated chronology."
+      ],
+      "machine_io": "Stream character reads: pair 3574/3581 including undisplayed prefix; stage4 FN060 6278; stage5 FN057/FN056/FN047 5210/6435/4341; stage6 FN057/FN056 8821/7269 including prefixes. Full blob only where stated. Source display totals include overlapping FN057 L249-260 and FN056 L210.",
+      "git_metadata": {
+        "commands": "GIT_OPTIONAL_LOCKS=0 local rev-parse HEAD origin/main; status; remote; diff names",
+        "stdout_chars": {
+          "head_origin_main": 82,
+          "status": 0,
+          "remote": 141,
+          "diff_names": 10
+        },
+        "result": "clean; expected candidate; only AGENTS differs"
+      },
+      "intervention": {
+        "hints_during_trial": 0,
+        "human": 0,
+        "post_completion_receipt_request": 0
+      },
+      "recorded_source_chars_displayed": 57054,
+      "receipt_basis": "Evaluator transcription of reader public reports and final judgment; no private reasoning or OS trace."
+    }
+  }
+}

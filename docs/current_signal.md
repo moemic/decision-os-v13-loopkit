@@ -1,3 +1,79 @@
+# Current Signal — Five-Pattern Memory Evaluation Admission Candidate
+
+This block is a candidate until its admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+ccae16ef2700ba34784a46413b7033a1672a8ee7 at evaluation setup; the fetched merge descendant containing this exact block is current after admission
+
+Current Layer:
+V13 — bounded retrieval and judgment across five memory perspectives
+
+V12 State:
+PASS — the bounded evaluation is recorded, including initial selectivity failures and remaining reporting limits; this is not an all-case efficacy claim
+
+Completed Work:
+nine initial no-history read-only cases, one PR165 observation reused, one minimal historical-routing clarification, and one fresh recheck for each of two affected cases; first failures remain preserved
+
+Canonical Current Capability:
+after admission, the recorded cases distinguish required experience retrieval from unnecessary descent; two repaired historical inquiries used bounded event search, while residual whole-source reading and a synthetic-data-boundary reporting omission remain visible
+
+Current Restart Point:
+this paired first block, then docs/rule_practice/fn125.md as usual; only when a later result affects a decision follow docs/rule_practice_memory.md to delayed-outcome-001; historical inquiries use AGENTS.md conditional routing; ordinary reader setup remains README.md
+
+Active Branch:
+codex/memory-five-pattern-evaluation until admission; none assigned after admission
+
+Current Gate:
+HOLD — no next upstream loop, automatic revisit, further trial or rule promotion; current authority controls each reader action
+
+Completion Line:
+PASS when fetched origin/main contains this exact paired block and delta, base/head ancestry and changed-path identity pass, and initial failures, recheck limits and source classes remain traceable
+
+Missing Closure:
+candidate: final commit/push, PR checks/review response, merge and read-back; after the exact admission joint passes, none for this bounded evaluation
+
+Next Authorized Action:
+candidate: finish the user-authorized record and routing delivery; after admission: readers may follow the README path within their own authority; no new upstream work is selected
+
+Not Authorized:
+automatic monitoring/retries, new harness/model/Companion work or five-type management, whole-history migration, authority/protection changes, release/tag/SNS; no further trial to manufacture all-PASS
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only with the exact paired blocks and delta on fetched origin/main plus reconstruction-base ancestry
+
+Admission Evidence:
+validation/memory_five_patterns/report.md, frozen matrix/cases, setup and initial/recheck receipts, separate assessments, preserved histories, relevant regression and PR read-back
+
+Remote Read-Back:
+fetch main after merge; compare both first blocks, changed paths, ancestry, prior evidence and unchanged FN125 Canon/card/ledger before completion
+
+Reader Ownership Boundary:
+upstream evidence does not transfer decision ownership or authority to a fork; generally applicable AGENTS.md safety rules remain controlling
+
+Reader Workspace Decision Owner:
+the actual workspace user or maintainer, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — unchanged; not needed or expanded by this evaluation
+
+Runtime Evidence Boundary:
+prior entry evidence includes one fresh isolated Codex task; these read-only judgments are not production executions, private incident reproduction, general reliability or measured time/cost/human-burden reduction
+
+Older Material Below:
+HISTORICAL ONLY — every older block is preserved byte-for-byte; old findings and gates remain evidence, not current authority
+```
+
+All material below is preserved history and grants no current authority.
+
+<!-- current-state-history-boundary:memory-five-patterns-001 -->
+
 # Current Signal — Fresh Reader Trial 001 Admission Candidate
 
 This block is a candidate until its admission joint passes.

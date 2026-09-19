@@ -24,6 +24,8 @@ When resuming this repository's own work, use this bounded reading order:
 This route is for upstream V13 continuation, not first-contact onboarding or a
 third-party fork's current state. Respect any current Main-Write Pause: perform
 only separately authorized work in an isolated worktree and work branch.
+For a read-only question about a different past event, use Conditional Routing
+below; the Current Restart Point is not a general history index.
 
 ## External Intelligence onboarding router
 
@@ -302,6 +304,14 @@ or Completion Line values below its historical boundary are evidence only.
 ## 6. Conditional Routing
 
 Read the relevant reference when the current judgment depends on it.
+
+For a read-only historical inquiry, first check whether the current route names
+the requested event. If it does not, use a bounded topic or filename search in
+an existing index or the relevant repository collection, then read the matched
+sections and their named evidence. Do not traverse an unrelated chronology
+merely because it also mentions failure or success. Similar wording does not
+establish event identity; preserve an unfound event as unconfirmed. Stop when
+the requested evidence and its limits are established.
 
 `AGENTS.md` is the controlling repository instruction surface. A document
 explicitly routed to below is binding only within the scope delegated to it: it
