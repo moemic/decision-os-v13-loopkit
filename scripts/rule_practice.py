@@ -9,10 +9,12 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
 import sys
+import tempfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -81,6 +83,12 @@ def validate(data: dict, root: Path) -> None:
                 "unknown authority boundary")
         require(entry["supersedes"] == latest.get(entry["execution_id"]),
                 "same execution must append an explicit amendment")
+        if entry["supersedes"] is not None:
+            previous = seen[entry["supersedes"]]
+            payload = lambda item: {k: v for k, v in item.items()
+                                    if k not in {"id", "supersedes"}}
+            require(payload(entry) != payload(previous),
+                    "same execution has no new observation: do not append a duplicate")
         refs(entry["evidence"], root)
         if entry["kind"] != "applied":
             require(entry["decision"] == "unassessed", "reference/connection is not practice assessment")
@@ -173,6 +181,23 @@ def render(data: dict) -> str:
     return "\n".join(lines)
 
 
+def write_card(path: Path, output: str) -> None:
+    """Replace one generated card only after its complete output is written."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    mode = path.stat().st_mode & 0o777 if path.exists() else 0o644
+    descriptor, temporary = tempfile.mkstemp(prefix=f".{path.name}.", dir=path.parent)
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8") as stream:
+            stream.write(output)
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.chmod(temporary, mode)
+        os.replace(temporary, path)
+    finally:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     action = parser.add_mutually_exclusive_group()
@@ -194,8 +219,7 @@ def main() -> int:
             require((ROOT / CARD).read_text() == output, "stale card: review ledger, then run --write")
             print("PASS: source identity, practice ledger, current card and requested history check")
         elif args.write:
-            (ROOT / CARD).parent.mkdir(parents=True, exist_ok=True)
-            (ROOT / CARD).write_text(output)
+            write_card(ROOT / CARD, output)
             print(f"Updated {CARD}; review the diff before committing.")
         else:
             print(output, end="")

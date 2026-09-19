@@ -1,0 +1,282 @@
+{
+  "confirmed_at": "2026-09-19T08:26:27Z",
+  "repository": "shin4141/decision-os-v13-loopkit",
+  "refs": {
+    "distributed": {
+      "commit": "e1212a795413e0146c52b2c9aa51356897c62846",
+      "package_source_files": 7,
+      "python_source_files": 7,
+      "non_python_source_files": 0,
+      "source_paths": [
+        "decision_os/__init__.py",
+        "decision_os/__main__.py",
+        "decision_os/checks.py",
+        "decision_os/cli.py",
+        "decision_os/scan.py",
+        "decision_os/scan_text.py",
+        "decision_os/state.py"
+      ],
+      "metadata": {
+        "build_system": {
+          "requires": [
+            "flit_core==3.12.0"
+          ],
+          "build-backend": "flit_core.buildapi"
+        },
+        "name": "decision-os-v13-loopkit",
+        "version": "0.2.0",
+        "requires_python": ">=3.10",
+        "dependencies": [],
+        "optional_dependencies": {},
+        "scripts": {
+          "decision-os": "decision_os.cli:main"
+        }
+      },
+      "critical_source_sha256": {
+        "pyproject.toml": "a000b85592db8cb35cabc8cc08803e83534b5cda5a0b3183d5fb12b84a8589c8",
+        "decision_os/__init__.py": "d714346cfadf9573c28c070c2eea63e55bc1def1525e1a0e26ed6e10febcd001",
+        "decision_os/__main__.py": "3f738a16bcdc10533c695eb1de176825458fe4044fa94d05dea2b3ec1944e219",
+        "decision_os/checks.py": "ad446febc1414d4f6e0e029e2d4baad99126c1e0e2b31366dcbc904d3453f0f6",
+        "decision_os/state.py": "703b0e4bdadcb412c7ff88e3d1a486e7ed28974e17985c8488094acf11a3f9ed",
+        "decision_os/scan.py": "51462e8e31dc46b74596cf2f90ae2cfb76356374d97f3c1c69a06dea9c773570",
+        "decision_os/scan_text.py": "31c304d4a00a8586f2a3e1f9b2510eed55b52ce2513bc3053613caf814ed2fd7",
+        "decision_os/cli.py": "3f35d13fd1a0d741fc2efb9fbffeeae6a19ac3b1b29797ce4348bfe32c153f08"
+      },
+      "cli_static_import_closure": {
+        "modules": [
+          "decision_os",
+          "decision_os.checks",
+          "decision_os.cli",
+          "decision_os.scan",
+          "decision_os.scan_text",
+          "decision_os.state"
+        ],
+        "edges": {
+          "decision_os": [
+            "decision_os.checks"
+          ],
+          "decision_os.checks": [
+            "decision_os.state"
+          ],
+          "decision_os.state": [],
+          "decision_os.cli": [
+            "decision_os.checks",
+            "decision_os.scan",
+            "decision_os.scan_text"
+          ],
+          "decision_os.scan_text": [],
+          "decision_os.scan": []
+        },
+        "method": "AST module references, including conditional/function imports; static reachability only, not runtime execution or side-effect proof"
+      }
+    },
+    "candidate": {
+      "commit": "0e90f81cb89cb5a7829f0961925b54316a59a78b",
+      "package_source_files": 62,
+      "python_source_files": 56,
+      "non_python_source_files": 6,
+      "source_paths": [
+        "decision_os/__init__.py",
+        "decision_os/__main__.py",
+        "decision_os/acceleration/__init__.py",
+        "decision_os/acceleration/claude_adapter.py",
+        "decision_os/acceleration/cli.py",
+        "decision_os/acceleration/codex_adapter.py",
+        "decision_os/acceleration/engine.py",
+        "decision_os/acceleration/model.py",
+        "decision_os/acceleration/store.py",
+        "decision_os/audit_delivery.py",
+        "decision_os/audit_delivery_text.py",
+        "decision_os/audit_gate.py",
+        "decision_os/audit_gate_text.py",
+        "decision_os/audit_link.py",
+        "decision_os/audit_link_text.py",
+        "decision_os/checks.py",
+        "decision_os/cli.py",
+        "decision_os/companion/__init__.py",
+        "decision_os/companion/__main__.py",
+        "decision_os/companion/candidate_inputs/creator_live_agents_before_after_v0_2/AGENTS.md",
+        "decision_os/companion/continuation.py",
+        "decision_os/companion/controller.py",
+        "decision_os/companion/field_notes_adapter.py",
+        "decision_os/companion/field_notes_controller.py",
+        "decision_os/companion/field_notes_creator_live.py",
+        "decision_os/companion/field_notes_creator_live_candidate.py",
+        "decision_os/companion/field_notes_creator_live_candidate_v0_2.py",
+        "decision_os/companion/field_notes_creator_live_capture.py",
+        "decision_os/companion/field_notes_creator_live_cycle_006.py",
+        "decision_os/companion/field_notes_creator_live_entrypoint.py",
+        "decision_os/companion/field_notes_creator_live_reconnect.py",
+        "decision_os/companion/field_notes_maturity_commit.py",
+        "decision_os/companion/field_notes_maturity_ledger.py",
+        "decision_os/companion/field_notes_maturity_review.py",
+        "decision_os/companion/field_notes_model.py",
+        "decision_os/companion/field_notes_reconnect.py",
+        "decision_os/companion/field_notes_reuse.py",
+        "decision_os/companion/field_notes_selective_reconnect.py",
+        "decision_os/companion/field_notes_server.py",
+        "decision_os/companion/field_notes_whole_flow.py",
+        "decision_os/companion/guided_intake.py",
+        "decision_os/companion/intelligence_transplant.py",
+        "decision_os/companion/manual_bridge.py",
+        "decision_os/companion/ordinary_user_path.py",
+        "decision_os/companion/server.py",
+        "decision_os/companion/small_compound_loop.py",
+        "decision_os/companion/static/app.css",
+        "decision_os/companion/static/app.js",
+        "decision_os/companion/static/field_notes.css",
+        "decision_os/companion/static/field_notes.js",
+        "decision_os/companion/static/index.html",
+        "decision_os/companion/supervisor.py",
+        "decision_os/compound_evidence_meter.py",
+        "decision_os/handoff_acceptance.py",
+        "decision_os/intake.py",
+        "decision_os/intake_text.py",
+        "decision_os/intelligence_transplant.py",
+        "decision_os/public_claim_guard.py",
+        "decision_os/role_contract.py",
+        "decision_os/scan.py",
+        "decision_os/scan_text.py",
+        "decision_os/state.py"
+      ],
+      "metadata": {
+        "build_system": {
+          "requires": [
+            "flit_core==3.12.0"
+          ],
+          "build-backend": "flit_core.buildapi"
+        },
+        "name": "decision-os-v13-loopkit",
+        "version": "0.2.0",
+        "requires_python": ">=3.10",
+        "dependencies": [],
+        "optional_dependencies": {
+          "claude": [
+            "claude-agent-sdk==0.2.123"
+          ]
+        },
+        "scripts": {
+          "decision-os": "decision_os.cli:main",
+          "decision-os-accelerate": "decision_os.acceleration.cli:main"
+        }
+      },
+      "critical_source_sha256": {
+        "pyproject.toml": "2edb0376eee095a356e010b6242d54797bfdcd5031d8dd9df71770786436fcc3",
+        "decision_os/__init__.py": "d714346cfadf9573c28c070c2eea63e55bc1def1525e1a0e26ed6e10febcd001",
+        "decision_os/__main__.py": "3f738a16bcdc10533c695eb1de176825458fe4044fa94d05dea2b3ec1944e219",
+        "decision_os/checks.py": "0c7174c5d270bbaf5df00d1e1d089dfb884c5dce4e9206c09d394170fa1c516c",
+        "decision_os/state.py": "703b0e4bdadcb412c7ff88e3d1a486e7ed28974e17985c8488094acf11a3f9ed",
+        "decision_os/scan.py": "51462e8e31dc46b74596cf2f90ae2cfb76356374d97f3c1c69a06dea9c773570",
+        "decision_os/scan_text.py": "7895984921cf9b8bd42cbbc7e1c3b1bf09a466eab9ae4b7226fb50ed8c1a3b20",
+        "decision_os/cli.py": "65d86a3c0c3a5d90fddac978a0b08b7211e4951be04a49943e73bdf07c01706f"
+      },
+      "cli_static_import_closure": {
+        "modules": [
+          "decision_os",
+          "decision_os.audit_delivery",
+          "decision_os.audit_delivery_text",
+          "decision_os.audit_gate",
+          "decision_os.audit_gate_text",
+          "decision_os.audit_link",
+          "decision_os.audit_link_text",
+          "decision_os.checks",
+          "decision_os.cli",
+          "decision_os.companion.intelligence_transplant",
+          "decision_os.handoff_acceptance",
+          "decision_os.intake",
+          "decision_os.intake_text",
+          "decision_os.intelligence_transplant",
+          "decision_os.public_claim_guard",
+          "decision_os.scan",
+          "decision_os.scan_text",
+          "decision_os.state"
+        ],
+        "edges": {
+          "decision_os": [
+            "decision_os.checks"
+          ],
+          "decision_os.checks": [
+            "decision_os.state"
+          ],
+          "decision_os.state": [],
+          "decision_os.cli": [
+            "decision_os.audit_delivery",
+            "decision_os.audit_delivery_text",
+            "decision_os.audit_gate",
+            "decision_os.audit_gate_text",
+            "decision_os.audit_link",
+            "decision_os.audit_link_text",
+            "decision_os.checks",
+            "decision_os.handoff_acceptance",
+            "decision_os.intake",
+            "decision_os.intake_text",
+            "decision_os.public_claim_guard",
+            "decision_os.scan",
+            "decision_os.scan_text"
+          ],
+          "decision_os.audit_delivery_text": [
+            "decision_os.audit_delivery"
+          ],
+          "decision_os.audit_delivery": [],
+          "decision_os.public_claim_guard": [
+            "decision_os.companion.intelligence_transplant",
+            "decision_os.intelligence_transplant"
+          ],
+          "decision_os.intelligence_transplant": [],
+          "decision_os.companion.intelligence_transplant": [
+            "decision_os.intelligence_transplant"
+          ],
+          "decision_os.audit_link_text": [
+            "decision_os.audit_link"
+          ],
+          "decision_os.audit_link": [
+            "decision_os",
+            "decision_os.audit_delivery",
+            "decision_os.intake"
+          ],
+          "decision_os.intake": [],
+          "decision_os.scan_text": [],
+          "decision_os.audit_gate_text": [
+            "decision_os",
+            "decision_os.audit_delivery",
+            "decision_os.audit_gate",
+            "decision_os.audit_link",
+            "decision_os.intake"
+          ],
+          "decision_os.audit_gate": [
+            "decision_os",
+            "decision_os.audit_delivery",
+            "decision_os.audit_link",
+            "decision_os.intake"
+          ],
+          "decision_os.handoff_acceptance": [],
+          "decision_os.scan": [],
+          "decision_os.intake_text": []
+        },
+        "method": "AST module references, including conditional/function imports; static reachability only, not runtime execution or side-effect proof"
+      }
+    }
+  },
+  "actual_wheel_contents": "NOT_BUILT",
+  "cold_transport": "NOT_RUN",
+  "new_ai_trials": 0,
+  "unchanged_critical_sources": [
+    "decision_os/__init__.py",
+    "decision_os/__main__.py",
+    "decision_os/state.py",
+    "decision_os/scan.py"
+  ],
+  "changed_critical_sources": [
+    "pyproject.toml",
+    "decision_os/checks.py",
+    "decision_os/scan_text.py",
+    "decision_os/cli.py"
+  ],
+  "local_prerequisites": {
+    "uv_on_PATH": false,
+    "uvx_on_PATH": false,
+    "flit_core_importable_by_selected_python": false,
+    "scope": "Only current PATH/interpreter; no claim about all installed or cached tools"
+  },
+  "scan_text_diff_numstat": "46\t0\tdecision_os/scan_text.py"
+}
