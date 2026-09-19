@@ -78,6 +78,10 @@ FN125の実体確認の節と[経験002](delayed_outcome_case_002.md)に照ら�
 
 ## 後続wheel工程と受領確認（2026-09-19）
 
+後続の起動・公開コマンド初回取得とpin更新の判断は
+[V215配布runtime確認](v215_distribution_runtime.md)へ接続した。以下は当時の
+固定source wheel確認時点の記録であり、その後のruntime結果ではない。
+
 上記の「新しいwheelは未作成」は範囲調査時点の記録。
 別途許可された[固定main sourceのwheel確認001](recycle_distribution_wheel_001.md)と
 [manifest・metadata・hash](recycle_distribution_wheel_001.json)では、一つのwheelの作成・静的検査まで完了した。
