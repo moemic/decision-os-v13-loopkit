@@ -1,0 +1,30 @@
+{
+  "trial_id": "fresh-reader-001",
+  "repository": "shin4141/decision-os-v13-loopkit",
+  "baseline": "f34b0d5d2f0a865d00587386abb8238195c1a8db",
+  "input_tree": "69c4b1230477c59f02b70d5a3731682905e8a003",
+  "prepared_at": "2026-09-19T05:42:15+00:00",
+  "session_configuration": {
+    "fork_turns": "none",
+    "model": "inherited default; no alternate model",
+    "clone": "independent single-branch main clone, not a shared worktree",
+    "worktree_files_readonly": true,
+    "git_metadata": "separate .git; read-only operation requested, optional locks disabled in prompt"
+  },
+  "prompt": "一回の読み取り専用の判断をお願いします。\n\n対象リポジトリは {READER_ROOT} です。\norigin は https://github.com/shin4141/decision-os-v13-loopkit.git です。\nこの専用cloneの main / origin/main / HEAD は、準備時に取得した現行main f34b0d5d2f0a865d00587386abb8238195c1a8db で一致し、作業ツリーはcleanです。upstream V13自身の作業として扱ってください。\n\nこのリポジトリの通常の運用指示（AGENTS.md）に従って、次の過去のRun 3記録を起点に、現在必要な対応を判断してください。\n出発記録: validation/codex_conversation_next_1_01_run_3_current_state_reconstruction.md\n\n許可は、この対象リポジトリ内での必要な読み取りと判断の報告だけです。提案した作業を実行しないでください。ファイルの変更・作成、fetch等のGit更新、テスト実行、外部通信、他エージェントの起動は行わないでください。他の作業ディレクトリや他タスクの会話を参照せず、与えられた入力と対象リポジトリだけで判断してください。読み取り用コマンドでは必要に応じて GIT_OPTIONAL_LOCKS=0 と PYTHONDONTWRITEBYTECODE=1 を使用してください。\n\n観測のため、各読み取り段階が終わったら、読んだファイル・範囲（全文／先頭ブロック／指定範囲／検索結果など）と、その取得に使ったコマンドを /root へのメッセージに記録してください。表示文字数等を計測できれば添え、計測していない量は推測しないでください。これは読取記録であり、追加の助言を待つ必要はありません。\n\n最後に、現在必要な対応、選ばなかった対応と理由、判断に使った証拠、未確認事項、読んだ範囲を簡潔に報告して停止してください。書き込みや追加試行は不要です。",
+  "prompt_sha256": "6fa17977bbed4066179dbcce168b264df8dce6dccbd430d46e3aba6113336717",
+  "attempt_cap": {
+    "initial": 1,
+    "conditional_after_minimal_repair": 1
+  },
+  "predeclared_checks": [
+    "Find the later outcome without a supplied answer or outcome path",
+    "Separate repaired history placement from unknown external O-69 runtime/transport",
+    "Preserve the historical statement as an as-of record while updating current judgment",
+    "Exclude duplicate placement repair from currently needed work",
+    "Use bounded relevant reads rather than unrelated full histories"
+  ],
+  "measurement_boundary": "Record file/range/command receipts and interventions; do not turn amount or question counts into time/cost/human-burden savings.",
+  "prompt_normalization": "Only the local absolute clone path is replaced by {READER_ROOT}; repository, SHA, instructions and all task text are otherwise preserved. The exact dispatched prompt is retained in the local ignored trial log.",
+  "normalized_prompt_sha256": "0c7c40ced85fa12e2af8f0942816ff38ba61351dc77c29ed4beafc0631503db9"
+}

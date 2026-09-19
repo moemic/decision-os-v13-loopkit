@@ -107,6 +107,39 @@
         ],
         "automatic_schedule": false
       }
+    },
+    {
+      "id": "delayed-outcome-001-observation-002",
+      "supersedes": null,
+      "kind": "fresh_reader_trial",
+      "confirmed_at": "2026-09-19T05:48:08Z",
+      "input_main": "f34b0d5d2f0a865d00587386abb8238195c1a8db",
+      "trial_id": "fresh-reader-001",
+      "evidence": [
+        "validation/delayed_outcome_fresh_reader_001.md",
+        "validation/delayed_outcome_fresh_reader_001_setup.json",
+        "validation/delayed_outcome_fresh_reader_001_reads.json"
+      ],
+      "result": "OBSERVED",
+      "observed_outcome": "One new no-history reader used the ordinary repository route, found the later result, preserved the original as-of finding, separated repaired document placement from unconfirmed external O-69 transport, and explicitly excluded duplicate placement repair. No parent hints or corrective retry.",
+      "assessment": {
+        "kind": "NEXT_SELECTION_IMPLICATION",
+        "implication": "The existing route supported this one current read-only judgment; no entrance/rule change is justified by this trial.",
+        "rule_change": "NONE",
+        "effect_improvement": "ONE_READ_ONLY_JUDGMENT_OBSERVED; GENERAL_EFFECT_UNCONFIRMED",
+        "causal_limit": "No executed repair, control/ablation, repeated trial, alternate model, independent evaluator or time/cost/human-burden measurement. This observation does not revise the original finding or count as another historical Run or FN125 application."
+      },
+      "unresolved_attention": [],
+      "revisit": {
+        "state": "UNCONFIRMED",
+        "question": "Will the connection remain useful in later authorized tasks and reduce unnecessary real work or burden?",
+        "trigger": "A later real task shows retrieval failure, contradictory evidence or changed selection/action outcomes.",
+        "references": [
+          "validation/delayed_outcome_fresh_reader_001.md",
+          "validation/delayed_outcome_case_001.md#revisit"
+        ],
+        "automatic_schedule": false
+      }
     }
   ]
 }

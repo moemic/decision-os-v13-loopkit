@@ -1,0 +1,179 @@
+{
+  "trial_id": "fresh-reader-001",
+  "source": "Eight unsolicited post-read receipts and the final answer from the fresh reader; paths normalized to repository-relative names and {READER_ROOT}. This is reader-reported operation accounting, not OS-level tracing.",
+  "baseline": "f34b0d5d2f0a865d00587386abb8238195c1a8db",
+  "parent_follow_up_messages": 0,
+  "human_follow_up_messages_during_trial": 0,
+  "stages": [
+    {
+      "stage": 1,
+      "command": "pwd; rg --files -g AGENTS.md -g '!node_modules' -g '!vendor' -g '!\\.git'",
+      "scope": "File names only; cwd={READER_ROOT}; root AGENTS plus three other AGENTS paths returned. No file bodies read.",
+      "display_characters": null
+    },
+    {
+      "stage": 2,
+      "command": "cat AGENTS.md",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "scope": "full body",
+          "display_characters": null
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "command": "Python subprocess: git remote get-url origin; git branch --show-current; git rev-parse HEAD refs/heads/main refs/remotes/origin/main; git status --porcelain=v1; git worktree list --porcelain. Python Path.read_text + first-fence regex extraction for the pair.",
+      "metadata_stdout_characters": [
+        56,
+        5,
+        123,
+        0,
+        126
+      ],
+      "files": [
+        {
+          "path": "docs/current_signal.md",
+          "scope": "lines 5-71, first fenced block including fences",
+          "display_characters": 3594
+        },
+        {
+          "path": "handoff/current_codex_handoff.md",
+          "scope": "lines 5-71, first fenced block including fences",
+          "display_characters": 3594
+        }
+      ],
+      "machine_io": "Both complete files were loaded to extract the first blocks. Only the first blocks were displayed and semantically read.",
+      "result": "Identity matched, clean, one worktree; paired first blocks identical."
+    },
+    {
+      "stage": 4,
+      "command": "Python Path.read_text; print each complete selected file and its len(text)/line count.",
+      "files": [
+        {
+          "path": "docs/rule_practice/fn125.md",
+          "scope": "full body, 26 lines",
+          "display_characters": 2379
+        },
+        {
+          "path": "validation/codex_conversation_next_1_01_run_3_current_state_reconstruction.md",
+          "scope": "full body, 117 lines",
+          "display_characters": 5513
+        }
+      ],
+      "reader_intermediate_judgment": "The past Run records an unrepaired suffix regression, while the current pair names a later-result connection. Check the named route before treating the historical unrepaired state as current."
+    },
+    {
+      "stage": 5,
+      "command": "rg -n '^#{1,3} |delayed-outcome-001|delayed_outcome|Run 3|suffix|V214' docs/rule_practice_memory.md validation/v13_13_42_closure_trajectory.md validation/delayed_outcome_case_001.md; Python subprocess git show origin/main:<paired path>, first-fence extraction, and git merge-base --is-ancestor 42e406e858b05b6b8aff5cc6669cf10ad506b424 origin/main.",
+      "scope": "Headings and matching lines from the three named files; no entire-history display. Pair bodies compared without redisplay.",
+      "display_characters": null,
+      "pair_including_fences_bytes": 3604,
+      "pair_including_fences_sha256": "4b61455097b29623eb0bd7c50e3de952d0640729d296df7be5c5aa2ba8ac06e5",
+      "result": "Local/pinned remote pair equality and ancestry passed; no fetch."
+    },
+    {
+      "stage": 6,
+      "command": "Python Path.read_text().splitlines(keepends=True); display the named line ranges.",
+      "files": [
+        {
+          "path": "docs/rule_practice_memory.md",
+          "scope": "lines 101-123",
+          "display_characters": 883
+        },
+        {
+          "path": "validation/delayed_outcome_case_001.md",
+          "scope": "full body, 133 lines",
+          "display_characters": 5406
+        },
+        {
+          "path": "validation/v13_13_42_closure_trajectory.md",
+          "scope": "lines 1-90, compact causal index",
+          "display_characters": 7926
+        }
+      ],
+      "reader_intermediate_judgment": "The later reader-entry repair was merged; no duplicate placement repair is needed. Check the necessary fixed identity/snapshot locally next; external PR text will not be fetched."
+    },
+    {
+      "stage": 7,
+      "command": "Python Path.read_text on case JSON; git log --first-parent --format=%H\\ %s 579f042e738ca117baa27cf7e95d7f0e76019a77..origin/main; git diff --name-status 579f042e738ca117baa27cf7e95d7f0e76019a77 origin/main.",
+      "files": [
+        {
+          "path": "validation/delayed_outcome_case_001.json",
+          "scope": "full body, 112 lines",
+          "display_characters": 6539
+        }
+      ],
+      "metadata_stdout_characters": [
+        111,
+        207
+      ],
+      "result": "One first-parent merge; six changed path names. No full diff read. Rule attribution/effect limits were retained."
+    },
+    {
+      "stage": 8,
+      "command": "Python subprocess git show <commit>:<named path>, SHA-256 and origin/main equality; regex extraction of the O-69 / V209 repair section; ancestor checks; exact historical-suffix comparisons; git diff --name-status origin/main^2 origin/main.",
+      "files": [
+        {
+          "path": "validation/codex_conversation_recycle_reader_entry_publication_readiness.md",
+          "ref": "ff239dc0845364d7f52a6296d7ab2d4abba558b7",
+          "scope": "O-69 / V209 repair section, lines 65-99 boundary",
+          "display_characters": 1157
+        }
+      ],
+      "machine_only_blobs": [
+        {
+          "path": "validation/codex_conversation_next_1_01_run_3_current_state_reconstruction.md",
+          "ref": "4bc279584d634e7a12947b35689efb70061a630d",
+          "bytes": 5531
+        },
+        {
+          "path": "validation/codex_conversation_recycle_reader_entry_publication_readiness.md",
+          "ref": "ff239dc0845364d7f52a6296d7ab2d4abba558b7",
+          "bytes": 6483
+        },
+        {
+          "path": "validation/v13_13_42_closure_trajectory.md",
+          "ref": "c58f2d2e9af5baad9c9e542901f8f294997f81c7",
+          "bytes": 20635
+        },
+        {
+          "path": "docs/current_signal.md",
+          "ref": "579f042e738ca117baa27cf7e95d7f0e76019a77",
+          "bytes": 143814
+        },
+        {
+          "path": "handoff/current_codex_handoff.md",
+          "ref": "579f042e738ca117baa27cf7e95d7f0e76019a77",
+          "bytes": 272957
+        }
+      ],
+      "result": "Named source hashes/current blobs and ancestor checks passed; prior pair bytes fully preserved; current merge tree equals its second parent. Full historical bodies were not displayed."
+    }
+  ],
+  "measurement_limits": "AGENTS and search-output character counts were not measured; no exact total model input, tokens, time, cost or human burden is claimed. Machine blob reads are explicitly distinct from semantic/context reads. Commands are reader-reported invocations/operations, not a verbatim full Python transcript.",
+  "postcondition": {
+    "checked_at": "2026-09-19T05:48:08Z",
+    "head_main_origin_main": "f34b0d5d2f0a865d00587386abb8238195c1a8db",
+    "tracked_diff": "empty",
+    "untracked_files": "none",
+    "remote_unchanged": true,
+    "single_independent_worktree": true,
+    "reader_reported_mutations": 0,
+    "reader_reported_tests": 0,
+    "reader_reported_external_communication": 0,
+    "additional_agents_started": 0
+  },
+  "assessment": {
+    "late_outcome_found": "PASS",
+    "placement_vs_external_runtime_distinguished": "PASS",
+    "historical_as_of_preserved": "PASS",
+    "duplicate_repair_excluded": "PASS",
+    "bounded_relevant_semantic_reads": "PASS",
+    "repair_required": false,
+    "second_trial_run": false,
+    "limitation": "One read-only judgment at a fixed main; no action execution, ablation/control, general reliability or savings measurement."
+  },
+  "reader_final_answer": "現在必要なのは、Run 3 の「未修復」を当時の状態として扱い、現在は修復済みと判断して **HOLD を維持すること**です。新しい upstream 作業は選択・許可されていません。読み取り判断を終え、停止します。\n\n- **選ばなかった対応**：同じ配置修正の再実行、テスト条件の変更、current pair の再作成。後続修復が現 main に保存されており、重複対応となるためです。ルール改訂、自動再訪、追加実装も現在の権限外です。\n- **根拠**：HEAD／main／準備済み origin/main は `f34b0d5…` で一致し、clean。先頭 current pair は完全一致し、reconstruction base の祖先関係も成立しています。Run 3 を明示的に再利用した後続報告と修復後 trajectory は、固定 source の hash と一致し、現在の origin/main でも同一です。修復 commit `c58f2d2…` と受入れ merge `3f6d1c0…` は現 main の祖先です。現在の任意参照経路も「古い未修復記録だけで同じ修正を選ばない」と明示しています。\n- **未確認**：今回のテスト結果、準備後の外部 remote 更新、PR #164 本文の最終完了記録、O-69 の外部 transport 原因。選択の最適性、ルールの因果効果、負担削減、反復改善も未確認です。記録中の PASS を今回の実測として扱っていません。\n- **意味内容を読んだ範囲**：AGENTS 全文、current pair 各5–71行、FN125カード全文、指定 Run 3 全文、rule_practice_memory 101–123行、delayed-outcome MD／JSON 全文、trajectory 1–90行、固定後続報告の O-69／V209 repair 節。加えて指定 Git metadata・hash・blob 同一性・履歴保存を比較しました。各取得コマンドと測定値は段階別に報告済みです。\n\n変更・作成、fetch、テスト、外部通信、追加エージェント起動は行っていません。"
+}
