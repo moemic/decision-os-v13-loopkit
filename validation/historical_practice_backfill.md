@@ -48,7 +48,7 @@ guideから条件別のcase/sourceへ辿れることを確認する。合成proo
 - 固定source 15件のhash・Git記録時刻・ancestryを照合。Stage D前後の保護されたAGENTS本文は同一。
   旧実体・移行・昇格本文のhashはStage Dが記録した値とも一致。PR #110/#113/#131/#150/#151/#159の
   head・merge・時刻を確認し、commit時刻とGitHub merge時刻を同一視していない。
-- caseと報告の参照22個、既存guideから2件への経路、JSON、数値と固定receiptを確認。
+- caseと報告の参照23個、既存guideから2件への経路、JSON、数値と固定receiptを確認。
   V209のbaseline/candidateの45 failure/error identitiesは集合として一致。
   実runのA1停止、no-turn確認、合成proofは別の証拠範囲として保存。
 - 既存の後日観測・原資料・Canon/card/ledger・実装は無変更。guideは元全文をprefixとして、
@@ -56,4 +56,4 @@ guideから条件別のcase/sourceへ辿れることを確認する。合成proo
 - 既存の後日観測・実践記憶・admission・歴史回帰・V209・handoff acceptanceの88テストPASS（130.244秒）。
   新しいAI試用や全legacy suiteの再実行ではない。私有binary・receiptや当時のignored logsは未再確認。
 
-PR/main/read-backの最終receiptは配達PRへ接続する。
+PR/main/read-backの最終receiptは [PR #169](https://github.com/shin4141/decision-os-v13-loopkit/pull/169) へ接続する。
