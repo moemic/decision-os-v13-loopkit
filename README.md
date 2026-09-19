@@ -117,6 +117,10 @@ FN125（継続時の証拠選択）では、普段は[短い現行カード](doc
 [PR #163](https://github.com/shin4141/decision-os-v13-loopkit/pull/163)にあります。
 一つのルールの限定導入であり、使用回数による自動昇格や ♻️ の探索拡張はありません。
 
+[5観点の取得・判断検証](validation/memory_five_patterns/report.md)では、必要な経験の取得と
+不要な履歴の非取得を別々に確認しました。初回の読み過ぎ・報告上の不足と、入口の限定修正後の
+一度の再確認を残しています。実例の参照・合成ケース・過去試用の再利用は、実使用件数へ加算しません。
+
 For FN125, read the small current card first and follow its evidence only when
 needed. Real use can support keeping the rule as well as revising it; unresolved
 counterexamples stay visible. This pilot does not establish general effectiveness.

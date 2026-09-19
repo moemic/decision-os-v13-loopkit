@@ -1,0 +1,158 @@
+{
+  "baseline": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+  "matrix_sha256": "7ad0e73a1129d767b9bf9c9062dd05c88f9af5de82353f982033748723f805e3",
+  "cases_sha256": "f549e97f6339e27ab1bdb48dbf2b6cfb1ae6fd0894917296138678537fd1eae7",
+  "initial_readers": [
+    {
+      "case": "m01",
+      "head": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "status_porcelain": "",
+      "origin": "https://github.com/shin4141/decision-os-v13-loopkit.git",
+      "evaluator_artifacts_absent": true,
+      "prepared_at": "2026-09-19T06:26:08+00:00",
+      "prompt_sha256": "5c20de8fe43886821e128ce3ab6d13f589a84434b76845de6b78c0d7c03d2d1c",
+      "fork_turns": "none",
+      "worktree_files_readonly": true
+    },
+    {
+      "case": "m02",
+      "head": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "status_porcelain": "",
+      "origin": "https://github.com/shin4141/decision-os-v13-loopkit.git",
+      "evaluator_artifacts_absent": true,
+      "prepared_at": "2026-09-19T06:26:09+00:00",
+      "prompt_sha256": "07be3a54e7ccffa274ccce0c842480720cb724a5963cf907e82f961c0b359f90",
+      "fork_turns": "none",
+      "worktree_files_readonly": true
+    },
+    {
+      "case": "m03",
+      "head": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "status_porcelain": "",
+      "origin": "https://github.com/shin4141/decision-os-v13-loopkit.git",
+      "evaluator_artifacts_absent": true,
+      "prepared_at": "2026-09-19T06:26:09+00:00",
+      "prompt_sha256": "51cde5d11f086e45326e01f0983a15eab8273fffe1da9349f92b1e77b5930414",
+      "fork_turns": "none",
+      "worktree_files_readonly": true
+    },
+    {
+      "case": "m04",
+      "head": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "status_porcelain": "",
+      "origin": "https://github.com/shin4141/decision-os-v13-loopkit.git",
+      "evaluator_artifacts_absent": true,
+      "prepared_at": "2026-09-19T06:31:11+00:00",
+      "prompt_sha256": "8f4c96bd8a18a45d42aa1f9bd7810572aeec0938b259debb5ed1fe4a9839ca9a",
+      "fork_turns": "none",
+      "worktree_files_readonly": true
+    },
+    {
+      "case": "m05",
+      "head": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "status_porcelain": "",
+      "origin": "https://github.com/shin4141/decision-os-v13-loopkit.git",
+      "evaluator_artifacts_absent": true,
+      "prepared_at": "2026-09-19T06:31:11+00:00",
+      "prompt_sha256": "b9c8d9526fa14df9c3974dccd136f6dc032e1e22e1b85c68acaa0332d1b02804",
+      "fork_turns": "none",
+      "worktree_files_readonly": true
+    },
+    {
+      "case": "m06",
+      "head": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "status_porcelain": "",
+      "origin": "https://github.com/shin4141/decision-os-v13-loopkit.git",
+      "evaluator_artifacts_absent": true,
+      "prepared_at": "2026-09-19T06:31:12+00:00",
+      "prompt_sha256": "65704efd09f6aae6f682671b702c3dc865ae5352aff05a60ad336d239a9726bf",
+      "fork_turns": "none",
+      "worktree_files_readonly": true
+    },
+    {
+      "case": "m07",
+      "head": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "status_porcelain": "",
+      "origin": "https://github.com/shin4141/decision-os-v13-loopkit.git",
+      "evaluator_artifacts_absent": true,
+      "prepared_at": "2026-09-19T06:31:12+00:00",
+      "prompt_sha256": "d4805ee75eb70a13e62e84ac51ea66239d0c37f2ce7a142c905e0c4c47d85653",
+      "fork_turns": "none",
+      "worktree_files_readonly": true
+    },
+    {
+      "case": "m08",
+      "head": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "status_porcelain": "",
+      "origin": "https://github.com/shin4141/decision-os-v13-loopkit.git",
+      "evaluator_artifacts_absent": true,
+      "prepared_at": "2026-09-19T06:31:12+00:00",
+      "prompt_sha256": "b8a8d99af134afa7da0081e4b2bf4dc03a74e17311d49c36f20b094b7dd42ca0",
+      "fork_turns": "none",
+      "worktree_files_readonly": true
+    },
+    {
+      "case": "m09",
+      "head": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "status_porcelain": "",
+      "origin": "https://github.com/shin4141/decision-os-v13-loopkit.git",
+      "evaluator_artifacts_absent": true,
+      "prepared_at": "2026-09-19T06:31:13+00:00",
+      "prompt_sha256": "3de86bf58ec3a09128c606bf5d92c707df2028049d229fd349c46c676cd88ff0",
+      "fork_turns": "none",
+      "worktree_files_readonly": true
+    }
+  ],
+  "verified_at": "2026-09-19T06:38:40+00:00",
+  "isolation_limits": "Independent no-hardlinks clones, no-history sessions, chmod readonly worktree files, prompt scope. Same host/tools/model; no OS security isolation/access audit claim. Evaluator matrix/answers absent. Git .git remains writable but post-run HEAD/status/origin checked. No lower-path or expected-answer hints sent.",
+  "recheck_readers": [
+    {
+      "case": "m05",
+      "head": "9773f992af1e9a661742f716a63daffdf5324bc7",
+      "tree": "8ad1247263b23035d3f5a7d881545fdc7b7bc159",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "prepared_at": "2026-09-19T06:40:01+00:00",
+      "fork_turns": "none",
+      "prompt_sha256": "a3da3ea19723c89f3d48ec097ff931698f6120d49e7587ea64be49d37b462ae8",
+      "evaluator_artifacts_present": false,
+      "worktree_files_readonly": true,
+      "changed_paths": [
+        "AGENTS.md"
+      ],
+      "AGENTS_sha256": "db09d6eefe8f1aad124e17c595b287cf474d239187353dc76d6808e873b15edb",
+      "post_read_status_porcelain": "",
+      "post_read_integrity_verified_at": "2026-09-19T06:45:43+00:00"
+    },
+    {
+      "case": "m08",
+      "head": "595c899d3927fcba499bae32319be92fdf7615f1",
+      "tree": "8ad1247263b23035d3f5a7d881545fdc7b7bc159",
+      "origin_main": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+      "prepared_at": "2026-09-19T06:40:02+00:00",
+      "fork_turns": "none",
+      "prompt_sha256": "0fe8aa685c81ae4ae9549631b8b83bea9e99e410cc9571bbd3bd4052a4cdece3",
+      "evaluator_artifacts_present": false,
+      "worktree_files_readonly": true,
+      "changed_paths": [
+        "AGENTS.md"
+      ],
+      "AGENTS_sha256": "db09d6eefe8f1aad124e17c595b287cf474d239187353dc76d6808e873b15edb",
+      "prompt_format_note": "Dispatch added one newline before Git environment guidance; hash is for actual dispatched text, with unchanged scenario and permissions.",
+      "post_read_status_porcelain": "",
+      "post_read_integrity_verified_at": "2026-09-19T06:45:44+00:00"
+    }
+  ],
+  "recheck_setup_note": "First local candidate commit preparation stopped because clone had no Git author config; before any recheck reader launch, reran using the canonical workspace noreply author for that local commit only. No global config change.",
+  "initial_receipt_sha256": "1eb6cc51a044e26183941acffdeedda6466719d151b7cfc2f029233c75f914ea",
+  "recheck_receipt_sha256": "c15f065eb1a00c6a4c3afc800d6dae8628377ccf75f7a679aa66f19e539721a8",
+  "recheck_prompt_derivation": "Use the matching unchanged case prompt_template with its independent reader root. Replace only the baseline-clean-main sentence with: 元は shin4141/decision-os-v13-loopkit のmain {baseline} です。今回はAGENTS.mdだけの候補差分を含む準備済みHEAD {candidate_head} のclean snapshotで、origin/mainは元mainのままです。候補をmain反映済みと扱わないでください。 m08 also has the recorded newline before Git guidance. No scenario, expected path, answer or evaluator assessment added."
+}

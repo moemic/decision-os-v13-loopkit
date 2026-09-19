@@ -1,0 +1,122 @@
+{
+  "suite_id": "memory-five-patterns-001",
+  "grading": "Judgment, required acquisition, selectivity and claim limits are separate. PARTIAL/FAIL findings remain after recheck; no effectiveness or success-count promotion.",
+  "initial": {
+    "m01": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "PARTIAL",
+      "claim_limits": "CONFIRMED",
+      "finding": "Actual V214 provenance checks and burden informed bounded maintenance. Whole guide includes an unrelated delayed-outcome section and whole V214 includes delivery/check detail beyond the historical question; core acquisition succeeded.",
+      "miss": "none observed",
+      "recheck": "not selected: no event-identity detour; existing card/ledger/evidence route worked"
+    },
+    "m02": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "CONFIRMED",
+      "claim_limits": "CONFIRMED",
+      "finding": "AGENTS plus current card only; no history/revision. Shared between 1-upper and 2-upper, not counted twice.",
+      "miss": "none observed",
+      "recheck": "not needed"
+    },
+    "m03": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "PARTIAL",
+      "claim_limits": "PARTIAL",
+      "finding": "Acquired actual Case1/2/3A conditions and adapted strength/timing. Additional V214 material corroborates current one-use limits but is not necessary for the three historical comparisons. Final answer preserves unavailable external-source limits but does not explicitly repeat the source's synthetic-only dataset boundary.",
+      "miss": "reporting omission of synthetic-only data boundary, not missing source acquisition",
+      "recheck": "not selected: source already states boundary beside result; no evidence of a route or rule defect justifying another operating instruction"
+    },
+    "m04": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "PARTIAL",
+      "claim_limits": "CONFIRMED",
+      "finding": "Identifies unknown persistence/receiver ownership without defaulting to normal. Targeted Canon detail was permissible, but reader displayed the whole Canon rather than only the relevant boundary.",
+      "miss": "none observed",
+      "recheck": "not selected: conditional decision boundary already worked"
+    },
+    "m05": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "FAIL",
+      "claim_limits": "CONFIRMED",
+      "finding": "Eventually acquires FN141 sequence and Candidate/private-source limits; does not confuse eventual direct-write success with validity of failed Actions. Before topic search, follows unrelated delayed-outcome/Run3/O69 chronology, MISTAKEN and FN125 practice history. Those reads did not establish the requested event or support its final method decision.",
+      "miss": "none at final; substantial retrieval detour",
+      "recheck": "once, on bounded historical-routing candidate"
+    },
+    "m06": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "CONFIRMED",
+      "claim_limits": "CONFIRMED",
+      "finding": "Authorized local metadata read completed; external incident body not retrieved. Compact card was an optional upper applicability check, not a history descent.",
+      "miss": "none observed",
+      "recheck": "not needed"
+    },
+    "m07": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "CONFIRMED",
+      "claim_limits": "CONFIRMED",
+      "finding": "AGENTS and current pyproject only; no delayed outcome or old Run history.",
+      "miss": "none observed",
+      "recheck": "not needed"
+    },
+    "m08": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "FAIL",
+      "claim_limits": "CONFIRMED",
+      "finding": "Recovers real pause/input contract and current Folded precedence, correctly holds packet creation with partial inputs. Whole unrelated current causal trajectory and FN125 were read before README/topic search; reader itself acknowledged unrelated historical sections.",
+      "miss": "none at final; unrelated chronology read",
+      "recheck": "once, on bounded historical-routing candidate"
+    },
+    "m09": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "CONFIRMED",
+      "claim_limits": "CONFIRMED",
+      "finding": "Uses current AGENTS/lifecycle, does not read old FN060/100 bodies or revive authority. Pair/card are redundant upper checks, not required historical acquisition.",
+      "miss": "none observed",
+      "recheck": "not needed"
+    }
+  },
+  "reused": {
+    "r165": {
+      "judgment": "CONFIRMED_PRIOR_OBSERVATION",
+      "required_acquisition": "CONFIRMED_PRIOR_OBSERVATION",
+      "selectivity": "BOUNDED_PRIOR_OBSERVATION",
+      "claim_limits": "CONFIRMED_PRIOR_OBSERVATION",
+      "source": "../delayed_outcome_fresh_reader_001.md",
+      "new_session": false
+    }
+  },
+  "recheck": {
+    "m05": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "IMPROVED_IN_ONE_RECHECK",
+      "claim_limits": "CONFIRMED",
+      "finding": "Requested event found by bounded topic search; no unrelated delayed-outcome/Run3/O69 chronology. Relevant named conditions retained. This single observation is not a reliability or causal efficiency estimate.",
+      "remaining": "Initial failure preserved; no further trial. Additional relevant advisory sources and small same-file range overlaps are recorded."
+    },
+    "m08": {
+      "judgment": "CONFIRMED",
+      "required_acquisition": "CONFIRMED",
+      "selectivity": "IMPROVED_IN_ONE_RECHECK",
+      "claim_limits": "CONFIRMED",
+      "finding": "Requested event found by bounded topic search; no unrelated delayed-outcome/Run3/O69 chronology. Relevant named conditions retained. This single observation is not a reliability or causal efficiency estimate.",
+      "remaining": "Initial failure preserved; no further trial. Additional relevant advisory sources and small same-file range overlaps are recorded."
+    }
+  },
+  "repair_scope": "Only AGENTS historical-inquiry routing: distinguish requested event from current upstream restart route; bounded topic/filename search then relevant sections/named evidence, no similarity-based event substitution. No answer paths, five-type management scheme, or rule/ledger changes.",
+  "remaining_limits": [
+    "No public reproducible counterexample to registered FN125 version found in bounded discovery; FN141 is a public incident summary, with private original identities/root cause inaccessible.",
+    "Synthetic controls are not real-use ledger executions. Historical FN125 data also has its own synthetic-only boundary.",
+    "A single trial per case and one targeted recheck cannot establish reliability or a causal performance effect.",
+    "Reader-reported paths/ranges are not an OS access trace; physical I/O, full total prompt tokens, time, money and human burden unmeasured."
+  ]
+}
