@@ -1,7 +1,8 @@
 # 後日観測 001 — ♻️ Run 3 と O-69 履歴配置の修正
 
 状態：一件の既存の後続結果を接続した検証記録。効果改善・ルール昇格の確認ではない。
-配達完了には、本変更の PR と fetched-main read-back が必要。
+配達完了は [PR #164](https://github.com/shin4141/decision-os-v13-loopkit/pull/164) の
+merge と fetched-main read-back の完了記録で確認する。
 
 ## 対象と探索の上限
 
@@ -106,7 +107,7 @@ V214 の任意の深掘り、固定 source 参照、実行 ID、過去の保存�
 - 新規検証は固定 source / 原記録保存、修正前後の実際の保存条件、時刻と不明値の分離、
   V214 履歴維持と任意リンクの再取得を確認した。模擬経験や新しい実利用は加算していない。
 - `scripts/rule_practice.py --check --base origin/main` と `git diff --check` はPASS。
-- 通常の FN125 カードは元と同じ2,379文字。current pair の先頭は旧4,623文字から短縮。
+- 通常の FN125 カードは元と同じ2,379文字。current pair の先頭は旧4,623文字から3,582文字へ短縮。
   過去の current pair は全バイトを下に保存した。文字数以外の効率改善は未測定。
 - AGENTS / README、FN125 カード・台帳・生成 CLI、♻️ 選択手順、元の選択・完了・後続報告は
   確認基点から変更していない。実行AIの差分レビューであり、独立レビューの主張はしない。
@@ -120,4 +121,13 @@ python3 -B scripts/compact_test_output.py --log .test-logs/delayed-outcome-focus
   tests.test_v209_restart_surface tests.test_decision_os_handoff_acceptance
 ```
 
-PR / main / remote read-back は配達時に本記録から接続する。保存だけで完了にしない。
+今回の接続・利用案内・配達は [PR #164](https://github.com/shin4141/decision-os-v13-loopkit/pull/164)
+へ接続した。実装 commit は `98781efe0a944c409dd0aa584899f481f4311deb`。
+作成時の PR は CLEAN / MERGEABLE、必須チェック・レビュー依頼・提出レビュー・
+未対応指摘なし。main の branch protection は 404 Branch not protected、適用 rules は
+`[]`。設定は変更しておらず、最終 head で再確認して通常 merge を行う。
+
+配達の closing AI は、merge 後に origin/main を取得し、正確な paired block、全変更 path、
+reconstruction / inspection base / PR head の祖先関係、元記録・FN125 の保存、任意取得を
+読み戻す。最終 head / main と結果、今回の作業ブランチの後始末を PR 本文の完了記録へ
+残す。それまでは配達未完了とし、このファイルの存在を完了や効果の証拠にしない。
