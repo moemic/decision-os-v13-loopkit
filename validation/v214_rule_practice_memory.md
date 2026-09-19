@@ -1,6 +1,8 @@
 # V214 — Rule practice memory and revision path
 
-Status: validated implementation and admission candidate; PR/main delivery is pending.
+Status: validated implementation. Canonical admission requires the merge and
+fetched-main read-back receipt in [PR #163](https://github.com/shin4141/decision-os-v13-loopkit/pull/163);
+this saved file alone is not a completion claim.
 
 ## Scope and starting point
 
@@ -166,8 +168,26 @@ evidence, not an independent reviewer endorsement.
 
 ## Delivery and restart
 
-Pending: commit, push, PR, final checks/review, merge and fresh remote read-back.
-No canonical completion is claimed by merely saving these files.
+- Implementation commit: `4982ec3da3c1310cb25f250a350d8adcafeda100`, pushed and
+  read back as the exact remote work-branch head.
+- [PR #163](https://github.com/shin4141/decision-os-v13-loopkit/pull/163) connects
+  the implementation, usage, observed maintenance decision and verification.
+- Pre-merge platform read at the implementation head: `MERGEABLE / CLEAN`;
+  no required checks, review requests, submitted reviews or inline comments;
+  active branch rules returned `[]`; fetched main remained `d0182a1…`.
+  No protection or review setting was changed, and no bypass is authorized.
+- Final delivery must use the actual PR head, repeat the platform state check,
+  merge normally, fetch main, verify both exact first blocks and every changed
+  path, verify base/head ancestry, and re-read the card and its evidence from
+  that fetched state. The closing AI posts the exact final head/main identities
+  and result as the PR's completion receipt. That receipt resolves delivery;
+  the practice ledger still contains one execution.
+- Cleanup remains AI-owned: remove the merged task branch after read-back,
+  preserve unrelated worktrees, and retain the task's test logs for inspection.
+
+Until that receipt exists, PR/main/read-back is missing closure. A branch or
+PR alone does not admit the capability. No independent external review is
+claimed when no such review was submitted.
 
 After delivery, start with the admitted paired block and FN125 current card.
 Reopen a lower record for a relevant warning, an applicability mismatch, source
