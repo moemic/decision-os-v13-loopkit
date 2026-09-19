@@ -1,3 +1,79 @@
+# Current Codex Handoff — Fresh Reader Trial 001 Admission Candidate
+
+This block is a candidate until its admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+f34b0d5d2f0a865d00587386abb8238195c1a8db at trial setup; the fetched merge descendant containing this exact block is current after admission
+
+Current Layer:
+V13 — one fresh read-only judgment using a later outcome
+
+V12 State:
+PASS — a new no-history reader completed the one-case judgment at the fixed input main; evidence preservation and canonical delivery require their recorded checks
+
+Completed Work:
+one initial fresh-reader trial, its input and read receipts, exact judgment, and an appended observation; no route repair or second trial was needed
+
+Canonical Current Capability:
+after admission, one observed fresh reader used the existing route to find the later result, preserve the original as-of finding and exclude duplicate placement repair while leaving external O-69 transport unconfirmed; no general efficacy claim
+
+Current Restart Point:
+this paired first block, then docs/rule_practice/fn125.md as usual; only when a later result affects a decision follow docs/rule_practice_memory.md to delayed-outcome-001; ordinary reader setup remains README.md
+
+Active Branch:
+codex/delayed-outcome-fresh-reader until admission; none assigned after admission
+
+Current Gate:
+HOLD — no next upstream loop, automatic revisit or rule change; current authority still controls each reader action
+
+Completion Line:
+PASS when fetched origin/main contains this exact paired block and delta, base/head ancestry and changed-path identity pass, and trial evidence remains traceable
+
+Missing Closure:
+candidate: final commit/push, PR checks/review response, merge and read-back; after the exact admission joint passes, none for this bounded trial
+
+Next Authorized Action:
+candidate: finish the user-authorized record delivery; after admission: readers may follow the README path within their own authority; no new upstream work is selected
+
+Not Authorized:
+automatic monitoring/retries, new features or global rule displays, authority/protection changes, release/tag/SNS; no second trial after this successful unchanged-route observation
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only with the exact paired blocks and delta on fetched origin/main plus reconstruction-base ancestry
+
+Admission Evidence:
+validation/delayed_outcome_fresh_reader_001.md, its setup/read receipts, appended delayed-outcome observation, historical preservation, relevant regression and PR read-back
+
+Remote Read-Back:
+fetch main after merge; compare both first blocks, changed paths, ancestry, prior evidence and unchanged operational routing before completion
+
+Reader Ownership Boundary:
+upstream evidence does not transfer decision ownership or authority to a fork; generally applicable AGENTS.md safety rules remain controlling
+
+Reader Workspace Decision Owner:
+the actual workspace user or maintainer, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — unchanged; not needed or expanded by this connection
+
+Runtime Evidence Boundary:
+prior entry evidence includes one fresh isolated Codex task; this trial adds one no-history read-only judgment on fixed main, not executed repair, general reliability or measured time/cost/human-burden reduction
+
+Older Material Below:
+HISTORICAL ONLY — every older block is preserved byte-for-byte; old findings and gates remain evidence, not current authority
+```
+
+All material below is preserved history and grants no current authority.
+
+<!-- current-state-history-boundary:fresh-reader-001 -->
+
 # Current Codex Handoff — One Delayed Outcome Admission Candidate
 
 The following block is a candidate until its admission joint passes.

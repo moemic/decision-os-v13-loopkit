@@ -131,3 +131,18 @@ python3 -B scripts/compact_test_output.py --log .test-logs/delayed-outcome-focus
 reconstruction / inspection base / PR head の祖先関係、元記録・FN125 の保存、任意取得を
 読み戻す。最終 head / main と結果、今回の作業ブランチの後始末を PR 本文の完了記録へ
 残す。それまでは配達未完了とし、このファイルの存在を完了や効果の証拠にしない。
+
+
+## 後続観測 002 — 新規AIによる実際の読み取り判断
+
+2026-09-19、会話を引き継がない独立 clone の新規AIに、通常の指示と過去の Run 3 を渡して
+一回の読み取り専用判断を実施した。正解・後日記録の場所・修正の PR 番号は追加で教えていない。
+AI は通常経路から後日結果を取得し、当時の未修復を誤り扱いせず、現在は配置修正済みと判断した。
+重複修正を除外し、O-69 の外部 transport 原因を未確認として分けた。
+
+[初回の実際の判断・読取範囲・限界](delayed_outcome_fresh_reader_001.md)と
+[段階別の読取記録](delayed_outcome_fresh_reader_001_reads.json)を参照。
+入口修正・二回目の試用は不要だった。一つの読み取り判断への接続を観測した範囲であり、
+時間・費用・負担削減や一般的な効果を確認したとは扱わない。
+上記の旧観測は当時の記録として全て保存し、同じ historical execution への後続観測を
+索引に追記した。新しい ♻️ Run や FN125 成功回数への加算はない。
