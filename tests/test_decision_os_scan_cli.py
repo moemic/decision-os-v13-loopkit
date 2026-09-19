@@ -16,6 +16,7 @@ from decision_os.cli import EXIT_INTERNAL, EXIT_USAGE, main
 from decision_os.scan import (
     EXIT_NOT_GIT,
     EXIT_UNSTABLE,
+    MAX_FILE_BYTES,
     failure_payload as scan_failure_payload,
     scan_repository,
 )
@@ -158,6 +159,29 @@ def direct_scan(
 
 
 class ScanTextRendererTest(unittest.TestCase):
+    def test_unavailable_surface_details_remain_terminal_safe(self) -> None:
+        payload = {
+            "evidence": [{
+                "check": "restart.surfaces",
+                "status": "UNKNOWN",
+                "detail": {"unknown": [
+                    {"path": "handoff/*.md", "reason": "symlink_rejected"},
+                    {"path": "/private/tmp/secret", "reason": "size_limit"},
+                    {"path": "../secret.md", "reason": "size_limit"},
+                    {"path": "handoff/https://secret.md", "reason": "size_limit"},
+                    {"path": "handoff/bad\x1b\u202e\udcff.md", "reason": "size_limit"},
+                    {"path": "HANDOFF.md", "reason": "https://secret.invalid"},
+                ]},
+            }],
+        }
+        text = render_text(payload)
+        text.encode("utf-8", errors="strict")
+        self.assertIn("handoff/*.md (symlink rejected)", text)
+        self.assertIn("HANDOFF.md (reason unavailable)", text)
+        self.assertIn("[path omitted]", text)
+        for unsafe in ("secret", "https:", "\x1b", "\u202e", "\udcff", "../"):
+            self.assertNotIn(unsafe, text)
+
     def test_renderer_is_payload_only_terminal_safe_and_has_no_url(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             repository = create_unmanaged_repository(
@@ -196,6 +220,27 @@ class ScanTextRendererTest(unittest.TestCase):
 
 
 class DecisionOsScanCliTest(unittest.TestCase):
+    def test_text_names_size_limited_surface_without_changing_scan_result(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            parent = Path(directory)
+            repository = create_unmanaged_repository(parent, "one_instruction")
+            (repository / "HANDOFF.md").write_bytes(b"x" * (MAX_FILE_BYTES + 1))
+            before = tree_digest(repository)
+            initial = run_module(parent, "scan", "--format", "json", str(repository))
+            text = run_module(parent, "scan", "--format", "text", str(repository))
+            final = run_module(parent, "scan", "--format", "json", str(repository))
+            self.assertEqual((0, 0, 0), (initial.returncode, text.returncode, final.returncode))
+            self.assertEqual(initial.stdout, final.stdout)
+            self.assertEqual(before, tree_digest(repository))
+            self.assertEqual(b"", text.stderr)
+            payload = decoded_json(initial)
+            self.assertEqual("PARTIAL", payload["scan_completion"])
+            self.assertEqual("INSUFFICIENT EVIDENCE", payload["recommendation"]["code"])
+            self.assertIn(
+                b"Unavailable: HANDOFF.md (file or remaining byte limit exceeded).",
+                text.stdout,
+            )
+
     def test_default_and_explicit_json_are_byte_identical_with_module_bin_parity(
         self,
     ) -> None:

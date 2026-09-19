@@ -1,3 +1,79 @@
+# Current Codex Handoff — Aspire Run and Scan Diagnostic Admission Candidate
+
+This block is a candidate until its admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+54b2c655a31fd14d75231d2c5467b6680a0ea362 at this one-Run setup; the fetched merge descendant containing this exact block is current after admission
+
+Current Layer:
+V13 — one Aspire-grounded ordinary selection and bounded scan diagnostic repair
+
+V12 State:
+PASS — the authorized Run compared current candidates and wait, used a later result to exclude duplicate repair, and completed the bounded text diagnostic change with scoped validation
+
+Completed Work:
+one ordinary-language equivalent recycle Run; scan text now identifies safely representable unavailable paths and known reasons; user guide and bounded actual-use observation connected
+
+Canonical Current Capability:
+after admission, source-checkout scan text exposes existing unavailable-surface evidence without changing JSON, scan bounds, authority or strict-check routing; the immutable distribution pin keeps its original behavior
+
+Current Restart Point:
+this paired first block, then docs/codex_conversation_next_1_01.md and current owner/Aspire/authority for a newly authorized selection; validation/recycle_aspire_scan_unavailability.md holds this Run; usual FN125 card and optional later-result route remain unchanged
+
+Active Branch:
+codex/recycle-scan-unavailability until admission; none assigned after admission
+
+Current Gate:
+HOLD — this one authorized Run stops after delivery; no automatic next loop, Companion restart, external task or rule promotion
+
+Completion Line:
+PASS when fetched origin/main contains the exact paired block and reviewed delta, ancestry and changed-path identity pass, and task-owned branch cleanup is complete
+
+Missing Closure:
+candidate: commit/push, PR review/checks, merge and read-back; after the exact admission joint passes, none for this bounded Run
+
+Next Authorized Action:
+candidate: finish this user-authorized delivery and cleanup; after admission: readers may follow the README path within their own authority; no next upstream action selected, await current authority for any further Run
+
+Not Authorized:
+other projects, Companion development, new services or paid infrastructure, authority/protection relaxation, paper changes, release/tag/SNS, automatic continuous execution
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only with exact paired blocks and delta on fetched origin/main plus reconstruction-base ancestry
+
+Admission Evidence:
+validation/recycle_aspire_scan_unavailability.md; delayed_outcome_case_001 observation-003; scanner and current-state regressions; PR review and remote read-back
+
+Remote Read-Back:
+fetch main after merge; compare first blocks, every changed path, ancestry, historical suffixes and unchanged selector/FN125/backend surfaces before completion
+
+Reader Ownership Boundary:
+upstream evidence does not transfer decision ownership or authority to a fork; generally applicable AGENTS.md safety rules remain controlling
+
+Reader Workspace Decision Owner:
+the actual workspace user or maintainer, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — unchanged and not restarted by this Run
+
+Runtime Evidence Boundary:
+prior entry evidence includes one fresh isolated Codex task; this adds one actual authorized selection and implementation in this session, with synthetic regressions separate; no new independent fresh-reader trial, isolated memory causality, measured burden reduction or general autonomous-compounding claim
+
+Older Material Below:
+HISTORICAL ONLY — every older block is preserved byte-for-byte; old findings and gates remain evidence, not current authority
+```
+
+All material below is preserved history and grants no current authority.
+
+<!-- current-state-history-boundary:recycle-scan-unavailability-001 -->
+
 # Current Codex Handoff — FN125 Scope Correction Admission Candidate
 
 This block is a candidate until its admission joint passes.

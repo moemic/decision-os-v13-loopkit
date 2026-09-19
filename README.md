@@ -394,6 +394,12 @@ validation run. See the
 [Distribution Surface v0.1 receipt](docs/v13_runner_distribution_surface_v0_1.md)
 for the exact boundary and limitations.
 
+The immutable command above retains its validated original rendering. In a
+current source checkout, `python3 -B -m decision_os scan --format text .` also
+shows unavailable bounded paths and known reasons, such as a byte limit or a
+rejected symlink. It retains `UNKNOWN` and the existing scan limits; see the
+[text-output guide](docs/v13_runner_v0_2.md#command-and-format-contract) for display limits.
+
 ### What a result can look like
 
 This is a condensed, anonymized example grounded in a verified scan. It is not

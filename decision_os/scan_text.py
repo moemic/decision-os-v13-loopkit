@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
+import re
 from typing import Any
 import unicodedata
 
@@ -48,6 +49,18 @@ UNKNOWN_MESSAGES = {
         "At least one bounded surface could not be inspected safely."
     ),
     "scan_result": "The bounded local scan did not complete.",
+}
+
+SURFACE_REASONS = {
+    "size_limit": "file or remaining byte limit exceeded",
+    "symlink_rejected": "symlink rejected",
+    "not_regular_file": "not a regular file",
+    "invalid_utf8": "invalid UTF-8",
+    "case_mismatch": "path case mismatch",
+    "directory_entry_limit": "directory entry limit exceeded",
+    "candidate_limit": "restart candidate limit exceeded",
+    "unsafe_path": "unsafe path rejected",
+    "unsafe_filename": "unsafe filename rejected",
 }
 
 MINIMUM_NEXT_STEPS = {
@@ -102,6 +115,34 @@ def _safe_inline(value: Any, fallback: str = "unknown") -> str:
 def _safe_repository_name(value: Any) -> str:
     name = _safe_inline(value, "unknown")
     return name.replace("/", "_").replace("\\", "_")
+
+
+def _surface_detail(value: Any) -> str:
+    detail = _mapping(value)
+    path = detail.get("path")
+    # Preserve simple relative names exactly; omit rather than transform an
+    # unsafe/ambiguous name into the apparent identity of another file.
+    if not (
+        isinstance(path, str)
+        and len(path) <= 256
+        and (
+            path == "handoff/*.md"
+            or (
+                re.fullmatch(r"[A-Za-z0-9_. -]+(?:/[A-Za-z0-9_. -]+)*", path)
+                and all(part not in (".", "..") for part in path.split("/"))
+            )
+        )
+    ):
+        path = "[path omitted]"
+    code = detail.get("reason")
+    reason = (
+        SURFACE_REASONS.get(code, "reason unavailable")
+        if isinstance(code, str)
+        else "reason unavailable"
+    )
+    if isinstance(code, str) and code.startswith("unreadable:"):
+        reason = "file could not be read"
+    return f"Unavailable: {path} ({reason})."
 
 
 def _integer(value: Any) -> int | None:
@@ -230,6 +271,11 @@ def _grouped_evidence(
         else:
             group = "Unknown"
         _append_unique(groups[group], description)
+        if status == "UNKNOWN" and item.get("check") in (
+            "instructions.surfaces", "restart.surfaces", "v13.routing"
+        ):
+            for detail in _sequence(_mapping(item.get("detail")).get("unknown")):
+                _append_unique(groups["Unknown"], _surface_detail(detail))
 
     for raw_unknown in _sequence(payload.get("unknowns")):
         unknown = _mapping(raw_unknown)
