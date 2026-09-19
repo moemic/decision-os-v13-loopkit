@@ -190,3 +190,12 @@ changed paths and reconstruction-base/head ancestry pass.
 [PR #166](https://github.com/shin4141/decision-os-v13-loopkit/pull/166) carries
 review and delivery. Its final body receipt records merge identity and remote
 read-back without modifying the frozen trial evidence after publication.
+
+## Forward correction for m03's evidence-scope omission
+
+The original findings above remain the PR #166 observation. The separately
+authorized [FN125 scope correction](../fn125_scope_correction.md) preserves
+m03's answer and this assessment, connects the missing synthetic-only
+qualification, and records one fresh read-only check of the repaired reporting
+route. Read that qualification together with m03's conditional comparison;
+reviewing an existing record is not evidence of business-work effectiveness.

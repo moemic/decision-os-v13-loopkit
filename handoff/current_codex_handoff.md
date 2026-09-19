@@ -1,3 +1,79 @@
+# Current Codex Handoff — FN125 Scope Correction Admission Candidate
+
+This block is a candidate until its admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+c152410809add234f8e9f4bd670ee9c3c21242d7 at scope-correction setup; the fetched merge descendant containing this exact block is current after admission
+
+Current Layer:
+V13 — FN125 validation evidence scope carried into reporting
+
+V12 State:
+PASS — the m03 omission is traced, original response/records are preserved, a scoped correction is connected and one fresh reader retained the evidence limit
+
+Completed Work:
+one case-specific source/report audit, a validation-record scope preface, separate original answer and correction, and one isolated read-only acquisition-to-report check; no five-pattern rerun
+
+Canonical Current Capability:
+after admission, the FN125 validation route couples its case conclusions with the synthetic-data and observation limits; one fresh reader retained synthetic-only evaluation versus business-effect distinctions without discarding the scoped observations
+
+Current Restart Point:
+this paired first block, then docs/rule_practice/fn125.md as usual; FN125 historical comparisons follow the named validation record including its scope preface; later-result questions may follow docs/rule_practice_memory.md; ordinary reader setup remains README.md
+
+Active Branch:
+codex/fn125-synthetic-scope-reporting until admission; none assigned after admission
+
+Current Gate:
+HOLD — no next upstream loop, additional trial or rule promotion; current authority controls each reader action
+
+Completion Line:
+PASS when fetched origin/main contains this exact paired block and delta, base/head ancestry and changed-path identity pass, with original answers/records preserved and the single-check limits traceable
+
+Missing Closure:
+candidate: final commit/push, PR checks/review response, merge and read-back; after the exact admission joint passes, none for this bounded correction
+
+Next Authorized Action:
+candidate: finish the user-authorized correction delivery; after admission: readers may follow the README path within their own authority; no new upstream work is selected
+
+Not Authorized:
+global display obligations, new features, automatic monitoring/retries, whole-rule migration, authority/protection changes, release/tag/SNS
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only with the exact paired blocks and delta on fetched origin/main plus reconstruction-base ancestry
+
+Admission Evidence:
+validation/fn125_scope_correction.md and .json, validation/fn125_scope_reader_001.json, unchanged original validation suffix and PR166 records, relevant regression and PR read-back
+
+Remote Read-Back:
+fetch main after merge; compare both first blocks, all changed paths, ancestry, original source/answer records and unchanged FN125 Canon/card/ledger before completion
+
+Reader Ownership Boundary:
+upstream evidence does not transfer decision ownership or authority to a fork; generally applicable AGENTS.md safety rules remain controlling
+
+Reader Workspace Decision Owner:
+the actual workspace user or maintainer, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — unchanged; not needed or expanded by this correction
+
+Runtime Evidence Boundary:
+prior entry evidence includes one fresh isolated Codex task; this adds one observed read-only response on prepared validation records, not a production execution, independent raw-source re-audit, general reliability or measured business/time/cost effect
+
+Older Material Below:
+HISTORICAL ONLY — every older block is preserved byte-for-byte; old findings and gates remain evidence, not current authority
+```
+
+All material below is preserved history and grants no current authority.
+
+<!-- current-state-history-boundary:fn125-scope-correction-001 -->
+
 # Current Codex Handoff — Five-Pattern Memory Evaluation Admission Candidate
 
 This block is a candidate until its admission joint passes.
