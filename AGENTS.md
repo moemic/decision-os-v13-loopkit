@@ -149,6 +149,10 @@ Changed choices, procedure, intensity, timing or stopping decisions need an
 observable basis; reference presence alone does not establish influence.
 Keep synthetic, real and unconfirmed evidence distinct. Reuse the same task's
 identity on resume; saving memory is not another experience to save recursively.
+Before claiming a save is complete, ensure a forward link from the relevant
+existing task record or conditional index reaches a new record. On resume,
+finish pending writes or missing links before reporting no addition; repairing
+that connection does not create another experience or require a new entry.
 
 Shin authorizes necessary V13-local practice appends and existing-index links
 as task cleanup inside the current task's write scope. This adds no push,
