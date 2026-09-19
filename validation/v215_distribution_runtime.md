@@ -83,6 +83,9 @@ cold transportはGitHubとpackage indexを使い得るが、target本文の送�
 READMEのscan行の完全refを上記 `e1212a...` へ戻す。その旧版は今回のpath/reason
 表示を持たないため、戻すと表示修復は使えなくなる。元の固定版検証範囲は
 [v0.1記録](../docs/v13_runner_distribution_surface_v0_1.md)に残す。
+固定refは案内変更前のcommitなので、取得wheelのmetadataに埋め込まれたREADME本文は
+旧案内を含む。利用者向けの新コマンドはmerge後のGitHub READMEであり、
+wheel metadataを現行案内として扱わない。
 
 未確認：他のOS/Python、SDK extraの導入とadapter実行、ネットワークのpacket-level
 監査、長期的な配布可用性。package registry公開、release、tag、SNSはしない。
