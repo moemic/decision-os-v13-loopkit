@@ -186,6 +186,7 @@ promoted. m03's reporting omission and other residual over-reading stay open
 as evaluation limits, not grounds for manufacturing another successful trial.
 
 Delivery remains an admission candidate until the exact fetched-main pair,
-changed paths and reconstruction-base/head ancestry pass. The delivery PR will
-link this record; its final body receipt records merge identity and remote
+changed paths and reconstruction-base/head ancestry pass.
+[PR #166](https://github.com/shin4141/decision-os-v13-loopkit/pull/166) carries
+review and delivery. Its final body receipt records merge identity and remote
 read-back without modifying the frozen trial evidence after publication.
