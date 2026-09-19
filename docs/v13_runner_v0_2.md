@@ -120,6 +120,24 @@ with sorted keys, stable evidence order, and no timestamp. Text is an explicit,
 deterministic rendering of the already-built payload; it performs no second
 inspection, terminal detection, wrapping, or additional inference.
 
+In a current source checkout, text also identifies unavailable bounded
+instruction, restart, and V13 surfaces with their known reason, for example:
+
+```text
+- Unavailable: handoff/current_codex_handoff.md (file or remaining byte limit exceeded).
+```
+
+`size_limit` covers either the per-file or remaining aggregate byte limit;
+the text does not infer which one caused a particular observation. A partial
+scan remains partial. The renderer uses closed reason labels and displays
+simple relative ASCII paths of at most 256 characters; other names are shown
+as `[path omitted]`, without rewriting them into another apparent filename.
+Unknown reason codes are shown as `reason unavailable`. JSON retains the
+existing structured evidence. This display change does not raise scan limits,
+follow rejected paths, or confer authority. The older immutable source pin in
+the README distribution command retains its original rendering; use the
+source-checkout command above for this behavior.
+
 The JSON schema is separate from the v0.1 `check` schema:
 
 ```text

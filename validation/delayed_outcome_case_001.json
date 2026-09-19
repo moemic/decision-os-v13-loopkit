@@ -140,6 +140,37 @@
         ],
         "automatic_schedule": false
       }
+    },
+    {
+      "id": "delayed-outcome-001-observation-003",
+      "supersedes": null,
+      "kind": "authorized_selection_and_execution",
+      "confirmed_at": "2026-09-19T07:38:18Z",
+      "input_main": "54b2c655a31fd14d75231d2c5467b6680a0ea362",
+      "using_execution_id": "shin4141/decision-os-v13-loopkit:conversation-recycle:scan-unavailability:2026-09-19T07:33:42Z",
+      "evidence": [
+        "validation/recycle_aspire_scan_unavailability.md"
+      ],
+      "result": "OBSERVED",
+      "observed_outcome": "A currently authorized ordinary equivalent recycle Run considered the old O-69 placement finding, followed this later-result connection, verified that current trajectory bytes match the admitted repair, excluded duplicate placement repair, and implemented the independently observed scan text diagnostic gap. Original Run 3 as-of and unknown external transport remain unchanged.",
+      "assessment": {
+        "kind": "NEXT_SELECTION_IMPLICATION",
+        "implication": "This later-result connection was used in one real candidate exclusion followed by a different authorized action; retain the existing route.",
+        "rule_change": "NONE",
+        "effect_improvement": "ONE_REAL_SELECTION_USE_OBSERVED; GENERAL_EFFECT_UNCONFIRMED",
+        "causal_limit": "No no-memory control, independent reader, time/cost/burden measurement or repeated autonomy evidence. This does not establish which action would otherwise have been selected. No FN125 attribution or application-count increase."
+      },
+      "unresolved_attention": [],
+      "revisit": {
+        "state": "UNCONFIRMED",
+        "question": "Does the connection remain reliable when a later real task considers this finding or encounters conflicting evidence?",
+        "trigger": "A later authorized selection duplicates the resolved work, cannot retrieve the result, or provides conflicting identity/content or measured burden evidence.",
+        "references": [
+          "validation/recycle_aspire_scan_unavailability.md",
+          "validation/delayed_outcome_case_001.md#revisit"
+        ],
+        "automatic_schedule": false
+      }
     }
   ]
 }
