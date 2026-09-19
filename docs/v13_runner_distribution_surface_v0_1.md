@@ -1,5 +1,11 @@
 # V13 Runner Distribution Surface v0.1
 
+This is the original distribution receipt for the former fixed pin. The current
+scan command and its separate cold-fetch validation are in
+[README](../README.md#run-the-local-read-only-scan) and the
+[V215 receipt](../validation/v215_distribution_runtime.md); the historical
+commands and hashes below are intentionally unchanged.
+
 ## Status
 
 ```text

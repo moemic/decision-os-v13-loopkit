@@ -1,3 +1,82 @@
+# Current Codex Handoff — V215 Distribution Admission Candidate
+
+This block is a candidate until its admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+42e406e858b05b6b8aff5cc6669cf10ad506b424
+
+Current Canonical Main:
+e7c3855fa1bdd28392d5667a5c82dec677afb316 at V215 setup; the fetched merge descendant containing this exact block is current only after admission
+
+Current Layer:
+V13 — verified fixed-source distribution of the repaired local scan
+
+V12 State:
+PASS — installed wheels and an empty-cache public Git command started scan on the bounded target, with limits and unknowns retained
+
+Completed Work:
+fixed candidate source, source-only wheel and public transport separately; checked cold/warm text, JSON parity, unavailable path/reason, optional dependency boundary and target no-write; updated the scan pin and rollback record
+
+Canonical Current Capability:
+after admission, README's full-commit uvx command obtains and starts the repaired local scan; the existing ordinary practice-selection capability remains unchanged
+
+Current Restart Point:
+this paired first block and AGENTS; README scan command for readers; validation/v215_distribution_runtime.md for the measured distribution scope and old pin
+
+Active Branch:
+codex/v215-distribution-runtime until admission; none assigned after admission
+
+Current Gate:
+HOLD — stop after this distribution delivery; no release, tag, registry publication, Companion work or automatic next loop
+
+Completion Line:
+PASS when reviewed changes and this exact paired block are on fetched origin/main, reconstruction-base ancestry and history checks pass, and task-owned cleanup is complete
+
+Missing Closure:
+candidate: PR checks, merge, remote read-back and cleanup; after the exact admission joint passes, none for this bounded delivery
+
+Next Authorized Action:
+candidate: complete authorized V215 review and delivery; after admission: readers may follow the README path with the fixed command in their own scope, with no new upstream task selected
+
+Not Authorized:
+registry publication, release/tag/SNS, Companion development, permission changes, unrelated feature validation or automatic next loop
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on the work branch; ADMITTED only with exact paired blocks and delta on fetched origin/main plus reconstruction-base ancestry
+
+Admission Evidence:
+validation/v215_distribution_runtime.md; original wheel and pin-scope records; targeted scan/distribution/current-state tests; exact PR/main read-back
+
+Remote Read-Back:
+after merge fetch main, compare the paired first blocks and changed paths, verify ancestry and old block suffixes, retain protected sources and original evidence
+
+Reader Ownership Boundary:
+upstream fixed-command evidence does not transfer authority to a fork or its target repository
+
+Reader Workspace Decision Owner:
+the actual workspace owner or maintainer, not automatically Shin
+
+Companion Status:
+UNDER DEVELOPMENT / OPTIONAL — unchanged; no adapter or model runtime was started
+
+Runtime Evidence Boundary:
+prior entry evidence includes one fresh isolated Codex task; V215 adds installed-package and cold-fetch scan observations on one local target, not general host or user-effect proof
+
+Distribution Boundary:
+cold transport may contact GitHub and the package index; installed scan was read-only on the bounded test target, with no general network or other-platform attestation
+
+Older Material Below:
+HISTORICAL ONLY — every older block is preserved byte-for-byte; old findings and gates remain evidence, not current authority
+```
+
+All material below is preserved history and grants no current authority.
+
+<!-- current-state-history-boundary:v215-distribution-001 -->
+
 # Current Codex Handoff — Ordinary Practice Selection Admission Candidate
 
 This block is a candidate until its admission joint passes.

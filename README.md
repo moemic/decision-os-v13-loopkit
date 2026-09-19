@@ -382,7 +382,7 @@ available, run this from the root of the Git repository you want to inspect:
 
 ```sh
 uvx --isolated --no-config --no-env-file --no-python-downloads \
-  --from "git+https://github.com/shin4141/decision-os-v13-loopkit@e1212a795413e0146c52b2c9aa51356897c62846" \
+  --from "git+https://github.com/shin4141/decision-os-v13-loopkit@e7c3855fa1bdd28392d5667a5c82dec677afb316" \
   decision-os scan --format text .
 ```
 
@@ -396,17 +396,15 @@ The command has two phases:
   no Runner telemetry, and performs no target-worktree or target-Git-directory
   write. Runner output is written to stdout.
 
-This distribution path was validated with `uv 0.11.32`, Python 3.14.3, and
-macOS 26.2 arm64. Other platforms and Python versions were not tested in that
-validation run. See the
-[Distribution Surface v0.1 receipt](docs/v13_runner_distribution_surface_v0_1.md)
-for the exact boundary and limitations.
-
-The immutable command above retains its validated original rendering. In a
-current source checkout, `python3 -B -m decision_os scan --format text .` also
-shows unavailable bounded paths and known reasons, such as a byte limit or a
-rejected symlink. It retains `UNKNOWN` and the existing scan limits; see the
-[text-output guide](docs/v13_runner_v0_2.md#command-and-format-contract) for display limits.
+This exact source commit was cold-fetched and started with `uvx 0.11.32`, Python
+3.14.3, and macOS 26.6.2 arm64. Its installed scan displays unavailable
+bounded paths and known reasons (including byte limits and rejected symlinks),
+while retaining `UNKNOWN`, the existing read limits, and JSON output. Other
+platforms and Python versions remain untested in this run. See the
+[V215 distribution receipt](validation/v215_distribution_runtime.md) for the
+wheel/transport distinction and rollback pin. The
+[original distribution receipt](docs/v13_runner_distribution_surface_v0_1.md)
+still describes the earlier fixed command and its own validation scope.
 
 ### What a result can look like
 
