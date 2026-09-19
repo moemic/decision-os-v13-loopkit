@@ -1,0 +1,147 @@
+{
+  "format_version": 1,
+  "case_id": "delayed-outcome-002",
+  "historical_execution_id": "shin4141/decision-os-v13-loopkit:cycle-006-runtime-migration:delta-v1.1",
+  "inspection_base": "5c506ccd2a7b7cd264124959d93a62ea2aba8b12",
+  "rule_attribution": {
+    "rule_id": null,
+    "status": "UNESTABLISHED",
+    "reason": "FN129 was a verification-pending origin at migration time. The later FN125 promotion is exactly linked below, but no historical application of the later fn125-v1 bundle or isolated rule effect is established. Do not increment its applied-execution ledger."
+  },
+  "sources": {
+    "origin_incident": {
+      "commit": "9c8b1027476142f163167ace00c5a90934027027",
+      "path": "field_notes/129_mutable_path_is_not_artifact_identity.md",
+      "role": "Pre-promotion incident, missing historical executable and bounded re-evaluation condition",
+      "sha256": "47a9da9e99fbc87a4d7d76624f982d47c2f6bfe432f30975ca62a52ffd12373d",
+      "git_committed_at": "2026-08-07T00:30:23+09:00"
+    },
+    "selection_and_implementation": {
+      "commit": "9f340a30d8caa53bdd71f5931c9788b98ac7000b",
+      "path": "validation/a7_creator_live_whole_flow_reentry_charter_delta_v1_1.md",
+      "role": "Authorized selection of a new preserved artifact and no-turn compatibility qualification; no historical-byte substitution or live GO",
+      "sha256": "dade3a6994e0814ae50cba7b412726e9d4a65f94c5c214b1d62bc32c3a89203d",
+      "git_committed_at": "2026-08-07T05:43:26+09:00"
+    },
+    "later_report": {
+      "commit": "2520d9a78ce94fa7185893744ea2c6bec893f384",
+      "path": "validation/stage_d_leave_the_desk_dogfood_001.md",
+      "role": "Later custody recheck, candidate selection, protected-destination failure and narrower promotion",
+      "sha256": "2e3dda96f721416eb1b40df1ed7d2dfcb849a487590b7658c172e0ebfc4df338",
+      "git_committed_at": "2026-08-09T20:07:20+09:00"
+    },
+    "promoted_rule": {
+      "commit": "2520d9a78ce94fa7185893744ea2c6bec893f384",
+      "path": "field_notes/125_execution_context_proof_selection.md",
+      "role": "Exact Artifact Identity and Mutable Paths as promoted then, not a backdated fn125-v1 activation",
+      "sha256": "e178a159a11b4f1397fa1a2eba9a474d12655b7300b279785084985fdbed29f9",
+      "git_committed_at": "2026-08-09T20:07:20+09:00"
+    },
+    "later_lifecycle": {
+      "commit": "2520d9a78ce94fa7185893744ea2c6bec893f384",
+      "path": "field_notes/129_mutable_path_is_not_artifact_identity.md",
+      "role": "Canon-promoted closure above preserved pre-promotion HOLD and verification-pending history",
+      "sha256": "533fdd8447537b9db45cb1b00924193aeedcd2aa80fdbd7a1bcbdea3aae078dd",
+      "git_committed_at": "2026-08-09T20:07:20+09:00"
+    },
+    "protected_before": {
+      "commit": "856f54607a6f1345cb0e92c9627272f0c851af95",
+      "path": "AGENTS.md",
+      "role": "Protected root before Stage D promotion",
+      "sha256": "bb14c77c6b45c6bf365902b47729b455df566fa98688956824e072c352f2dae7",
+      "git_committed_at": "2026-08-09T19:46:07+09:00"
+    },
+    "protected_after": {
+      "commit": "2520d9a78ce94fa7185893744ea2c6bec893f384",
+      "path": "AGENTS.md",
+      "role": "Final promotion retained the exact protected root bytes",
+      "sha256": "bb14c77c6b45c6bf365902b47729b455df566fa98688956824e072c352f2dae7",
+      "git_committed_at": "2026-08-09T20:07:20+09:00"
+    },
+    "later_live_authority": {
+      "commit": "976804129c69097d4bd98cf2ece9a56f87a6ea49",
+      "path": "validation/a7_creator_live_whole_flow_reentry_charter_delta_v1_2.md",
+      "role": "Separate materialization of the historical live-start approval; migration qualification itself was not live authority",
+      "sha256": "5cd2804df2b5eb8cd67e600fe7eb139fe95a5f72c92dba1c4cd8b695795314ca",
+      "git_committed_at": "2026-08-07T08:10:45+09:00"
+    },
+    "later_live_stop": {
+      "commit": "8db36c32fc54fb6115e7a3878f9970694014b77a",
+      "path": "validation/a7_creator_live_cycle_006_terminal_public_evidence_001.md",
+      "role": "Real one-attempt A1 terminal failure; operands and lower cause absent; retry/replacement zero",
+      "sha256": "1f66a284247dbca25c655829ac8c4509f51210019ad62ad70717a2367b9e01c3",
+      "git_committed_at": "2026-08-07T08:59:59+09:00"
+    }
+  },
+  "observations": [
+    {
+      "id": "delayed-outcome-002-observation-001",
+      "supersedes": null,
+      "confirmed_at": "2026-09-19T08:05:18Z",
+      "confirmation_scope": "Read fixed public Git records and PR metadata; verify hashes, ancestry, protected-root equality and current-source preservation. No private binary/receipt/log access, live execution, new AI trial or migration.",
+      "event_times": {
+        "origin_record_committed_at": "2026-08-07T00:30:23+09:00",
+        "migration_record_committed_at": "2026-08-07T05:43:26+09:00",
+        "custody_recorded_at": "2026-08-06T15:38:01Z",
+        "later_report_committed_at": "2026-08-09T20:07:20+09:00",
+        "execution_finished_at": null,
+        "execution_finished_at_unknown_reason": "The public sources provide recorded custody and commit times, not separately measured finish times for all linked operations.",
+        "later_live_stop_record_committed_at": "2026-08-07T08:59:59+09:00"
+      },
+      "external_receipt": {
+        "url": "https://github.com/shin4141/decision-os-v13-loopkit/pull/131",
+        "state": "MERGED",
+        "head": "2520d9a78ce94fa7185893744ea2c6bec893f384",
+        "merge_commit": "d86b97b036e54263b26bb9f5265b44d146c5fb2e",
+        "merged_at": "2026-08-09T11:19:42Z",
+        "checked_at": "2026-09-19T08:05:18Z",
+        "body_sha256": "ccdbc0773e3176ee42f7ecc1c8ff3189d787fa3b5f1226690f00eff733682775",
+        "reported_validation": "clean full suite: 1,440 passed, 15 skipped"
+      },
+      "related_receipts": [
+        {
+          "url": "https://github.com/shin4141/decision-os-v13-loopkit/pull/110",
+          "state": "MERGED",
+          "head": "9f340a30d8caa53bdd71f5931c9788b98ac7000b",
+          "merge_commit": "87088f169385141aefff51157716e2b4525a07b9",
+          "merged_at": "2026-08-06T20:59:27Z",
+          "checked_at": "2026-09-19T08:03:11Z"
+        },
+        {
+          "url": "https://github.com/shin4141/decision-os-v13-loopkit/pull/113",
+          "state": "MERGED",
+          "head": "8db36c32fc54fb6115e7a3878f9970694014b77a",
+          "merge_commit": "2cedea98a4cb912a261357cf834135b6f4f316d8",
+          "merged_at": "2026-08-07T00:36:21Z",
+          "checked_at": "2026-09-19T08:05:18Z",
+          "body_sha256": "765839f0344e6cf3bd6efefc24f1991a5492017bdb7afa904684e842f958e5b8"
+        }
+      ],
+      "result": "OBSERVED",
+      "observed_outcome": "The unrecoverable older binary was not substituted or used to invalidate its historical runs. A bounded new artifact qualification was admitted. A separately authorized real Cycle 006 later made one model invocation/task transmission and terminalized at A1_CANDIDATE_INDEPENDENCE_NOT_PASS with no retry/replacement; lower predicates and output content remain unestablished. Stage D subsequently reported custody re-verification and promoted a narrow residue into FN125 after protected-root regression blocked its first placement. PR131 reports its repaired full suite passed. Neither qualification nor promotion establishes whole-flow success or current runtime availability.",
+      "content_checks": {
+        "incident_sha256_matches_stage_d": true,
+        "migration_sha256_matches_stage_d": true,
+        "promoted_rule_sha256_matches_stage_d": true,
+        "stage_d_protected_agents_unchanged": true
+      },
+      "assessment": {
+        "kind": "NEXT_SELECTION_IMPLICATION",
+        "implication": "When exact rerun identity matters, inspect current custody and claim scope; missing historical bytes require HOLD on the dependent operation or separately authorized forward qualification, not silent substitution. For promotion, use an existing permissible reference instead of weakening a protected artifact. A qualification PASS and later rule promotion do not erase the real A1 stop or authorize a retry; preserve the unknown lower cause.",
+        "rule_change": "NONE",
+        "effect_improvement": "HISTORICAL_SELECTION_AND_LATER_CLOSURE_OBSERVED; GENERAL_EFFECT_UNCONFIRMED",
+        "causal_limit": "One connected migration history with a later real one-attempt stop and a promotion, not three independent successes. Stage D used a deterministic local reader; fixture tests and no-turn protocol checks are separate from the real Cycle006 invocation. Private underlying execution records were not replayed; the A1 result is not evidence that the runtime migration caused the failure."
+      },
+      "unresolved_attention": [],
+      "revisit": {
+        "state": "UNCONFIRMED",
+        "question": "Are custody and proportionality sufficient for a new exact-artifact-dependent task?",
+        "trigger": "A currently authorized task depends on exact rerun identity, finds custody/compatibility contradictions, or incurs an unnecessary universal hashing requirement.",
+        "references": [
+          "validation/delayed_outcome_case_002.md#revisit"
+        ],
+        "automatic_schedule": false
+      }
+    }
+  ]
+}
