@@ -1,0 +1,36 @@
+{
+  "id": "fn125-scope-correction-001",
+  "baseline": "c152410809add234f8e9f4bd670ee9c3c21242d7",
+  "corrects": {
+    "case": "memory-five-patterns-001/m03",
+    "saved_record": "validation/memory_five_patterns/reads.json#/cases/m03",
+    "assessment": "validation/memory_five_patterns/results.json#/initial/m03",
+    "input": "validation/memory_five_patterns/cases.json#/cases/2",
+    "original_record_policy": "Keep the existing input/decision/receipts/assessment byte-for-byte; connect a separate correction, never rewrite them as if the initial answer already contained it."
+  },
+  "original_final": {
+    "origin": "Transcribed from reader_m03's previously delivered public final judgment in this task. PR166 stored a decision summary and read receipts, not a verbatim answer file.",
+    "snapshot": "ccae16ef2700ba34784a46413b7033a1672a8ee7",
+    "text": "継続確認の強さは、実際に残っている依存関係に合わせます。保存資料で判断を再構成できればprovenance確認で足り、未保存の受け取り履歴が必要ならDestination Identityを追加します。必要証拠が欠ける間は、対象の変更・登録・受入れを止めます。\n\n[運用記録](/Users/sn/Documents/v13/13-memory-reader-03/validation/field_note_125_operational_validation.md:47)には、次の違いが残っています。\n\n| 状況 | 残っている具体的証拠 | 続行できる条件 |\n|---|---|---|\n| 保存資料が揃ったCase 1 | Bundleに役割、byte identity、SHA-256、結果、限界を保存。既存report v0.1を保ち、v0.2を別成果物として作成 | 必要な判断と証拠を保存資料から再構成でき、現在の操作権限が確認できた時。元チャットの探索は不要 |\n| Capsule受入れのCase 2 | 元Candidate受領、以前のREVISE、FN125完了報告受領、現在の受け取り所有者が受信側履歴に依存 | Artifact Provenanceに加え、その受信contextと未保存判断を確認できた時。新しい依頼文から所有者を推定しない |\n| Bundle不着のCase 3A | 必要なBundleが存在せずhash計算不能。後日到着したBundleのSHA-256一致を記録 | 不着中は変更前BLOCK。欠落物と再開条件を保持し、到着後にidentityを検証してから、別途認められた範囲で再開 |\n\n確認を弱められる実例もあります。Case 3Bでは、登録済みの一つのcanonical root内で、各役割の成果物が一意に`artifacts/`へ移っていました。binding、鮮度、一意性、独立した操作権限が揃うため、期待pathと解決pathを記録して続行可能でした。元のBLOCKは安全でしたが、必要以上に厳しい判断でした。\n\n条件が変われば、[FN125の再確認条件](/Users/sn/Documents/v13/13-memory-reader-03/field_notes/125_execution_context_proof_selection.md:179)に戻します。履歴依存の判断が十分に保存されたならDestination確認を外せます。一方、identity・鮮度・一意性・所有者・権限に曖昧さが生じれば追加確認し、解消するまで続行しません。可変pathの現在の中身を過去の成果物へ代入することもできません。\n\n選ばない対応は、毎回の元チャット探索、hashだけによる意味的完全性・受入れの断定、広いpath推測、別repository/versionへの代替、旧PASSからの実行権限継承です。[V214の保存実例](/Users/sn/Documents/v13/13-memory-reader-03/validation/v214_rule_practice_memory.md:51)も、古いcheckoutとの曖昧さを固定資料で解消した一件を支えますが、一般的効果や時間・負担削減は未測定です。\n\n今回確認したのは対象snapshotの保存記録です。別workspaceにある元Bundle、当時の受信履歴、hashの再計算、remoteの最新状態は未確認であり、既存のリンクやPASSを今回の効果検証とは扱いません。判断報告を完了し、登録・Capsule受入れを含む新しい実行は行わず停止します。",
+    "links": "Historical snapshot links preserved exactly; the disposable clone no longer exists. Fixed public source identities are in PR166 cases.json and the correction record.",
+    "text_sha256": "885acf5edf4d0dc6957d529533368d300fc4832221c750a4654dfad9d020f5b1"
+  },
+  "correction": {
+    "kind": "scope-qualification-added-forward",
+    "text": "Case 1's registered evaluation data are synthetic-only. Its aggregate/boundary PASS is not a measurement of business-work effectiveness. Cases 2/3A preserve receiving-context and transport-handling observations in the validation history. The m03 AI response was actually observed on that prepared record review; it is useful scoped evidence, not another production execution or proof of business benefit. Original external histories, broad effectiveness and measured savings remain unverified.",
+    "does_not_invalidate": "The observed conditional proof-selection behavior and historical recorded decisions remain evidence within their scope.",
+    "does_not_claim": "All historical actions were invented, all historical case inputs had identical synthetic construction, or effects in real business work were measured."
+  },
+  "changed_route": "validation/field_note_125_operational_validation.md: scoped preface only; original record unchanged below boundary",
+  "unchanged": [
+    "AGENTS.md",
+    "field_notes/125_execution_context_proof_selection.md",
+    "docs/rule_practice/fn125.md",
+    "evidence/rule_practice/fn125.json",
+    "validation/memory_five_patterns/cases.json",
+    "validation/memory_five_patterns/reads.json",
+    "validation/memory_five_patterns/results.json"
+  ],
+  "check_policy": "Exactly one new no-history read-only session; no synthetic instruction in evaluator prompt or midtrial hints; expected evidence and assessment withheld.",
+  "trial_record": "validation/fn125_scope_reader_001.json"
+}

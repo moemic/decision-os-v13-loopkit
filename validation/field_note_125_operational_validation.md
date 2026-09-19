@@ -1,3 +1,23 @@
+# Reading and reporting scope — FN125 validation cases
+
+For a comparison or summary of Cases 1, 2 and 3A below, keep the evidence
+scope with the case conclusions:
+
+- Case 1 registers **synthetic-only evaluation data**. Its `240 / 240` aggregate
+  and `8 / 8` synthetic-boundary result are not observations of business-work
+  effectiveness. The recorded provenance/continuation handling remains evidence.
+- Cases 2 and 3A record receiving-context and missing/recovered-Bundle handling
+  in this validation history. Those observations do not establish effects in
+  actual business work; the original external histories are not reproduced here.
+- An AI response observed while reviewing these prepared validation cases is a
+  real observation of that response, not another production execution or proof
+  of business benefit. Do not silently change either evidence class in a summary.
+
+This scoped clarification leaves the rule, case results and their existing
+limits unchanged. The original record below is preserved byte-for-byte.
+
+<!-- fn125-validation-original-record -->
+
 # Field Note 125 — Operational Validation Record
 
 Date: 2026-07-13

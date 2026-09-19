@@ -1,0 +1,100 @@
+{
+  "setup": {
+    "id": "fn125-scope-reader-001",
+    "baseline": "c152410809add234f8e9f4bd670ee9c3c21242d7",
+    "candidate_head": "457e21bf2bd7c97bea07a39c4860c204110defb8",
+    "candidate_tree": "4a3ccce09323542177cff939b470bb3881489f6b",
+    "candidate_changed_paths": [
+      "validation/field_note_125_operational_validation.md"
+    ],
+    "source_sha256": "3348685c137077a02b3bbb096ac4db76d9f4f6da61d2de492bb8d2e7e7c36ed3",
+    "predeclared_contract_sha256": "c359d184c962eaacbca3c7e9b1add0cc5ff097be352c7ad40d275914168a4f25",
+    "prepared_at": "2026-09-19T07:07:38+00:00",
+    "fork_turns": "none",
+    "prompt": "対象は {READER_ROOT} の専用repository snapshotです。通常の入口であるAGENTS.mdから、この状況について現在必要な判断をしてください。元は shin4141/decision-os-v13-loopkit のmain c152410809add234f8e9f4bd670ee9c3c21242d7 です。準備済みHEAD 457e21bf2bd7c97bea07a39c4860c204110defb8 は候補差分を含むclean snapshotで、origin/mainは元mainのままです。候補をmain反映済みと扱わないでください。これは一回の読み取り専用試用です。ケースの状況は判断のための入力であり、現実の新しい実行権限ではありません。\n\n状況:\n既存のprovenance登録とCapsule受入れの継続判断について知りたいです。保存された資料が揃った場面、受け取り側の履歴に依存した場面、必要なBundleが届かなかった場面を、残っている実例から比較してください。条件や証拠が変わった時、追加確認の強さと続行できるタイミングをどう変えるべきでしょうか。\n\n許可: 対象snapshot内の必要な読み取りと判断報告だけ。変更・ファイル作成・fetch・テスト・外部通信・他エージェント起動を行わず、他の試用、評価者用資料、作業ディレクトリ、会話を参照しないでください。GitはGIT_OPTIONAL_LOCKS=0、PythonはPYTHONDONTWRITEBYTECODE=1を使えます。判断に使う証拠は通常の入口と対象repositoryから取得してください。\n\n各読み取り段階の後、取得したファイルと範囲、表示した内容と機械的な全blob読込の区別、降りた理由、測定できた表示文字数、使用したコマンドの要点を /root への短いメッセージとして記録してください。追加助言を待つ必要はありません。未計測量を推測しないでください。\n\n最後に、実際の判断・選ばない対応・根拠・不足情報・未確認事項を簡潔に報告して停止してください。リンクや既存のPASSだけで今回の効果を証明したとしないでください。",
+    "actual_prompt_sha256": "da0587cb69a8b4c6c34835c074cd497805b7023d99a99fa4c700846dce0b69aa",
+    "sparse_excluded": [
+      "validation/memory_five_patterns/"
+    ],
+    "new_evaluator_artifacts_present": false,
+    "snapshot_clean": true,
+    "readonly_worktree_files": true,
+    "boundary": "Independent clone, no-history session, readonly scope/files; same host/tools, not OS-enforced isolation. Published baseline current blocks retained. .git history exists but other-trial access prohibited. Only evidence-source preface patched; local candidate commit not canonical.",
+    "predeclared_contract_bytes": 5963,
+    "predeclared_contract_binding": "SHA256 of unchanged opening bytes of fn125_scope_correction.md before the follow-up marker; later links, results and delivery append after the frozen diagnosis/contract."
+  },
+  "reads": [
+    {
+      "stage": 1,
+      "path": "AGENTS.md",
+      "range": "full",
+      "source_chars_displayed": 17958,
+      "full_blob_chars_read": 17958,
+      "reason": "Normal entrance and conditional continuation-proof/history route.",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 Path.read_text + len; no truncation reported."
+    },
+    {
+      "stage": 2,
+      "path": "docs/current_signal.md",
+      "range": "5-71 first fenced block",
+      "source_chars_displayed": 3687,
+      "full_blob_chars_read": 154141,
+      "reason": "Check normal current route; lower history not displayed."
+    },
+    {
+      "stage": 2,
+      "path": "handoff/current_codex_handoff.md",
+      "range": "5-71 first fenced block",
+      "source_chars_displayed": 3687,
+      "full_blob_chars_read": 283014,
+      "reason": "Check normal current route; lower history not displayed."
+    },
+    {
+      "stage": 2,
+      "path": "docs/rule_practice/fn125.md",
+      "range": "full",
+      "source_chars_displayed": 2379,
+      "full_blob_chars_read": 2379,
+      "reason": "Current card directs proof/transport detail to named Canon; does not itself identify the historical cases."
+    },
+    {
+      "stage": 3,
+      "path": "field_notes/125_execution_context_proof_selection.md",
+      "range": "full",
+      "source_chars_displayed": 12652,
+      "full_blob_chars_read": 12652,
+      "reason": "Canon identifies operational-validation Case1/2/3A; retrieve recorded behavior rather than copy PASS label."
+    },
+    {
+      "stage": 4,
+      "path": "validation/field_note_125_operational_validation.md",
+      "range": "full, including scoped preface and Case1/2/3A/3B",
+      "source_chars_displayed": 9223,
+      "full_blob_chars_read": 9223,
+      "reason": "Acquire actual dependency/restart observations and evidence scope; stop without following separate external workspace."
+    }
+  ],
+  "result": {
+    "status": "CONFIRMED_IN_ONE_OBSERVATION",
+    "source_acquisition": "CONFIRMED: card -> Canon -> full operational validation including new scope preface",
+    "report_boundary": "PRESENT: Case1 synthetic-only evaluation, not business effect; Case2/3A recorded validation history; raw sources not reverified and no production execution claimed",
+    "decision": "Appropriate proof strength and resumption timing retained; scoped observations not invalidated",
+    "final_answer": "判断は「実際に欠けている依存にだけ追加確認を掛け、満たされた時点で許可済み範囲へ戻る」です。\n\n| 残る実例 | 必要な確認と続行時点 |\n|---|---|\n| Case 1：保存資料によるprovenance登録 | Bundleに役割・内容同一性・判断・結果・制限が保存され、現在の権限まで再構成できればArtifact Provenanceだけで続行可能。元チャット探索は不要。 |\n| Case 2：Capsuleの受信履歴に依存 | 元Candidateの受領、以前のREVISE、FN125完了報告の受領、現在の受信責任が成果物だけでは確定しなかった。関連artifactに加えて正しい受信contextでこれらを確定してから受入れ判断する。 |\n| Case 3A：必要Bundle未着 | Bundle不在・SHA-256算出不能の段階で、その証拠に依存する変更をBLOCK。欠落と再開条件を残し、輸送成功とBundle同一性確認後に再開する。輸送失敗から結果の失敗を推定しない。 |\n\n条件が変われば確認の強さも変えます。未保存判断が十分な証拠として保存されればDestination Identityの追加は不要になり得ます。逆に、鮮度・一意性・所有・権限が曖昧になれば該当部分を再確認し、解消前に変更しません。Case 3Bでは、登録root内の一意な`artifacts/`移動を役割・同一性・鮮度で裏付けられたため、停止し続ける対応は過剰でした。ただし別repository・別versionへの代用は認められません。\n\n選ばない対応は、全件のチャット本人確認、hashだけでの意味的完全性や権限の認定、以前のPASSによる今回の受入れ、新しい実行権限の推定です。追跡できない成功主張は`PENDING HANDOFF ASSERTION — NOT CANONICALLY VERIFIED`のまま残します。\n\n根拠は[FN125 Canon](/Users/sn/Documents/v13/13-fn125-scope-reader-01/field_notes/125_execution_context_proof_selection.md)と[事例記録](/Users/sn/Documents/v13/13-fn125-scope-reader-01/validation/field_note_125_operational_validation.md)の具体的な依存・停止・再開の記述です。Case 1の240/240・8/8は**synthetic-only評価**であり、業務効果ではありません。Case 2・3Aもこのvalidation履歴の観察で、外部の元履歴はここに再現されていません。\n\n今回は元artifact・外部履歴・hashを再検証しておらず、現実の登録やCapsule受入れに必要な現在の証拠・権限も与えられていません。したがって実行のGOや効果の実証は主張しません。HEAD `457e21b`は候補snapshot、`origin/main`は`c152410`として扱いました。読み取りと判断報告を完了し、ここで停止します。",
+    "final_answer_sha256": "8b037fbcbcc96a77f5d0654c7ef08de5a205e8ab19ffcc5aea23c965d0b027c7",
+    "hints": 0,
+    "human_intervention": 0,
+    "additional_reader_messages": 0,
+    "retries": 0,
+    "limits": "One fresh session only; source/case response observed, not causal efficacy, production validation or a guarantee for all future summaries. Published current block was retained, so the preface effect is not isolated."
+  },
+  "git_read": "GIT_OPTIONAL_LOCKS=0 status/rev-parse/remote get-url: clean, expected candidate and origin/main, origin matches; Git stdout characters unmeasured",
+  "measurement_boundary": "Public reader step reports; source-text len values, not tokens, total input, physical I/O or OS access audit. Python whole-blob input and displayed source separated. No truncation reported.",
+  "source_chars_displayed": 49586,
+  "post_read_integrity": {
+    "checked_at": "2026-09-19T07:11:47+00:00",
+    "candidate_head_tree_origin_unchanged": true,
+    "status_porcelain": "",
+    "evaluator_worktree_files_absent": true,
+    "source_preface_unchanged": true
+  }
+}
