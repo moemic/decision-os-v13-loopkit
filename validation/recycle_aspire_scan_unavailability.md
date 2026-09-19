@@ -101,7 +101,7 @@ handoffは288,484 bytesで、JSONの`restart.surfaces.detail.unknown`には
   ♻️経路・Aspire・scanner本体の無変更、JSON/link、`git diff --check`、rule-practice `--check --base origin/main`を確認。
 - 実checkoutの修正後CLIでも対象・理由の行を確認。`check`はPASS/HOLDで、authority matchは
   対応するrun phaseのない文書でNOT_APPLICABLE由来のUNKNOWNを保つ。会話の現在の許可をscanから推定しない。
-- PR/main/read-backは配達receiptで確定する。
+- PR/main/read-backは [PR #168](https://github.com/shin4141/decision-os-v13-loopkit/pull/168) の配達receiptで確定する。
 
 今回の選択経路は**無変更**。Aspireへ戻る比較、既に許可された範囲の実行、停止は現行経路で成立した。
 今回観測した欠落はscanの表示であり、新しい選択層や一律報告義務を追加する根拠にしない。
