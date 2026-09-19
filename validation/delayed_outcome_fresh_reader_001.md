@@ -3,7 +3,8 @@
 初回結果：**この一件の読み取り判断は完了**。新規AIは通常の経路から後日結果を見つけ、
 文書配置は修正済み、O-69 の外部 transport 原因は未確認と分け、重複修正を選ばなかった。
 入口の修正は不要。修正後の二回目は実施していない。
-この記録の main 配達は、PR と remote read-back の完了記録で別に確認する。
+この記録の main 配達は、[PR #165](https://github.com/shin4141/decision-os-v13-loopkit/pull/165) と
+remote read-back の完了記録で別に確認する。
 
 ## 実施条件と入力
 
@@ -132,4 +133,12 @@ python3 -B scripts/compact_test_output.py --log .test-logs/fresh-reader-record-r
   tests.test_v209_restart_surface tests.test_decision_os_handoff_acceptance
 ```
 
-PR / main / remote read-back は配達時に本記録から接続する。今回も保存だけで完了にしない。
+配達先は [PR #165](https://github.com/shin4141/decision-os-v13-loopkit/pull/165)。
+記録 commit は `d884139a7e0e7fde63032b0833d9966ee9d1f56e`。
+PR作成時は CLEAN / MERGEABLE、必須チェック・レビュー依頼・提出レビュー・未対応指摘なし。
+main の既存 branch protection は404、適用 rules は `[]`。設定の変更やbypassは行わない。
+
+親側の closing AI が最終headで条件を再確認し、通常merge後にmainを取得する。
+paired first blocks・全変更path・祖先関係・過去の観測とルーティングの保存を確認し、
+最終head / main、read-back、作業ブランチの後始末をPR本文の完了記録へ残す。
+それまでは配達未完了であり、保存・test PASSだけからこの配達や一般的な効果を推定しない。
