@@ -52,7 +52,7 @@ Admission Evidence:
 docs/v216_public_reuse_aspire.md; validation/v216_profile_motion.md; examples/profile_motion/README.md and tests; profile layout source cc3e38f; branch and PR remote read-back
 
 Remote Read-Back:
-Draft PR #172 is the target; verify the final two-scene GIF, layout and branch head after push; after merge fetch main and compare exact paired first blocks, old suffixes and 49b27e5 ancestry before claiming operational admission
+Draft PR #172 branch renders the final two-scene cat and alternate GIF, mobile layout and fixed-commit baseline comparison; final head must be rechecked after this closure commit; after merge fetch main and compare exact paired first blocks, old suffixes and 49b27e5 ancestry before claiming operational admission
 
 Older Material Below:
 HISTORICAL ONLY — preserved without rebaseline; older gates do not authorize V216 or another loop
