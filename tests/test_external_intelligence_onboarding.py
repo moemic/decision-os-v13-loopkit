@@ -10,6 +10,26 @@ def read(path: str) -> str:
 
 
 class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
+    def test_00_selection_only_and_same_kind_outcomes_use_one_route(self) -> None:
+        agents = read("AGENTS.md")
+        route = read("docs/codex_conversation_next_1_01.md")
+
+        self.assertIn(
+            "choose or recommend the next Aspire-serving action, "
+            "including a selection-only request",
+            agents,
+        )
+        self.assertIn("A request to **recommend or compare**", route)
+        self.assertIn("a user-supplied result record", route)
+        self.assertIn("For a proposed kind of work already attempted", route)
+        self.assertIn("bounded topic or filename search", route)
+        self.assertIn("For an **improvement or repeat repair**", route)
+        self.assertIn("For an **uncertainty-reducing experiment**", route)
+        self.assertIn("each plausible result would change the next decision", route)
+        self.assertIn("Compare each supported candidate with", route)
+        self.assertIn("For a selection-only request, return", route)
+        self.assertIn("Do not execute, publish, or append a `♻️` Run", route)
+
     def test_00a_readme_exposes_reader_owned_conversation_recycle_entry(self) -> None:
         readme = read("README.md")
         route = read("docs/codex_conversation_next_1_01.md")

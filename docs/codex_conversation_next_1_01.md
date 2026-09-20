@@ -67,6 +67,12 @@ The shorter input changes only the number of characters the user must type. It
 does not change the objective, candidate range, selection criteria, execution
 authority, or stop condition.
 
+A request to **recommend or compare** the next Aspire-serving action without
+authorizing execution uses the same grounding and selection checks below, then
+stops with a recommendation. It does not imply a `♻️` Run, a trial-log entry,
+or permission to execute the recommended action. A narrower user request always
+controls what happens after selection.
+
 Resolve the selection objective from the current Decision-Owner-defined
 Aspire, the active operational goal if one exists, the admitted current state,
 and the applicable roadmap anchors. For upstream canonical work, the admitted
@@ -124,9 +130,16 @@ Read only the minimum evidence needed to decide the next action:
 4. Read the applicable roadmap anchors and `docs/self_repair_diagnostic.md`
    only as needed for the judgment. Do not use Shin's upstream roadmap as the
    direction of a new owner.
-5. Read prior outcome records only when they can change the current judgment.
-   During the initial observation window, use at most the latest three entries
-   in `validation/codex_conversation_next_1_01_trial.md`. Treat their results,
+5. For a proposed kind of work already attempted, first check the current
+   handoff/restart point, a user-supplied result record, or a bounded matching
+   outcome index for what was done and what it actually changed. If none names
+   the result, use the bounded topic or filename search in `AGENTS.md`'s
+   Conditional Routing within the relevant existing record collection. Read
+   the matched underlying result only if it can change this choice; do not
+   scan unrelated history. If the prior result is unavailable, state that gap
+   instead of assuming the work failed or remains undone. During the initial
+   observation window, use at most the latest three entries in
+   `validation/codex_conversation_next_1_01_trial.md`. Treat their results,
    corrections, dependencies, and failures as evidence; never use their count
    as a work target.
 6. Follow the ordinary conditional routes in `AGENTS.md` for any judgment that
@@ -158,6 +171,30 @@ current objective within the inspected evidence. Compare:
 - current authorization, Gate, protected surfaces, and reversibility; and
 - whether the action creates real state progress rather than easy cleanup.
 
+Connect the proposed action to the evidence before ranking it:
+
+- For an **improvement or repeat repair**, name the current unmet condition,
+  its present evidence, any relevant prior same-kind work and result, and why
+  this intervention is expected to change that condition. A completed earlier
+  repair with no new concrete gap is not a reason to repeat it. New observed
+  friction can reopen the same surface; do not ban README or any other category
+  categorically.
+- For an **uncertainty-reducing experiment**, name the question whose answer
+  matters, a concrete limit on work or exposure, what will be observed, and how
+  each plausible result would change the next decision. An experiment is not
+  justified merely because its result is currently unknown or it is easy to
+  run.
+- Compare each supported candidate with the other candidates and waiting.
+  Explain why it should precede them now, including the result that would
+  falsify or defer it. Being executable, publishable, or small is not itself a
+  selection reason.
+
+Keep observed gaps, owner hypotheses, and proposed measurements separate. A
+candidate with missing decisive evidence may be held, narrowed to a useful
+experiment, or left to wait; weak evidence does not impose a blanket stop on
+exploration. Do not turn a proposal, a simulation, or an available artifact
+into an admitted V13 decision or evidence of real use.
+
 Do not prefer documentation cleanup or more tests merely because they are easy
 to select. Do not claim a global optimum. Limit the claim to the candidates
 and evidence actually compared.
@@ -174,16 +211,20 @@ Before acting, state briefly:
 <one action, or wait>
 
 他候補より優先した理由:
-<bounded comparison and evidence>
+<current unmet condition and evidence or experiment question; relevant prior
+result; why this action before alternatives and waiting>
 
 期待する改善と確認方法:
-<observable result>
+<observable result and, for an experiment, how it changes the next decision>
 
 今の承認で実行できる範囲:
 <exact boundary>
 ```
 
 ### 3. Execute only when already authorized
+
+For a selection-only request, return the bounded comparison and stop here.
+Do not execute, publish, or append a `♻️` Run record from that request.
 
 If the selected action is local, reversible, bounded, and inside the current
 authorization, continue in the same Codex turn:
