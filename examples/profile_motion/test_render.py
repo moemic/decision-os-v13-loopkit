@@ -77,7 +77,12 @@ class RenderTest(unittest.TestCase):
     def test_layout_keeps_body(self):
         preview = (ROOT / "profile_layout_preview.md").read_text()
         self.assertTrue(preview.startswith(make_layout.HEADING))
-        source = preview.replace(make_layout.HEADING, make_layout.TITLE, 1).replace(make_layout.CREATURE, "", 1)
+        self.assertIn(make_layout.PORTFOLIO_ABSOLUTE, preview)
+        self.assertNotIn(make_layout.PORTFOLIO_RELATIVE, preview)
+        source = (preview.replace(make_layout.HEADING, make_layout.TITLE, 1)
+                  .replace(make_layout.CREATURE, "", 1)
+                  .replace(make_layout.PORTFOLIO_ABSOLUTE,
+                           make_layout.PORTFOLIO_RELATIVE, 1))
         self.assertEqual(make_layout.build(source), preview)
         self.assertIn("**32 direct upstream merges across 28 independent public repositories**", source)
         self.assertIn("siriusa.paper@gmail.com", source)

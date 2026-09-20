@@ -54,7 +54,7 @@ Each link exposes the failure boundary, bounded repair, and third-party direct u
 
 All 32 verified direct merges—including OSC / Open OnDemand #5725, Adyen #1760, Dynawo / DyCoV #385, and PowerGridModel #1547—are preserved in the canonical detailed ledger:
 
-**[Open the full verified merge portfolio →](MERGE_PORTFOLIO.md)**
+**[Open the full verified merge portfolio →](https://github.com/shin4141/shin4141/blob/cc3e38fb2cb4fc3ba339050d30fe1deef9acc425/MERGE_PORTFOLIO.md)**
 
 Boundary coverage: **STATE / TRANSITION ×7** · **DATA / CONTEXT ×6** · **CONFIG / POLICY ×7** · **RETRY / RECOVERY ×2** · **INSTALL / COMPLETION ×2** · **TRANSPORT / PARTIAL PROGRESS ×1** · **NUMERIC / REPRESENTATION ×7**
 

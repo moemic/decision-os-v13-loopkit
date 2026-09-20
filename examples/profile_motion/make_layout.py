@@ -8,6 +8,8 @@ HEADING = ('<picture>\n'
            '  <img src="heading.gif" alt="Technical Boundary Audit & Repair for AI Systems — softly flowing purple and cyan light">\n'
            '</picture>\n')
 CREATURE = "![Crowned black cat walking, sending a shockwave through decorative activity tiles, napping while they return, then waking](crowned_cat.gif)\n\n"
+PORTFOLIO_RELATIVE = "(MERGE_PORTFOLIO.md)"
+PORTFOLIO_ABSOLUTE = "(https://github.com/shin4141/shin4141/blob/cc3e38fb2cb4fc3ba339050d30fe1deef9acc425/MERGE_PORTFOLIO.md)"
 
 
 def build(source):
@@ -16,7 +18,12 @@ def build(source):
     intro, separator, body = source[len(TITLE):].partition("\n\n")
     if not separator:
         raise ValueError("Missing introductory paragraph boundary")
-    return HEADING + intro + "\n\n" + CREATURE + body
+    if body.count(PORTFOLIO_RELATIVE) != 1:
+        raise ValueError("Expected one relative portfolio link to preserve across repositories")
+    # The profile source keeps its relative link; only this cross-repo preview
+    # resolves it to the exact source commit so the evidence link still works.
+    return (HEADING + intro + "\n\n" + CREATURE + body
+            .replace(PORTFOLIO_RELATIVE, PORTFOLIO_ABSOLUTE, 1))
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@ The working prototype lives inside [V13 LoopKit](https://github.com/shin4141/dec
 
 ![Alternative fox icon and amber/peach palette using the same shockwave and staggered-return loop over synthetic example activity](fox.gif)
 
-The [full profile layout mock](profile_layout_preview.md) uses the unchanged profile body from [shin4141/shin4141 at `cc3e38f`](https://github.com/shin4141/shin4141/blob/cc3e38f/README.md). The only substitutions are the original heading for an image with equivalent alt text, and one compact GIF after the first paragraph. Proof links, counts and contact are copied intact. No live profile mutation is part of V216.
+The [full profile layout mock](profile_layout_preview.md) uses the unchanged prose and counts from [shin4141/shin4141 at `cc3e38f`](https://github.com/shin4141/shin4141/blob/cc3e38f/README.md). The original heading becomes an image with equivalent alt text, and one compact GIF follows the first paragraph. Its one relative portfolio link is resolved to that same source commit so it works from this separate repository; all other evidence links and the contact are copied intact. Reversing these three presentation-only substitutions reproduces the original profile README exactly. No live profile mutation is part of V216.
 
 ## Generate your own
 
