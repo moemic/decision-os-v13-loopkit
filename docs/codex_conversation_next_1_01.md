@@ -70,7 +70,12 @@ authority, or stop condition.
 Resolve the selection objective from the current Decision-Owner-defined
 Aspire, the active operational goal if one exists, the admitted current state,
 and the applicable roadmap anchors. For upstream canonical work, the admitted
-pair and `docs/roadmap_anchors.md` apply. For a reader-owned workspace, use the
+pair, `docs/roadmap_anchors.md`, and the additional, owner-declared
+[`V216 public reuse Aspire`](v216_public_reuse_aspire.md) apply. When comparing
+upstream candidates, include evidenced first-contact understanding, first trial,
+and return/reuse friction where relevant; keep stars, trial, and real use as
+different observations. This additional objective does not override the
+preserved higher Aspire or grant new action authority. For a reader-owned workspace, use the
 reader's setup and any fork-owned anchors instead; the upstream roadmap is
 historical context, not the reader's direction. The mechanics of this command,
 the trial-log length, and a target number of trials are not the objective and

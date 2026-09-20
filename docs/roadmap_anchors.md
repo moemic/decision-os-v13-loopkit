@@ -1,5 +1,14 @@
 # Roadmap Anchors
 
+## Additional upstream public-reuse objective — V216, 2026-09-20
+
+Shin added [a V13 LoopKit-specific 100-star Aspire](v216_public_reuse_aspire.md)
+without replacing the higher Aspire or the existing primary operating line below.
+Discovery, first trial, and return/reuse can now be considered in next-work
+selection; stars alone do not establish the latter two. This objective applies
+only to the upstream `shin4141/decision-os-v13-loopkit` and gives no fork owner
+an inherited target or new execution authority.
+
 ## Purpose
 
 Roadmap Anchors define the line that V13 uses to judge whether a 0.01 repair actually moves the user forward.
