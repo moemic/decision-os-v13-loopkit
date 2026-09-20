@@ -1,5 +1,7 @@
 # Compact profile motion — V216 review prototype
 
+> Historical, fixed V216 prototype. This page records the pre-publication review state at commit `a3c3e6633b13684adc08beab28883a57b11d5cbb`; its statements about an unpublished profile are not current instructions. The [independent github-profile-motion repository](https://github.com/shin4141/github-profile-motion) is now the canonical generator and user guide. Keep this copy and the older `31a7624` asset as evidence/rollback references; make future generator changes in the independent repository.
+
 The working prototype lives inside [V13 LoopKit](https://github.com/shin4141/decision-os-v13-loopkit), not a new repository. It creates self-contained GIF images for README embedding; it does **not** alter or replace GitHub's native contribution graph. The heading and placement are a review-only mock; nothing here is published to the live `shin4141/shin4141` profile.
 
 <picture>
