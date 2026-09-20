@@ -132,11 +132,13 @@ Read only the minimum evidence needed to decide the next action:
    direction of a new owner.
 5. For a proposed kind of work already attempted, first check the current
    handoff/restart point, a user-supplied result record, or a bounded matching
-   outcome index for what was done and what it actually changed. Read its named
-   underlying result only if it can change this choice; do not scan unrelated
-   history. If the prior result is unavailable, state that gap instead of
-   assuming the work failed or remains undone. During the initial observation
-   window, use at most the latest three entries in
+   outcome index for what was done and what it actually changed. If none names
+   the result, use the bounded topic or filename search in `AGENTS.md`'s
+   Conditional Routing within the relevant existing record collection. Read
+   the matched underlying result only if it can change this choice; do not
+   scan unrelated history. If the prior result is unavailable, state that gap
+   instead of assuming the work failed or remains undone. During the initial
+   observation window, use at most the latest three entries in
    `validation/codex_conversation_next_1_01_trial.md`. Treat their results,
    corrections, dependencies, and failures as evidence; never use their count
    as a work target.

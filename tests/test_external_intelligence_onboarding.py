@@ -22,6 +22,7 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         self.assertIn("A request to **recommend or compare**", route)
         self.assertIn("a user-supplied result record", route)
         self.assertIn("For a proposed kind of work already attempted", route)
+        self.assertIn("bounded topic or filename search", route)
         self.assertIn("For an **improvement or repeat repair**", route)
         self.assertIn("For an **uncertainty-reducing experiment**", route)
         self.assertIn("each plausible result would change the next decision", route)
