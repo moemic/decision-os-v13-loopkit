@@ -1,3 +1,67 @@
+# Current Signal — V216 Aspire and Profile Motion Admission Candidate
+
+This first block is a candidate until the admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+49b27e521f8a29312a6e0767c4c0f19483d999fb
+
+Current Canonical Main:
+49b27e521f8a29312a6e0767c4c0f19483d999fb at V216 start; this V216 block is a branch candidate until exact main admission
+
+Current Layer:
+V13 — V216 public reuse Aspire and review-only profile motion prototype
+
+V12 State:
+PASS — local Aspire connection, two animation configurations, layout mock and bounded verification completed; remote admission remains separate
+
+Completed Work:
+added the owner-declared 100-star public reuse objective without replacing the higher Aspire; wired upstream next-work selection; built deterministic GIF renderer, crowned cat and alternate icon, heading and intact-body profile mock
+
+Canonical Current Capability:
+after admission, upstream next-work selection consults docs/v216_public_reuse_aspire.md; review-only GIF examples do not change the native contribution graph or live profile
+
+Current Restart Point:
+this paired first block and AGENTS; docs/v216_public_reuse_aspire.md for target, observations and re-evaluation; examples/profile_motion/README.md for generation and profile mock
+
+Active Branch:
+codex/v216-aspire-profile-animation until review and admission; no next branch assigned
+
+Current Gate:
+HOLD — review prototype; no live profile reflection, main write, SNS, new repo, release, tag or automatic next loop
+
+Completion Line:
+V216 delivery is complete after branch commit, best-effort push, Draft PR and remote branch read-back; operational admission requires exact paired block on fetched origin/main and ancestry verification separately
+
+Missing Closure:
+candidate branch: Draft PR and review, merge and post-merge main admission; live profile reflection requires Shin's visual approval and a separate scoped action
+
+Next Authorized Action:
+present working examples for Shin review; no automatic next loop or profile merge
+
+Not Authorized:
+direct main write or profile publication; SNS, new repository, release, tag, automatic next loop
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on this branch; ADMITTED only when exact paired blocks are on fetched origin/main with reconstruction-base ancestry
+
+Admission Evidence:
+docs/v216_public_reuse_aspire.md; examples/profile_motion/README.md and tests; profile layout source cc3e38f; branch and PR remote read-back
+
+Remote Read-Back:
+pending branch push/PR; after merge fetch main and compare exact paired first blocks, old suffixes and 49b27e5 ancestry before claiming operational admission
+
+Older Material Below:
+HISTORICAL ONLY — preserved without rebaseline; older gates do not authorize V216 or another loop
+```
+
+All older material below remains history; it grants no present authority.
+
+<!-- current-state-history-boundary:v216-profile-motion-001 -->
+
 # Current Signal — V215 Distribution Admission Candidate
 
 This block is a candidate until its admission joint passes.
