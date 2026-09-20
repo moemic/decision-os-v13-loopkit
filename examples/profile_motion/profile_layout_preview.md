@@ -5,7 +5,7 @@
 
 I independently examine and repair failure boundaries in AI agents and automated systems—including false completion, duplicate execution, broken retry/resume, state drift, and authority mismatch.
 
-![Crowned black cat visiting contribution cells; decorative glow over a dated activity snapshot](crowned_cat.gif)
+![Crowned black cat walking, sending a shockwave through decorative activity tiles, napping while they return, then waking](crowned_cat.gif)
 
 **OpenSSL — upstream adoption in `master`.** Recursive seed-source construction could exhaust the stack → the reviewed repair now fails cleanly; [PR #32685](https://github.com/openssl/openssl/pull/32685) remains `Closed`, and adoption is recorded in [commit `aeeca5a`](https://github.com/openssl/openssl/commit/aeeca5a9e07166183fe323f336c9177a9b524c78).
 

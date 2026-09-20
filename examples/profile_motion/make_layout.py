@@ -7,7 +7,7 @@ HEADING = ('<picture>\n'
            '  <source media="(max-width: 600px)" srcset="heading_mobile.gif">\n'
            '  <img src="heading.gif" alt="Technical Boundary Audit & Repair for AI Systems — softly flowing purple and cyan light">\n'
            '</picture>\n')
-CREATURE = "![Crowned black cat visiting contribution cells; decorative glow over a dated activity snapshot](crowned_cat.gif)\n\n"
+CREATURE = "![Crowned black cat walking, sending a shockwave through decorative activity tiles, napping while they return, then waking](crowned_cat.gif)\n\n"
 
 
 def build(source):

@@ -75,7 +75,11 @@ pair, `docs/roadmap_anchors.md`, and the additional, owner-declared
 upstream candidates, include evidenced first-contact understanding, first trial,
 and return/reuse friction where relevant; keep stars, trial, and real use as
 different observations. This additional objective does not override the
-preserved higher Aspire or grant new action authority. For a reader-owned workspace, use the
+preserved higher Aspire or grant new action authority. For profile work only
+when separately authorized, the same record also names Shin's follower and
+playful-range presentation purposes; compare profile readability and evidence
+without treating followers as LoopKit users or inferring work impact. For a
+reader-owned workspace, use the
 reader's setup and any fork-owned anchors instead; the upstream roadmap is
 historical context, not the reader's direction. The mechanics of this command,
 the trial-log length, and a target number of trials are not the objective and

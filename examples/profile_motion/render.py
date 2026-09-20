@@ -6,7 +6,7 @@ import math
 from pathlib import Path
 import random
 import subprocess
-from PIL import Image, ImageColor, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageColor, ImageDraw, ImageFont
 
 ROOT = Path(__file__).parent
 W, H = 580, 164
@@ -118,7 +118,7 @@ def position(target, t):
     return target[1]
 
 
-def frames(config, data, seed):
+def touch_frames(config, data, seed):
     accent, glow = color(config["accent"]), color(config["glow"])
     base, grid = base_frame(config["username"], data, accent)
     targets = target_points(grid, seed)
@@ -147,6 +147,181 @@ def frames(config, data, seed):
         yield im
 
 
+def smoothstep(value):
+    value = max(0.0, min(1.0, value))
+    return value * value * (3 - 2 * value)
+
+
+def shock_stop(grid, seed):
+    """Choose one central active square; no activity values are rewritten."""
+    active = [(col, row) for col in range(11, 18) for row in range(2, 5)
+              if grid[col][row] > 0]
+    return random.Random(seed).choice(active or [(14, 3)])
+
+
+def shock_plan(grid, seed, stop):
+    """One fixed per-cell motion plan: radial launch, irregular voluntary return."""
+    cx, cy = X0 + stop[0]*STEP + 6, Y0 + stop[1]*STEP - 17
+    plan = []
+    for col in range(28):
+        for row in range(7):
+            x, y = X0 + col*STEP, Y0 + row*STEP
+            rng = random.Random(f"{seed}:{col}:{row}")
+            dx, dy = x+6-cx, y+6-cy
+            dist = math.hypot(dx, dy)
+            if dist < 3:
+                angle = rng.random()*math.tau
+                dx, dy, dist = math.cos(angle), math.sin(angle), 1
+            reach = 36 + min(52, dist*.27) + rng.uniform(-6, 8)
+            # Slight tangent adds a natural tumble without reversing the burst.
+            tangent = rng.uniform(-9, 9)
+            ox = dx/dist*reach - dy/dist*tangent
+            oy = dy/dist*reach + dx/dist*tangent
+            launch = 27 + min(8, int(dist/35))
+            return_start = 46 + rng.randrange(0, 17)
+            return_duration = 12 + rng.randrange(0, 14)
+            plan.append(dict(col=col, row=row, count=grid[col][row], x=x, y=y,
+                             ox=ox, oy=oy, launch=launch,
+                             return_start=return_start,
+                             return_end=return_start+return_duration,
+                             phase=rng.random()*math.tau))
+    return plan
+
+
+def cell_position(cell, t):
+    """Decorative position only; a cell's original count/color is immutable."""
+    if t < cell["launch"] or t >= cell["return_end"]:
+        return cell["x"], cell["y"]
+    if t < cell["launch"]+7:
+        p = (t-cell["launch"])/7
+        amount = 1-(1-p)**3  # quick outward impulse
+        wiggle = 0
+    elif t < cell["return_start"]:
+        amount = 1
+        wiggle = 0
+    else:
+        p = (t-cell["return_start"])/(cell["return_end"]-cell["return_start"])
+        amount = 1-smoothstep(p)
+        # Small sideways hesitation while drifting home; vanishes at both ends.
+        wiggle = math.sin(p*math.tau*1.5+cell["phase"])*3.2*p*(1-p)
+    return (cell["x"] + cell["ox"]*amount + wiggle,
+            cell["y"] + cell["oy"]*amount - wiggle)
+
+
+def shock_background(username, data):
+    im = Image.new("RGB", (W, H), (17, 23, 37))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle((1, 1, W-2, H-2), radius=16, outline=(59, 72, 95), width=2)
+    d.text((X0, 9), "@"+username, fill=(232, 239, 249), font=font(15, True))
+    d.text((W-112, 11), "ACTIVITY", fill=(170, 185, 203), font=font(11, True))
+    d.text((X0, 148), data.get("observed_at", "sample")[:10]
+           + " snapshot  ·  tile motion is decorative; counts unchanged",
+           fill=(161, 178, 199), font=font(10))
+    return im
+
+
+def square_color(count, accent):
+    shades = [(39, 49, 68), blend((45, 56, 73), accent, .29),
+              blend((45, 56, 73), accent, .48),
+              blend((45, 56, 73), accent, .72), accent]
+    level = 0 if count == 0 else 1 if count < 3 else 2 if count < 6 else 3 if count < 10 else 4
+    return shades[level]
+
+
+def load_icon(path):
+    icon = Image.open(ROOT / path).convert("RGBA")
+    icon.thumbnail((53, 53), Image.Resampling.LANCZOS)
+    return icon
+
+
+def creature_at(frame, icon, x, ground_y, angle=0, scale=1, lift=0):
+    size = (max(1, round(icon.width*scale)), max(1, round(icon.height*scale)))
+    sprite = icon.resize(size, Image.Resampling.LANCZOS)
+    sprite = sprite.rotate(angle, Image.Resampling.BICUBIC, expand=True)
+    frame.paste(sprite, (round(x-sprite.width/2), round(ground_y-sprite.height+12-lift)), sprite)
+
+
+def shock_frames(config, data, seed):
+    """Walk → stop → burst → sleep → staggered return → wake → seamless walk."""
+    accent, glow = color(config["accent"]), color(config["glow"])
+    grid = activity_grid(data)
+    stop = shock_stop(grid, seed)
+    plan = shock_plan(grid, seed, stop)
+    background = shock_background(config["username"], data)
+    awake = load_icon(config["icon"])
+    sleeping = load_icon(config["sleep_icon"]) if config.get("sleep_icon") else awake
+    waking = load_icon(config["wake_icon"]) if config.get("wake_icon") else awake
+    start_x, stop_x = X0+4*STEP+6, X0+stop[0]*STEP+6
+    ground_y = Y0+stop[1]*STEP+6
+    center_y = ground_y-23
+    first = None
+    for t in range(104):
+        if t == 103:
+            # Exact repeated endpoint: no jump of either square placement or icon.
+            yield first.copy()
+            continue
+        im = background.copy()
+        draw = ImageDraw.Draw(im)
+        for cell in plan:
+            x, y = cell_position(cell, t)
+            x, y = round(x), round(y)
+            draw.rounded_rectangle((x, y, x+12, y+12), radius=3,
+                                   fill=square_color(cell["count"], accent))
+
+        # Two expanding outlines, not a full-screen flash.
+        for onset in (27, 31):
+            age = t-onset
+            if 0 <= age <= 15:
+                radius = 5+age*13
+                strength = (1-age/16)*.75
+                ring = blend((17, 23, 37), glow, strength)
+                draw.ellipse((stop_x-radius, center_y-radius,
+                              stop_x+radius, center_y+radius),
+                             outline=ring, width=3 if age < 9 else 2)
+
+        if t < 20:
+            p = smoothstep(t/20)
+            x = start_x+(stop_x-start_x)*p
+            creature_at(im, awake, x, ground_y,
+                        angle=3*math.sin(t*.7), lift=abs(math.sin(t*.65))*4)
+        elif t < 42:
+            creature_at(im, awake, stop_x, ground_y)
+        elif t < 46:
+            if config.get("sleep_icon"):
+                creature_at(im, sleeping, stop_x, ground_y, angle=-10, scale=.96)
+            else:
+                creature_at(im, awake, stop_x, ground_y,
+                            angle=-65*smoothstep((t-42)/4), scale=1-.16*(t-42)/4)
+        elif t < 88:
+            breath = 1 + .025*math.sin((t-46)*.6)
+            creature_at(im, sleeping, stop_x, ground_y,
+                        angle=0 if config.get("sleep_icon") else -65,
+                        scale=breath if config.get("sleep_icon") else .84*breath)
+        elif t < 95:
+            if config.get("wake_icon"):
+                creature_at(im, waking, stop_x, ground_y,
+                            angle=-12*(1-smoothstep((t-88)/7)), scale=.95)
+            else:
+                creature_at(im, awake, stop_x, ground_y,
+                            angle=-65*(1-smoothstep((t-88)/7)), scale=.84+.16*smoothstep((t-88)/7))
+        else:
+            p = smoothstep((t-95)/8)
+            x = stop_x+(start_x-stop_x)*p
+            creature_at(im, awake, x, ground_y,
+                        angle=2*math.sin((t-95)*.8), lift=abs(math.sin((t-95)*.65))*3)
+        if first is None:
+            first = im.copy()
+        yield im
+
+
+def frames(config, data, seed, pattern="shock"):
+    if pattern == "shock":
+        return shock_frames(config, data, seed)
+    if pattern == "touch":
+        return touch_frames(config, data, seed)
+    raise ValueError("pattern must be shock or touch")
+
+
 def heading_frames(mobile=False):
     w, h = (440, 86) if mobile else (850, 62)
     bg = (17, 23, 37)
@@ -173,7 +348,11 @@ def heading_frames(mobile=False):
 def gif(images, dest, duration):
     # One global fixed palette suppresses per-frame palette flicker.
     images = list(images)
-    palette = images[0].quantize(colors=128)
+    samples = [images[0], images[len(images)//3], images[len(images)//2]]
+    sheet = Image.new("RGB", (images[0].width, images[0].height*len(samples)))
+    for i, sample in enumerate(samples):
+        sheet.paste(sample, (0, i*sample.height))
+    palette = sheet.quantize(colors=128)
     frames_p = [im.quantize(palette=palette) for im in images]
     frames_p[0].save(dest, save_all=True, append_images=frames_p[1:], duration=duration,
                      loop=0, disposal=2, optimize=False)
@@ -184,6 +363,8 @@ def main():
     parser.add_argument("--config", type=Path, help="JSON with username, icon, accent, glow")
     parser.add_argument("--activity", type=Path, help="Frozen dated JSON activity input")
     parser.add_argument("--seed", type=int, default=216)
+    parser.add_argument("--pattern", choices=("shock", "touch"), default="shock",
+                        help="Main shock/sleep loop, or retained touch/glow variant")
     parser.add_argument("--out", type=Path, help="Output activity GIF")
     parser.add_argument("--heading-out", type=Path, help="Output heading GIF")
     parser.add_argument("--heading-mobile-out", type=Path, help="Output two-line narrow-screen heading GIF")
@@ -214,7 +395,7 @@ def main():
         data = json.loads(args.activity.read_text())
         if data["username"] != config["username"]:
             parser.error("activity username does not match config")
-        gif(frames(config, data, args.seed), args.out, 90)
+        gif(frames(config, data, args.seed, args.pattern), args.out, 100)
 
 
 if __name__ == "__main__":

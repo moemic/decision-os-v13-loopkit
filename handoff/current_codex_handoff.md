@@ -13,13 +13,13 @@ Current Layer:
 V13 — V216 public reuse Aspire and review-only profile motion prototype
 
 V12 State:
-PASS — local Aspire connection, two animation configurations, layout mock and bounded verification completed; remote admission remains separate
+PASS — local Aspire/profile-purpose connection, revised shock-nap loop, two animation configurations, layout mock and bounded verification completed; remote admission remains separate
 
 Completed Work:
-added the owner-declared 100-star public reuse objective without replacing the higher Aspire; wired upstream next-work selection; built deterministic GIF renderer, crowned cat and alternate icon, heading and intact-body profile mock
+kept the owner-declared 100-star LoopKit Aspire and added distinct follower/playful-range/work-entry profile purposes; wired next-work selection; built deterministic shockwave, cat nap, staggered-return GIF with one-image alternate, heading and intact-body profile mock; repaired current-versus-V215 historical tests without changing protected history
 
 Canonical Current Capability:
-after admission, upstream next-work selection consults docs/v216_public_reuse_aspire.md; review-only GIF examples do not change the native contribution graph or live profile
+after admission, upstream next-work selection consults docs/v216_public_reuse_aspire.md; review-only shockwave GIF examples do not change activity counts, the native contribution graph or live profile
 
 Current Restart Point:
 this paired first block and AGENTS; docs/v216_public_reuse_aspire.md for target, observations and re-evaluation; examples/profile_motion/README.md for generation and profile mock
@@ -34,7 +34,7 @@ Completion Line:
 V216 delivery is complete after branch commit, best-effort push, Draft PR and remote branch read-back; operational admission requires exact paired block on fetched origin/main and ancestry verification separately
 
 Missing Closure:
-candidate branch: Shin review, historical fixed-frontier test disposition, merge and post-merge main admission; live profile reflection requires Shin's visual approval and a separate scoped action
+candidate branch: updated PR remote read-back, Shin visual review, merge and post-merge main admission; live profile reflection requires Shin's approval and a separate scoped action
 
 Next Authorized Action:
 present working examples for Shin review; no automatic next loop or profile merge
@@ -49,10 +49,10 @@ Admission Joint:
 CANDIDATE / NOT CURRENT on this branch; ADMITTED only when exact paired blocks are on fetched origin/main with reconstruction-base ancestry
 
 Admission Evidence:
-docs/v216_public_reuse_aspire.md; examples/profile_motion/README.md and tests; profile layout source cc3e38f; branch and PR remote read-back
+docs/v216_public_reuse_aspire.md; validation/v216_profile_motion.md; examples/profile_motion/README.md and tests; profile layout source cc3e38f; branch and PR remote read-back
 
 Remote Read-Back:
-Draft PR #172 and remote branch images/layout verified; after merge fetch main and compare exact paired first blocks, old suffixes and 49b27e5 ancestry before claiming operational admission
+Draft PR #172 remains the delivery target; verify the revised branch head, GIF and layout after push; after merge fetch main and compare exact paired first blocks, old suffixes and 49b27e5 ancestry before claiming operational admission
 
 Older Material Below:
 HISTORICAL ONLY — preserved without rebaseline; older gates do not authorize V216 or another loop

@@ -196,6 +196,24 @@ class CurrentStateAdmissionTests(unittest.TestCase):
         ):
             self.assertNotIn(historical_field, fields)
 
+    def test_actual_worktree_pair_is_candidate_or_exactly_admitted_on_fetched_main(self) -> None:
+        local_block = first_blocks_from_worktree(REPO_ROOT)[0]
+        remote_blocks = tuple(
+            first_fenced_block(run_git(REPO_ROOT, "show", f"origin/main:{path}").stdout)
+            for path in SURFACES
+        )
+        self.assertIsNotNone(remote_blocks[0])
+        self.assertIsNotNone(remote_blocks[1])
+        validate_current_pair((remote_blocks[0], remote_blocks[1]))
+        if local_block == remote_blocks[0]:
+            # Main adoption still requires exact paired read-back and ancestry.
+            admit_from_fetched_origin_main(REPO_ROOT, local_block)
+        else:
+            fields = validate_current_pair(first_blocks_from_worktree(REPO_ROOT))
+            self.assertIn("CANDIDATE / NOT CURRENT", fields["admission_joint"][0])
+            with self.assertRaisesRegex(AssertionError, "does not contain the admitted block"):
+                admit_from_fetched_origin_main(REPO_ROOT, local_block)
+
     def test_candidate_branch_does_not_admit_until_origin_main_contains_it(
         self,
     ) -> None:

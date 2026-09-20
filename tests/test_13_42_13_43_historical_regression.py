@@ -35,6 +35,8 @@ PRE_13_42_CLOSURE_SHA256 = {
 }
 V209_RECONSTRUCTION_BASE = "5be89c84d1816a2b185cc2f6e85869a9f1e73d11"
 CURRENT_RECONSTRUCTION_BASE = "42e406e858b05b6b8aff5cc6669cf10ad506b424"
+V215_ADMITTED_MAIN = "49b27e521f8a29312a6e0767c4c0f19483d999fb"
+V216_HISTORY_BOUNDARY = "<!-- current-state-history-boundary:v216-profile-motion-001 -->"
 READER_ENTRY_BOUNDARY = (
     "<!-- current-state-history-boundary:conversation-recycle-reader-entry -->"
 )
@@ -45,6 +47,16 @@ def current_block(relative_path: str) -> str:
     block = first_fenced_block(text)
     if block is None:
         raise AssertionError(f"{relative_path}: first fenced block is absent")
+    return block
+
+
+def v215_historical_block(relative_path: str) -> str:
+    text = (REPO_ROOT / relative_path).read_text(encoding="utf-8")
+    if text.count(V216_HISTORY_BOUNDARY) != 1:
+        raise AssertionError(f"{relative_path}: V216 history boundary is not unique")
+    block = first_fenced_block(text.split(V216_HISTORY_BOUNDARY, 1)[1])
+    if block is None:
+        raise AssertionError(f"{relative_path}: V215 historical block is absent")
     return block
 
 
@@ -63,6 +75,9 @@ class Historical13_42And13_43RegressionTests(unittest.TestCase):
         self.assertEqual(signal_block, handoff_block)
 
         fields = parse_fields(signal_block)
+        # Only the AGENTS admission fields are universal at a future frontier.
+        # V215-specific reader and distribution fields are asserted below as
+        # fixed history, not imposed on the new V216 first block.
         required_fields = {
             "canonical_reconstruction_base",
             "current_canonical_main",
@@ -81,30 +96,47 @@ class Historical13_42And13_43RegressionTests(unittest.TestCase):
             "admission_joint",
             "admission_evidence",
             "remote_read_back",
-            "reader_ownership_boundary",
-            "reader_workspace_decision_owner",
-            "companion_status",
-            "runtime_evidence_boundary",
             "older_material_below",
         }
         self.assertEqual(set(), required_fields.difference(fields))
-        self.assertEqual(
-            CURRENT_RECONSTRUCTION_BASE,
-            fields["canonical_reconstruction_base"][0],
+        relationship = subprocess.run(
+            ("git", "-C", str(REPO_ROOT), "merge-base", "--is-ancestor",
+             fields["canonical_reconstruction_base"][0], "HEAD"),
+            capture_output=True, check=False, text=True,
         )
+        self.assertEqual(0, relationship.returncode, relationship.stderr)
         self.assertTrue(fields["current_gate"][0].startswith("HOLD"))
-        self.assertIn("readers may follow the README path", fields["next_authorized_action"][0])
         self.assertEqual("Shin", fields["decision_owner"][0])
-        self.assertIn("not automatically Shin", fields["reader_workspace_decision_owner"][0])
+        self.assertIn("HISTORICAL ONLY", fields["older_material_below"][0])
+
+    def test_v215_specific_reader_contract_is_exact_preserved_history(self) -> None:
+        observed = [v215_historical_block(path) for path in SURFACES]
+        self.assertEqual(observed[0], observed[1])
+        for relative_path, block in zip(SURFACES, observed):
+            fixed = first_fenced_block(run_git(
+                REPO_ROOT, "show", f"{V215_ADMITTED_MAIN}:{relative_path}"
+            ).stdout)
+            self.assertEqual(fixed, block)
+        fields = parse_fields(observed[0])
+        self.assertEqual(CURRENT_RECONSTRUCTION_BASE,
+                         fields["canonical_reconstruction_base"][0])
+        self.assertIn("readers may follow the README path",
+                      fields["next_authorized_action"][0])
+        self.assertIn("not automatically Shin",
+                      fields["reader_workspace_decision_owner"][0])
         self.assertTrue(fields["companion_status"][0].startswith("UNDER DEVELOPMENT"))
-        self.assertIn("one fresh isolated Codex task", fields["runtime_evidence_boundary"][0])
+        self.assertIn("one fresh isolated Codex task",
+                      fields["runtime_evidence_boundary"][0])
+        self.assertIn("reader_ownership_boundary", fields)
 
     def test_repository_check_reads_only_the_new_current_authority(self) -> None:
         payload, exit_code = inspect_repository(REPO_ROOT)
         self.assertEqual(EXIT_OK, exit_code)
-        self.assertEqual("PASS", payload["v12_state"])
-        self.assertEqual("HOLD", payload["v13_gate"])
-        self.assertIn("readers may follow the README path", payload["next_authorized_action"])
+        fields = parse_fields(current_block(SURFACES[0]))
+        self.assertEqual(fields["v12_state"][0].split()[0], payload["v12_state"])
+        self.assertEqual(fields["current_gate"][0].split()[0], payload["v13_gate"])
+        self.assertEqual(fields["next_authorized_action"][0],
+                         payload["next_authorized_action"])
 
     def test_reconstruction_base_is_real_and_ancestral(self) -> None:
         completed = subprocess.run(
@@ -148,6 +180,7 @@ class Historical13_42And13_43RegressionTests(unittest.TestCase):
 
             observed_head = run_git(reader, "rev-parse", "origin/main").stdout.strip()
             observed_blocks = []
+            observed_texts = []
             for relative_path in SURFACES:
                 text = run_git(
                     reader,
@@ -157,25 +190,22 @@ class Historical13_42And13_43RegressionTests(unittest.TestCase):
                 block = first_fenced_block(text)
                 self.assertIsNotNone(block)
                 observed_blocks.append(block)
+                observed_texts.append(text)
 
         self.assertEqual(observed_blocks[0], observed_blocks[1])
-        self.assertNotEqual(CURRENT_RECONSTRUCTION_BASE, observed_head)
+        self.assertNotEqual(V215_ADMITTED_MAIN, observed_head)
+        self.assertEqual(current_block(SURFACES[0]), observed_blocks[0])
         fields = parse_fields(observed_blocks[0] or "")
         self.assertIn("current_canonical_main", fields)
-        self.assertEqual(
-            CURRENT_RECONSTRUCTION_BASE,
-            fields["canonical_reconstruction_base"][0],
-        )
         self.assertTrue(fields["current_gate"][0].startswith("HOLD"))
-        self.assertTrue(
-            fields["canonical_current_capability"][0].startswith(
-                "after admission"
-            )
-        )
-        self.assertIn("fetched merge descendant", fields["current_canonical_main"][0])
-        self.assertIn("after the exact admission joint passes, none", fields["missing_closure"][0])
-        self.assertIn("readers may follow the README path", fields["next_authorized_action"][0])
-        self.assertTrue(fields["completion_line"][0].startswith("PASS when"))
+        # Synthetic transport/read-back proves the new first pair survives a
+        # main clone; it does not promote the real PR. Exact fetched origin/main
+        # identity and reconstruction-base ancestry remain separate admission
+        # requirements in test_current_state_admission.py and AGENTS.md.
+        for relative_path, text in zip(SURFACES, observed_texts):
+            self.assertEqual(1, text.count(V216_HISTORY_BOUNDARY))
+            history = first_fenced_block(text.split(V216_HISTORY_BOUNDARY, 1)[1])
+            self.assertEqual(v215_historical_block(relative_path), history)
 
     def test_v209_frontier_remains_exact_history_below_reader_entry(self) -> None:
         historical_blocks = []
