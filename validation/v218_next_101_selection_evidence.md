@@ -73,3 +73,11 @@ Branchの差分はShinのreview用候補としてlocal commitに保存する。�
 補修後の`python3 -B -m unittest tests.test_external_intelligence_onboarding tests.test_current_state_admission tests.test_workspace_health_red_routing`は26/26 PASS。`python3 -B -m decision_os check .`はexit 0、V12 PASS / V13 HOLD、第一block2枚に矛盾なし。検査時のDIRTYはこの候補修正中の作業ツリーを指し、`authority_match: UNKNOWN`は該当run phaseがないためで、実行承認ではない。`git diff --check`はPASSし、`validation/`での限定したX経路/紹介検索は本ファイルだけを返した。これらは文面・接続・既存状態の確認であり、机上A–Cや人の訂正後の新チャットを自律選択のruntime成功へ昇格しない。
 
 残る限界は、自然な次の依頼での自律的な選択品質、外部読者の初回/再利用、100スターへの効果が未確認であること。今回の範囲ではShinがこの差分を採用するか判断できる候補までで、main反映・push・公開・外部連絡はしない。採用前なら候補を不採用として止められ、採用後に戻す場合はこの差分をforward-onlyに逆変更し、過去の評価・検証記録を履歴として保持する。
+
+## V218採用配達候補 — 2026-09-20 JST
+
+Shinはレビュー済みの`4ea7dac`、`f0acd157`、`59aff70da63b3b4dfedf78eb681fa4bd895c384d`についてmain採用と必要なpush・PR・merge・remote照合を明示承認した。取得済み`origin/main`は`8387e6a4c6263ea90c2c925724d57525b6b8dc16`で、対象3コミットの直前の祖先。`codex/v218-selection-basis`をこの3コミットでpushし、remote branchの同一SHAを読み戻してPR #174を作成した。旧段落の「未push・未PR」はそれぞれの記録時点の事実として残す。
+
+V218の新しい現在地候補を`docs/current_signal.md`と`handoff/current_codex_handoff.md`へ同一の第一fenced blockとして前置し、V216以下は履歴として保持した。候補状態での限定回帰はadmission 9/9、13-42/13-43歴史保存 8/8、handoff/V209 70/70、選択入口・workspace health 17/17 PASS。`python3 -B -m decision_os check .`はexit 0、V12 PASS / V13 HOLD、第一block2枚の矛盾なし。検査時のDIRTYは候補追記中のworktreeであり、`authority_match: UNKNOWN`は該当run phaseなしによる。これらは文面・接続・履歴・handoffの検証で、自律選択やスター効果の実用検証ではない。
+
+残る配達はPR #174の承認済み差分のmerge、fetched`origin/main`からの第一block完全一致・`8387e6a`祖先・対象4修正pathと評価記録のread-back、およびこの配達で作った不要物だけの安全な後片付け。branch pushやPR作成だけでCanon入場を主張しない。main反映後の訂正は古い評価・検証履歴を消さずforward-onlyの新しい変更で行う。

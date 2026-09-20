@@ -1,3 +1,67 @@
+# Current Codex Handoff — V218 Selection Basis Admission Candidate
+
+This first block is a candidate until the admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+8387e6a4c6263ea90c2c925724d57525b6b8dc16
+
+Current Canonical Main:
+8387e6a4c6263ea90c2c925724d57525b6b8dc16 at V218 start; the fetched descendant containing this exact paired block is current only after admission
+
+Current Layer:
+V13 — V218 next-1.01 selection basis and bounded feedback re-entry
+
+V12 State:
+PASS — the reviewed selection-route repair, focused verification and preserved user-feedback record are complete on the branch; remote admission remains separate
+
+Completed Work:
+connected same-kind prior outcomes, present unmet conditions, bounded uncertainty experiments and waiting in the ordinary next-work route; separated selection-only recommendations from execution authority; preserved Shin's assessment of the unposted X draft and the new chat's human-corrected outcome without claiming autonomous selection success
+
+Canonical Current Capability:
+after admission, ordinary next-work selection checks relevant prior results and present gaps before ranking, can compare bounded experiments under uncertainty, and stops after a recommendation when execution is not authorized; V216's public assets and 100-star Aspire remain distinct and unchanged
+
+Current Restart Point:
+this paired first block and AGENTS.md; docs/codex_conversation_next_1_01.md for the route; validation/v218_next_101_selection_evidence.md for sources, desk checks, human corrections, limits and rollback; docs/v216_public_reuse_aspire.md for the declared target
+
+Active Branch:
+codex/v218-selection-basis through PR #174 review and admission; none assigned by V218 after admission
+
+Current Gate:
+HOLD — no automatic new selection run, development, outreach or publication; observe usefulness only during a separately authorized natural next task
+
+Completion Line:
+PASS when PR #174's approved V218 change and this exact paired block are on fetched origin/main, 8387e6a ancestry and related regressions pass, remote content is read back, and task-owned cleanup is complete
+
+Missing Closure:
+candidate: finish PR #174 merge, fetched-main exact pair/content/ancestry read-back and task-owned cleanup; after admission: none for this bounded delivery, while autonomous selection reliability, outside use and star effect remain unverified
+
+Next Authorized Action:
+candidate: complete Shin-approved PR #174 admission and remote verification; after completion: none until a separately authorized ordinary task supplies real use evidence
+
+Not Authorized:
+automatic next loop; SNS posting or external contact; release or new product surface; V215 local-tip or record changes
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on this branch; ADMITTED only when the exact paired first blocks are on fetched origin/main and the reconstruction base is its ancestor
+
+Admission Evidence:
+Shin's V218 main-adoption approval; reviewed commits 4ea7dac, f0acd157 and 59aff70da63b3b4dfedf78eb681fa4bd895c384d; PR #174; validation/v218_next_101_selection_evidence.md; focused route, admission, historical and handoff regressions
+
+Remote Read-Back:
+after PR #174 merge, fetch origin/main, compare both exact first blocks and reviewed V218 paths, and verify 8387e6a ancestry before claiming operational completion; branch push alone is not admission
+
+Older Material Below:
+HISTORICAL ONLY — the prior V216 and older blocks remain byte-preserved below this boundary and grant no V218 execution authority
+```
+
+All older material below remains history; it grants no present authority.
+
+<!-- current-state-history-boundary:v218-selection-basis-001 -->
+
 # Current Codex Handoff — V216 Approved Public Handoff Admission Candidate
 
 This first block is a candidate until the admission joint passes.
