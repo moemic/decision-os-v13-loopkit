@@ -12,6 +12,11 @@ ROOT = Path(__file__).parent
 W, H = 580, 164
 STEP, X0, Y0 = 17, 40, 33
 HEADING = "Technical Boundary Audit & Repair for AI Systems"
+FRAME_MS = 80
+WALK_SPEED = 13
+EDGE_MARGIN = 31  # entire awake sprite and its shadow clear the right edge
+STRIDE = (W + 2*EDGE_MARGIN) / 24  # gait phase completes 24 cycles around a wrap
+B_PAUSE_FRAMES = 5
 
 
 def font(size, bold=False):
@@ -152,11 +157,15 @@ def smoothstep(value):
     return value * value * (3 - 2 * value)
 
 
-def shock_stop(grid, seed):
-    """Choose one central active square; no activity values are rewritten."""
-    active = [(col, row) for col in range(11, 18) for row in range(2, 5)
-              if grid[col][row] > 0]
-    return random.Random(seed).choice(active or [(14, 3)])
+def scene_stops(grid, seed):
+    """Choose separate left-of-center and right-side squares at one gait height."""
+    ranges = (range(8, 13), range(19, 23))
+    stops = []
+    for scene, columns in enumerate(ranges):
+        active = [(col, 3) for col in columns if grid[col][3] > 0]
+        stops.append(random.Random(f"{seed}:stop:{scene}").choice(
+            active or [(list(columns)[len(columns)//2], 3)]))
+    return stops
 
 
 def shock_plan(grid, seed, stop):
@@ -241,34 +250,118 @@ def creature_at(frame, icon, x, ground_y, angle=0, scale=1, lift=0):
     frame.paste(sprite, (round(x-sprite.width/2), round(ground_y-sprite.height+12-lift)), sprite)
 
 
+def walk_phase(x):
+    """The same speed, scale, ground height and gait on both wrap boundaries."""
+    return math.tau * (x+EDGE_MARGIN) / STRIDE
+
+
+def enter_positions(stop_x):
+    x = -EDGE_MARGIN
+    while x < stop_x:
+        x = min(stop_x, x+WALK_SPEED)
+        yield x
+
+
+def exit_positions(stop_x):
+    x = stop_x
+    while x < W+EDGE_MARGIN:
+        x = min(W+EDGE_MARGIN, x+WALK_SPEED)
+        yield x
+
+
+def build_timeline(grid, seed):
+    """A and B are states on one clock, not two GIFs glued together."""
+    states = []
+    stops = scene_stops(grid, seed)
+    for scene, stop in enumerate(stops):
+        stop_x = X0+stop[0]*STEP+6
+        for x in enter_positions(stop_x):
+            states.append(dict(scene=scene, stage="enter", x=x, stop=stop))
+        for _ in range(3):
+            states.append(dict(scene=scene, stage="stop", x=stop_x, stop=stop))
+        for motion_t in range(27, 88):
+            states.append(dict(scene=scene, stage="event", x=stop_x,
+                               stop=stop, motion_t=motion_t, pause_step=0))
+            if scene == 1 and motion_t == 62:
+                for pause_step in range(1, B_PAUSE_FRAMES+1):
+                    states.append(dict(scene=scene, stage="event", x=stop_x,
+                                       stop=stop, motion_t=motion_t,
+                                       pause_step=pause_step))
+        for wake_step in range(7):
+            states.append(dict(scene=scene, stage="wake", x=stop_x,
+                               stop=stop, wake_step=wake_step))
+        for x in exit_positions(stop_x):
+            states.append(dict(scene=scene, stage="exit", x=x, stop=stop))
+    return states
+
+
+def draw_creature(im, state, awake, sleeping, waking, specialized_sleep):
+    x = state["x"]
+    ground_y = Y0+3*STEP+6
+    d = ImageDraw.Draw(im)
+    d.ellipse((round(x-17), ground_y+8, round(x+17), ground_y+12),
+              fill=(29, 36, 52))
+    stage = state["stage"]
+    if stage in ("enter", "exit"):
+        phase = walk_phase(x)
+        # The little up/down step is position-based, so it never restarts at A/B.
+        creature_at(im, awake, x, ground_y,
+                    angle=2.5*math.sin(phase),
+                    lift=2.5*(1-math.cos(phase)))
+    elif stage == "stop":
+        creature_at(im, awake, x, ground_y)
+    elif stage == "wake":
+        p = smoothstep(state["wake_step"]/6)
+        if specialized_sleep:
+            creature_at(im, waking, x, ground_y, angle=-10*(1-p), scale=.95+.05*p)
+        else:
+            creature_at(im, awake, x, ground_y, angle=-65*(1-p), scale=.84+.16*p)
+    else:
+        t = state["motion_t"]
+        if t < 42:
+            creature_at(im, awake, x, ground_y)
+        elif t < 46:
+            p = smoothstep((t-42)/4)
+            if specialized_sleep:
+                creature_at(im, sleeping, x, ground_y, angle=-10*(1-p), scale=.96)
+            else:
+                creature_at(im, awake, x, ground_y, angle=-65*p, scale=1-.16*p)
+        else:
+            breath = 1+.025*math.sin((t-46)*.6)
+            pause_step = state["pause_step"]
+            # Only B: one tiny stir freezes the moving squares for five frames.
+            stir = (0, -1, -2, 0, 1, 0)[pause_step]
+            creature_at(im, sleeping, x, ground_y,
+                        angle=(0 if specialized_sleep else -65)+stir*4,
+                        scale=(breath if specialized_sleep else .84*breath),
+                        lift=abs(stir))
+
+
 def shock_frames(config, data, seed):
-    """Walk → stop → burst → sleep → staggered return → wake → seamless walk."""
+    """One two-scene timeline: right exit, invisible wrap, left re-entry."""
     accent, glow = color(config["accent"]), color(config["glow"])
     grid = activity_grid(data)
-    stop = shock_stop(grid, seed)
-    plan = shock_plan(grid, seed, stop)
+    states = build_timeline(grid, seed)
+    plans = [shock_plan(grid, seed+scene*100003, stop)
+             for scene, stop in enumerate(scene_stops(grid, seed))]
     background = shock_background(config["username"], data)
     awake = load_icon(config["icon"])
     sleeping = load_icon(config["sleep_icon"]) if config.get("sleep_icon") else awake
     waking = load_icon(config["wake_icon"]) if config.get("wake_icon") else awake
-    start_x, stop_x = X0+4*STEP+6, X0+stop[0]*STEP+6
-    ground_y = Y0+stop[1]*STEP+6
-    center_y = ground_y-23
-    first = None
-    for t in range(104):
-        if t == 103:
-            # Exact repeated endpoint: no jump of either square placement or icon.
-            yield first.copy()
-            continue
+    for state in states:
         im = background.copy()
         draw = ImageDraw.Draw(im)
+        stop_x = X0+state["stop"][0]*STEP+6
+        center_y = Y0+3*STEP+6-23
+        t = state.get("motion_t", 0)
+        plan = plans[state["scene"]]
         for cell in plan:
             x, y = cell_position(cell, t)
             x, y = round(x), round(y)
             draw.rounded_rectangle((x, y, x+12, y+12), radius=3,
                                    fill=square_color(cell["count"], accent))
 
-        # Two expanding outlines, not a full-screen flash.
+        # Same background and rendering on both scenes; only the shock center moves.
         for onset in (27, 31):
             age = t-onset
             if 0 <= age <= 15:
@@ -278,39 +371,8 @@ def shock_frames(config, data, seed):
                 draw.ellipse((stop_x-radius, center_y-radius,
                               stop_x+radius, center_y+radius),
                              outline=ring, width=3 if age < 9 else 2)
-
-        if t < 20:
-            p = smoothstep(t/20)
-            x = start_x+(stop_x-start_x)*p
-            creature_at(im, awake, x, ground_y,
-                        angle=3*math.sin(t*.7), lift=abs(math.sin(t*.65))*4)
-        elif t < 42:
-            creature_at(im, awake, stop_x, ground_y)
-        elif t < 46:
-            if config.get("sleep_icon"):
-                creature_at(im, sleeping, stop_x, ground_y, angle=-10, scale=.96)
-            else:
-                creature_at(im, awake, stop_x, ground_y,
-                            angle=-65*smoothstep((t-42)/4), scale=1-.16*(t-42)/4)
-        elif t < 88:
-            breath = 1 + .025*math.sin((t-46)*.6)
-            creature_at(im, sleeping, stop_x, ground_y,
-                        angle=0 if config.get("sleep_icon") else -65,
-                        scale=breath if config.get("sleep_icon") else .84*breath)
-        elif t < 95:
-            if config.get("wake_icon"):
-                creature_at(im, waking, stop_x, ground_y,
-                            angle=-12*(1-smoothstep((t-88)/7)), scale=.95)
-            else:
-                creature_at(im, awake, stop_x, ground_y,
-                            angle=-65*(1-smoothstep((t-88)/7)), scale=.84+.16*smoothstep((t-88)/7))
-        else:
-            p = smoothstep((t-95)/8)
-            x = stop_x+(start_x-stop_x)*p
-            creature_at(im, awake, x, ground_y,
-                        angle=2*math.sin((t-95)*.8), lift=abs(math.sin((t-95)*.65))*3)
-        if first is None:
-            first = im.copy()
+        draw_creature(im, state, awake, sleeping, waking,
+                      bool(config.get("sleep_icon")))
         yield im
 
 
@@ -353,7 +415,10 @@ def gif(images, dest, duration):
     for i, sample in enumerate(samples):
         sheet.paste(sample, (0, i*sample.height))
     palette = sheet.quantize(colors=128)
-    frames_p = [im.quantize(palette=palette) for im in images]
+    # Error diffusion from an entering icon can otherwise alter identical
+    # background squares all the way across a seam in the encoded GIF.
+    frames_p = [im.quantize(palette=palette, dither=Image.Dither.NONE)
+                for im in images]
     frames_p[0].save(dest, save_all=True, append_images=frames_p[1:], duration=duration,
                      loop=0, disposal=2, optimize=False)
 
@@ -395,7 +460,8 @@ def main():
         data = json.loads(args.activity.read_text())
         if data["username"] != config["username"]:
             parser.error("activity username does not match config")
-        gif(frames(config, data, args.seed, args.pattern), args.out, 100)
+        gif(frames(config, data, args.seed, args.pattern), args.out,
+            FRAME_MS if args.pattern == "shock" else 100)
 
 
 if __name__ == "__main__":

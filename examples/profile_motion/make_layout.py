@@ -7,7 +7,7 @@ HEADING = ('<picture>\n'
            '  <source media="(max-width: 600px)" srcset="heading_mobile.gif">\n'
            '  <img src="heading.gif" alt="Technical Boundary Audit & Repair for AI Systems — softly flowing purple and cyan light">\n'
            '</picture>\n')
-CREATURE = "![Crowned black cat walking, sending a shockwave through decorative activity tiles, napping while they return, then waking](crowned_cat.gif)\n\n"
+CREATURE = "![Round crowned black cat walking through two shockwave-and-nap scenes, exiting right and re-entering left between them](crowned_cat.gif)\n\n"
 PORTFOLIO_RELATIVE = "(MERGE_PORTFOLIO.md)"
 PORTFOLIO_ABSOLUTE = "(https://github.com/shin4141/shin4141/blob/cc3e38fb2cb4fc3ba339050d30fe1deef9acc425/MERGE_PORTFOLIO.md)"
 

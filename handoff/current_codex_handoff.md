@@ -13,13 +13,13 @@ Current Layer:
 V13 — V216 public reuse Aspire and review-only profile motion prototype
 
 V12 State:
-PASS — local Aspire/profile-purpose connection, revised shock-nap loop, two animation configurations, layout mock and bounded verification completed; remote admission remains separate
+PASS — local Aspire/profile-purpose connection, continuous two-scene GIF, alternate single-icon configuration, layout mock and bounded verification completed; remote admission remains separate
 
 Completed Work:
-kept the owner-declared 100-star LoopKit Aspire and added distinct follower/playful-range/work-entry profile purposes; wired next-work selection; built deterministic shockwave, cat nap, staggered-return GIF with one-image alternate, heading and intact-body profile mock; repaired current-versus-V215 historical tests without changing protected history
+kept the 100-star LoopKit Aspire and distinct follower/playful-range/work-entry profile purposes; wired next-work selection; refined the original round crowned cat and one-clock A/B right-exit/left-entry GIF with a single B sleep-stir pause, one-image alternate, heading and intact-body profile mock; retained the earlier passing GIF at fixed commit 31a7624; preserved historical tests and protected history
 
 Canonical Current Capability:
-after admission, upstream next-work selection consults docs/v216_public_reuse_aspire.md; review-only shockwave GIF examples do not change activity counts, the native contribution graph or live profile
+after admission, upstream next-work selection consults docs/v216_public_reuse_aspire.md; review-only two-scene GIF examples keep activity counts and base cell positions, and do not change the native contribution graph or live profile
 
 Current Restart Point:
 this paired first block and AGENTS; docs/v216_public_reuse_aspire.md for target, observations and re-evaluation; examples/profile_motion/README.md for generation and profile mock
@@ -52,7 +52,7 @@ Admission Evidence:
 docs/v216_public_reuse_aspire.md; validation/v216_profile_motion.md; examples/profile_motion/README.md and tests; profile layout source cc3e38f; branch and PR remote read-back
 
 Remote Read-Back:
-Draft PR #172 branch shows the revised moving GIF and layout, with the cross-repository evidence link resolved; recheck final head after this closure commit; after merge fetch main and compare exact paired first blocks, old suffixes and 49b27e5 ancestry before claiming operational admission
+Draft PR #172 is the target; verify the final two-scene GIF, layout and branch head after push; after merge fetch main and compare exact paired first blocks, old suffixes and 49b27e5 ancestry before claiming operational admission
 
 Older Material Below:
 HISTORICAL ONLY — preserved without rebaseline; older gates do not authorize V216 or another loop
