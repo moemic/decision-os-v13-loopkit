@@ -34,7 +34,7 @@ Completion Line:
 V216 delivery is complete after branch commit, best-effort push, Draft PR and remote branch read-back; operational admission requires exact paired block on fetched origin/main and ancestry verification separately
 
 Missing Closure:
-candidate branch: Draft PR and review, merge and post-merge main admission; live profile reflection requires Shin's visual approval and a separate scoped action
+candidate branch: Shin review, historical fixed-frontier test disposition, merge and post-merge main admission; live profile reflection requires Shin's visual approval and a separate scoped action
 
 Next Authorized Action:
 present working examples for Shin review; no automatic next loop or profile merge
@@ -52,7 +52,7 @@ Admission Evidence:
 docs/v216_public_reuse_aspire.md; examples/profile_motion/README.md and tests; profile layout source cc3e38f; branch and PR remote read-back
 
 Remote Read-Back:
-pending branch push/PR; after merge fetch main and compare exact paired first blocks, old suffixes and 49b27e5 ancestry before claiming operational admission
+Draft PR #172 and remote branch images/layout verified; after merge fetch main and compare exact paired first blocks, old suffixes and 49b27e5 ancestry before claiming operational admission
 
 Older Material Below:
 HISTORICAL ONLY — preserved without rebaseline; older gates do not authorize V216 or another loop
