@@ -347,7 +347,7 @@ document.
 
 | Judgment or operation | Required reference |
 |---|---|
-| User sends exact `♻️` or ordinarily asks Codex to choose the current next 1.01 | `docs/codex_conversation_next_1_01.md` |
+| User sends exact `♻️` or asks Codex to choose or recommend the next Aspire-serving action, including a selection-only request | `docs/codex_conversation_next_1_01.md` |
 | Select the next required 0.01 | `field_notes/021_required_intermediate_node.md` |
 | Convert V12 state into V13 Gate | `field_notes/022_v12_to_v13_mapping.md` |
 | Select a CAP axis and limit | `field_notes/023_cap_axis_limit_selection.md` |
