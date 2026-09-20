@@ -1092,6 +1092,8 @@ See:
 
 V13 is not only defensive. After basic gates are stable, it can also map whether each loop moves toward a declared Aspire such as adoption, stars, revenue, or operationalization without damaging the Carrier.
 
+The V216 public-reuse Aspire and its profile experiment are recorded in [`docs/v216_public_reuse_aspire.md`](docs/v216_public_reuse_aspire.md). The reusable GIF generator now lives in the independent [GitHub Profile Motion](https://github.com/shin4141/github-profile-motion) repository; the [live profile](https://github.com/shin4141) shows the result. The 100-star target applies to V13 LoopKit alone, not to that new repository.
+
 See:
 
 - [`docs/aspire_oriented_loop_map.md`](docs/aspire_oriented_loop_map.md)

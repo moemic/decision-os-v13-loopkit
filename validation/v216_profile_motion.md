@@ -1,5 +1,7 @@
 # V216 bounded delivery and evidence
 
+The approved post-review publication and independent-repository handoff are recorded in [V216 public handoff](v216_public_handoff.md). The review-era statements below remain fixed evidence of what was known then, not the current live-profile status.
+
 Repository: `shin4141/decision-os-v13-loopkit`; work branch `codex/v216-aspire-profile-animation`, created from fetched `origin/main` `49b27e521f8a29312a6e0767c4c0f19483d999fb`. The older base `main` worktree was not edited. `c95205772d1ec289f9198a33cfaac68d59409d02` remains the local tip of `codex/recycle-py310-wheel-check` in `/Users/sn/Documents/v13/13-215-distribution-runtime`; `git branch -r --contains` found no remote-tracking branch. It was not merged or used as this branch's base. No V215 re-test was attempted.
 
 Shin's added Aspire is [recorded separately](../docs/v216_public_reuse_aspire.md) and linked from both the roadmap and the ordinary next-work selection entry. At 2026-09-20 02:43 UTC the repository API returned 39 stars; the frozen activity example was captured via GitHub GraphQL at 02:47:24 UTC. Stars, trial and repeat use are not conflated. The profile images are a discovery experiment, not proof of any of the three outcomes.

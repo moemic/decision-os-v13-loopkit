@@ -1,3 +1,67 @@
+# Current Signal — V216 Approved Public Handoff Admission Candidate
+
+This first block is a candidate until the admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+94e106701e29a6eadfac132a6b7cb0d0907d909f
+
+Current Canonical Main:
+94e106701e29a6eadfac132a6b7cb0d0907d909f at public-handoff start; this new block is current only after exact main admission
+
+Current Layer:
+V13 — V216 Aspire adopted, live profile and independent motion-generator handoff
+
+V12 State:
+PASS — approved GIF and Aspire merged; profile and independent public template delivered with scoped checks, not third-party adoption
+
+Completed Work:
+kept V13 LoopKit's 100-star target distinct from account followers and new-repo stars; admitted PR #172 to V13 main; displayed approved heading/cat on Shin's real profile; published github-profile-motion with original code/assets, MIT, provenance, one-image customization, real-data capture and tests; switched profile images to the new repo's fixed commit; retained older V13 prototypes and rollback paths
+
+Canonical Current Capability:
+ordinary next-work selection consults docs/v216_public_reuse_aspire.md; V13 retains Aspire and fixed decision/verification history while github-profile-motion is the sole canonical generator and user guide; the live profile links to it and uses its immutable GIF assets; the native contribution graph is unchanged
+
+Current Restart Point:
+this paired first block and AGENTS; docs/v216_public_reuse_aspire.md for the V13 target and distinction; validation/v216_public_handoff.md for sources, checks, limits and rollback; github-profile-motion README for generation
+
+Active Branch:
+codex/v216-public-handoff until review and admission; none assigned after admission
+
+Current Gate:
+HOLD — stop after the authorized public handoff; no automatic new development, outreach, release or follower optimization
+
+Completion Line:
+PASS when this exact paired block and the forward-only handoff record are on fetched origin/main with reconstruction-base ancestry, external refs and profile display checked, and task-owned cleanup complete
+
+Missing Closure:
+candidate: V13 PR merge, paired main read-back and task-owned cleanup; after admission: none for this bounded delivery, with third-party use and outcomes still unobserved
+
+Next Authorized Action:
+candidate: finish the authorized V216 handoff and remote admission; after completion: no new execution action is authorized
+
+Not Authorized:
+SNS or external messaging; V215 local-tip merge; release, tag, automatic updates or another development loop
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on this branch; ADMITTED only when exact paired blocks are on fetched origin/main with reconstruction-base ancestry
+
+Admission Evidence:
+PR #172 V13 merge 94e1067; profile PRs #1/#2; github-profile-motion af863ac; validation/v216_public_handoff.md; independent-clone generation and public UI read-back
+
+Remote Read-Back:
+external profile and new repository were checked after publication; after this V13 PR merge, fetch origin/main, compare exact paired first blocks and verify 94e1067 ancestry before claiming V13 operational completion
+
+Older Material Below:
+HISTORICAL ONLY — prior V216 review and older blocks are preserved without rebaseline; their old gates do not authorize another loop
+```
+
+All older material below remains history; it grants no present authority.
+
+<!-- current-state-history-boundary:v216-public-handoff-001 -->
+
 # Current Signal — V216 Aspire and Profile Motion Admission Candidate
 
 This first block is a candidate until the admission joint passes.
