@@ -297,26 +297,45 @@ fork/clone path, Completion and Loop Gate, Companion, the repository scanner,
 incident tooling, Audit surfaces, and other V13 structures. These surfaces have
 different maturity levels, and none is required to try External Intelligence.
 
-### 🔓 Full Experience — Forkして体感する
+### 🔓 Full Experience — Start your personal hub locally
 
-ここまでは、公開repositoryをAIに読ませたShowroomです。Questの説明や小さな
-trialを受けた後、自分のExternal Intelligenceとして実際に育てたいとユーザーが
-興味を示した時にだけ、AIは`🔓 Full Experience — Forkして体感する`の見出しを
-保ってこのsecondary CTAを案内します。Questの選択だけでForkへ進めません。
+Keep your own rules, restart state, and evidence-bounded lessons in a writable
+local hub. For each new job, Codex can create a purpose-fitted capsule that
+carries only the instructions and prior learning that the job actually needs.
+This is a post-interest step; choosing a Quest alone does not authorize
+cloning, setup, or file changes.
 
-1. Fork or clone this repository.
-2. Open the repository root in Codex or Claude Code.
-3. Ask: `外部知能を使ってみたい。何から始めればいい？`
+1. Clone public `main` to your computer:
 
-そうすると、public repositoryに含まれる`AGENTS.md`、notes、handoff、docs等を
-実際のworkspaceとして使いながら、自分のExternal Intelligenceを育てられます。
-気に入らなければ採用を続ける必要はありません。
+   ```console
+   git clone https://github.com/shin4141/decision-os-v13-loopkit.git my-loopkit-hub
+   ```
 
-Forkで得られるのは、このpublic repositoryに含まれるsurfaceと、その人がそこから
-育てる新しい状態です。private repository、separate unpublished implementation、
-Shin固有のprivate memory、public `main`に存在しないupstream internal trajectoryが
-自動的に使えるようになるわけではありません。The tiny `AGENTS.md` router opens
-the Quest Board on demand; unrelated tasks do not load the tutorial.
+   A GitHub Fork is optional. Use one only if you want your own GitHub-hosted
+   remote; cloning the public repository does not require a GitHub account.
+2. Open the cloned repository root in Codex.
+3. Follow [Personal Hub Roundtrip — Minimal Start](docs/personal_hub_roundtrip_quickstart.md)
+   and paste its owner-setup request with your purpose, current state,
+   protected conditions, and local permission.
+4. Let Codex replace the active root instructions and current handoff with
+   your owner state, then read them back and commit the local setup. The
+   author's reusable knowledge may remain available as reference, but the
+   author's goals, current work, Gate, branch authority, and publication
+   permission do not become yours.
+5. Send one bounded job and its source facts. Codex creates the smallest fitting
+   capsule, performs the job once, verifies it, leaves a restartable handoff,
+   and saves only an evidence-bounded lesson when the result supports one.
+
+See the [synthetic worked roundtrip](examples/personal_hub_roundtrip_v0_1/)
+for one saved → selected → applied example. V219 exercised the local owner
+switch and two-task roundtrip; V220 observed one fresh Codex chat retrieve and
+reuse the saved candidate. These are synthetic local observations, not proof
+of third-party ease, token reduction, or general quality improvement. See the
+[bounded validation record](validation/v220_personal_hub_fresh_chat_reuse.md).
+
+This path uses the public repository surfaces and the new state you create.
+It does not unlock private repositories, separate unpublished implementations,
+Shin-specific private memory, or upstream state absent from public `main`.
 
 ## Next, if you need completion and loop gates
 
@@ -343,7 +362,7 @@ Do not start the next task automatically. Stop after the report.
 That trial also requires no install, fork, or repository change. If it helps,
 use the full [Next-Action Confidence
 Check](copy-paste/next-action-confidence-check.md), then consider the
-[Fork + Codex Quickstart](docs/fork_codex_quickstart.md).
+[Personal Copy + Codex Quickstart](docs/fork_codex_quickstart.md).
 
 ## Turn one AI incident into a paste-ready rule
 
@@ -564,7 +583,7 @@ Stop there. Do not start the next task automatically.
 
 ### For AI-agent workspace users
 
-Codex users have a dedicated quickstart: [Fork + Codex Quickstart](docs/fork_codex_quickstart.md).
+Codex users have a dedicated quickstart: [Personal Copy + Codex Quickstart](docs/fork_codex_quickstart.md).
 
 Claude Code, Cursor, Cline, and similar tools can still start with the same restartability check above.
 
@@ -808,7 +827,7 @@ Use [Next-Action Confidence Check](copy-paste/next-action-confidence-check.md) b
 
 After the first trial, use [Restartable Handoff](copy-paste/restartable-handoff.md) before ending a long AI-agent session.
 
-For fork users using Codex, start here: [Fork + Codex Quickstart](docs/fork_codex_quickstart.md).
+For personal-copy users using Codex, start here: [Personal Copy + Codex Quickstart](docs/fork_codex_quickstart.md).
 
 If this feels abstract, ask your AI to read the [AI Reading Order](docs/ai_reading_order.md) and decide how V13 should fit your repo.
 
