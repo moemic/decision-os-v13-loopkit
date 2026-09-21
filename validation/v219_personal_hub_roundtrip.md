@@ -91,4 +91,6 @@ Impact: public readerはREADMEから開始手順、owner-state切替、最初の
 
 Rollback: 公開用commitをrevertし、README入口、二つのquickstart差分、worked example、V219/V220 public validation、focused test、paired current-state blockを除去する。V219/V220のlocal試用branch・試用folder・元の評価資料は別に保持され、このrevertでは削除しない。
 
+Review identity: [PR #175](https://github.com/shin4141/decision-os-v13-loopkit/pull/175).
+
 Admission remains candidate until the approved PR is merged, fetched `origin/main` contains the exact selected files and paired current-state block, focused tests pass, and unauthenticated GitHub URLs for README, quickstart, worked example, and validation are read back.

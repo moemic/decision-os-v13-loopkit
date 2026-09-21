@@ -49,7 +49,7 @@ Admission Joint:
 CANDIDATE / NOT CURRENT on this branch; ADMITTED only when the exact paired first blocks and selected publication paths are on fetched origin/main and the reconstruction base is its ancestor
 
 Admission Evidence:
-Shin's explicit approval for the required push, PR, merge and publication verification; V219 commits d75cc1d, 7a0ecdb, 4ca74a6 and 5547362; V220 fresh-chat result identity 5460ceb and evaluated record 4a53166; reviewed publication diff; focused onboarding, link, current-state, historical and handoff regressions
+Shin's explicit approval for the required push, PR, merge and publication verification; V219 commits d75cc1d, 7a0ecdb, 4ca74a6 and 5547362; V220 fresh-chat result identity 5460ceb and evaluated record 4a53166; PR #175; reviewed publication diff; focused onboarding, link, current-state, historical and handoff regressions
 
 Remote Read-Back:
 after merge, fetch origin/main, compare both exact first blocks and every selected publication path, verify 26c9eea ancestry, and open unauthenticated GitHub README, quickstart, worked-example and validation URLs before claiming operational publication completion
