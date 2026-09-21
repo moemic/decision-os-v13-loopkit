@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 import unittest
 
 
@@ -78,7 +79,7 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         quickstart = read("docs/fork_codex_quickstart.md")
 
         entry = readme.split(
-            "## Start one governed next action in Codex / Codexで最初の一回",
+            "## Start one governed next action in Codex",
             1,
         )[1].split("## External intelligence for decisions that survive the chat", 1)[0]
 
@@ -86,7 +87,12 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
             readme.index("## Start one governed next action in Codex"),
             readme.index("## External intelligence for decisions that survive the chat"),
         )
-        for field in ("Aspire:", "現在地:", "守る条件:", "一回の♻️で許可する範囲:"):
+        for field in (
+            "Aspire:",
+            "Current state:",
+            "Protected conditions:",
+            "Allowed scope for one ♻️ Run:",
+        ):
             self.assertIn(field, entry)
         for category in (
             "maintenance",
@@ -104,8 +110,8 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         self.assertIn("a personal fork or another writable copy", entry)
         self.assertIn("normal Codex input", entry)
         self.assertIn("No Companion process, server, second model", entry)
-        self.assertIn("Shinやupstreamの目的・現在地・Gate・権限", entry)
-        self.assertIn("まだ実行しないでください", entry)
+        self.assertIn("Do not inherit Shin's or upstream's goals", entry)
+        self.assertIn("Do not execute yet", entry)
         self.assertIn("docs/codex_conversation_next_1_01.md", entry)
         self.assertEqual(entry.count("```text\n♻️\n```"), 1)
         self.assertIn("Zero questions is an interaction count", entry)
@@ -135,7 +141,8 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
             "### What External Intelligence changes",
             "### What this repository supports",
             "### Try it in English — no fork required",
-            "### まず試してみる — Fork不要",
+            "Japanese readers can use the guide linked at the top",
+            "### 🔓 Full Experience — Start your personal hub locally",
             "## Next, if you need completion and loop gates",
         )
         positions = [readme.index(marker) for marker in markers]
@@ -154,6 +161,20 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         prompt_path = "copy-paste/external-intelligence-first-contact.md"
         self.assertIn(f"]({prompt_path})", readme)
         self.assertTrue((ROOT / prompt_path).is_file())
+
+    def test_00b_readme_visible_copy_is_english_with_one_japanese_entry(self) -> None:
+        readme = read("README.md")
+        japanese_entry = "[日本語の案内](docs/getting_started_ja.md)"
+
+        self.assertEqual(readme.count(japanese_entry), 1)
+        self.assertTrue((ROOT / "docs/getting_started_ja.md").is_file())
+
+        visible_lines = [
+            line
+            for line in readme.splitlines()
+            if line != japanese_entry and not line.startswith('<a id="')
+        ]
+        self.assertIsNone(re.search(r"[ぁ-んァ-ヶ一-龠]", "\n".join(visible_lines)))
 
     def test_01_english_prompt_is_repo_first_read_only_and_no_fork(self) -> None:
         prompt = read("copy-paste/external-intelligence-first-contact.md")
@@ -245,9 +266,9 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         self.assertIn("完全なimplementation", japanese)
 
     def test_a_primary_prompt_requires_repo_read_disclosure_and_full_board(self) -> None:
-        readme = read("README.md")
-        primary = readme.split("### まず試してみる — Fork不要", 1)[1].split(
-            "### 🔓 Full Experience — Start your personal hub locally", 1
+        guide = read("docs/getting_started_ja.md")
+        primary = guide.split("## まず仕組みを見る — Fork不要", 1)[1].split(
+            "## 自分用の母艦を始める", 1
         )[0]
 
         self.assertEqual(primary.count("```text"), 1)
@@ -275,6 +296,13 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
             "分かったふりをせず、その境界を明示してください",
         ):
             self.assertIn(instruction, primary)
+
+        personal_hub = guide.split("## 自分用の母艦を始める", 1)[1]
+        self.assertIn("GitHub Fork は任意です", personal_hub)
+        self.assertIn("Decision Ownerは私です", personal_hub)
+        self.assertIn("候補メモは、採用済みの\n   Ruleや新しい許可ではありません", personal_hub)
+        self.assertIn("Personal Hub Roundtrip — Minimal Start", personal_hub)
+        self.assertIn("Synthetic Worked Example", personal_hub)
 
         onboarding = read("docs/external_intelligence_onboarding.md")
         japanese_board = onboarding.split(

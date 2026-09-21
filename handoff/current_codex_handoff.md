@@ -1,3 +1,63 @@
+# Current Codex Handoff — English Personal-Hub Entry Admission Candidate
+
+This first block is a candidate until the admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+ea0dadb0726394d5c4a37283f163c5ad1b3bc5ef
+
+Current Canonical Main:
+ea0dadb0726394d5c4a37283f163c5ad1b3bc5ef at README language-repair start; the fetched descendant containing this exact paired block is current only after admission
+
+Current Layer:
+V13 — English README continuity for personal-hub onboarding
+
+V12 State:
+PASS — the already-published personal-hub route and synthetic V219/V220 evidence remain unchanged, and the bounded README language repair, Japanese entry page, compatibility anchors and focused regressions are complete on the branch; public review, merge and remote read-back remain separate
+
+Completed Work:
+made the README's visible headings, explanatory text, operating instructions, owner-setup prompt and Rule practice memory entry English; moved the Japanese first-contact prompt into one short Japanese getting-started page; preserved the clone-first personal-hub route, optional-Fork boundary, worked example, evidence limits, owner/permission/stop semantics, candidate-versus-adopted distinction and old anchor destinations
+
+Canonical Current Capability:
+after admission, an English reader can move from the public README through the copyable owner setup and into the personal-hub roundtrip without understanding Japanese; a Japanese reader has one top-level guide link without a second maintained README; upstream author knowledge remains reference material while the author's purpose, current work, Gate, authority and publication permission do not transfer
+
+Current Restart Point:
+this paired first block and AGENTS.md; README.md; docs/getting_started_ja.md; docs/personal_hub_roundtrip_quickstart.md; examples/personal_hub_roundtrip_v0_1/; validation/readme_english_personal_hub_entry.md
+
+Active Branch:
+codex/readme-english-personal-hub through review and admission; none assigned after admission
+
+Current Gate:
+HOLD — no additional onboarding expansion or translation campaign; the separately authorized delivery is limited to the confirmed README language inconsistencies, one Japanese entry guide, required reference/test updates, this paired block and its validation record
+
+Completion Line:
+PASS when the approved publication PR and this exact paired block are on fetched origin/main, ea0dadb ancestry and relevant regressions pass, selected paths match the reviewed branch, and unauthenticated GitHub README, Japanese guide, personal-hub quickstart and worked-example routes are read back
+
+Missing Closure:
+candidate: complete focused review, PR merge, fetched-main exact content/pair/ancestry verification and unauthenticated public read-back; after admission: none for this bounded language repair, while third-party ease, token reduction, repeated reliability and general quality improvement remain unverified
+
+Next Authorized Action:
+candidate: complete the Shin-approved push, PR, merge and remote verification; after completion: none until a separately authorized follow-up
+
+Not Authorized:
+broader messaging rewrite, new features, installer or generator; translation of historical Japanese records or internal materials; V219/V220 trial changes or repetition; SNS or external contact
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on this branch; ADMITTED only when the exact paired first blocks and selected language-repair paths are on fetched origin/main and the reconstruction base is its ancestor
+
+Admission Evidence:
+Shin's explicit approval for the required push, PR, merge and publication verification; PR pending; reviewed bounded diff; focused onboarding, current-state, historical and handoff regressions; unauthenticated public read-back required after merge
+
+Remote Read-Back:
+after merge, fetch origin/main, compare both exact first blocks and every selected path, verify ea0dadb ancestry, and open unauthenticated GitHub README, Japanese guide, personal-hub quickstart and worked-example URLs before claiming operational publication completion
+
+Older Material Below:
+HISTORICAL ONLY — the prior personal-hub publication and older blocks remain byte-preserved below this boundary and grant no new execution authority
+```
+
 # Current Codex Handoff — Personal Hub Public Start Admission Candidate
 
 This first block is a candidate until the admission joint passes.

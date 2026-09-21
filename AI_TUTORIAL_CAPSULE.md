@@ -79,8 +79,8 @@ operation.
 
 ## Recommended onboarding prompt
 
-Use the single primary copy block under `まず試してみる — Fork不要` in
-`README.md`. It binds the fresh AI to the public repository, the five minimum
+Use the single primary copy block under `まず仕組みを見る — Fork不要` in
+`docs/getting_started_ja.md` (Japanese). It binds the fresh AI to the public repository, the five minimum
 first-contact files, compact access disclosure, the full Quest Board, and the
 post-selection deep-read boundary.
 
