@@ -8,1218 +8,274 @@
 
 [日本語の案内](docs/getting_started_ja.md)
 
-<a id="update-conversation-️--更新案内"></a>
+Decision-OS V13 LoopKit helps an AI-assisted workspace remember selected
+decisions, failure boundaries, reusable lessons, and a safe restart point
+between jobs. It keeps completion and permission visible before another loop
+starts.
 
-## Update: conversation ♻️
+Use it with your own purpose and rules. The author's public knowledge can stay
+available as reference, but the author's goals, current work, permissions, and
+publication authority do not become yours.
 
-[PR #161](https://github.com/shin4141/decision-os-v13-loopkit/pull/161) added
-one normal-Codex-conversation `♻️` Run: compare next actions, execute within
-your permission, verify, record, and stop. It may also choose to wait.
-Companion is optional, under development, and not needed for this route.
+<a id="beyond-first-contact--optional-and-deeper-surfaces"></a>
+<a id="full-experience--start-your-personal-hub-locally"></a>
+<a id="-full-experience--start-your-personal-hub-locally"></a>
 
-**Existing users:** sync your personal copy or Fork with upstream `main` while
-preserving your own changes, then follow the four-field setup below before
-sending a standalone `♻️`. Syncing does not grant new permissions. Companion
-is not required.
+## Start your own hub
 
-**Evidence:** one fresh isolated Codex trial completed this path.
-General reliability, repeated compounding, and cost savings are not established.
-See the [recorded trial](validation/codex_conversation_reader_owned_live_trial_001.md).
+This is the primary route. It creates a writable local hub for your owner
+state, rules, restart context, and evidence-bounded lessons.
 
-<a id="start-one-governed-next-action-in-codex--codexで最初の一回"></a>
+Before starting, keep these conditions visible:
 
-## Start one governed next action in Codex
+- use a writable local clone of public `main` on a branch or isolated
+  worktree;
+- expect setup to rewrite local instruction and handoff files, review the
+  diff, and commit the owner state you want to keep;
+- declare your Decision Owner, purpose, current state, protected conditions,
+  and allowed local operations; and
+- provide any tools or source facts required by the job you later authorize.
 
-`♻️` is a short form of this ordinary-language request:
+Clone the public repository:
 
-> From my current Aspire, current state, and existing judgment rules, choose
-> the most effective next 1.01; execute, verify, and record it once within my
-> permission; then stop.
-
-It can choose among evidence-backed maintenance, cost reduction, repair,
-investigation, feature work, recording, and waiting. It is not a dedicated
-button or an automatic loop. One standalone `♻️` in the normal Codex input
-runs at most one selection and one already-authorized action, verifies and
-records the result, and stops.
-
-### Required environment
-
-- a personal fork or another writable copy of public `main`;
-- the repository root opened as a Codex project on a writable branch or
-  isolated worktree; and
-- the tools required by the action Codex eventually selects.
-
-No Companion process, server, second model, or special button is required.
-Python and repository checks may be needed for selected code changes, but no
-extra runtime is required merely to send the command.
-
-### Prepare once in the normal conversation
-
-Send this first, replacing the four short values. Codex should confirm the
-setup without starting work:
-
-```text
-I am the Decision Owner of this workspace.
-Aspire: <what I want this workspace to move toward>
-Current state: <what is complete now and what is blocked>
-Protected conditions: <files not to change, budget, deadline, no external sending, etc.>
-Allowed scope for one ♻️ Run: <for example, local documentation and test changes,
-verification, and a commit on this branch>
-
-Confirm these four items as the starting conditions for this conversation.
-Do not inherit Shin's or upstream's goals, current state, Gate, or authority as
-mine. Do not execute yet. If a missing fact would change the result, ask at
-most one question.
+```console
+git clone https://github.com/shin4141/decision-os-v13-loopkit.git my-loopkit-hub
 ```
 
-This setup belongs to the current user and workspace. In a fork or personal
-copy, `Shin` and the upstream current-state files remain upstream history; they
-do not authorize or describe the new owner's work, and their task-specific
-boundaries are not silently imported. The generally applicable safety rules in
-`AGENTS.md` still control repository work. For a durable direction, reuse
-[`templates/user_roadmap_anchors.md`](templates/user_roadmap_anchors.md). For a
-durable restart point, reuse
-[`handoff/current_codex_handoff.md`](handoff/current_codex_handoff.md) only when
-file changes are inside the declared permission. No new settings layer is
-required for the first Run.
+A GitHub Fork is optional. Use one only when you want your own GitHub-hosted
+remote. Then open the clone in Codex and follow
+[Personal Hub Roundtrip — Minimal Start](docs/personal_hub_roundtrip_quickstart.md).
+Its owner-setup request separates your state and authority from upstream before
+any job runs.
 
-### Run the first one
+### A short example
 
-After Codex confirms the setup, send exactly this as a new message:
+1. Job A finishes and saves one evidence-bounded lesson as a candidate.
+2. Job B starts from a fresh context and selects only the prior structure that
+   fits the new purpose.
+3. The AI applies it inside the new job's permission, verifies the result, and
+   leaves a restartable handoff.
 
-```text
-♻️
-```
+See the [synthetic saved → selected → applied example](examples/personal_hub_roundtrip_v0_1/)
+and its [bounded V219/V220 validation](validation/v220_personal_hub_fresh_chat_reuse.md).
+These are synthetic local observations, not proof of third-party ease, token
+reduction, time savings, repeated reliability, or general quality improvement.
 
-The route is defined in
-[`docs/codex_conversation_next_1_01.md`](docs/codex_conversation_next_1_01.md).
-Codex should briefly show the compared candidates, why one won, and the exact
-permission boundary before acting. It then performs one bounded action,
-checks the result, leaves a conversation result or an authorized existing
-record, and stops.
-
-Read the outcome this way:
-
-- **Done:** the selected local action ran and its verification is shown.
-- **Human judgment needed:** Codex returns one concrete decision and stops
-  before the unapproved boundary.
-- **Waiting:** no useful authorized action is currently supported; the missing
-  condition or re-entry trigger is shown.
-
-Zero questions is an interaction count, not proof of zero human burden. Send
-another `♻️` only when you deliberately want another separately initiated
-Run; Codex must not emit or chain the next command itself.
-
-<a id="rule-practice-memory--ルールを使った経験を次へ戻す"></a>
-
-## Rule practice memory
-
-Before ordinary development ends, or before a planned interruption or handoff,
-the AI selects only the evidence-supported difference worth preserving from
-the work just completed. No addition is a normal result. Report it in one short
-line, such as `Practice memory: no addition; the conditions and result match
-the existing record.` Do not reread all history or create empty records.
-
-Any necessary append stays inside the current task's write permission. A new
-user's own owner setup controls their workspace; Shin's approval does not
-transfer. The [selection, save, and failure procedure (Japanese)](docs/rule_practice_memory.md#closure-selection)
-is an instruction for the AI. It is separate from code that checks the ledger
-or generates a card: code alone does not decide whether an experience is worth
-saving or establish generally reliable automation. The [bounded closure-selection
-validation (Japanese)](validation/practice_closure_selection_validation.md)
-separates a real-work save, an initially missing forward link and its repair,
-no-addition behavior, and a resume check.
-
-For FN125, the continuation-evidence rule, read the [small current card](docs/rule_practice/fn125.md)
-first. Follow its practice conditions, results, burden, and judgment evidence
-only when needed. A real use can support keeping the rule as well as revising
-it; unresolved counterexamples return to the next reader's entry point. The
-[practice-memory procedure (Japanese)](docs/rule_practice_memory.md),
-[V214 record (Japanese)](validation/v214_rule_practice_memory.md), and
-[PR #163](https://github.com/shin4141/decision-os-v13-loopkit/pull/163)
-define this bounded one-rule pilot. It does not automatically promote a rule
-after a usage count or broaden what `♻️` may explore.
-
-The [five-pattern retrieval and judgment validation (Japanese)](validation/memory_five_patterns/report.md)
-checks retrieval of needed experience separately from non-retrieval of
-irrelevant history. It preserves the initial over-reading and reporting gaps,
-then one recheck after a limited entry-point repair. Merely reading an example,
-running a synthetic case, or reusing an earlier trial does not count as another
-real use. This pilot does not establish general effectiveness.
-
-## External intelligence for decisions that survive the chat
-
-### The problem
-
-AI keeps rereading context. Old mistakes repeat. Previous decisions disappear.
-One agent says “done,” but the next cannot safely continue.
-
-### What External Intelligence changes
-
-External Intelligence preserves selected past decisions, failure boundaries,
-reusable knowledge, and restart context outside one chat. A later AI retrieves
-only the prior structure that matters so it can make a better downstream
-decision—not merely store or summarize more text.
-
-This is not model self-training. The model weights do not update, and more
-stored material is not automatically better. It is also not an
-everything-memory system, and a context compactor is not the interpretation
-anchor for this repository.
-
-A saved observation is not automatically an active Rule. It remains
-[lifecycle-bounded](docs/field_note_lifecycle.md) and requires verification or
-repeated evidence before bounded promotion.
-
-### What this repository supports
-
-The public repository documents a bounded path from real work to later
-selective retrieval:
-
-```text
-real work -> observation -> external memory -> reusable candidate
-          -> verification or repeated evidence -> bounded promotion
-          -> later selective retrieval -> a changed downstream decision
-```
-
-Claims stay within the public files that were actually inspected. Creator-owned
-observations are not third-party certification, and this repository does not
-claim that External Intelligence caused cache or quota behavior.
-
-### Try it in English — no fork required
-
-The source of truth is the [canonical English first-contact
-prompt](copy-paste/external-intelligence-first-contact.md). Copy the same prompt
-directly from here into a fresh ChatGPT, Claude, or Codex conversation:
-
-```text
-Inspect the actual public repository before explaining External Intelligence:
-
-https://github.com/shin4141/decision-os-v13-loopkit
-
-At minimum, inspect these public files:
-
-- README.md
-- AGENTS.md
-- docs/external_intelligence_onboarding.md
-- docs/ai_reading_order.md
-- docs/field_note_lifecycle.md
-
-Then respond in this order:
-
-1. Briefly state the recognizable problem this repository addresses and what
-   External Intelligence changes. Explain only mechanisms supported by the
-   repository files you actually inspected. Center selected past decisions,
-   failure boundaries, reusable knowledge, restart context, selective
-   retrieval, and changed downstream judgment—not context compaction.
-
-2. State exactly which requested files or surfaces you could access and which
-   you could not access. Do not infer unseen code, private implementation, or
-   unavailable behavior. Do not present creator-owned observations as
-   third-party certification, and do not claim cache or quota causality.
-
-3. Show the complete participant-facing section named
-   "English first-contact — External Intelligence Quest Board" from
-   docs/external_intelligence_onboarding.md.
-
-Until I select a Quest, do not fork or clone the repository, begin setup,
-modify files, create a handoff, save a Note, promote a Rule, recommend a
-specific Quest, or make External Intelligence depend on an optional Companion.
-
-After I select a Quest, inspect only the actual public files, rules, docs,
-relevant Field Notes, and implementation needed to explain that Quest. State
-any remaining evidence or availability boundary instead of guessing.
-```
-
-If the model cannot inspect GitHub, open the repository-relative [English
-Quest Board](docs/external_intelligence_onboarding.md#english-first-contact--external-intelligence-quest-board)
-and provide that section directly. Treat this as a fallback, not as evidence
-that the model inspected files it could not access.
-
-<a id="まず試してみる--fork不要"></a>
-
-Japanese readers can use the guide linked at the top of this README. It keeps
-the Japanese first-contact prompt and the personal-hub owner-setup route in one
-place without maintaining a second copy of this README.
-
-Do not adopt the whole repository at once. First explore the available
-External Intelligence Quests, then choose one structure that interests you or
-ask the AI what may fit. Add another structure only when actual use exposes
-the need.
-
-First-contact read boundary: after this section, follow the linked onboarding
-instead of continuing through the whole README. In a third-party fork, do not
-read upstream `docs/current_signal.md`, `handoff/current_codex_handoff.md`,
-`docs/trajectory/V13_TRAJECTORY.md`, or `validation/` as evidence of the
-fork's current state. Read them only when the user explicitly asks to resume
-or evaluate upstream work.
-
-## Beyond first contact — optional and deeper surfaces
-
-Everything below is optional depth. It may include the Full Experience
-fork/clone path, Completion and Loop Gate, Companion, the repository scanner,
-incident tooling, Audit surfaces, and other V13 structures. These surfaces have
-different maturity levels, and none is required to try External Intelligence.
-
-### 🔓 Full Experience — Start your personal hub locally
-
-Keep your own rules, restart state, and evidence-bounded lessons in a writable
-local hub. For each new job, Codex can create a purpose-fitted capsule that
-carries only the instructions and prior learning that the job actually needs.
-This is a post-interest step; choosing a Quest alone does not authorize
-cloning, setup, or file changes.
-
-1. Clone public `main` to your computer:
-
-   ```console
-   git clone https://github.com/shin4141/decision-os-v13-loopkit.git my-loopkit-hub
-   ```
-
-   A GitHub Fork is optional. Use one only if you want your own GitHub-hosted
-   remote; cloning the public repository does not require a GitHub account.
-2. Open the cloned repository root in Codex.
-3. Follow [Personal Hub Roundtrip — Minimal Start](docs/personal_hub_roundtrip_quickstart.md)
-   and paste its owner-setup request with your purpose, current state,
-   protected conditions, and local permission.
-4. Let Codex replace the active root instructions and current handoff with
-   your owner state, then read them back and commit the local setup. The
-   author's reusable knowledge may remain available as reference, but the
-   author's goals, current work, Gate, branch authority, and publication
-   permission do not become yours.
-5. Send one bounded job and its source facts. Codex creates the smallest fitting
-   capsule, performs the job once, verifies it, leaves a restartable handoff,
-   and saves only an evidence-bounded lesson when the result supports one.
-
-See the [synthetic worked roundtrip](examples/personal_hub_roundtrip_v0_1/)
-for one saved → selected → applied example. V219 exercised the local owner
-switch and two-task roundtrip; V220 observed one fresh Codex chat retrieve and
-reuse the saved candidate. These are synthetic local observations, not proof
-of third-party ease, token reduction, or general quality improvement. See the
-[bounded validation record](validation/v220_personal_hub_fresh_chat_reuse.md).
-
-This path uses the public repository surfaces and the new state you create.
-It does not unlock private repositories, separate unpublished implementations,
+This route uses public repository surfaces and the new state you create. It
+does not unlock a private repository, separate unpublished implementation,
 Shin-specific private memory, or upstream state absent from public `main`.
 
-## Next, if you need completion and loop gates
+<a id="update-conversation-️--更新案内"></a>
+<a id="update-conversation-"></a>
+<a id="start-one-governed-next-action-in-codex--codexで最初の一回"></a>
+<a id="start-one-governed-next-action-in-codex"></a>
+<a id="required-environment"></a>
+<a id="prepare-once-in-the-normal-conversation"></a>
+<a id="run-the-first-one"></a>
+<a id="rule-practice-memory--ルールを使った経験を次へ戻す"></a>
+<a id="rule-practice-memory"></a>
+<a id="external-intelligence-for-decisions-that-survive-the-chat"></a>
+<a id="the-problem"></a>
+<a id="what-external-intelligence-changes"></a>
+<a id="what-this-repository-supports"></a>
+<a id="try-it-in-english--no-fork-required"></a>
+<a id="try-one-line-first"></a>
+<a id="start-in-5-minutes"></a>
+<a id="ask-your-ai-first"></a>
+<a id="まず試してみる--fork不要"></a>
 
-Decision-OS V13 LoopKit can also act as a no-install exit gate for AI coding
-work. It makes the agent separate two decisions that are easy to blur together:
+<details>
+<summary>Common questions and other ways to try V13</summary>
 
-1. Is the current task actually complete and restartable?
-2. Should the next loop `GO`, `HOLD`, run under a `CAP`, or `BLOCK`?
+### Can I inspect it before changing local files?
 
-Try it after your next AI-assisted task:
+Yes. Use the [English first-contact prompt](copy-paste/external-intelligence-first-contact.md)
+to inspect the public repository without cloning or writing. It routes to the
+[External Intelligence Quest Board](docs/external_intelligence_onboarding.md)
+and keeps public evidence separate from unavailable or private behavior.
 
-```text
-Before starting another task, report:
-
-- Is the current task complete? PASS / DELAY / BLOCK / UNKNOWN
-- Should the next loop run? GO / HOLD / CAP / BLOCK
-- Why?
-- What is the one allowed next action?
-- What must not happen next?
-
-Do not start the next task automatically. Stop after the report.
-```
-
-That trial also requires no install, fork, or repository change. If it helps,
-use the full [Next-Action Confidence
-Check](copy-paste/next-action-confidence-check.md), then consider the
-[Personal Copy + Codex Quickstart](docs/fork_codex_quickstart.md).
-
-## Turn one AI incident into a paste-ready rule
-
-An AI agent said “done,” resumed from stale state, lost the accepted result,
-or left you reconstructing the restart point.
-
-You do not need to post the incident, share your repository, install LoopKit,
-or contact anyone.
-
-Paste one sanitized incident into your own AI and receive a draft rule for
-your `AGENTS.md`, `CLAUDE.md`, system prompt, or runbook.
-
-[Copy the Incident-to-Instruction prompt](copy-paste/incident-to-instruction-rule.md)
-
-[See one complete Before / After example](examples/incident-to-instruction-before-after-v0-1.md)
-
-1. Remove secrets and private data.
-2. Paste one incident into the prompt.
-3. Review the returned rule before adding it to your instruction surface.
-
-The self-service result is a draft, not a verified Audit or a guarantee that
-the underlying tool will not fail again.
-
-## Can the next coding agent find where to restart?
-
-Your repository can contain the right instructions and current state while
-still hiding them from a fresh agent.
-
-Run one local, read-only command to see what a bounded reader can actually
-discover.
-
-### Run the local read-only scan
-
-If [`uv`](https://docs.astral.sh/uv/) and Python 3.10 or newer are already
-available, run this from the root of the Git repository you want to inspect:
-
-```sh
-uvx --isolated --no-config --no-env-file --no-python-downloads \
-  --from "git+https://github.com/shin4141/decision-os-v13-loopkit@e7c3855fa1bdd28392d5667a5c82dec677afb316" \
-  decision-os scan --format text .
-```
-
-The command has two phases:
-
-- **Tool transport:** on a cold run, `uvx` may contact GitHub for the exact
-  40-character source commit, contact the Python package index for the pinned
-  build backend, use its local cache, and print transport messages to stderr.
-- **Repository scan:** after launch, the Runner scan is local and read-only.
-  It makes no target Git network call, sends no target repository content, uses
-  no Runner telemetry, and performs no target-worktree or target-Git-directory
-  write. Runner output is written to stdout.
-
-This exact source commit was cold-fetched and started with `uvx 0.11.32`, Python
-3.14.3, and macOS 26.6.2 arm64. Its installed scan displays unavailable
-bounded paths and known reasons (including byte limits and rejected symlinks),
-while retaining `UNKNOWN`, the existing read limits, and JSON output. Other
-platforms and Python versions remain untested in this run. See the
-[V215 distribution receipt](validation/v215_distribution_runtime.md) for the
-wheel/transport distinction and rollback pin. The
-[original distribution receipt](docs/v13_runner_distribution_surface_v0_1.md)
-still describes the earlier fixed command and its own validation scope.
-
-### What a result can look like
-
-This is a condensed, anonymized example grounded in a verified scan. It is not
-the complete raw output:
-
-```text
-Decision-OS Scan v0.2: INSUFFICIENT EVIDENCE
-
-Observed:
-- CLAUDE.md
-
-Unknown:
-- AGENTS.md — symlink rejected
-
-Not observed through bounded restart paths:
-- HANDOFF.md
-- CURRENT_STATE.md
-- docs/current_state.md
-
-Recommendation:
-INSUFFICIENT EVIDENCE
-```
-
-### How to interpret it
-
-If you see INSUFFICIENT EVIDENCE, the scan could not confirm a stable restart
-path through its bounded rules. That is useful: it shows where a fresh,
-safety-bounded reader may need a clearer canonical pointer.
-
-- **OBSERVED** means the Runner safely found the item through a declared path.
-  It does not establish that the item is correct or sufficient.
-- **ABSENT** is path-bounded. It does not establish repository-wide absence;
-  the state may be absent or may exist at a repository-specific location.
-- **UNKNOWN** means the Runner could not safely establish the item through its
-  bounded rules. It is intentional and non-permissive, not silent permission
-  to treat the item as present or absent.
-
-The Runner is not a complete Audit. It does not establish software safety,
-software correctness, task completion, instruction quality, remote freshness,
-or workflow-specific cause.
-
-### Choose what happens after the result
-
-#### A. Result is enough
-
-If the bounded result answers your question, stop there. No adoption, fork,
-purchase, or repository change is required. You may simply keep the output as
-a bounded record.
-
-#### B. Private Repository-Specific Audit
-
-If the result leaves a repository-specific cause unresolved, the private Audit
-is designed to examine whether the cause is true absence, path or symlink
-discoverability, existing non-canonical state, or a missing minimum pointer.
-
-The scan result is complete without purchasing anything.
-
-See the
-[AI Agent Handoff Audit](services/ai_agent_handoff_audit_offer.md)
-for scope, pricing, delivery, and the free fit-check boundary.
-
-Not only coding repositories. The paid Audit can also review one clearly bounded
-[AI application or operational workflow](services/ai_application_workflow_audit_delivery_v0_1.md)
-when a failure returned revalidation, cleanup, context reconstruction,
-rollback, or restart decisions to a human.
-
-## Check one AI workflow incident
-
-Use this for a released app, pilot, staging workflow, or internal workflow when
-one concrete incident has already returned cleanup, rollback, revalidation,
-reconstruction, or restart decisions to a human.
-
-This is not a pre-release safety certification or a general product audit. The
-checker verifies only whether the incident packet is structurally ready for a
-bounded fit discussion.
-
-```sh
-curl -fsSLo workflow_incident_intake_v0_1.json \
-  https://raw.githubusercontent.com/shin4141/decision-os-v13-loopkit/d3ba864c66367e5c676ec14fbaa550801e4f1889/examples/workflow_incident_intake_v0_1.json
-
-uvx --isolated --no-config --no-env-file --no-python-downloads \
-  --from "git+https://github.com/shin4141/decision-os-v13-loopkit@d3ba864c66367e5c676ec14fbaa550801e4f1889" \
-  decision-os intake --format text workflow_incident_intake_v0_1.json
-```
-
-- Edit the downloaded JSON to describe one sanitized incident.
-- Remove credentials, customer data, production secrets, and private material.
-- Expected results are `FIT_CHECK_READY`, `INCOMPLETE`, or `INVALID`.
-- `FIT_CHECK_READY` does not mean the workflow passed an Audit or was accepted
-  for paid work.
-
-Read the
-[Workflow Incident Intake Checker guide](docs/workflow_incident_intake_checker_v0_1.md),
-review the
-[AI Application Workflow Audit delivery boundary](services/ai_application_workflow_audit_delivery_v0_1.md),
-or
-[open the AI Agent Handoff Audit fit-check form](https://github.com/shin4141/decision-os-v13-loopkit/issues/new?template=ai_agent_handoff_audit_fit_check.md).
-
-## What AI coding incidents return to the human
-
-[![AI coding incidents do not end at the error](assets/incident-map/external-ai-workflow-incident-map-v0-1.png)](case_studies/external_ai_workflow_incident_map_v0_1.md)
-
-Across 17 selected public incident worldlines from seven GitHub repositories,
-the visible error often did not end inside the tool. It returned work to the
-human as revalidation, manual cleanup, context reconstruction, rollback, or a
-lost session.
-
-These are descriptive case-presence counts from a selected public corpus, not
-population frequency or a product ranking.
-
-[Read the evidence boundary, source tables, and interpretation limits.](case_studies/external_ai_workflow_incident_map_v0_1.md)
-
-## Secondary adoption paths
+External Intelligence means preserving selected past decisions, failure
+boundaries, reusable knowledge, and restart context outside one chat so that a
+later AI retrieves only the prior structure that matters. It is not model
+self-training or an everything-memory claim. Saved observations remain
+[lifecycle-bounded](docs/field_note_lifecycle.md).
 
 ### Try one line first
 
-If every AI session makes you re-explain context, re-fix old mistakes, or clean up after "done," try adding this one line to your `AGENTS.md`, `CLAUDE.md`, or project instructions:
+Add this to your project instructions:
 
 ```text
 Before you say "done," leave a restart note: what changed, what remains unresolved, the next safe step, and anything the next AI must not repeat.
 ```
 
-If that line helps, ask your own AI whether your workflow needs stronger handoff, mistake memory, and restart rules.
+This is a small handoff trial, not the Personal Hub setup and not evidence that
+the wider system improves your work.
 
-Decision-OS V13 is a no-install Lite Footer for AI coding sessions:
+### Ask your AI first
 
-- V12 checks whether the work is actually complete and restartable.
-- V13 checks whether the next loop should `GO`, `HOLD`, `CAP`, or `BLOCK`.
-- `AGENTS.md` stays minimal while docs, examples, handoff, and field notes are read only when needed.
-- `CAP` prevents small finished tasks from expanding into expensive scope creep.
-
-## Start in 5 minutes
-
-Your AI may say “done,” but the next human or AI may still be unable to safely restart or decide the next step.
-
-Use this after your next AI-assisted task, before letting the agent continue.
-
-Primary check:
-[Next-Action Confidence Check](copy-paste/next-action-confidence-check.md)
-
-Ask your AI:
-
-> Is this safely restartable?
-
-Expected output:
-
-- what changed
-- what was verified
-- what was not touched
-- whether the current task is complete
-- whether the next loop should `GO`, `HOLD`, `CAP`, or `BLOCK`
-- one allowed next action
-- what must not happen next
-
-Stop there. Do not start the next task automatically.
-
-### For AI-agent workspace users
-
-Codex users have a dedicated quickstart: [Personal Copy + Codex Quickstart](docs/fork_codex_quickstart.md).
-
-Claude Code, Cursor, Cline, and similar tools can still start with the same restartability check above.
-
-The deeper docs, `AGENTS.md`, `CLAUDE.md`, and `field_notes/` are useful after the first trial. They are not required for the first five minutes.
-
-## Why fork this repo?
-
-Copy the prompt to try LoopKit once.
-
-Fork the repo when you want your own AI-agent workspace to remember what broke, what worked, what not to repeat, and how the next AI should restart.
-
-This is not only a prompt kit. Used as a fork, LoopKit becomes a small external brain for your AI work: handoffs, mistakes, context risks, boundaries, and restart rules live outside the chat so the next session does not have to rediscover them.
-
-The 5-minute check shows the first benefit. A fork captures the longer benefit: fewer repeated mistakes, less re-explanation, lower token waste, and safer restartability over time.
-
-### What a fork unlocks
-
-Forking does not mean copying every LoopKit rule into your workflow.
-
-It gives your AI a library it can selectively connect to your repository:
-
-- **Interactive tutorial** — Ask your AI to read
-  [`AI_TUTORIAL_CAPSULE.md`](AI_TUTORIAL_CAPSULE.md) and
-  [`docs/codex_tutorial_guide.md`](docs/codex_tutorial_guide.md).
-  The tutorial starts with a menu instead of explaining the entire framework at once.
-
-- **A repo-specific starter pack** — Use the `Setup Pill` to inspect only the
-  smallest useful surfaces of one repository and return its likely boundaries,
-  first files to read, suggested memory surfaces, Lite Footer, and first tiny task.
-  It remains read-only until you approve changes.
-
-- **Selective operational reuse** — Your AI does not need to load or copy every
-  field note. It should read only the notes related to the current task or failure,
-  then carry forward only the reusable residue that belongs in a handoff, example,
-  document, or candidate operating rule.
-
-The fork is not a documentation burden. It is a selective operating library for
-your AI-assisted work.
-
-## After you fork: where to write
-
-A fork becomes useful when your AI work starts leaving memory outside the chat.
-
-Use these three surfaces first:
-
-- [`handoff/current_codex_handoff.md`](handoff/current_codex_handoff.md) — write the current restart state: what changed, what is unfinished, what was verified, and how the next human or AI should resume.
-- `MISTAKEN.md` — write mistakes or do-not-repeat rules before the next correction loop.
-- `field_notes/` — write reusable observations, failures, context-risk signals, and lessons that are not ready to become canonical rules yet.
-
-Do not use the README as a work log.
-Do not write every task into `field_notes/`.
-Only record what should reduce future re-onboarding, repeated mistakes, token waste, or unsafe restart.
-
-## Ask your AI first
-
-You do not need to install V13 LoopKit first.
-
-You do not have to understand all of LoopKit first.
-
-### Fastest way to evaluate it
-
-You do not need to fork first.
-
-Ask your own AI to read this README and explain whether LoopKit would reduce your repeated explanation cost, handoff failures, token waste, or restart risk.
-
-If your AI says it is not useful for your workflow, stop there.
-
-If it is useful, fork the repo and start moving memory outside the chat.
-
-For a broader fit check, ask your own AI to read this repo and evaluate whether it creates clear expected value for your current workflow.
-
-Ask whether external memory, handoff records, mistake memory, and restartability checks are unnecessary for your workflow.
-
-The cost is not reading this repo once. The cost is paying again when the next AI repeats the same explanation, mistake, or broken handoff.
-
-If your AI work is meant to earn, save time, or compound, treat restartability and mistake memory as a small free operational investment.
-
-If the fit is clear, your AI should recommend one bounded next action.
-
-If the fit is unclear, low-value, or premature, your AI should not recommend adoption. It should only explain what this repo is for, when it helps, and when it may be unnecessary.
-
-If this repo looks relevant, fork it and ask your own AI to interpret it inside your workspace.
-
-This README is the entry point. Your own AI can explain the useful parts more accurately after seeing your actual repo, workflow, constraints, and failure traces.
-
-## Paid Pilot — AI Agent Handoff Audit
-
-The AI Agent Handoff Audit is a bounded professional review for solo builders,
-small teams, and maintainers whose coding-agent workflows lose context, become
-hard to restart, drift across instruction files, produce weak handoffs, or
-report completion without leaving a reliable next-session state.
-
-Pricing:
-
-- standard rate: **US$200** for overseas clients or **30,000 JPY** for domestic
-  clients;
-- current pilot rate: **US$100** for overseas clients or **15,000 JPY** for
-  domestic clients;
-- pilot capacity: the first **3 paid clients total**, not three clients per
-  currency.
-
-After the first 3 paid pilots, the listed standard rate applies unless Shin
-publishes a later explicit Forward-only pricing change.
-
-The scope is one repository or one clearly bounded AI-agent workflow. Delivery
-is within 3 business days after scope confirmation, required materials, and
-payment.
-
-Read the [full public offer](services/ai_agent_handoff_audit_offer.md) for the
-deliverables, boundaries, and pilot-price explanation.
-
-See a complete sample audit:
-[AI Agent Handoff Audit — Sample 001](services/ai_agent_handoff_audit_sample_001.md)
-
-A real project handoff can preserve the state and still stall the objective.
-This sample shows the friction map, restartability diagnosis, priority fix, and
-copy-paste restart block.
-
-Repository-verifiable examples of the operating approach:
-
-- [Restartable Handoff](copy-paste/restartable-handoff.md);
-- [One-Paste Codex Execution Packet v0.1](templates/one_paste_codex_execution_packet_v0_1.md);
-- [Real Compound Proof 001](validation/real_compound_proof_001_single_paste_execution.md).
-
-The proof record covers one bounded receiver-side execution. It does not
-establish general reliability or customer outcomes.
-
-To request a free fit check, either
-[open the AI Agent Handoff Audit fit-check form](https://github.com/shin4141/decision-os-v13-loopkit/issues/new?template=ai_agent_handoff_audit_fit_check.md)
-containing only a high-level request or contact Shin through the channel where
-the offer was shared. You may include a public repository URL, the coding-agent
-tool used, one recurring operational failure, and what the next agent or
-session needs to understand.
-
-Do not post credentials, secrets, private repository content, customer data,
-or confidential material in a public GitHub issue.
-
-The free fit check confirms only fit, bounded scope, and material availability.
-Bespoke diagnosis begins after scope confirmation and payment.
-
-## Let Your AI Read V13
-
-You do not need to understand the entire V13 Field Note corpus before using this repository.
-
-Let your AI begin from the thin entry surface:
-
-1. this README;
-2. [`AGENTS.md`](AGENTS.md);
-3. the [canonical current handoff](handoff/current_codex_handoff.md).
-
-When the task involves governance, handoff, branch control, rollback, context health, authority, or a repeated operational failure, ask the AI to identify and deep-read only the relevant Field Notes.
-
-The AI should explain:
-
-- what may be worth adopting;
-- why the recorded incident or causal rationale applies;
-- what should not be imported;
-- the expected benefit and added operating cost;
-- what still requires the Decision Owner's judgment.
-
-Field Notes are not execution authority. `Active Branch`, `Next Authorized Action`, `Current Gate`, and the target repository's own authority continue to control action.
-
-In one bounded private-repository evidence path, fresh AI contexts selected relevant Field Notes, preserved target-native authority, rejected unnecessary V13 machinery, and converted one recommendation into a validated target-native patch without human correction. See [Forward Use 003](examples/aspire_gap_forward_use_003/results.md), [Forward Use 004](examples/aspire_gap_forward_use_004/results.md), and [Field Note 124](field_notes/124_v13_capability_boundaries_and_triggered_deep_read.md).
-
-This is bounded evidence, not proof across all models or repositories. Final adoption authority remains with the Decision Owner.
-
-The current separate creator-live Cycle 006 record is bounded terminal failure
-evidence: one authorized attempt reached `A1_CAPTURE` and stopped with
-`A1_CANDIDATE_INDEPENDENCE_NOT_PASS`. No Note was saved or durably captured,
-no real After was produced, and Run 2 and A2–A7 were not run.
-
-This establishes only that terminal boundary. It does not establish A1–A7
-success, Compactor success, successful reconnect or reuse, behavior
-preservation or `10/10`, generalization, superiority, or external-user
-validation. [Read the Cycle 006 terminal public
-evidence.](validation/a7_creator_live_cycle_006_terminal_public_evidence_001.md)
-
-Example prompt:
-
-> Review my repository's current operational problem. Use V13 only where relevant. Identify the Field Notes that directly apply, explain what may be worth adopting, and state what should not be imported. Do not modify files or start execution.
-
-## Example: documented does not always mean restartable
-
-A long-running AI-agent repo was checked with the Workspace Health Check.
-
-It had governance docs, release ledgers, protocols, and many records, but the current source of truth was split across branches and docs. The health check returned:
-
-> 🔴 RED — there was an operating system, but the current handoff is broken.
-
-Key lesson:
-
-> Many records ≠ restartable state.
-
-See: [`docs/examples/workspace_health_check_red_example.md`](docs/examples/workspace_health_check_red_example.md)
-
-## What this is
-
-V13 LoopKit is a copy-paste reporting kit for AI coding agents.
-
-It is designed for workflows where an agent can follow project-level instructions, including Codex, Claude Code, Cursor, Cline, and similar tools.
-
-After an agent says a task is done, LoopKit makes the agent report the completion state and the next-loop gate:
-
-1. whether the task is actually complete and restartable
-2. whether the next loop should `GO`, `HOLD`, `CAP`, or `BLOCK`
-
-## Setup
-
-No install is required.
-
-Copy the instruction file that matches your workflow into your project, then ask your agent to follow it when reporting task completion.
-
-Do not start by adding automation, integrations, or product features.
-
-## First, try the Lite Footer
-
-You do not need the full `AGENTS.md` rule set to feel the first benefit.
-
-Ask your AI agent to append this small footer to its final report:
+If you want a recommendation before adopting anything, ask:
 
 ```text
-V12 State: PASS / DELAY / BLOCK / UNKNOWN
-V13 Next Loop Gate: GO / HOLD / CAP / BLOCK
-Reason:
-Next Authorized Action:
+Read this repository's public README and AI Reading Order. Explain which one
+small V13 route may fit my current problem, what it would change locally, and
+what evidence or permission is still missing. Do not modify files yet.
 ```
 
-The footer makes the agent state whether the current task is complete, whether the next loop should run, why, and the single next action.
-
-If that feels useful, copy `AGENTS.md` later.
-
-## Choose one
-
-Use [`AGENTS.md`](AGENTS.md) for Codex or any AI coding agent that reads project-level instruction files.
-
-Use [`CLAUDE.md`](CLAUDE.md) for Claude Code. It is a thin entry point that points back to `AGENTS.md` as the canonical rule set.
-
-Use [Thin CLAUDE.md / AGENTS.md base](copy-paste/claude-md-thin-base.md) when you want a small copy-paste starter for keeping always-loaded agent instructions short.
-
-Use [Next-Action Confidence Check](copy-paste/next-action-confidence-check.md) before letting an AI agent continue into the next task.
-
-After the first trial, use [Restartable Handoff](copy-paste/restartable-handoff.md) before ending a long AI-agent session.
-
-For personal-copy users using Codex, start here: [Personal Copy + Codex Quickstart](docs/fork_codex_quickstart.md).
-
-If this feels abstract, ask your AI to read the [AI Reading Order](docs/ai_reading_order.md) and decide how V13 should fit your repo.
-
-Ask your AI to generate a tutorial from this repo: see [AI_TUTORIAL_CAPSULE.md](AI_TUTORIAL_CAPSULE.md).
-
-Use [`prompts/v13_loop_review.md`](prompts/v13_loop_review.md) when you want a one-off review without adding project-level instruction files.
-
-Use [`templates/user_roadmap_anchors.md`](templates/user_roadmap_anchors.md) when you want V13 to align 0.01 repairs with your own direction line.
-
-## What you get
-
-Instead of only receiving:
-
-```text
-Done. I updated the README.
-```
-
-you receive a bounded next-loop decision:
-
-```text
-V12 State:
-PASS
-
-V13 Next Loop Gate:
-CAP
-
-Reason:
-The README edit is complete, but the next action should stay bounded.
-
-Next Authorized Action:
-Push this commit.
-
-Not Authorized:
-- Add new features
-- Start broad promotion
-- Draft v1.0
-
-Decision Packet Required:
-no
-
-Decision Owner:
-Repository maintainer
-
-Completion Line:
-The README edit is complete and the next loop remains capped to pushing this commit.
-```
-
-### Active Signals vs Parked Horizons
-
-V13 does not treat every yellow item as an unfinished task.
-
-Some yellow items are active caps for the current loop.
-
-Others are parked horizons: known future directions that are intentionally not active now.
-
-Example:
-
-```text
-Signal:
-🟢 BLUE / README-TRUST-BADGES-PUSHED
-+
-🟢 BLUE / TRUST-SURFACE-IMPROVED
-+
-🟡 YELLOW / FEATURE-GROWTH-CAP
-
-Parked Horizons:
-HOOKS / MCP / PLUGINIZATION / V1
-```
-
-This keeps the current loop readable while preserving future directions without letting them invade the present task.
-
-## Observed Codex output from an AGENTS.md verification task
-
-This is not a mock example. It was recorded from a Codex verification task after the repository instructions were read.
-
-```text
-V12 State:
-PASS
-
-V13 Next Loop Gate:
-GO
-
-Reason:
-The V13 Lite Footer worked naturally for this ordinary verification report without requiring a full Loop Record. The repo remained unchanged and restartable.
-
-Next Authorized Action:
-Use the Lite Footer again on the next small concrete Codex task.
-
-Not Authorized:
-- Add automation
-- Add CLI/server/package setup
-- Draft V13 v1.0
-
-Decision Packet Required:
-no
-
-Decision Owner:
-Repository maintainer
-
-Completion Line:
-The verification report is complete without requiring a full Loop Record.
-```
-
-## Input → Decision → Output
-
-```text
-Input:
-An AI agent completed a task and proposes another follow-up.
-
-Decision:
-CAP
-
-Reason:
-The work is useful, but the next loop should run only within fixed limits.
-
-Output:
-The next loop may run only as a bounded action, with clear stop conditions.
-```
-
-## Before / After
-
-Without LoopKit, an agent may finish a task like this:
-
-```text
-Done. I updated the README.
-```
-
-That sounds complete, but it does not tell you whether the next loop should run.
-
-With LoopKit, the report adds the completion state, the next-loop gate, the allowed next action, the disallowed actions, and the next command.
-
-The difference is simple:
-
-> LoopKit turns “done” into a restartable decision about what should happen next.
-
-## Gate outcomes
-
-It asks whether the next loop should:
-
-- `GO`: continue
-- `HOLD`: wait for more evidence
-- `CAP`: continue only within limits
-- `BLOCK`: stop because the next loop is unsafe or not useful
-
-## Quick Example
-
-Your agent says a task is done.
-
-Instead of immediately starting the next task, LoopKit asks whether the next loop should run.
-
-### Input
-
-```text
-Task completed:
-README first-use path clarified.
-
-Evidence:
-- README.md changed
-- working tree clean
-- no new features added
-
-Proposed next action:
-Add more examples and promote the repository.
-```
-
-### Output
-
-```text
-V12 State:
-PASS
-
-V13 Next Loop Gate:
-CAP
-
-Reason:
-The task is complete and restartable, but the proposed next action expands scope. Continue only with a bounded next step.
-
-Next Authorized Action:
-Push the README clarification.
-
-Not Authorized:
-- Add automation
-- Add CLI/server/package setup
-- Start broad promotion
-
-Decision Packet Required:
-no
-
-Decision Owner:
-Repository maintainer
-
-Completion Line:
-The clarification is bounded to the README push; broader promotion remains unauthorized.
-```
-
-## When should I use it?
-
-Use it after AI-assisted work such as:
-
-- coding
-- writing
-- research
-- posting
-- automation planning
-
-Especially when you are unsure whether to continue, verify, limit, or stop.
-
-## One-off Review
-
-1. Open [`prompts/v13_loop_review.md`](prompts/v13_loop_review.md)
-2. Paste the completed work summary
-3. Ask for a V13 Loop Record
-4. Read the gate
-5. Follow the `Next Loop Command`
-
-## What does it prevent?
-
-It prevents jumping from:
-
-> “The task is done”
-
-to:
-
-> “Run the next loop”
-
-without checking whether the work is restartable, bounded, and worth repeating.
-
-## Quick Links
-
-- [`prompts/v13_loop_review.md`](prompts/v13_loop_review.md): copy-paste prompt
-- [`USE_CASES.md`](USE_CASES.md): practical use cases
-- [`MISTAKEN.md`](MISTAKEN.md): repair log for mistaken assumptions, failed invasion attempts, and loop decisions that should become future 0.01 repairs
-- [`docs/context_compression.md`](docs/context_compression.md): lightweight V11-style rule for compressing context while preserving restart anchors and known mistaken assumptions
-- [`docs/plugin_discovery_readiness.md`](docs/plugin_discovery_readiness.md): design note for making V13 LoopKit easier for agents to discover, evaluate, and recommend safely
-- [`docs/plugin_surface_spec.md`](docs/plugin_surface_spec.md): documentation-only map of possible future plugin skills, commands, non-goals, and Decision Packet requirements
-- [`docs/roadmap_anchors.md`](docs/roadmap_anchors.md): rule for giving Codex at least two direction anchors so 0.01 repairs align with the user’s Aspire
-- [`templates/v13_reconnection_packet_template.md`](templates/v13_reconnection_packet_template.md): manual restart packet for transferring Current Gate, Next Action, Do-Not-Do Boundary, Recheck Condition, Completion Line, Missing Closure, and Seat Owner
-- [`templates/user_roadmap_anchors.md`](templates/user_roadmap_anchors.md): fill-in template for defining your own roadmap anchors before asking V13 to choose 0.01 repairs
-- [`docs/field_note_types.md`](docs/field_note_types.md): Self-Application, Real-Task Proof, and Public-Exposure Control
-- [`docs/self_repair_diagnostic.md`](docs/self_repair_diagnostic.md): pre-invasion check for identifying the weakest point and highest-EV 0.01 repair
-
-## Contributing and safety
-
-See:
-
-- `CONTRIBUTING.md`
-- `SECURITY.md`
-- `CODE_OF_CONDUCT.md`
-- `.github/ISSUE_TEMPLATE/`
-
-## Prototype Status
-
-Current status: feature growth is paused; real-task proof continues.
-
-See:
-
-- [`docs/prototype_status.md`](docs/prototype_status.md)
-
-## Current Signal
-
-Current operating state:
-
-- proof continues
-- feature growth is paused
-- public exposure is capped
-- V13 v1.0 is on HOLD
-
-See:
-
-- [`docs/current_signal.md`](docs/current_signal.md)
-
-## Loop Map
-
-Loop Map tracks active loop gates across the prototype: proof, feature growth, public exposure, v1.0 readiness, Decision Packet, and ownership-sensitive work.
-
-See:
-
-- [`docs/loop_map.md`](docs/loop_map.md)
-
-## Aspire-Oriented Loop Map
-
-V13 is not only defensive. After basic gates are stable, it can also map whether each loop moves toward a declared Aspire such as adoption, stars, revenue, or operationalization without damaging the Carrier.
-
-The V216 public-reuse Aspire and its profile experiment are recorded in [`docs/v216_public_reuse_aspire.md`](docs/v216_public_reuse_aspire.md). The reusable GIF generator now lives in the independent [GitHub Profile Motion](https://github.com/shin4141/github-profile-motion) repository; the [live profile](https://github.com/shin4141) shows the result. The 100-star target applies to V13 LoopKit alone, not to that new repository.
-
-See:
-
-- [`docs/aspire_oriented_loop_map.md`](docs/aspire_oriented_loop_map.md)
-
-## Decision Packet
-
-Future direction: V13 LoopKit should eventually produce human-actionable Decision Packets for high-impact or irreversible next-loop decisions.
-
-See:
-
-- [`docs/decision_packet.md`](docs/decision_packet.md)
-
-Decision Packet examples:
-
-- [`docs/decision_packet_examples.md`](docs/decision_packet_examples.md)
-
-## V13 Lite Footer
-
-For ordinary use, humans should not need to manually write full Loop Records. Agents can include a short V13 next-loop footer at the end of each task report.
-
-V13 reports can also include a Chat Continuation signal: `CHAT_CONTINUE`, `PREPARE_HANDOFF`, or `HANDOFF_NOW`, so long-running work does not silently lose restartability.
-
-Agents can also report `Context Compression: KEEP / COMPRESS / HANDOFF` so long-running work can reduce context cost without losing restartability.
-
-See:
-
-- [`AGENTS.md`](AGENTS.md)
-
-## Field Notes
-
-Field notes are not the first reading path. They are evidence of what the repo records over time.
-
-Examples:
-
-- [Field Note 145 — Result difference and AI operations value](field_notes/145_result_difference_to_ai_operations_value.md) — operational value, value recognition, and behavior; Field Note candidate / Verification pending.
-- `field_notes/099_handoff_responsibility_transfer.md` — broken handoff responsibility transfer.
-- `field_notes/100_session_size_context_risk.md` — session size becoming Context Risk.
-- `field_notes/062_public_entry_friction_review.md` — public entry friction.
-- `field_notes/063_example_schema_validation_audit.md` — schema validation audit.
-- `field_notes/057_external_repo_transfer_packet_minimum_input_contract.md` — external repo transfer packet checks.
-- `handoff/current_codex_handoff.md` — current restartable handoff for Codex-side V13 LoopKit state.
-
-## Short Example
-
-Input:
-"Codex created README, schema, examples, templates, and use cases."
-
-Output:
-CAP
-
-Reason:
-The scaffold is useful, but no real user has tried it yet.
-
-Cap:
-Ask one user to run the prompt on one real completed AI task. Do not automate outreach.
-
-Next Loop Command:
-Run one real V13 review on an AI coding completion and record whether CAP felt useful.
-
-## Conceptual Flow
-
-```text
-V12 Completion Record
-        ↓
-V13 Loop Record
-        ↓
-GO / HOLD / CAP / BLOCK
-        ↓
-Next Loop Command
-```
-
-## Core Distinction
-
-```text
-V12 asks:
-Is this work actually complete and restartable?
-
-V13 asks:
-Given that completion state, should the next loop be run, held, capped, or blocked?
-```
-
-V13 LoopKit assumes V12-style completion integrity: first make the completed work restartable, then decide whether the next loop should GO / HOLD / CAP / BLOCK.
-
-## V13 Canon
-
-```text
-Capability without controllability is not intelligence.
-```
-
-## Core Principle
-
-```text
-A Compound Loop improves the condition from which the next loop begins.
-```
-
-## Gate Outcomes
-
-- GO: positive-EV, controllable, residue-producing, Carrier-preserving
-- HOLD: sign, cost, residue, or Carrier impact is unclear
-- CAP: valid only under fixed exposure limits
-- BLOCK: damages Aspire, Carrier, or re-entry capacity
-
-These are public-facing outcome dimensions, not standalone execution criteria.
-For executable decisions, `AGENTS.md` §3 (`V12 Completion Before V13 Gate`) is
-the controlling operational definition. `GO` is permitted only when evidence,
-scope, exit condition, touch surface, rollback, and debt risk are clear and
-bounded; `PASS` does not automatically mean `GO`.
-
-## Practical Use
-
-- Start with [`USE_CASES.md`](USE_CASES.md) for common loop-governance scenarios.
-- Copy and paste [`prompts/v13_loop_review.md`](prompts/v13_loop_review.md) after a completed work report to produce a V13 Loop Record.
-
-## Optional Companion: your coding agent asks once. The next Run remembers.
-
-The Companion is **under development** and optional. It is not used by the
-normal Codex conversation `♻️` route above; that route needs no Companion
-process, server, UI, or dedicated button. Do not delay the first conversation
-Run to install or start it.
-
-The currently confirmed scope is narrower:
-
-1. The agent asks whether it may modify a file.
-2. You choose **Use for this repository**. This saves permission for this
-   repository, action, and exact path for future Runs.
-3. A fresh later Run may reuse that permission without showing the same diff
-   again. Future proposed content may differ; the saved Default does not bind
-   future reuse to the current diff or content.
-4. After the later Run passes its checkpoint, it records a Verified Save and
-   emits a local Acceleration Receipt.
-
-In the creator-owned human live proof for the first Claude Agent SDK adapter,
-the human explicitly selected option 2 in Run 1. A separate, fresh Run 2 showed
-no second option prompt and ended with `VERIFIED_SAVE`. Its Receipt recorded
-1 Save and 1 Verified Reuse; 7.5 minutes, ¥625, and 9,467 tokens are estimates.
-
-That is creator-owned evidence for this bounded adapter path, not confirmation
-that the whole Companion is complete, required by Codex, externally adopted,
-or third-party certified. [See the Verified Save Claude MVP
-guide.](docs/verified_save_claude_mvp_v0_1.md)
-
-## Current Status
+Use the [AI Reading Order](docs/ai_reading_order.md) to keep that inspection
+bounded.
+
+### Can I use a standalone ♻️ in Codex?
+
+Yes, after the current owner has established these four fields:
+
+- `Aspire:`
+- `Current state:`
+- `Protected conditions:`
+- `Allowed scope for one ♻️ Run:`
+
+The ordinary conversation route may compare evidence-backed maintenance, cost reduction,
+repair, investigation, feature work, recording, and waiting. It runs
+at most one already-authorized action and reports **Done:**, **Human judgment
+needed:**, or **Waiting:** before it stops. No Companion process, server,
+second model, or special button is required.
+
+Read the exact [conversation ♻️ procedure](docs/codex_conversation_next_1_01.md)
+and the [Personal Copy + Codex Quickstart](docs/fork_codex_quickstart.md).
+Do not inherit Shin's or upstream's goals, Gate, current state, or authority.
+
+### How does practice memory work?
+
+At closure, the AI selects only an evidence-supported difference worth
+preserving; no addition is a normal result. The
+[Rule practice memory procedure](docs/rule_practice_memory.md#closure-selection)
+defines the bounded save, failure, and re-entry path. Reading or running a
+synthetic case alone is not another real-use result.
+
+</details>
+
+<a id="next-if-you-need-completion-and-loop-gates"></a>
+<a id="turn-one-ai-incident-into-a-paste-ready-rule"></a>
+<a id="can-the-next-coding-agent-find-where-to-restart"></a>
+<a id="run-the-local-read-only-scan"></a>
+<a id="what-a-result-can-look-like"></a>
+<a id="how-to-interpret-it"></a>
+<a id="choose-what-happens-after-the-result"></a>
+<a id="a-result-is-enough"></a>
+<a id="b-private-repository-specific-audit"></a>
+<a id="check-one-ai-workflow-incident"></a>
+<a id="what-ai-coding-incidents-return-to-the-human"></a>
+<a id="secondary-adoption-paths"></a>
+<a id="for-ai-agent-workspace-users"></a>
+<a id="why-fork-this-repo"></a>
+<a id="what-a-fork-unlocks"></a>
+<a id="after-you-fork-where-to-write"></a>
+<a id="fastest-way-to-evaluate-it"></a>
+<a id="paid-pilot--ai-agent-handoff-audit"></a>
+<a id="let-your-ai-read-v13"></a>
+<a id="example-documented-does-not-always-mean-restartable"></a>
+<a id="what-this-is"></a>
+<a id="setup"></a>
+<a id="first-try-the-lite-footer"></a>
+<a id="choose-one"></a>
+<a id="what-you-get"></a>
+<a id="active-signals-vs-parked-horizons"></a>
+<a id="observed-codex-output-from-an-agentsmd-verification-task"></a>
+<a id="input--decision--output"></a>
+<a id="before--after"></a>
+<a id="gate-outcomes"></a>
+<a id="quick-example"></a>
+<a id="input"></a>
+<a id="output"></a>
+<a id="when-should-i-use-it"></a>
+<a id="one-off-review"></a>
+<a id="what-does-it-prevent"></a>
+<a id="quick-links"></a>
+<a id="contributing-and-safety"></a>
+<a id="prototype-status"></a>
+<a id="current-signal"></a>
+<a id="loop-map"></a>
+<a id="aspire-oriented-loop-map"></a>
+<a id="decision-packet"></a>
+<a id="v13-lite-footer"></a>
+<a id="field-notes"></a>
+<a id="short-example"></a>
+<a id="conceptual-flow"></a>
+<a id="core-distinction"></a>
+<a id="v13-canon"></a>
+<a id="core-principle"></a>
+<a id="practical-use"></a>
+<a id="optional-companion-your-coding-agent-asks-once-the-next-run-remembers"></a>
+<a id="current-status"></a>
+
+<details>
+<summary>Completion gates, tools, evidence, and project history</summary>
+
+### Completion and restart routes
+
+- [Next-Action Confidence Check](copy-paste/next-action-confidence-check.md):
+  separate `PASS / DELAY / BLOCK / UNKNOWN` from `GO / HOLD / CAP / BLOCK`.
+- [Restartable Handoff](copy-paste/restartable-handoff.md): leave the next safe
+  step and the do-not-repeat boundary.
+- [AGENTS.md](AGENTS.md): canonical repository operating and authority rules.
+- [Local read-only Workspace Health Check](docs/loop_library_ai_agent_workspace_health_check.md):
+  test whether the next coding agent can find the restart point. The
+  [distribution guide](docs/v13_runner_distribution_surface_v0_1.md) preserves
+  the historical `run-the-local-read-only-scan` route.
+- [One-off loop review](prompts/v13_loop_review.md): produce a bounded decision
+  after completed work without installing a service.
+
+### Incidents and reusable rules
+
+- [Incident-to-instruction prompt](copy-paste/incident-to-instruction-rule.md):
+  turn one sanitized AI-workflow incident into a draft rule.
+- [Workflow incident intake](docs/workflow_incident_intake_checker_v0_1.md):
+  check one incident without sharing credentials or private repository data.
+- [Public incident map](case_studies/external_ai_workflow_incident_map_v0_1.md):
+  selected descriptive cases, not population frequency or a product ranking.
+
+### Optional Companion
+
+The Companion is under development and is not used by the normal Codex
+conversation `♻️` route. Its confirmed permission reuse is narrower than the
+whole product: permission is bound to a repository, action, and exact path;
+future proposed content may differ. Read the
+[Verified Save boundary and evidence](docs/verified_save_claude_mvp_v0_1.md)
+and the [Companion roadmap](docs/companion_product_roadmap_v0_3.md).
+
+### Maps, packets, and memory
+
+- [Loop Map](docs/loop_map.md) and
+  [Aspire-Oriented Loop Map](docs/aspire_oriented_loop_map.md)
+- [Decision Packet](docs/decision_packet.md) and
+  [examples](docs/decision_packet_examples.md)
+- [Field Note lifecycle](docs/field_note_lifecycle.md) and
+  [Field Note types](docs/field_note_types.md)
+- [User roadmap anchors](templates/user_roadmap_anchors.md)
+- [V13 reconnection packet](templates/v13_reconnection_packet_template.md)
+
+Field Notes are advisory evidence, not execution authority. Decision Packets,
+maps, candidates, and saved observations do not grant permission or start
+another loop.
+
+### Service and public project state
+
+- [Paid Pilot — AI Agent Handoff Audit](services/ai_agent_handoff_audit_offer.md):
+  offer, fit check, scope, payment boundary, and handling limits.
+- [Prototype status](docs/prototype_status.md)
+- [Current operating signal](docs/current_signal.md)
+- [Use cases](USE_CASES.md) and [mistake/repair log](MISTAKEN.md)
+- [Contributing](CONTRIBUTING.md), [Security](SECURITY.md), and
+  [Code of Conduct](CODE_OF_CONDUCT.md)
+
+Historical updates and experiments remain in `validation/`, `field_notes/`,
+the current-state history below the first block, and Git history. Their
+existence does not prove general effectiveness or authorize repetition.
+
+</details>
+
+## Current status
 
 ```text
 Status: Prototype scaffold / file-based loop governance kit.
-This repository is not a full application yet.
+Feature growth is paused; bounded real-task evidence and restartability checks continue.
 ```

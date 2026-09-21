@@ -10,6 +10,31 @@ def read(path: str) -> str:
     return (ROOT / path).read_text(encoding="utf-8")
 
 
+def visible_readme_words(text: str) -> list[str]:
+    """Count rendered words outside closed details with one stable method."""
+    visible: list[str] = []
+    details_depth = 0
+    for line in text.splitlines():
+        stripped = line.strip().lower()
+        if stripped.startswith("<details"):
+            details_depth += 1
+            continue
+        if stripped.startswith("</details"):
+            details_depth = max(0, details_depth - 1)
+            continue
+        if details_depth == 0:
+            visible.append(line)
+
+    rendered = "\n".join(visible)
+    rendered = re.sub(r"!\[[^]]*\]\([^)]*\)", " ", rendered)
+    rendered = re.sub(r"\[([^]]+)\]\([^)]*\)", r"\1", rendered)
+    rendered = re.sub(r"<[^>]+>", " ", rendered)
+    return re.findall(
+        r"[A-Za-z0-9]+(?:['-][A-Za-z0-9]+)*|[ぁ-んァ-ヶ一-龠]+",
+        rendered,
+    )
+
+
 class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
     def test_personal_hub_public_entry_is_clone_first_and_fork_optional(self) -> None:
         readme = read("README.md")
@@ -19,9 +44,7 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         v219 = read("validation/v219_personal_hub_roundtrip.md")
         v220 = read("validation/v220_personal_hub_fresh_chat_reuse.md")
 
-        entry = readme.split(
-            "### 🔓 Full Experience — Start your personal hub locally", 1
-        )[1].split("## Next, if you need completion and loop gates", 1)[0]
+        entry = readme.split("## Start your own hub", 1)[1].split("<details>", 1)[0]
 
         self.assertIn(
             "git clone https://github.com/shin4141/decision-os-v13-loopkit.git",
@@ -29,9 +52,9 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         )
         self.assertIn("A GitHub Fork is optional", entry)
         self.assertIn("Personal Hub Roundtrip — Minimal Start", entry)
-        self.assertIn("synthetic worked roundtrip", entry)
-        self.assertIn("bounded validation record", entry)
-        self.assertIn("do not become yours", entry)
+        self.assertIn("synthetic saved → selected → applied example", entry)
+        self.assertIn("bounded V219/V220 validation", entry)
+        self.assertIn("owner-setup request separates your state", entry)
 
         for path in (
             "docs/personal_hub_roundtrip_quickstart.md",
@@ -79,21 +102,17 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         quickstart = read("docs/fork_codex_quickstart.md")
 
         entry = readme.split(
-            "## Start one governed next action in Codex",
-            1,
-        )[1].split("## External intelligence for decisions that survive the chat", 1)[0]
+            "<summary>Common questions and other ways to try V13</summary>", 1
+        )[1].split("</details>", 1)[0]
+        compact_entry = " ".join(entry.split())
 
-        self.assertLess(
-            readme.index("## Start one governed next action in Codex"),
-            readme.index("## External intelligence for decisions that survive the chat"),
-        )
         for field in (
             "Aspire:",
             "Current state:",
             "Protected conditions:",
             "Allowed scope for one ♻️ Run:",
         ):
-            self.assertIn(field, entry)
+            self.assertIn(field, compact_entry)
         for category in (
             "maintenance",
             "cost reduction",
@@ -103,18 +122,14 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
             "recording",
             "waiting",
         ):
-            self.assertIn(category, entry)
+            self.assertIn(category, compact_entry)
         for outcome in ("**Done:**", "**Human judgment needed:**", "**Waiting:**"):
-            self.assertIn(outcome, entry)
+            self.assertIn(outcome, compact_entry)
 
-        self.assertIn("a personal fork or another writable copy", entry)
-        self.assertIn("normal Codex input", entry)
-        self.assertIn("No Companion process, server, second model", entry)
+        self.assertIn("Personal Copy + Codex Quickstart", entry)
+        self.assertIn("No Companion process, server", entry)
         self.assertIn("Do not inherit Shin's or upstream's goals", entry)
-        self.assertIn("Do not execute yet", entry)
         self.assertIn("docs/codex_conversation_next_1_01.md", entry)
-        self.assertEqual(entry.count("```text\n♻️\n```"), 1)
-        self.assertIn("Zero questions is an interaction count", entry)
 
         for text in (route, quickstart):
             self.assertIn("fork", text.lower())
@@ -124,40 +139,26 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         self.assertIn("must not\nappend to the upstream trial file", route)
         self.assertIn("does not use the optional Companion", quickstart)
 
-        companion = readme.index(
-            "## Optional Companion: your coding agent asks once. "
-            "The next Run remembers."
-        )
-        self.assertGreater(companion, readme.index("## Practical Use"))
-        self.assertLess(companion, readme.index("## Current Status"))
-        companion_section = readme[companion : readme.index("## Current Status")]
-        self.assertIn("under development", companion_section)
-        self.assertIn("not used by the\nnormal Codex conversation `♻️` route", companion_section)
+        self.assertIn("docs/verified_save_claude_mvp_v0_1.md", readme)
+        self.assertIn("The Companion is under development", readme)
+        self.assertIn("not used by the normal Codex\nconversation `♻️` route", readme)
 
-    def test_00_readme_first_contact_order_centers_external_intelligence(self) -> None:
+    def test_00_readme_first_contact_centers_personal_hub_and_collapses_depth(self) -> None:
         readme = read("README.md")
-        markers = (
-            "### The problem",
-            "### What External Intelligence changes",
-            "### What this repository supports",
-            "### Try it in English — no fork required",
-            "Japanese readers can use the guide linked at the top",
-            "### 🔓 Full Experience — Start your personal hub locally",
-            "## Next, if you need completion and loop gates",
-        )
-        positions = [readme.index(marker) for marker in markers]
+        first_details = readme.index("<details>")
 
-        self.assertEqual(positions, sorted(positions))
+        self.assertLess(readme.index("## Start your own hub"), first_details)
+        self.assertEqual(readme.count("<details>"), 2)
+        self.assertEqual(readme.count("</details>"), 2)
+        self.assertNotIn("<details open", readme.lower())
+        self.assertLess(len(visible_readme_words(readme)), 500)
         self.assertIn(
-            "selected past decisions, failure boundaries,\n"
-            "reusable knowledge, and restart context outside one chat",
+            "selected\ndecisions, failure boundaries, reusable lessons, and a safe restart point",
             readme,
         )
-        self.assertIn("later AI retrieves\nonly the prior structure that matters", readme)
-        self.assertLess(
-            readme.index("### What External Intelligence changes"),
-            readme.index("context compactor"),
-        )
+        self.assertIn("later AI retrieves only the prior structure that matters", readme)
+        self.assertIn("Common questions and other ways to try V13", readme)
+        self.assertIn("Completion gates, tools, evidence, and project history", readme)
         prompt_path = "copy-paste/external-intelligence-first-contact.md"
         self.assertIn(f"]({prompt_path})", readme)
         self.assertTrue((ROOT / prompt_path).is_file())
@@ -175,6 +176,54 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
             if line != japanese_entry and not line.startswith('<a id="')
         ]
         self.assertIsNone(re.search(r"[ぁ-んァ-ヶ一-龠]", "\n".join(visible_lines)))
+
+    def test_00c_readme_depth_routes_and_legacy_anchors_remain_reachable(self) -> None:
+        readme = read("README.md")
+
+        for path in (
+            "docs/personal_hub_roundtrip_quickstart.md",
+            "examples/personal_hub_roundtrip_v0_1/",
+            "validation/v220_personal_hub_fresh_chat_reuse.md",
+            "docs/getting_started_ja.md",
+            "copy-paste/external-intelligence-first-contact.md",
+            "docs/codex_conversation_next_1_01.md",
+            "copy-paste/next-action-confidence-check.md",
+            "docs/v13_runner_distribution_surface_v0_1.md",
+            "docs/verified_save_claude_mvp_v0_1.md",
+            "docs/loop_map.md",
+            "docs/decision_packet.md",
+            "docs/field_note_lifecycle.md",
+            "services/ai_agent_handoff_audit_offer.md",
+        ):
+            self.assertIn(f"]({path})", readme)
+            self.assertTrue((ROOT / path.rstrip("/")).exists())
+
+        for anchor in (
+            "start-one-governed-next-action-in-codex--codexで最初の一回",
+            "start-one-governed-next-action-in-codex",
+            "required-environment",
+            "prepare-once-in-the-normal-conversation",
+            "run-the-first-one",
+            "rule-practice-memory",
+            "the-problem",
+            "what-external-intelligence-changes",
+            "what-this-repository-supports",
+            "try-it-in-english--no-fork-required",
+            "paid-pilot--ai-agent-handoff-audit",
+            "run-the-local-read-only-scan",
+            "try-one-line-first",
+            "ask-your-ai-first",
+            "start-in-5-minutes",
+            "a-result-is-enough",
+            "b-private-repository-specific-audit",
+            "for-ai-agent-workspace-users",
+            "fastest-way-to-evaluate-it",
+            "input",
+            "output",
+        ):
+            self.assertEqual(readme.count(f'<a id="{anchor}"></a>'), 1)
+
+        self.assertNotIn("## Start in 5 minutes", readme)
 
     def test_01_english_prompt_is_repo_first_read_only_and_no_fork(self) -> None:
         prompt = read("copy-paste/external-intelligence-first-contact.md")
@@ -436,16 +485,17 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         readme = read("README.md")
         onboarding = read("docs/external_intelligence_onboarding.md")
 
-        for text in (readme, onboarding):
-            self.assertIn("🔓 Full Experience", text)
-            self.assertIn("private repository", text)
-            self.assertIn("separate unpublished", text)
-            self.assertIn("private memory", text)
-            self.assertIn("public `main`", text)
+        self.assertIn("🔓 Full Experience", onboarding)
+        for boundary in (
+            "private repository",
+            "separate unpublished",
+            "private memory",
+            "public `main`",
+        ):
+            self.assertIn(boundary, readme)
 
-        self.assertIn("Start your personal hub locally", readme)
+        self.assertIn("Start your own hub", readme)
         self.assertIn("A GitHub Fork is optional", readme)
-        self.assertIn("choosing a Quest alone does not authorize", readme)
         self.assertIn("Forkして体感する", onboarding)
         self.assertIn("説明または小さなtrialを受けた後", onboarding)
         self.assertIn("Forkは理解するための前提ではなく", onboarding)
