@@ -49,7 +49,7 @@ Admission Joint:
 CANDIDATE / NOT CURRENT on this branch; ADMITTED only when the exact paired first blocks and selected language-repair paths are on fetched origin/main and the reconstruction base is its ancestor
 
 Admission Evidence:
-Shin's explicit approval for the required push, PR, merge and publication verification; PR pending; reviewed bounded diff; focused onboarding, current-state, historical and handoff regressions; unauthenticated public read-back required after merge
+Shin's explicit approval for the required push, PR, merge and publication verification; PR #176; reviewed bounded diff; focused onboarding, current-state, historical and handoff regressions; unauthenticated public read-back required after merge
 
 Remote Read-Back:
 after merge, fetch origin/main, compare both exact first blocks and every selected path, verify ea0dadb ancestry, and open unauthenticated GitHub README, Japanese guide, personal-hub quickstart and worked-example URLs before claiming operational publication completion

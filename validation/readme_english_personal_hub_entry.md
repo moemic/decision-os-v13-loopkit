@@ -3,7 +3,7 @@
 - Evidence class: bounded documentation and link verification
 - Base: `ea0dadb0726394d5c4a37283f163c5ad1b3bc5ef` (`origin/main` at start)
 - Work branch: `codex/readme-english-personal-hub`
-- Publication PR: pending
+- Publication PR: [#176](https://github.com/shin4141/decision-os-v13-loopkit/pull/176)
 
 ## Reason
 
