@@ -6,28 +6,29 @@
 ![Local read-only scan](https://img.shields.io/badge/scan-local%20read--only-blue)
 ![Human approval for changes](https://img.shields.io/badge/changes-human%20approval%20required-orange)
 
-## Update: conversation ♻️ / 更新案内
+[日本語の案内](docs/getting_started_ja.md)
+
+<a id="update-conversation-️--更新案内"></a>
+
+## Update: conversation ♻️
 
 [PR #161](https://github.com/shin4141/decision-os-v13-loopkit/pull/161) added
 one normal-Codex-conversation `♻️` Run: compare next actions, execute within
 your permission, verify, record, and stop. It may also choose to wait.
 Companion is optional, under development, and not needed for this route.
 
-**既存利用者へ：** 自分の変更を残したままforkをupstreamの最新mainと同期し、
-下の手順で「Aspire・現在地・守る条件・一回の許可範囲」を設定してください。
-確認後、別メッセージで単独の `♻️` を送ります。選択・許可範囲内の実行・
-検証・記録を一回行って停止し、必要な改善がなければ待機します。
-Companionの導入は不要です。
+**Existing users:** sync your personal copy or Fork with upstream `main` while
+preserving your own changes, then follow the four-field setup below before
+sending a standalone `♻️`. Syncing does not grant new permissions. Companion
+is not required.
 
-**Existing users:** sync your fork with upstream main while preserving your
-own changes, then follow the four-field setup below before sending a standalone
-`♻️`. Syncing does not grant new permissions.
-
-**確認範囲 / Evidence:** one fresh isolated Codex trial completed this path.
+**Evidence:** one fresh isolated Codex trial completed this path.
 General reliability, repeated compounding, and cost savings are not established.
 See the [recorded trial](validation/codex_conversation_reader_owned_live_trial_001.md).
 
-## Start one governed next action in Codex / Codexで最初の一回
+<a id="start-one-governed-next-action-in-codex--codexで最初の一回"></a>
+
+## Start one governed next action in Codex
 
 `♻️` is a short form of this ordinary-language request:
 
@@ -58,15 +59,17 @@ Send this first, replacing the four short values. Codex should confirm the
 setup without starting work:
 
 ```text
-このworkspaceのDecision Ownerは私です。
-Aspire: <このworkspaceを何へ近づけたいか>
-現在地: <いま完了していること／詰まっていること>
-守る条件: <変更禁止、予算、期限、外部送信禁止など>
-一回の♻️で許可する範囲: <例: このbranch内のlocalな文書・test変更、検証、commitまで>
+I am the Decision Owner of this workspace.
+Aspire: <what I want this workspace to move toward>
+Current state: <what is complete now and what is blocked>
+Protected conditions: <files not to change, budget, deadline, no external sending, etc.>
+Allowed scope for one ♻️ Run: <for example, local documentation and test changes,
+verification, and a commit on this branch>
 
-この4点をこの会話の初回前提として確認してください。
-Shinやupstreamの目的・現在地・Gate・権限を私のものとして継承せず、
-まだ実行しないでください。結果を変える不足があれば質問は一つだけにしてください。
+Confirm these four items as the starting conditions for this conversation.
+Do not inherit Shin's or upstream's goals, current state, Gate, or authority as
+mine. Do not execute yet. If a missing fact would change the result, ask at
+most one question.
 ```
 
 This setup belongs to the current user and workspace. In a fork or personal
@@ -107,31 +110,42 @@ Zero questions is an interaction count, not proof of zero human burden. Send
 another `♻️` only when you deliberately want another separately initiated
 Run; Codex must not emit or chain the next command itself.
 
-## Rule practice memory / ルールを使った経験を次へ戻す
+<a id="rule-practice-memory--ルールを使った経験を次へ戻す"></a>
 
-通常の開発終了・予定した中断や引き継ぎの前に、AIが今回の証拠から保存価値のある差分だけを選びます。
-追加なしも正常で、報告は「実践記憶：追加なし。…」など一行だけ。全履歴の再読や空の記録は増やしません。
-必要な追記は各作業の書込権限内で行い、新規利用者にはその所有者の設定が適用されます。
-[選別・保存・失敗時の手順](docs/rule_practice_memory.md#closure-selection)はAI向けの指示です。
-コードによる台帳検査・カード生成とは区別し、保存価値や一般的な自動運用をコードだけで保証しません。
-[限定試用と残る限界](validation/practice_closure_selection_validation.md)には、実作業の保存、
-初回の接続漏れと修正、追加なし・再開の確認を区別して残しています。
+## Rule practice memory
 
-FN125（継続時の証拠選択）では、普段は[短い現行カード](docs/rule_practice/fn125.md)を
-読み、必要な時だけ実践条件・結果・負担・判断根拠へ降りられます。
-改訂しない判断も保存し、未解決の反例は次の利用者の入口へ戻します。
-使い方と今回の変更範囲は[実践記憶の手順](docs/rule_practice_memory.md)、
-実使用・検証は[V214 記録](validation/v214_rule_practice_memory.md)、変更は
-[PR #163](https://github.com/shin4141/decision-os-v13-loopkit/pull/163)にあります。
-一つのルールの限定導入であり、使用回数による自動昇格や ♻️ の探索拡張はありません。
+Before ordinary development ends, or before a planned interruption or handoff,
+the AI selects only the evidence-supported difference worth preserving from
+the work just completed. No addition is a normal result. Report it in one short
+line, such as `Practice memory: no addition; the conditions and result match
+the existing record.` Do not reread all history or create empty records.
 
-[5観点の取得・判断検証](validation/memory_five_patterns/report.md)では、必要な経験の取得と
-不要な履歴の非取得を別々に確認しました。初回の読み過ぎ・報告上の不足と、入口の限定修正後の
-一度の再確認を残しています。実例の参照・合成ケース・過去試用の再利用は、実使用件数へ加算しません。
+Any necessary append stays inside the current task's write permission. A new
+user's own owner setup controls their workspace; Shin's approval does not
+transfer. The [selection, save, and failure procedure (Japanese)](docs/rule_practice_memory.md#closure-selection)
+is an instruction for the AI. It is separate from code that checks the ledger
+or generates a card: code alone does not decide whether an experience is worth
+saving or establish generally reliable automation. The [bounded closure-selection
+validation (Japanese)](validation/practice_closure_selection_validation.md)
+separates a real-work save, an initially missing forward link and its repair,
+no-addition behavior, and a resume check.
 
-For FN125, read the small current card first and follow its evidence only when
-needed. Real use can support keeping the rule as well as revising it; unresolved
-counterexamples stay visible. This pilot does not establish general effectiveness.
+For FN125, the continuation-evidence rule, read the [small current card](docs/rule_practice/fn125.md)
+first. Follow its practice conditions, results, burden, and judgment evidence
+only when needed. A real use can support keeping the rule as well as revising
+it; unresolved counterexamples return to the next reader's entry point. The
+[practice-memory procedure (Japanese)](docs/rule_practice_memory.md),
+[V214 record (Japanese)](validation/v214_rule_practice_memory.md), and
+[PR #163](https://github.com/shin4141/decision-os-v13-loopkit/pull/163)
+define this bounded one-rule pilot. It does not automatically promote a rule
+after a usage count or broaden what `♻️` may explore.
+
+The [five-pattern retrieval and judgment validation (Japanese)](validation/memory_five_patterns/report.md)
+checks retrieval of needed experience separately from non-retrieval of
+irrelevant history. It preserves the initial over-reading and reporting gaps,
+then one recheck after a limited entry-point repair. Merely reading an example,
+running a synthetic case, or reusing an earlier trial does not count as another
+real use. This pilot does not establish general effectiveness.
 
 ## External intelligence for decisions that survive the chat
 
@@ -221,62 +235,11 @@ Quest Board](docs/external_intelligence_onboarding.md#english-first-contact--ext
 and provide that section directly. Treat this as a fallback, not as evidence
 that the model inspected files it could not access.
 
-<details>
-<summary><strong>日本語のfirst-contact promptを開く — Fork不要</strong></summary>
+<a id="まず試してみる--fork不要"></a>
 
-### まず試してみる — Fork不要
-
-Fresh ChatGPT / Claude / Codexの新しいチャットへ、次のblockをそのまま
-copy-pasteしてください。AIはまずpublic repositoryの実ファイルを確認し、
-確認できた範囲を明示してから、repository根拠の案内とQuest Boardを返します。
-Fork、clone、setupはまだ必要ありません。
-
-```text
-この公開repositoryを実際に読んでから、
-External Intelligenceを案内してください。
-
-https://github.com/shin4141/decision-os-v13-loopkit
-
-最初に最低限、次を確認してください。
-
-- README.md
-- AGENTS.md
-- docs/external_intelligence_onboarding.md
-- docs/ai_reading_order.md
-- docs/field_note_lifecycle.md
-
-そのうえで、最初に短く2点だけ教えてください。
-
-1. このrepositoryが実際に持っているExternal Intelligenceの仕組みは何か。
-   repositoryで確認できた内容だけを使って説明してください。
-
-2. あなたが今の環境から実際に確認できた範囲と、
-   確認できなかった範囲を明示してください。
-   見えていない実装や仕組みを推測で補わないでください。
-
-その後、
-docs/external_intelligence_onboarding.md の
-「日本語first-contact — External Intelligence Quest Board」
-を全文表示してください。
-
-私がQuestを選ぶまでは、
-Fork、clone、setup、file変更、特定Questの推薦を始めないでください。
-
-Questを選んだ後は、
-そのQuestを支えているrepository内の実ファイル・rules・docs・Field Notesを
-必要な範囲だけ先に確認してから説明してください。
-
-確認できない部分があれば、
-分かったふりをせず、その境界を明示してください。
-```
-
-最初のresponseは長い監査報告ではありません。短いrepo-grounded orientationと、
-確認できたsurface／確認できなかったsurface／そこから説明できる境界を数行で
-示し、その後に`MEMORY / GROW / LIGHTEN / CONTINUE / PROTECT / CONNECT /
-GRADUATE`を含むfull Quest Boardを表示します。全Field Notesや全実装をfirst
-contactで読むのではなく、選択後に関係するevidenceだけを追加で読みます。
-
-</details>
+Japanese readers can use the guide linked at the top of this README. It keeps
+the Japanese first-contact prompt and the personal-hub owner-setup route in one
+place without maintaining a second copy of this README.
 
 Do not adopt the whole repository at once. First explore the available
 External Intelligence Quests, then choose one structure that interests you or
