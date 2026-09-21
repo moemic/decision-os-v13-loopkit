@@ -87,12 +87,22 @@ page was needed.
 
 ## UI, publication and return checks
 
+Branch UI observed on GitHub before PR:
+
+- desktop `1440 × 1000`: `Start your own hub` rendered as the first primary
+  README heading; both details were closed initially;
+- narrow `390 × 844`: the same primary path rendered without page-level
+  horizontal overflow and both details were closed initially;
+- both details expanded at both tested widths; `Try one line first`, `Ask your
+  AI first`, completion routes, Companion and Paid Pilot links became visible;
+- the Personal Hub link opened the branch quickstart at `Personal Hub
+  Roundtrip — Minimal Start`;
+- the Japanese link opened `docs/getting_started_ja.md` at `日本語の開始案内`;
+- GitHub emitted `user-content-...` DOM targets for the known old conversation,
+  Paid Pilot, read-only scan and removed time-claim anchors.
+
 Pending before admission:
 
-- render the branch README on GitHub at desktop and narrow widths;
-- confirm both details are closed initially and each expands;
-- follow the Personal Hub Roundtrip and Japanese entry links;
-- open known old anchors;
 - merge the approved PR and read back unauthenticated public `main`;
 - fetch public main into the ordinary repository, update `v13-main-ready` only
   if it remains clean and safe, then verify the outer `v13` entry reaches the

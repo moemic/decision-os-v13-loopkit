@@ -34,7 +34,7 @@ Completion Line:
 PASS when the approved PR and this exact paired block are on fetched origin/main, 382ac25 ancestry and relevant regressions pass, selected paths match the reviewed branch, GitHub desktop and narrow views show both details closed initially and expandable, primary start links work, old anchors resolve, and the ordinary v13-main-ready worktree safely reaches the admitted version
 
 Missing Closure:
-candidate: finish focused review, branch UI check, PR merge, fetched-main pair/content/ancestry verification, unauthenticated public desktop/narrow read-back and ordinary-entry recheck; after admission: none for this bounded first-view repair, while abandonment, completion speed, token effect and general usefulness remain unmeasured
+candidate: finish PR review and merge, fetched-main pair/content/ancestry verification, unauthenticated public desktop/narrow read-back and ordinary-entry recheck; after admission: none for this bounded first-view repair, while abandonment, completion speed, token effect and general usefulness remain unmeasured
 
 Next Authorized Action:
 candidate: complete Shin-approved push, PR, merge, public UI verification and safe ordinary-worktree return; after completion: none until a separately authorized observation or follow-up
@@ -49,7 +49,7 @@ Admission Joint:
 CANDIDATE / NOT CURRENT on this branch; ADMITTED only when the exact paired first blocks and selected README/test/validation paths are on fetched origin/main and the reconstruction base is its ancestor
 
 Admission Evidence:
-Shin's explicit approval for required modification, verification, push, PR, merge and publication checks; same-method visible-word comparison; focused onboarding, owner-boundary, link and legacy-anchor regressions; GitHub desktop/narrow closed-and-expanded UI read-back required
+Shin's explicit approval for required modification, verification, push, PR, merge and publication checks; same-method visible-word comparison; focused onboarding, owner-boundary, link and legacy-anchor regressions; branch GitHub desktop 1440x1000 and narrow 390x844 closed-and-expanded UI read-back passed, with public-main read-back still required
 
 Remote Read-Back:
 after merge, fetch origin/main, compare both exact first blocks and every selected path, verify 382ac25 ancestry, open the unauthenticated GitHub README at desktop and narrow widths, expand both details blocks, follow the Personal Hub and Japanese entry links, check historical anchors, then verify the outer v13 entry reaches the same admitted instructions, state and handoff
