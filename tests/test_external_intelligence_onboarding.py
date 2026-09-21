@@ -10,6 +10,48 @@ def read(path: str) -> str:
 
 
 class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
+    def test_personal_hub_public_entry_is_clone_first_and_fork_optional(self) -> None:
+        readme = read("README.md")
+        personal_copy = read("docs/fork_codex_quickstart.md")
+        roundtrip = read("docs/personal_hub_roundtrip_quickstart.md")
+        example = read("examples/personal_hub_roundtrip_v0_1/README.md")
+        v219 = read("validation/v219_personal_hub_roundtrip.md")
+        v220 = read("validation/v220_personal_hub_fresh_chat_reuse.md")
+
+        entry = readme.split(
+            "### 🔓 Full Experience — Start your personal hub locally", 1
+        )[1].split("## Next, if you need completion and loop gates", 1)[0]
+
+        self.assertIn(
+            "git clone https://github.com/shin4141/decision-os-v13-loopkit.git",
+            entry,
+        )
+        self.assertIn("A GitHub Fork is optional", entry)
+        self.assertIn("Personal Hub Roundtrip — Minimal Start", entry)
+        self.assertIn("synthetic worked roundtrip", entry)
+        self.assertIn("bounded validation record", entry)
+        self.assertIn("do not become yours", entry)
+
+        for path in (
+            "docs/personal_hub_roundtrip_quickstart.md",
+            "examples/personal_hub_roundtrip_v0_1/README.md",
+            "validation/v220_personal_hub_fresh_chat_reuse.md",
+        ):
+            self.assertTrue((ROOT / path).is_file())
+
+        self.assertIn("# Personal Copy + Codex Quickstart", personal_copy)
+        self.assertIn("A GitHub Fork is optional", personal_copy)
+        self.assertIn("A GitHub Fork is optional", roundtrip)
+        self.assertIn("active owner setup", roundtrip)
+        self.assertIn("saved", roundtrip.lower())
+        self.assertIn("selected", roundtrip.lower())
+        self.assertIn("applied", roundtrip.lower())
+        self.assertIn("Synthetic Worked Example", example)
+        self.assertIn("third-party", example)
+        self.assertIn("Public entry delivery candidate", v219)
+        self.assertIn("Direct read evidence", v220)
+        self.assertIn("token effect remains `UNKNOWN`", v220)
+
     def test_00_selection_only_and_same_kind_outcomes_use_one_route(self) -> None:
         agents = read("AGENTS.md")
         route = read("docs/codex_conversation_next_1_01.md")
@@ -205,7 +247,7 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
     def test_a_primary_prompt_requires_repo_read_disclosure_and_full_board(self) -> None:
         readme = read("README.md")
         primary = readme.split("### まず試してみる — Fork不要", 1)[1].split(
-            "### 🔓 Full Experience — Forkして体感する", 1
+            "### 🔓 Full Experience — Start your personal hub locally", 1
         )[0]
 
         self.assertEqual(primary.count("```text"), 1)
@@ -367,13 +409,16 @@ class RepoGroundedExternalIntelligenceOnboardingTests(unittest.TestCase):
         onboarding = read("docs/external_intelligence_onboarding.md")
 
         for text in (readme, onboarding):
-            self.assertIn("🔓 Full Experience — Forkして体感する", text)
+            self.assertIn("🔓 Full Experience", text)
             self.assertIn("private repository", text)
             self.assertIn("separate unpublished", text)
             self.assertIn("private memory", text)
             self.assertIn("public `main`", text)
 
-        self.assertIn("Questの選択だけでForkへ進めません", readme)
+        self.assertIn("Start your personal hub locally", readme)
+        self.assertIn("A GitHub Fork is optional", readme)
+        self.assertIn("choosing a Quest alone does not authorize", readme)
+        self.assertIn("Forkして体感する", onboarding)
         self.assertIn("説明または小さなtrialを受けた後", onboarding)
         self.assertIn("Forkは理解するための前提ではなく", onboarding)
         self.assertIn("その人がそこから育てる新しい状態", onboarding)

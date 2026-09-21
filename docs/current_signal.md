@@ -1,3 +1,63 @@
+# Current Signal — Personal Hub Public Start Admission Candidate
+
+This first block is a candidate until the admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+26c9eead2b627858881ef72d8236ed137c06c5ac
+
+Current Canonical Main:
+26c9eead2b627858881ef72d8236ed137c06c5ac at V219/V220 publication start; the fetched descendant containing this exact paired block is current only after admission
+
+Current Layer:
+V13 — public personal-hub clone onboarding and capsule roundtrip
+
+V12 State:
+PASS — V219 established one synthetic local owner switch and two-task capsule roundtrip, and V220 observed one fresh Codex chat retrieve and structurally reuse the saved candidate; public branch review, merge and remote read-back remain separate
+
+Completed Work:
+prepared a clone-first English README entry, owner-state quickstart, manual New Repo Capsule route, synthetic saved / selected / applied worked example, bounded V219/V220 evidence, explicit GitHub-Fork-optional boundary, focused regression checks, and exclusions for unrelated V219 reader-value material
+
+Canonical Current Capability:
+after admission, an unauthenticated reader can move from public README to a local-clone personal-hub start procedure, switch active instructions and handoff to their own owner state, give one bounded job, inspect one capsule roundtrip example, and read the synthetic evidence limits; author knowledge may remain reference material while author goals, current work, Gate, branch authority and publication permission do not transfer
+
+Current Restart Point:
+this paired first block and AGENTS.md; README.md Full Experience personal-hub entry; docs/personal_hub_roundtrip_quickstart.md; docs/fork_codex_quickstart.md; examples/personal_hub_roundtrip_v0_1/; validation/v219_personal_hub_roundtrip.md; validation/v220_personal_hub_fresh_chat_reuse.md
+
+Active Branch:
+codex/v219-v220-personal-hub-publication through review and admission; none assigned after admission
+
+Current Gate:
+HOLD — no automatic additional onboarding development or outreach; the separately authorized branch delivery and admission remain limited to the selected README entry, quickstarts, worked example, bounded validation, paired current-state block and focused tests
+
+Completion Line:
+PASS when the approved publication PR and this exact paired block are on fetched origin/main, 26c9eea ancestry and relevant regressions pass, selected paths match the reviewed branch, and unauthenticated GitHub README, quickstart, worked-example and validation URLs are read back
+
+Missing Closure:
+candidate: finish focused review, PR merge, fetched-main exact content/pair/ancestry verification and unauthenticated URL read-back; after admission: none for this bounded documentation publication, while real third-party ease, repeated reliability, token reduction and general quality improvement remain unverified
+
+Next Authorized Action:
+candidate: complete the Shin-approved publication PR and remote verification; after completion: none until a separately authorized real-reader observation or follow-up change
+
+Not Authorized:
+SNS or external contact; a new installer, capsule generator, selector, service or runtime; unrelated V219 reader-value assets or records; V215 changes; claims of third-party ease, token savings or general quality improvement
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on this branch; ADMITTED only when the exact paired first blocks and selected publication paths are on fetched origin/main and the reconstruction base is its ancestor
+
+Admission Evidence:
+Shin's explicit approval for the required push, PR, merge and publication verification; V219 commits d75cc1d, 7a0ecdb, 4ca74a6 and 5547362; V220 fresh-chat result identity 5460ceb and evaluated record 4a53166; reviewed publication diff; focused onboarding, link, current-state, historical and handoff regressions
+
+Remote Read-Back:
+after merge, fetch origin/main, compare both exact first blocks and every selected publication path, verify 26c9eea ancestry, and open unauthenticated GitHub README, quickstart, worked-example and validation URLs before claiming operational publication completion
+
+Older Material Below:
+HISTORICAL ONLY — the prior V218 and older blocks remain byte-preserved below this boundary and grant no V219/V220 execution authority
+```
+
 # Current Signal — V218 Selection Basis Admission Candidate
 
 This first block is a candidate until the admission joint passes.

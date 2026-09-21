@@ -1,6 +1,7 @@
-# Fork + Codex Quickstart
+# Personal Copy + Codex Quickstart
 
-This guide is for someone who forks this repo and wants to ask Codex to use V13 without guessing what to read first.
+This guide is for someone who makes a writable personal copy of this repository
+and wants to ask Codex to use V13 without guessing what to read first.
 
 This is a post-interest setup guide, not the first showroom. Before forking,
 the user can explore the public [External Intelligence Quest Board](external_intelligence_onboarding.md)
@@ -13,9 +14,16 @@ AI after that choice, continue here.
 The broader [Codex Tutorial Guide](codex_tutorial_guide.md) is an on-demand map,
 not a required first lesson.
 
-## Open the repository and ask naturally
+## Clone the repository and ask naturally
 
-1. Fork or clone this repository.
+1. Clone public `main` to your computer:
+
+   ```console
+   git clone https://github.com/shin4141/decision-os-v13-loopkit.git my-loopkit-hub
+   ```
+
+   A GitHub Fork is optional. Use one only if you want your own GitHub-hosted
+   remote. A public HTTPS clone does not require a GitHub account.
 2. Open the repository root in Codex or Claude Code.
 3. Ask:
 
@@ -40,12 +48,12 @@ chooses or asks what fits, it should inspect the actual repository evidence for
 that Quest before explaining it, ask only for missing facts that would change
 the next step, and avoid repeating concepts the user already operates.
 
-The Fork contains only the public External Intelligence surfaces and the new
+The personal copy contains only the public External Intelligence surfaces and the new
 state its owner creates. It does not unlock private repositories, separate
 unpublished implementations, Shin-specific private memory, or upstream
 internal trajectory absent from public `main`.
 
-In a fork, the Decision Owner is the fork's actual owner or maintainer, not
+In a personal copy, the Decision Owner is its actual owner or maintainer, not
 automatically Shin from the upstream canonical repository. Do not attach a
 full completion footer to each in-progress tutorial question; close the
 bounded onboarding once after the selected use and restart point.
@@ -53,6 +61,34 @@ bounded onboarding once after the selected use and restart point.
 The first onboarding is complete when that one structure has been tried once
 and a restart point remains. It is not measured by how many V13 concepts were
 introduced.
+
+## Before ordinary work: establish your active owner state
+
+A personal copy keeps the public LoopKit library, including Shin's rules and
+Field Notes, available as reference. It must not keep Shin's current operating
+state as the copy owner's active instructions merely because those files were
+copied by Git.
+
+After the user authorizes setup, establish a small owner-controlled active surface:
+
+1. replace the root `AGENTS.md` with the owner's purpose, authority, protected
+   conditions, evidence boundary, completion rule, memory boundary, and route
+   to the existing New Repo Capsule procedure;
+2. update `CLAUDE.md` if it routes to the root instructions;
+3. replace `handoff/current_codex_handoff.md` with the owner's actual current
+   state, Gate, next authorized action, missing closure, and stop boundary;
+4. preserve upstream content in Git history or fixed-source references and
+   keep reusable docs, Field Notes, templates, and examples available for
+   selective reading; and
+5. read the active files back and check that upstream goals, current tasks,
+   Gates, branch authority, and permissions did not become the owner's state.
+
+Adding only “do not follow Shin” while the rest of the active root rules and
+handoff still describe upstream work is not a completed owner-state switch.
+The owner may still adopt upstream guidance after checking its fit and limits.
+
+For an English start-to-reuse procedure and one synthetic worked roundtrip,
+use [Personal Hub Roundtrip — Minimal Start](personal_hub_roundtrip_quickstart.md).
 
 When the user wants to graduate from the tutorial, present
 `KEEP / MANUAL / REMOVE / NOT NOW`. Never remove the router or tutorial-only
@@ -68,7 +104,7 @@ Aspire, current state, protected conditions, and the operations permitted for
 one Run. Confirm the setup without acting, then wait for the user to send a
 standalone `♻️` in the normal Codex input.
 
-The fork owner is the Decision Owner for that workspace. Do not inherit Shin's
+The personal-copy owner is the Decision Owner for that workspace. Do not inherit Shin's
 Aspire, upstream Gate, current-state pair, branch authority, or publication
 boundary as the fork owner's state. Upstream current-state and validation files
 remain evidence about upstream unless the owner explicitly asks to resume or
