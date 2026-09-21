@@ -49,7 +49,7 @@ Admission Joint:
 CANDIDATE / NOT CURRENT on this branch; ADMITTED only when the exact paired first blocks and selected README/test/validation paths are on fetched origin/main and the reconstruction base is its ancestor
 
 Admission Evidence:
-Shin's explicit approval for required modification, verification, push, PR, merge and publication checks; same-method visible-word comparison; focused onboarding, owner-boundary, link and legacy-anchor regressions; branch GitHub desktop 1440x1000 and narrow 390x844 closed-and-expanded UI read-back passed, with public-main read-back still required
+Shin's explicit approval for required modification, verification, push, PR, merge and publication checks; PR #177; same-method visible-word comparison; focused onboarding, owner-boundary, link and legacy-anchor regressions; branch GitHub desktop 1440x1000 and narrow 390x844 closed-and-expanded UI read-back passed, with public-main read-back still required
 
 Remote Read-Back:
 after merge, fetch origin/main, compare both exact first blocks and every selected path, verify 382ac25 ancestry, open the unauthenticated GitHub README at desktop and narrow widths, expand both details blocks, follow the Personal Hub and Japanese entry links, check historical anchors, then verify the outer v13 entry reaches the same admitted instructions, state and handoff

@@ -7,6 +7,7 @@ Date: 2026-09-21 JST
 - Repository: `https://github.com/shin4141/decision-os-v13-loopkit.git`
 - Reconstruction base: `382ac253f90de74a3f103d9040f6ddb10748d2de`
 - Work branch: `codex/readme-first-view-hub`
+- Publication PR: [#177](https://github.com/shin4141/decision-os-v13-loopkit/pull/177)
 - Decision Owner: Shin
 - Authorized delivery: README reorganization, related tests and current-state
   records, push, PR, merge, public UI read-back, and safe return to the ordinary
