@@ -1,3 +1,63 @@
+# Current Signal — Personal-Hub First-View Admission Candidate
+
+This first block is a candidate until the admission joint passes.
+
+```text
+Canonical Reconstruction Base:
+382ac253f90de74a3f103d9040f6ddb10748d2de
+
+Current Canonical Main:
+382ac253f90de74a3f103d9040f6ddb10748d2de at README first-view repair start; the fetched descendant containing this exact paired block is current only after admission
+
+Current Layer:
+V13 — concise README first view centered on starting a personal hub
+
+V12 State:
+PASS — the published personal-hub route, English continuity, Japanese entry, compatibility anchors and bounded V219/V220 evidence remain intact, and the first-view reorganization plus focused regressions are complete on the branch; PR review, merge and public UI read-back remain separate
+
+Completed Work:
+made Start your own hub the first primary heading; kept purpose, owner separation, writable-local requirements, local-file mutation, owner setup, clone path, short saved-to-reused example and evidence limits visible; moved common questions and alternate trials into one closed details block; replaced long Companion, Field Notes, Decision Packet, Loop Map, Paid Pilot and historical descriptions with short links in a second closed block; preserved the Japanese entry and old public anchors; reduced normally visible README words from 6,684 to 353 under one recorded method
+
+Canonical Current Capability:
+after admission, a first reader sees one short explanation and a direct route to the published Personal Hub Roundtrip before optional depth, while Try one line first, Ask your AI first, the conversation recycle route, detailed tools and historical evidence remain reachable without competing with the main action; no effect on reader completion or abandonment has been observed
+
+Current Restart Point:
+this paired first block and AGENTS.md; README.md; docs/personal_hub_roundtrip_quickstart.md; examples/personal_hub_roundtrip_v0_1/; validation/readme_personal_hub_first_view.md
+
+Active Branch:
+codex/readme-first-view-hub through review and admission; none assigned after admission
+
+Current Gate:
+HOLD — no additional messaging campaign, feature work or trial repetition; the authorized delivery is limited to README information architecture, focused compatibility tests, this paired block, its validation record, publication and public UI verification
+
+Completion Line:
+PASS when the approved PR and this exact paired block are on fetched origin/main, 382ac25 ancestry and relevant regressions pass, selected paths match the reviewed branch, GitHub desktop and narrow views show both details closed initially and expandable, primary start links work, old anchors resolve, and the ordinary v13-main-ready worktree safely reaches the admitted version
+
+Missing Closure:
+candidate: finish focused review, branch UI check, PR merge, fetched-main pair/content/ancestry verification, unauthenticated public desktop/narrow read-back and ordinary-entry recheck; after admission: none for this bounded first-view repair, while abandonment, completion speed, token effect and general usefulness remain unmeasured
+
+Next Authorized Action:
+candidate: complete Shin-approved push, PR, merge, public UI verification and safe ordinary-worktree return; after completion: none until a separately authorized observation or follow-up
+
+Not Authorized:
+new product features or permissions; Companion/runtime change; repetition of V219/V220 or another synthetic trial; claims of faster setup, lower abandonment, token savings or general quality; SNS or external contact
+
+Decision Owner:
+Shin
+
+Admission Joint:
+CANDIDATE / NOT CURRENT on this branch; ADMITTED only when the exact paired first blocks and selected README/test/validation paths are on fetched origin/main and the reconstruction base is its ancestor
+
+Admission Evidence:
+Shin's explicit approval for required modification, verification, push, PR, merge and publication checks; same-method visible-word comparison; focused onboarding, owner-boundary, link and legacy-anchor regressions; GitHub desktop/narrow closed-and-expanded UI read-back required
+
+Remote Read-Back:
+after merge, fetch origin/main, compare both exact first blocks and every selected path, verify 382ac25 ancestry, open the unauthenticated GitHub README at desktop and narrow widths, expand both details blocks, follow the Personal Hub and Japanese entry links, check historical anchors, then verify the outer v13 entry reaches the same admitted instructions, state and handoff
+
+Older Material Below:
+HISTORICAL ONLY — the prior English personal-hub entry and older blocks remain byte-preserved below this boundary and grant no new execution authority
+```
+
 # Current Signal — English Personal-Hub Entry Admission Candidate
 
 This first block is a candidate until the admission joint passes.
